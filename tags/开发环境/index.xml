@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>XIZERO</title>
+    <link>http://f12998765.github.io/tags/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/index.xml</link>
+    <description>Recent content on XIZERO</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <atom:link href="http://f12998765.github.io/tags/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>搭建 Java 开发环境 linux</title>
+      <link>http://f12998765.github.io/java-notes/%E6%90%AD%E5%BB%BA-java-%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83-linux/</link>
+      <pubDate>Fri, 18 Nov 2016 18:20:00 +0800</pubDate>
+      
+      <guid>http://f12998765.github.io/java-notes/%E6%90%AD%E5%BB%BA-java-%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83-linux/</guid>
+      <description>
+
+&lt;h2 id=&#34;安装-jdk&#34;&gt;安装 JDK&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;下载压缩包&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;地址：&lt;a href=&#34;http://www.oracle.com/technetwork/java/javase/downloads/index.html&#34;&gt;http://www.oracle.com/technetwork/java/javase/downloads/index.html&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;解压到 &lt;code&gt;/usr/local/jdk&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;配置环境变量&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;vi /etc/profile
+
+# 在文件末尾添加
+
+export JAVA_HOME=/usr/locl/jdk/**
+
+export JRE_HOME=${JAVA_HOME}/jre
+
+export CLASSPATH=.:${JAVA_HOME}/lib/tools.jar:${JRE_HOME}/lib/dt.jar
+
+export PATH=${JAVA_HOME}/bin:${JAVA_HOME}/jre/bin:$PATH
+
+# 使配置生效
+source /etc/profile
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;安装-tomcat&#34;&gt;安装 Tomcat&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;下载压缩包&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;地址：&lt;a href=&#34;http://tomcat.apache.org/&#34;&gt;http://tomcat.apache.org/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;解压到 &lt;code&gt;/usr/local/tomcat&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;安装-idea&#34;&gt;安装 IDEA&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;下载安装包&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;地址：&lt;a href=&#34;https://www.jetbrains.com/idea/&#34;&gt;https://www.jetbrains.com/idea/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;解压到 &lt;code&gt;/opt&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;运行 &lt;code&gt;/bin/idea.sh&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;安装-datagrip&#34;&gt;安装 DataGrip&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;下载安装包&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;地址：&lt;a href=&#34;https://www.jetbrains.com/datagrip&#34;&gt;https://www.jetbrains.com/datagrip&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;解压到 &lt;code&gt;/opt&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;运行 &lt;code&gt;/bin/DataGrip.sh&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>搭建 Java 开发环境 win</title>
+      <link>http://f12998765.github.io/java-notes/%E6%90%AD%E5%BB%BA-Java-%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83-Win/</link>
+      <pubDate>Fri, 18 Nov 2016 18:20:00 +0800</pubDate>
+      
+      <guid>http://f12998765.github.io/java-notes/%E6%90%AD%E5%BB%BA-Java-%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83-Win/</guid>
+      <description>
+
+&lt;h2 id=&#34;安装jdk&#34;&gt;安装JDK&lt;/h2&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;JDK：Java Development Kit，&lt;/strong&gt;java的开发工具包和运行环境&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;JRE：Java Runtime Environment，&lt;/strong&gt;java程序的运行环境&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;1、打开下载页面 &amp;lt;&lt;a href=&#34;http://www.oracle.com/technetwork/java/javase/downloads/index.html&#34;&gt;下载链接&lt;/a&gt;&amp;gt;&lt;/p&gt;
+
+&lt;p&gt;2、选择对应系统的java 开发工具包下载 &lt;strong&gt;Java SE Development Kit&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;3、运行安装程序，默认安装&lt;/p&gt;
+
+&lt;h2 id=&#34;配置环境变量&#34;&gt;配置环境变量&lt;/h2&gt;
+
+&lt;p&gt;打开： &lt;strong&gt;控制面板 &amp;ndash;&amp;gt; 系统和安全 &amp;ndash;&amp;gt; 系统 &amp;ndash;&amp;gt; 高级系统设置 &amp;ndash;&amp;gt; 环境变量&lt;/strong&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;如果使用1.5以上版本的JDK，不用设置CLASSPATH环境变量&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;left&#34;&gt;变量名&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;变量值&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;strong&gt;JAVA_HOME&lt;/strong&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;C:\Program Files\Java\jdk1.8.0 //根据实际路径配置&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;strong&gt;Path&lt;/strong&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;%JAVA_HOME%\bin;%JAVA_HOME%\jre\bin;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&#34;验证&#34;&gt;验证&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;win+R &amp;ndash;&amp;gt; 输入cmd &amp;ndash;&amp;gt; 运行命令&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;java
+javac
+java -version
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;javac命令和java命令的区别
+Javac：编译.java文件，生成.Class文件
+Java：加载类库，运行.class文件&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&#34;开发工具&#34;&gt;开发工具&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.eclipse.org/&#34;&gt;Eclipse&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.jetbrains.com/idea/&#34;&gt;IntelliJ IDEA&lt;/a&gt;(推荐)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://notepad-plus-plus.org/&#34;&gt;NotePad++&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

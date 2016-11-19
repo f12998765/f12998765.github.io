@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>XIZERO</title>
+    <link>http://f12998765.github.io/tags/scraps/index.xml</link>
+    <description>Recent content on XIZERO</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <atom:link href="http://f12998765.github.io/tags/scraps/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Scraps of notes</title>
+      <link>http://f12998765.github.io/notes/scraps-of-notes/</link>
+      <pubDate>Fri, 18 Nov 2016 18:20:00 +0800</pubDate>
+      
+      <guid>http://f12998765.github.io/notes/scraps-of-notes/</guid>
+      <description>
+
+&lt;h1 id=&#34;scraps-of-notes&#34;&gt;Scraps of notes&lt;/h1&gt;
+
+&lt;h2 id=&#34;1-idea新建maven项目卡住显示-generating-project-in-batch-mode&#34;&gt;1. IDEA新建MAVEN项目卡住显示 : &amp;ldquo;Generating Project in Batch mode&amp;rdquo;&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;下载 &lt;code&gt;archetype-catalog.xml&lt;/code&gt; ,放到 &amp;ldquo;.m2\repository\org\apache\maven\archetype\archetype-catalog\2.4&amp;rdquo; 目录下
+
+&lt;ul&gt;
+&lt;li&gt;下载文件夹链接 &lt;code&gt;http://repo.maven.apache.org/maven2/&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;找到 &lt;code&gt;archetype-catalog.xml&lt;/code&gt; ,右键保存&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;在 &lt;code&gt;Settings&lt;/code&gt;&amp;gt; &lt;code&gt;Maven&lt;/code&gt; &amp;gt; &lt;code&gt;Runner&lt;/code&gt; &amp;gt; &lt;code&gt;VM Options&lt;/code&gt; 中添加 &lt;code&gt;-DarchetypeCatalog=internal&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;PS：注意右上角的灰字：for default project，而不是for current project&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;2-win-下快捷切换中英文符号&#34;&gt;2. Win 下快捷切换中英文符号&lt;/h2&gt;
+
+&lt;p&gt;快捷键 :  &amp;ldquo;&lt;code&gt;Ctrl&lt;/code&gt; + &lt;code&gt;.&lt;/code&gt;&amp;ldquo;&lt;/p&gt;
+
+&lt;h2 id=&#34;3-intellij-idea编译报错-information-java-javactask-源发行版-1-8-需要目标发行版-1-8&#34;&gt;3. IntelliJ Idea编译报错：&amp;rdquo;Information:java: javacTask: 源发行版 1.8 需要目标发行版 1.8&amp;rdquo;&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;IDEA :  File&amp;ndash;&amp;gt;Settings&amp;ndash;&amp;gt;Compiler&amp;ndash;&amp;gt;Java Compiler&lt;/li&gt;
+&lt;li&gt;设置相应Module的target byte code version的合适版本就行&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;4-tomcat-中取消项目地址&#34;&gt;4. Tomcat 中取消项目地址&lt;/h2&gt;
+
+&lt;p&gt;在tomcat -&amp;gt; conf -&amp;gt; server.xml 的&lt;Engine&gt;中添加&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-xml&#34;&gt;&amp;lt;Context path=&amp;quot;&amp;quot; docBase=&amp;quot;项目名&amp;quot; debug=&amp;quot;0&amp;quot; reloadable=&amp;quot;true&amp;quot;/&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;5-sftp-提示无权限&#34;&gt;5. sftp 提示无权限&lt;/h2&gt;
+
+&lt;p&gt;修改父目录的权限&lt;/p&gt;
+
+&lt;h2 id=&#34;6-linux-zip-压缩-命令&#34;&gt;6. Linux zip 压缩 命令&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;zip -r [filename.zip] [dir]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;7-异步加载js&#34;&gt;7. 异步加载js&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;var script = document.createElement(&amp;quot;script&amp;quot;);
+script.type = &amp;quot;text/javascript&amp;quot;;
+script.src = &amp;quot;http://libs.baidu.com/jquery/2.0.3/jquery.min.js&amp;quot;;
+document.getElementsByTagName(&#39;head&#39;)[0].appendChild(script);
+setTimeout(function() {
+    //Other Code    
+},100);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;8-children-返回对象的遍历&#34;&gt;8. children 返回对象的遍历&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://stackoverflow.com/questions/28442138/children-does-not-work-on-specified-index-of-jquery-return&#34;&gt;.children() does not work on specified index of jquery return&lt;/a&gt;
+It&amp;rsquo;s because it is no longer a jQuery object after you specify an index [7]. Thus, you are calling a jQuery method on a DOM element (which doesn&amp;rsquo;t work).&lt;/p&gt;
+
+&lt;p&gt;You could use the .eq() method instead:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;$(&#39;div&#39;).eq(7).children();
+or
+$($(&#39;div&#39;)[7]).children();
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;It&amp;rsquo;s worth pointing out that this would work because the DOM element is wrapped in $() - thus turning it into a jQuery object.&lt;/p&gt;
+
+&lt;h2 id=&#34;9-为什么listary-的注册码这么奇葩-已过期&#34;&gt;9. 为什么Listary 的注册码这么奇葩？(已过期)&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;姓    名（Name）：Vovan
+邮    箱（Email）：vovan666@6n8d7oa
+序 列 号（Code）：
+66666666666666666666666666666666
+66666666666666666666666666666666
+66666666666666666666666666666666
+66666666666666666666666666666666
+66666666666666666666666666666666
+66666666666666666666666666666666
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;10-笔记本开wifi热点&#34;&gt;10. 笔记本开wifi热点&lt;/h2&gt;
+
+&lt;p&gt;cmd 运行&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;netsh wlan set hostednetwork mode=allow ssid=wifi名 key=密码 keyUsage =persistent
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;例&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;netsh wlan set hostednetwork mode=allow ssid=xxoo key=woshidabendan keyUsage =persistent
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;启动&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;netsh wlan start hostednetwork
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;关闭&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;netsh wlan stop hostednetwork
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;11-staruml-license&#34;&gt;11. StarUML license&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;目录&lt;/strong&gt; C:\Program Files (x86)\StarUML\www\license\node\LicenseManagerDomain.js&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://moetu.org/images/2016/10/14/cec8de.png&#34; alt=&#34;cec8de.png&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;12-listary-pro-5-破解&#34;&gt;12. Listary pro 5 破解&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://pan.baidu.com/share/link?shareid=368037&amp;amp;uk=605837026#list/path=%2F&#34;&gt;百度云&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;13-flysee-关联文件无效&#34;&gt;13. FlySee 关联文件无效&lt;/h2&gt;
+
+&lt;p&gt;以管理员运行&lt;/p&gt;
+
+&lt;h2 id=&#34;14-java-可变参数列表&#34;&gt;14. java 可变参数列表&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;可以传入 0 个 或更多的参数，接收参数是数组类型&lt;/li&gt;
+&lt;li&gt;函数有多个参数时，必须放在最后&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;public void test(int num , String ... args) {
+    //....
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;15-泛型接口和泛型抽象类&#34;&gt;15. 泛型接口和泛型抽象类&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;泛型接口可以做基础的容器接口，定义基本的操作。&lt;/li&gt;
+&lt;li&gt;泛型抽象类实现泛型接口。&lt;/li&gt;
+&lt;li&gt;具体接口继承泛型接口，并定义自己的方法。&lt;/li&gt;
+&lt;li&gt;具体类继承泛型抽象类，并实现具体接口。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;16-maven-设置默认jdk版本&#34;&gt;16. Maven 设置默认JDK版本&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;a. 修改 settings.xml&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;vim %maven%/conf/settings.xml
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-xml&#34;&gt;&amp;lt;profiles&amp;gt;
+  &amp;lt;profile&amp;gt;
+    &amp;lt;id&amp;gt;development&amp;lt;/id&amp;gt;
+    &amp;lt;activation&amp;gt;
+      &amp;lt;jdk&amp;gt;1.8&amp;lt;/jdk&amp;gt;
+      &amp;lt;activeByDefault&amp;gt;true&amp;lt;/activeByDefault&amp;gt;
+    &amp;lt;/activation&amp;gt;
+    &amp;lt;properties&amp;gt;
+      &amp;lt;maven.compiler.source&amp;gt;1.8&amp;lt;/maven.compiler.source&amp;gt;
+      &amp;lt;maven.compiler.target&amp;gt;1.8&amp;lt;/maven.compiler.target&amp;gt;
+      &amp;lt;maven.compiler.compilerVersion&amp;gt;1.8&amp;lt;/maven.compiler.compilerVersion&amp;gt;
+    &amp;lt;/properties&amp;gt;
+  &amp;lt;/profile&amp;gt;
+&amp;lt;/profiles&amp;gt;
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;b. 修改 pom.xml&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-xml&#34;&gt;&amp;lt;build&amp;gt;
+  &amp;lt;plugins&amp;gt;
+    &amp;lt;plugin&amp;gt;
+      &amp;lt;groupId&amp;gt;org.apache.maven.plugins&amp;lt;/groupId&amp;gt;
+      &amp;lt;artifactId&amp;gt;maven-compiler-plugin&amp;lt;/artifactId&amp;gt;
+      &amp;lt;configuration&amp;gt;
+        &amp;lt;source&amp;gt;1.8&amp;lt;/source&amp;gt;
+        &amp;lt;target&amp;gt;1.8&amp;lt;/target&amp;gt;
+      &amp;lt;/configuration&amp;gt;
+    &amp;lt;/plugin&amp;gt;
+  &amp;lt;/plugins&amp;gt;
+&amp;lt;/build&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

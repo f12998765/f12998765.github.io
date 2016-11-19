@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8">
+<meta name="generator" content="Hugo 0.17" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="//fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="/css/main.css">
+<link rel="alternate" href="/index.xml" type="application/rss+xml" title="XIZERO">
+<link href="https://cdn.bootcss.com/highlight.js/9.7.0/styles/tomorrow.min.css" rel="stylesheet">
+<script src="https://cdn.bootcss.com/highlight.js/9.8.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<title>重装系统 - win - XIZERO</title>
+</head>
+<body>
+
+
+	
+		<div class="header">
+			<a href="/">XIZERO</a>
+			<div class="gos">
+				<span class="go"><a href="/">Home</a></span>
+				<span class="go"><a href="/tags">Tags</a></span>
+				<span class="go"><a href="/about">About</a></span>
+			</div>
+		</div>
+	
+
+
+	<main role="main">
+		<article itemscope itemtype="http://schema.org/BlogPosting">
+			<div class="md_title" itemprop="headline">重装系统 - win</div>
+			<div class="md_tag">
+				
+					<span> <a href="/tags/win">/win</a></span>
+				
+					<span> <a href="/tags/%E9%87%8D%E8%A3%85%E7%B3%BB%E7%BB%9F">/重装系统</a></span>
+				
+			</div>
+			<div class="md_meta"><time itemprop="datePublished" datetime="2016-11-18">11月18日 2016</time></div>
+			<hr class="md_hr">
+			<section itemprop="entry-text" class="md_content">
+				
+
+<h1 id="重装系统-win">重装系统 - win</h1>
+
+<h2 id="1-删除预装应用">1.删除预装应用</h2>
+
+<ul>
+<li>管理员权限运行PowerShell</li>
+<li>Get-AppxPackage *程序名* | Remove-AppxPackage</li>
+</ul>
+
+<h2 id="2-删除onedrive">2.删除Onedrive</h2>
+
+<h2 id="3-禁止win10自动安装应用">3.禁止win10自动安装应用</h2>
+
+<ul>
+<li>打开注册表 regedit</li>
+<li>进入路径 <code>HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\</code></li>
+<li>右键点击新建项“CloudContent</li>
+<li>双击新建的CloudContent，在右栏右键新建DWORD（32位）值或新建DWORD（64位）值，并命名为DisableWindowsConsumerFeatures</li>
+<li>双击DisableWindowsConsumerFeatures，在数值数据输入1，确定</li>
+</ul>
+
+<h2 id="4-设置资源管理器默认打开我的电脑">4.设置资源管理器默认打开我的电脑</h2>
+
+<h2 id="5-安装软件">5.安装软件</h2>
+
+<h3 id="7-zip">7-zip</h3>
+
+<ul>
+<li>设置文件关联</li>
+<li>设置右键菜单</li>
+</ul>
+
+<h3 id="花蜜密码-ss">花蜜密码+SS</h3>
+
+<ul>
+<li>准备运行环境</li>
+</ul>
+
+<h3 id="google-chrome">Google Chrome</h3>
+
+<ul>
+<li>登陆账户，同步设置</li>
+</ul>
+
+<h3 id="asus-splendid-video">ASUS Splendid Video</h3>
+
+<ul>
+<li><a href="http://www.asus.com.cn/support/Download/3/813/0/6/45/">地址</a></li>
+</ul>
+
+<h3 id="markeditor">MarkEditor</h3>
+
+<h3 id="坚果云">坚果云</h3>
+
+<ul>
+<li>定义同步文件夹</li>
+<li>安装<strong>网速监控</strong></li>
+</ul>
+
+<h3 id="cmder">Cmder</h3>
+
+<ul>
+<li>设置Cmder和Git的环境变量（Path）
+
+<ul>
+<li>%GIT_HOME%\bin</li>
+</ul></li>
+<li>更新</li>
+<li>设置git相关</li>
+</ul>
+
+<p><strong>添加到右键</strong>
+管理员权限终端，输入<code>Cmder.exe /REGISTER ALL</code></p>
+
+<p><strong>中文乱码解决</strong>
+修改vendor/clink.lua文件，替换第20行<code>set_prompt_filter</code>函数</p>
+
+<pre><code>function set_prompt_filter()
+    -- get_cwd() is differently encoded than the clink.prompt.value, so everything other than
+    -- pure ASCII will get garbled. So try to parse the current directory from the original prompt
+    -- and only if that doesn't work, use get_cwd() directly.
+    -- The matching relies on the default prompt which ends in X:\PATH\PATH&gt;
+    -- (no network path possible here!)
+    local old_prompt = clink.prompt.value
+    local cwd = old_prompt:match('.*(.:[^&gt;]*)&gt;')
+    if cwd == nil then cwd = clink.get_cwd() end
+
+    -- environment systems like pythons virtualenv change the PROMPT and usually
+    -- set some variable. But the variables are differently named and we would never
+    -- get them all, so try to parse the env name out of the PROMPT.
+    -- envs are usually put in round or square parentheses and before the old prompt
+    local env = old_prompt:match('.*%(([^%)]+)%).+:')
+    -- also check for square brackets
+    if env == nil then env = old_prompt:match('.*%[([^%]]+)%].+:') end
+
+    -- build our own prompt
+    -- orig: $E[1;32;40m$P$S{git}{hg}$S$_$E[1;30;40m{lamb}$S$E[0m
+    -- color codes: &quot;\x1b[1;37;40m&quot;
+    local cmder_prompt = &quot;\x1b[1;32;40m{cwd} {git}{hg} \n\x1b[1;30;40m{lamb} \x1b[0m&quot;
+    cmder_prompt = string.gsub(cmder_prompt, &quot;{cwd}&quot;, cwd)
+    if env == nil then
+        lambda = &quot;λ&quot;
+    else
+        lambda = &quot;(&quot;..env..&quot;) λ&quot;
+    end
+    clink.prompt.value = string.gsub(cmder_prompt, &quot;{lamb}&quot;, lambda)
+end
+</code></pre>
+
+<p>###配置开发环境
+* <a href="https://notepad-plus-plus.org/">Notpad++</a>
+* 安装<a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">JDK</a>
+* <a href="https://www.jetbrains.com/idea/">IDEA</a>
+* Atom、Sublime、VS Code
+* <a href="http://mobaxterm.mobatek.net/">MobaXterm</a></p>
+
+<p>###安装其他软件
+* <a href="http://music.163.com/#/download">网易云音乐</a>
+* <a href="http://zh.snipaste.com/">Snipaste</a>
+* <a href="http://im.qq.com/lightqq/">QQ精简版</a>
+* Steam</p>
+
+			</section>
+		</article>
+	</main>
+
+<hr class="md_hr">
+<div class="footer">
+	@XIZERO Powered by <a href="http://hugo.spf13.com/">Hugo</a> and <a href="#">bigbig</a>
+</div>
+</body>
+</html>
+

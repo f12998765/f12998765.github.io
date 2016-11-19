@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>XIZERO</title>
+    <link>http://f12998765.github.io/tags/%E6%97%B6%E9%97%B4/index.xml</link>
+    <description>Recent content on XIZERO</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <atom:link href="http://f12998765.github.io/tags/%E6%97%B6%E9%97%B4/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Java 时间</title>
+      <link>http://f12998765.github.io/java-notes/java-%E6%97%B6%E9%97%B4/</link>
+      <pubDate>Fri, 18 Nov 2016 18:20:00 +0800</pubDate>
+      
+      <guid>http://f12998765.github.io/java-notes/java-%E6%97%B6%E9%97%B4/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

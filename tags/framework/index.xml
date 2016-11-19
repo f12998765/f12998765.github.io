@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>XIZERO</title>
+    <link>http://f12998765.github.io/tags/framework/index.xml</link>
+    <description>Recent content on XIZERO</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <atom:link href="http://f12998765.github.io/tags/framework/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>java Framework</title>
+      <link>http://f12998765.github.io/notes/java-framework/</link>
+      <pubDate>Fri, 18 Nov 2016 18:20:00 +0800</pubDate>
+      
+      <guid>http://f12998765.github.io/notes/java-framework/</guid>
+      <description>
+
+&lt;h1 id=&#34;java-framework&#34;&gt;java Framework&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Lombok
+
+&lt;ul&gt;
+&lt;li&gt;使用注解消除冗长代码&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://projectlombok.org/&#34;&gt;https://projectlombok.org/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/rzwitserloot/lombok&#34;&gt;Github&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Google Guava
+
+&lt;ul&gt;
+&lt;li&gt;Google 开发工具包&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/google/guava&#34;&gt;Github&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Logback
+
+&lt;ul&gt;
+&lt;li&gt;日志工具&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://logback.qos.ch/&#34;&gt;http://logback.qos.ch/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;OkHttp
+
+&lt;ul&gt;
+&lt;li&gt;HTTP client&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://square.github.io/okhttp/&#34;&gt;http://square.github.io/okhttp/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/square/okhttp&#34;&gt;Github&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Apache Commons
+
+&lt;ul&gt;
+&lt;li&gt;扩展库&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://commons.apache.org/&#34;&gt;https://commons.apache.org/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Jenkins
+
+&lt;ul&gt;
+&lt;li&gt;持续集成&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://jenkins.io/&#34;&gt;https://jenkins.io/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/jenkinsci&#34;&gt;Github&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Dropwizard
+
+&lt;ul&gt;
+&lt;li&gt;Java REST&amp;lt;&lt;strong&gt;???&lt;/strong&gt;&amp;gt;  服务器栈&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.dropwizard.io/&#34;&gt;http://www.dropwizard.io/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/dropwizard/dropwizard&#34;&gt;Gtihub&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;JWT
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://jwt.io/&#34;&gt;https://jwt.io/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/jwtk/jjwt&#34;&gt;JJWT&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;##了解一些的Java框架和工具
+- &lt;a href=&#34;https://spring.io/&#34;&gt;Spring&lt;/a&gt;
+- Mybatis
+    - &lt;a href=&#34;https://github.com/mybatis/&#34;&gt;Github&lt;/a&gt;
+    - &lt;a href=&#34;http://www.mybatis.org/mybatis-3/zh/&#34;&gt;中文官网&lt;/a&gt;
+    - &lt;a href=&#34;http://www.mybatis.org/generator/&#34;&gt;MyBatis Generator&lt;/a&gt;
+- Maven
+    - &lt;a href=&#34;https://maven.apache.org/&#34;&gt;官网&lt;/a&gt;
+    - &lt;a href=&#34;http://search.maven.org/&#34;&gt;Maven Central Repository&lt;/a&gt;
+- &lt;a href=&#34;http://tomcat.apache.org/&#34;&gt;Tomcat&lt;/a&gt;
+- &lt;a href=&#34;https://hc.apache.org/httpcomponents-client-ga/&#34;&gt;Apache HttpComponents&lt;/a&gt;
+- &lt;a href=&#34;https://jsoup.org/&#34;&gt;jsoup&lt;/a&gt;
+- jackson
+    - &lt;a href=&#34;https://github.com/FasterXML/jackson&#34;&gt;Github&lt;/a&gt;
+    - &lt;a href=&#34;http://mvnrepository.com/search?q=Jackson&#34;&gt;Maven&lt;/a&gt;
+- SWAGGER
+    - &lt;a href=&#34;http://swagger.io/&#34;&gt;http://swagger.io/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;##一些不会用的Java框架和工具
+- &lt;a href=&#34;http://www.groovy-lang.org/&#34;&gt;Groovy&lt;/a&gt;
+    - &lt;a href=&#34;https://github.com/apache/groovy&#34;&gt;Github&lt;/a&gt;
+- &lt;a href=&#34;https://gradle.org/&#34;&gt;Gradle&lt;/a&gt; &amp;ndash; 项目构建
+- &lt;a href=&#34;http://junit.org/junit5/&#34;&gt;JUnit5&lt;/a&gt; &amp;ndash; Java单元测试
+- &lt;a href=&#34;http://logging.apache.org/log4j/2.x/&#34;&gt;Log4j&lt;/a&gt; &amp;ndash; 日志记录
+- &lt;a href=&#34;http://www.eclemma.org/jacoco/&#34;&gt;JaCoCo&lt;/a&gt; &amp;ndash; 代码覆盖率
+- &lt;a href=&#34;http://nginx.org/&#34;&gt;Nginx&lt;/a&gt;
+- Javadoc&amp;ndash; 文档注释&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

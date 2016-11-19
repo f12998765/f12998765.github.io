@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8">
+<meta name="generator" content="Hugo 0.17" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="//fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="/css/main.css">
+<link rel="alternate" href="/index.xml" type="application/rss+xml" title="XIZERO">
+<link href="https://cdn.bootcss.com/highlight.js/9.7.0/styles/tomorrow.min.css" rel="stylesheet">
+<script src="https://cdn.bootcss.com/highlight.js/9.8.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<title>Scraps of notes - XIZERO</title>
+</head>
+<body>
+
+
+	
+		<div class="header">
+			<a href="/">XIZERO</a>
+			<div class="gos">
+				<span class="go"><a href="/">Home</a></span>
+				<span class="go"><a href="/tags">Tags</a></span>
+				<span class="go"><a href="/about">About</a></span>
+			</div>
+		</div>
+	
+
+
+	<main role="main">
+		<article itemscope itemtype="http://schema.org/BlogPosting">
+			<div class="md_title" itemprop="headline">Scraps of notes</div>
+			<div class="md_tag">
+				
+					<span> <a href="/tags/scraps">/scraps</a></span>
+				
+					<span> <a href="/tags/note">/note</a></span>
+				
+			</div>
+			<div class="md_meta"><time itemprop="datePublished" datetime="2016-11-18">11月18日 2016</time></div>
+			<hr class="md_hr">
+			<section itemprop="entry-text" class="md_content">
+				
+
+<h1 id="scraps-of-notes">Scraps of notes</h1>
+
+<h2 id="1-idea新建maven项目卡住显示-generating-project-in-batch-mode">1. IDEA新建MAVEN项目卡住显示 : &ldquo;Generating Project in Batch mode&rdquo;</h2>
+
+<ul>
+<li>下载 <code>archetype-catalog.xml</code> ,放到 &ldquo;.m2\repository\org\apache\maven\archetype\archetype-catalog\2.4&rdquo; 目录下
+
+<ul>
+<li>下载文件夹链接 <code>http://repo.maven.apache.org/maven2/</code></li>
+<li>找到 <code>archetype-catalog.xml</code> ,右键保存</li>
+</ul></li>
+<li>在 <code>Settings</code>&gt; <code>Maven</code> &gt; <code>Runner</code> &gt; <code>VM Options</code> 中添加 <code>-DarchetypeCatalog=internal</code></li>
+<li>PS：注意右上角的灰字：for default project，而不是for current project</li>
+</ul>
+
+<h2 id="2-win-下快捷切换中英文符号">2. Win 下快捷切换中英文符号</h2>
+
+<p>快捷键 :  &ldquo;<code>Ctrl</code> + <code>.</code>&ldquo;</p>
+
+<h2 id="3-intellij-idea编译报错-information-java-javactask-源发行版-1-8-需要目标发行版-1-8">3. IntelliJ Idea编译报错：&rdquo;Information:java: javacTask: 源发行版 1.8 需要目标发行版 1.8&rdquo;</h2>
+
+<ul>
+<li>IDEA :  File&ndash;&gt;Settings&ndash;&gt;Compiler&ndash;&gt;Java Compiler</li>
+<li>设置相应Module的target byte code version的合适版本就行</li>
+</ul>
+
+<h2 id="4-tomcat-中取消项目地址">4. Tomcat 中取消项目地址</h2>
+
+<p>在tomcat -&gt; conf -&gt; server.xml 的<Engine>中添加</p>
+
+<pre><code class="language-xml">&lt;Context path=&quot;&quot; docBase=&quot;项目名&quot; debug=&quot;0&quot; reloadable=&quot;true&quot;/&gt;
+</code></pre>
+
+<h2 id="5-sftp-提示无权限">5. sftp 提示无权限</h2>
+
+<p>修改父目录的权限</p>
+
+<h2 id="6-linux-zip-压缩-命令">6. Linux zip 压缩 命令</h2>
+
+<pre><code class="language-bash">zip -r [filename.zip] [dir]
+</code></pre>
+
+<h2 id="7-异步加载js">7. 异步加载js</h2>
+
+<pre><code class="language-js">var script = document.createElement(&quot;script&quot;);
+script.type = &quot;text/javascript&quot;;
+script.src = &quot;http://libs.baidu.com/jquery/2.0.3/jquery.min.js&quot;;
+document.getElementsByTagName('head')[0].appendChild(script);
+setTimeout(function() {
+    //Other Code    
+},100);
+</code></pre>
+
+<h2 id="8-children-返回对象的遍历">8. children 返回对象的遍历</h2>
+
+<p><a href="http://stackoverflow.com/questions/28442138/children-does-not-work-on-specified-index-of-jquery-return">.children() does not work on specified index of jquery return</a>
+It&rsquo;s because it is no longer a jQuery object after you specify an index [7]. Thus, you are calling a jQuery method on a DOM element (which doesn&rsquo;t work).</p>
+
+<p>You could use the .eq() method instead:</p>
+
+<pre><code class="language-js">$('div').eq(7).children();
+or
+$($('div')[7]).children();
+</code></pre>
+
+<p>It&rsquo;s worth pointing out that this would work because the DOM element is wrapped in $() - thus turning it into a jQuery object.</p>
+
+<h2 id="9-为什么listary-的注册码这么奇葩-已过期">9. 为什么Listary 的注册码这么奇葩？(已过期)</h2>
+
+<pre><code>姓    名（Name）：Vovan
+邮    箱（Email）：vovan666@6n8d7oa
+序 列 号（Code）：
+66666666666666666666666666666666
+66666666666666666666666666666666
+66666666666666666666666666666666
+66666666666666666666666666666666
+66666666666666666666666666666666
+66666666666666666666666666666666
+</code></pre>
+
+<h2 id="10-笔记本开wifi热点">10. 笔记本开wifi热点</h2>
+
+<p>cmd 运行</p>
+
+<pre><code class="language-bash">netsh wlan set hostednetwork mode=allow ssid=wifi名 key=密码 keyUsage =persistent
+</code></pre>
+
+<p>例</p>
+
+<pre><code class="language-bash">netsh wlan set hostednetwork mode=allow ssid=xxoo key=woshidabendan keyUsage =persistent
+</code></pre>
+
+<p>启动</p>
+
+<pre><code class="language-bash">netsh wlan start hostednetwork
+</code></pre>
+
+<p>关闭</p>
+
+<pre><code class="language-bash">netsh wlan stop hostednetwork
+</code></pre>
+
+<h2 id="11-staruml-license">11. StarUML license</h2>
+
+<p><strong>目录</strong> C:\Program Files (x86)\StarUML\www\license\node\LicenseManagerDomain.js</p>
+
+<p><img src="https://moetu.org/images/2016/10/14/cec8de.png" alt="cec8de.png" /></p>
+
+<h2 id="12-listary-pro-5-破解">12. Listary pro 5 破解</h2>
+
+<p><a href="http://pan.baidu.com/share/link?shareid=368037&amp;uk=605837026#list/path=%2F">百度云</a></p>
+
+<h2 id="13-flysee-关联文件无效">13. FlySee 关联文件无效</h2>
+
+<p>以管理员运行</p>
+
+<h2 id="14-java-可变参数列表">14. java 可变参数列表</h2>
+
+<ul>
+<li>可以传入 0 个 或更多的参数，接收参数是数组类型</li>
+<li>函数有多个参数时，必须放在最后</li>
+</ul>
+
+<pre><code class="language-java">public void test(int num , String ... args) {
+    //....
+}
+</code></pre>
+
+<h2 id="15-泛型接口和泛型抽象类">15. 泛型接口和泛型抽象类</h2>
+
+<ul>
+<li>泛型接口可以做基础的容器接口，定义基本的操作。</li>
+<li>泛型抽象类实现泛型接口。</li>
+<li>具体接口继承泛型接口，并定义自己的方法。</li>
+<li>具体类继承泛型抽象类，并实现具体接口。</li>
+</ul>
+
+<h2 id="16-maven-设置默认jdk版本">16. Maven 设置默认JDK版本</h2>
+
+<ul>
+<li>a. 修改 settings.xml</li>
+</ul>
+
+<pre><code class="language-bash">vim %maven%/conf/settings.xml
+</code></pre>
+
+<pre><code class="language-xml">&lt;profiles&gt;
+  &lt;profile&gt;
+    &lt;id&gt;development&lt;/id&gt;
+    &lt;activation&gt;
+      &lt;jdk&gt;1.8&lt;/jdk&gt;
+      &lt;activeByDefault&gt;true&lt;/activeByDefault&gt;
+    &lt;/activation&gt;
+    &lt;properties&gt;
+      &lt;maven.compiler.source&gt;1.8&lt;/maven.compiler.source&gt;
+      &lt;maven.compiler.target&gt;1.8&lt;/maven.compiler.target&gt;
+      &lt;maven.compiler.compilerVersion&gt;1.8&lt;/maven.compiler.compilerVersion&gt;
+    &lt;/properties&gt;
+  &lt;/profile&gt;
+&lt;/profiles&gt;
+
+</code></pre>
+
+<ul>
+<li>b. 修改 pom.xml</li>
+</ul>
+
+<pre><code class="language-xml">&lt;build&gt;
+  &lt;plugins&gt;
+    &lt;plugin&gt;
+      &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;
+      &lt;artifactId&gt;maven-compiler-plugin&lt;/artifactId&gt;
+      &lt;configuration&gt;
+        &lt;source&gt;1.8&lt;/source&gt;
+        &lt;target&gt;1.8&lt;/target&gt;
+      &lt;/configuration&gt;
+    &lt;/plugin&gt;
+  &lt;/plugins&gt;
+&lt;/build&gt;
+</code></pre>
+
+			</section>
+		</article>
+	</main>
+
+<hr class="md_hr">
+<div class="footer">
+	@XIZERO Powered by <a href="http://hugo.spf13.com/">Hugo</a> and <a href="#">bigbig</a>
+</div>
+</body>
+</html>
+

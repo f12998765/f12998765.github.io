@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>XIZERO</title>
+    <link>http://f12998765.github.io/tags/%E4%BF%AE%E9%A5%B0%E7%AC%A6/index.xml</link>
+    <description>Recent content on XIZERO</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <atom:link href="http://f12998765.github.io/tags/%E4%BF%AE%E9%A5%B0%E7%AC%A6/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Java 修饰符</title>
+      <link>http://f12998765.github.io/java-notes/java-%E4%BF%AE%E9%A5%B0%E7%AC%A6/</link>
+      <pubDate>Fri, 18 Nov 2016 18:20:00 +0800</pubDate>
+      
+      <guid>http://f12998765.github.io/java-notes/java-%E4%BF%AE%E9%A5%B0%E7%AC%A6/</guid>
+      <description>
+
+&lt;h2 id=&#34;分类&#34;&gt;分类&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;访问修饰符 &lt;code&gt;public&lt;/code&gt;、&lt;code&gt;private&lt;/code&gt;、&lt;code&gt;protected&lt;/code&gt;、default&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;非访问修饰符 &lt;code&gt;static&lt;/code&gt;、&lt;code&gt;final&lt;/code&gt;、&lt;code&gt;abstract&lt;/code&gt;、&lt;code&gt;synchronized&lt;/code&gt;、&lt;code&gt;transient&lt;/code&gt;、&lt;code&gt;volatile&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;访问修饰符&#34;&gt;访问修饰符&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;保护对类、变量、方法和构造方法的访问&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;公有访问修饰符-public&#34;&gt;公有访问修饰符 &amp;ndash; public&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;被声明为 public 的类、方法、构造方法和接口能够被任何其他类访问&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;不同的包中，则需要导入相应 public 类所在的包。&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;由于类的继承性，类所有的公有方法和变量都能被其子类继承&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;私有访问修饰符-private&#34;&gt;私有访问修饰符 &amp;ndash; private&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;被声明为 private 的方法、变量和构造方法只能被所属类访问&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;类和接口不能声明为 private&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;声明为私有访问类型的变量只能通过类中公共的 Getter\/Setter 方法被外部类访问&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;保护访问修饰符-protected&#34;&gt;保护访问修饰符 &amp;ndash; protected&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;被声明为 protected 的变量、方法和构造器能被同一个包中的任何其他类访问，也能够被不同包中的子类访问。&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Protected 访问修饰符不能修饰类和接口，方法和成员变量能够声明为 protected，但是接口的成员变量和成员方法不能声明为 protected&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;子类能访问 Protected 修饰符声明的方法和变量&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;默认访问修饰符&#34;&gt;默认访问修饰符&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;使用默认访问修饰符声明的变量和方法，对同一个包内的类是可见的&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;接口里的变量都隐式声明为 public static final, 而接口里的方法默认情况下访问权限为 public&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;权限比较&#34;&gt;权限比较&lt;/h3&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;访问修饰符&lt;/th&gt;
+&lt;th&gt;所属类&lt;/th&gt;
+&lt;th&gt;所属包的其他类&lt;/th&gt;
+&lt;th&gt;子类&lt;/th&gt;
+&lt;th&gt;其他包的其他类&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;public&lt;/td&gt;
+&lt;td&gt;O&lt;/td&gt;
+&lt;td&gt;O&lt;/td&gt;
+&lt;td&gt;O&lt;/td&gt;
+&lt;td&gt;O&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;protected&lt;/td&gt;
+&lt;td&gt;O&lt;/td&gt;
+&lt;td&gt;O&lt;/td&gt;
+&lt;td&gt;O&lt;/td&gt;
+&lt;td&gt;X&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;default&lt;/td&gt;
+&lt;td&gt;O&lt;/td&gt;
+&lt;td&gt;O&lt;/td&gt;
+&lt;td&gt;X&lt;/td&gt;
+&lt;td&gt;X&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;private&lt;/td&gt;
+&lt;td&gt;O&lt;/td&gt;
+&lt;td&gt;X&lt;/td&gt;
+&lt;td&gt;X&lt;/td&gt;
+&lt;td&gt;X&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&#34;访问控制与继承&#34;&gt;访问控制与继承&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;继承中，子类的权限不能小于父类的。&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;父类中声明为 public 的方法在子类中也必须为 public。&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;父类中声明为 protected 的方法在子类中要么声明为 protected，要么声明为 public。&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;父类中默认修饰符声明的方法，能够在子类中声明为 protected。&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;父类中声明为 private 的方法，不能够被继承。&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;非访问修饰符&#34;&gt;非访问修饰符&lt;/h2&gt;
+
+&lt;h3 id=&#34;static-修饰符&#34;&gt;static 修饰符&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;被 static 修饰的成员变量和成员方法独立于该类的任何对象，被所有对象共享。&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;静态变量&#34;&gt;静态变量&lt;/h4&gt;
+
+&lt;p&gt;&lt;strong&gt;用static修饰的成员变量称为静态变量，其他的称为实例变量&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;静态变量在加载类的过程中完成空间分配，只有一份拷贝，可以直接用类名访问。&lt;/p&gt;
+
+&lt;p&gt;实例变量在对象实例化时分配内存。&lt;/p&gt;
+
+&lt;h4 id=&#34;静态方法&#34;&gt;静态方法&lt;/h4&gt;
+
+&lt;p&gt;&lt;strong&gt;静态方法中不能用 this 和 super 关键字，不能直接访问所属类的实例变量和实例方法，只能访问所属类的静态成员变量和成员方法&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;静态代码块&#34;&gt;静态代码块&lt;/h4&gt;
+
+&lt;p&gt;请看代码块相关内容。&lt;/p&gt;
+
+&lt;h4 id=&#34;静态导入&#34;&gt;静态导入&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;// 导入某个特定的静态方法
+import static packageName.className.methonName;
+
+// 导入类中的所有静态成员
+import static packageName.className.*;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;可以在当前类中直接用方法名调用静态方法，不必再通过类名来访问。&lt;/p&gt;
+
+&lt;h3 id=&#34;final-修饰符&#34;&gt;final 修饰符&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;最终的，不可改变&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;final-变量&#34;&gt;final 变量&lt;/h4&gt;
+
+&lt;p&gt;final 变量即常量，仅可以赋值一次。&lt;/p&gt;
+
+&lt;p&gt;final 修饰的成员变量，要显示初始化，如果没有只能在构造函数中进行一次赋值&lt;/p&gt;
+
+&lt;p&gt;当变量为引用类型的时候，不可以改变引用对象，但可以改变对象的属性等。&lt;/p&gt;
+
+&lt;h4 id=&#34;final-方法&#34;&gt;final 方法&lt;/h4&gt;
+
+&lt;p&gt;final 可以被子类继承，但不可以覆盖。&lt;/p&gt;
+
+&lt;h4 id=&#34;final-类&#34;&gt;final 类&lt;/h4&gt;
+
+&lt;p&gt;final 类不可继承。&lt;/p&gt;
+
+&lt;h4 id=&#34;final-static&#34;&gt;final static&lt;/h4&gt;
+
+&lt;p&gt;成员变量，必须显示初始化，不可以修改，成员方法不可覆盖，可以通过类名直接访问。&lt;/p&gt;
+
+&lt;h3 id=&#34;abstract-修饰符&#34;&gt;Abstract 修饰符&lt;/h3&gt;
+
+&lt;p&gt;用来定义抽象方法和抽象类。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;abstract 不可以 与 final , private , static 共存&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Abstract 修饰后，必须通过类继承或者接口实现来重写，否则就是摆设。&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;final 修饰的类 \ 方法 \ 属性均不可再次更改，故而不可以被重写。&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;private 修饰的类只可以定义在内部类；private 修饰的方法 \ 属性只可以在类中调用，重写时是访问不到这些方法和属性的。&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;static 静态的，其修饰的方法 \ 属性，是随着类的创建而创建，类的消亡而消亡，在编译时就已经确定的东西；但是 abstract 是 dynamic（动态）的，其必须通过类继承或接口实现来动态重写 abstract 方法。&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&#34;synchronized-修饰符&#34;&gt;Synchronized 修饰符&lt;/h3&gt;
+
+&lt;p&gt;Synchronized 关键字声明的方法同一时间只能被一个线程访问&lt;/p&gt;
+
+&lt;h3 id=&#34;transient-修饰符&#34;&gt;Transient 修饰符&lt;/h3&gt;
+
+&lt;p&gt;序列化的对象包含被 transient 修饰的实例变量时，java 虚拟机 (JVM) 跳过该特定的变量。&lt;/p&gt;
+
+&lt;p&gt;该修饰符包含在定义变量的语句中，用来预处理类和变量的数据类型。&lt;/p&gt;
+
+&lt;h3 id=&#34;volatile-修饰符&#34;&gt;Volatile 修饰符&lt;/h3&gt;
+
+&lt;p&gt;Volatile 修饰的成员变量在每次被线程访问时，都强制从共享内存中重新读取该成员变量的值。而且，当成员变量发生变化时，会强制线程将变化值回写到共享内存。这样在任何时刻，两个不同的线程总是看到某个成员变量的同一个值。&lt;/p&gt;
+
+&lt;p&gt;一个 volatile 对象引用可能是 null。&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

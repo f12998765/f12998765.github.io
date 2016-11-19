@@ -1,0 +1,775 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>XIZERO</title>
+    <link>http://f12998765.github.io/tags/%E7%BD%91%E5%9D%80/index.xml</link>
+    <description>Recent content on XIZERO</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <atom:link href="http://f12998765.github.io/tags/%E7%BD%91%E5%9D%80/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>URL Index</title>
+      <link>http://f12998765.github.io/notes/url-index/</link>
+      <pubDate>Fri, 18 Nov 2016 18:20:00 +0800</pubDate>
+      
+      <guid>http://f12998765.github.io/notes/url-index/</guid>
+      <description>
+
+&lt;h1 id=&#34;url-index&#34;&gt;URL Index&lt;/h1&gt;
+
+&lt;h2 id=&#34;资讯获取&#34;&gt;资讯获取&lt;/h2&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;left&#34;&gt;网站&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;地址&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;描述&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;V2EX&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;a href=&#34;https://v2ex.com/&#34;&gt;https://v2ex.com/&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;InfoQ&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;a href=&#34;http://www.infoq.com/cn/&#34;&gt;http://www.infoq.com/cn/&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;掘金&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;a href=&#34;http://gold.xitu.io/&#34;&gt;http://gold.xitu.io/&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;掘金酱&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;a href=&#34;http://e.xitu.io/#&#34;&gt;http://e.xitu.io/#&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;reddit&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;a href=&#34;https://www.reddit.com/&#34;&gt;https://www.reddit.com/&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;Hacks News&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;a href=&#34;https://news.ycombinator.com&#34;&gt;https://news.ycombinator.com&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;Startup News&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;a href=&#34;http://news.dbanotes.net&#34;&gt;http://news.dbanotes.net&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&#34;在线课程&#34;&gt;在线课程&lt;/h2&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;left&#34;&gt;网站&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;地址&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;描述&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;慕课网&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;a href=&#34;http://www.imooc.com/&#34;&gt;http://www.imooc.com/&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;实验楼&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;a href=&#34;https://www.shiyanlou.com&#34;&gt;https://www.shiyanlou.com&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;Jenkov.com&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;a href=&#34;http://tutorials.jenkov.com/&#34;&gt;http://tutorials.jenkov.com/&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;IBM developerWorks&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;a href=&#34;http://www.ibm.com/developerworks/cn/&#34;&gt;http://www.ibm.com/developerworks/cn/&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&#34;在线题库&#34;&gt;在线题库&lt;/h2&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;left&#34;&gt;网站&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;地址&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;描述&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;牛客网&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;a href=&#34;http://www.nowcoder.com/&#34;&gt;http://www.nowcoder.com/&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;Codewars&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;a href=&#34;https://www.codewars.com/&#34;&gt;https://www.codewars.com/&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;LeetCode&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;a href=&#34;https://leetcode.com/&#34;&gt;https://leetcode.com/&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&#34;git&#34;&gt;Git&lt;/h2&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;left&#34;&gt;网站&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;地址&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;描述&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;Coding&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;a href=&#34;https://coding.net&#34;&gt;https://coding.net&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;Github&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;a href=&#34;https://github.com/&#34;&gt;https://github.com/&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;GitBook&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;a href=&#34;https://www.gitbook.com/&#34;&gt;https://www.gitbook.com/&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&#34;云服务&#34;&gt;云服务&lt;/h2&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;left&#34;&gt;网站&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;地址&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;描述&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;腾讯云&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;a href=&#34;https://www.qcloud.com/&#34;&gt;https://www.qcloud.com/&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;七牛云&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;a href=&#34;http://www.qiniu.com/&#34;&gt;http://www.qiniu.com/&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&#34;java&#34;&gt;Java&lt;/h2&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;left&#34;&gt;网站&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;地址&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;描述&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;并发编程网&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;a href=&#34;https://ifeve.com&#34;&gt;https://ifeve.com&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;ImportNew&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;a href=&#34;http://www.importnew.com&#34;&gt;http://www.importnew.com&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&#34;综合&#34;&gt;综合&lt;/h2&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;left&#34;&gt;网站&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;地址&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;描述&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;码农网&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;a href=&#34;http://www.codeceo.com/&#34;&gt;http://www.codeceo.com/&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;博客园&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;a href=&#34;http://www.cnblogs.com/&#34;&gt;http://www.cnblogs.com/&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;字节技术&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;a href=&#34;http://www.4byte.cn/&#34;&gt;http://www.4byte.cn/&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&#34;问答&#34;&gt;问答&lt;/h2&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;left&#34;&gt;网站&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;地址&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;描述&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;segmentfault&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;a href=&#34;https://segmentfault.com/&#34;&gt;https://segmentfault.com/&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;StackOverflow&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;a href=&#34;https://stackflow.com&#34;&gt;https://stackflow.com&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&#34;图书社区&#34;&gt;图书社区&lt;/h2&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;left&#34;&gt;网站&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;地址&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;描述&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;图灵社区&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;a href=&#34;http://www.ituring.com.cn/&#34;&gt;http://www.ituring.com.cn/&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;异步社区&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;a href=&#34;http://www.epubit.com.cn/&#34;&gt;http://www.epubit.com.cn/&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&#34;邮件订阅&#34;&gt;邮件订阅&lt;/h2&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;left&#34;&gt;网站&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;地址&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;描述&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;众成翻译&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;a href=&#34;http://www.zcfy.cc/&#34;&gt;http://www.zcfy.cc/&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;奇舞周刊&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;a href=&#34;http://old.75team.com/weekly/&#34;&gt;http://old.75team.com/weekly/&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&#34;前端&#34;&gt;前端&lt;/h2&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;left&#34;&gt;网站&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;地址&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;描述&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;Mozilla 开发者网络&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;a href=&#34;https://developer.mozilla.org/zh-CN/&#34;&gt;https://developer.mozilla.org/zh-CN/&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;前端导航网&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;a href=&#34;http://jsdig.com/&#34;&gt;http://jsdig.com/&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;学习CSS布局&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;a href=&#34;http://zh.learnlayout.com/&#34;&gt;http://zh.learnlayout.com/&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&#34;前端框架&#34;&gt;前端框架&lt;/h2&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;left&#34;&gt;网站&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;地址&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;描述&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;Vue.js&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;a href=&#34;https://cn.vuejs.org/&#34;&gt;https://cn.vuejs.org/&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;Node.js&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;a href=&#34;https://nodejs.org/zh-cn/&#34;&gt;https://nodejs.org/zh-cn/&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;jQuery&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;a href=&#34;https://jquery.com/&#34;&gt;https://jquery.com/&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;Pure.CSS&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;a href=&#34;http://www.purecss.org/&#34;&gt;http://www.purecss.org/&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;Spectre.css&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;a href=&#34;https://picturepan2.github.io/spectre/&#34;&gt;https://picturepan2.github.io/spectre/&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&#34;生活&#34;&gt;生活&lt;/h2&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;left&#34;&gt;网站&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;地址&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;描述&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;豆瓣 FM&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;a href=&#34;https://douban.fm/&#34;&gt;https://douban.fm/&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;网易云音乐&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;a href=&#34;http://music.163.com/&#34;&gt;http://music.163.com/&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;BiliBili&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;a href=&#34;http://www.bilibili.com/&#34;&gt;http://www.bilibili.com/&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&#34;游戏&#34;&gt;游戏&lt;/h2&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;left&#34;&gt;网站&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;地址&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;描述&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;Steam&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;a href=&#34;http://store.steampowered.com/&#34;&gt;http://store.steampowered.com/&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;SteamCN&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;a href=&#34;http://steamcn.com/&#34;&gt;http://steamcn.com/&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;Humble Bundle&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;a href=&#34;https://www.humblebundle.com/&#34;&gt;https://www.humblebundle.com/&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;Install Guide Games&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;a href=&#34;http://igg-games.com/&#34;&gt;http://igg-games.com/&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;奶牛关&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;a href=&#34;https://cowlevel.net&#34;&gt;https://cowlevel.net&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;MC 中文论坛&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;a href=&#34;http://www.mcbbs.net/&#34;&gt;http://www.mcbbs.net/&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;Minecraft Wiki&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;a href=&#34;http://minecraft-zh.gamepedia.com/Minecraft_Wiki&#34;&gt;http://minecraft-zh.gamepedia.com/Minecraft_Wiki&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&#34;发现软件&#34;&gt;发现软件&lt;/h2&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;left&#34;&gt;网站&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;地址&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;描述&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;36Kr Next&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;a href=&#34;http://next.36kr.com/posts&#34;&gt;http://next.36kr.com/posts&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;MindStore&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;a href=&#34;http://mindstore.io/&#34;&gt;http://mindstore.io/&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;开源资讯&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;a href=&#34;http://www.oschina.net/news/list?show=project&#34;&gt;http://www.oschina.net/news/list?show=project&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;少数派&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;a href=&#34;http://sspai.com/&#34;&gt;http://sspai.com/&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;小众软件&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;a href=&#34;http://www.appinn.com/&#34;&gt;http://www.appinn.com/&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;异次元软件&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;a href=&#34;http://www.iplaysoft.com/&#34;&gt;http://www.iplaysoft.com/&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&#34;在线工具&#34;&gt;在线工具&lt;/h2&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;left&#34;&gt;网站&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;地址&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;描述&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;花蜜密码&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;a href=&#34;https://flowerpassword.com/app/web&#34;&gt;https://flowerpassword.com/app/web&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;石墨文档&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;a href=&#34;https://shimo.im&#34;&gt;https://shimo.im&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;Cmd Markdown&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;a href=&#34;https://www.zybuluo.com&#34;&gt;https://www.zybuluo.com&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;简洁的云笔记&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;a href=&#34;http://showtxt.cn/&#34;&gt;http://showtxt.cn/&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;HowSoftWorks&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;a href=&#34;http://www.howsoftworks.net/&#34;&gt;http://www.howsoftworks.net/&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;垂直索引&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;a href=&#34;http://www.51index.cn/&#34;&gt;http://www.51index.cn/&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;MoeTu&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;a href=&#34;https://moetu.org/&#34;&gt;https://moetu.org/&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;JSFiddle&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;a href=&#34;https://jsfiddle.net/&#34;&gt;https://jsfiddle.net/&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;Instapaper&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;a href=&#34;https://www.instapaper.com&#34;&gt;https://www.instapaper.com&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;ImageToBase64&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;a href=&#34;http://www.vgot.net/test/image2base64.php?&#34;&gt;http://www.vgot.net/test/image2base64.php?&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;regexper&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;a href=&#34;https://regexper.com/&#34;&gt;https://regexper.com/&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&#34;ppt&#34;&gt;PPT&lt;/h2&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;left&#34;&gt;网站&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;地址&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;描述&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;Instacode&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;a href=&#34;http://instaco.de/&#34;&gt;http://instaco.de/&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;BgRemover&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;a href=&#34;http://www.2gei.com/bgremover&#34;&gt;http://www.2gei.com/bgremover&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;OfficePLUS&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;a href=&#34;http://www.officeplus.cn/Template/Home.shtml&#34;&gt;http://www.officeplus.cn/Template/Home.shtml&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&#34;im&#34;&gt;IM&lt;/h2&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;left&#34;&gt;网站&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;地址&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;描述&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;Telegram Messenger&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;a href=&#34;https://telegram.org/&#34;&gt;https://telegram.org/&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&#34;他言&#34;&gt;他言&lt;/h2&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;left&#34;&gt;网站&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;地址&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;描述&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;阮一峰&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;a href=&#34;http://www.ruanyifeng.com/blog/&#34;&gt;http://www.ruanyifeng.com/blog/&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;廖雪峰&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;a href=&#34;http://www.liaoxuefeng.com/&#34;&gt;http://www.liaoxuefeng.com/&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;javascript、Python、Git 教程&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;java_my_life&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;a href=&#34;http://www.cnblogs.com/java-my-life/&#34;&gt;http://www.cnblogs.com/java-my-life/&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;设计模式&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;SharEDITor&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;a href=&#34;http://www.shareditor.com/&#34;&gt;http://www.shareditor.com/&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;全栈工程师&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;张鑫旭-鑫空间-鑫生活&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;a href=&#34;http://www.zhangxinxu.com/wordpress/&#34;&gt;http://www.zhangxinxu.com/wordpress/&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;前端&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;HollisChuang&amp;rsquo;s Blog&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;a href=&#34;http://www.hollischuang.com/&#34;&gt;http://www.hollischuang.com/&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Java 成神之路&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;Hello World&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;a href=&#34;http://blog.mayongfa.cn&#34;&gt;http://blog.mayongfa.cn&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;MacTalk&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;a href=&#34;http://macshuo.com/&#34;&gt;http://macshuo.com/&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;吕立青&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;a href=&#34;http://blog.jimmylv.info/&#34;&gt;http://blog.jimmylv.info/&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;read and go&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;a href=&#34;http://unee.wang/&#34;&gt;http://unee.wang/&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;鸟窝&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;a href=&#34;http://colobu.com/&#34;&gt;http://colobu.com/&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;Mafly&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;a href=&#34;http://blog.mayongfa.cn/&#34;&gt;http://blog.mayongfa.cn/&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

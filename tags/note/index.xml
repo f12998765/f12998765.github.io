@@ -1,0 +1,468 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>XIZERO</title>
+    <link>http://f12998765.github.io/tags/note/index.xml</link>
+    <description>Recent content on XIZERO</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <atom:link href="http://f12998765.github.io/tags/note/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Centos 配置指南</title>
+      <link>http://f12998765.github.io/notes/centos-note/</link>
+      <pubDate>Fri, 18 Nov 2016 18:20:00 +0800</pubDate>
+      
+      <guid>http://f12998765.github.io/notes/centos-note/</guid>
+      <description>
+
+&lt;h2 id=&#34;ssh-配置修改&#34;&gt;SSH 配置修改&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;#修改ssh配置
+vim /etc/ssh/sshd_config
+
+#使用第二代通讯协定
+Protocol 2
+
+#不容许空白密码
+PermitEmptyPasswords no
+
+#禁止root 使用SSH 登入
+PermitRootLogin no
+
+#重新启动sshd
+systemctl restart sshd.service
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;更新系统和软件&#34;&gt;更新系统和软件&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;yum update &amp;amp;&amp;amp; yum upgrade
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;创建用户赋予权限&#34;&gt;创建用户赋予权限&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;#创建用户，修改密码
+useradd [username]
+passwd [username]
+
+#修改权限
+EDITOR=nano visudo
+#修改 %wheel ALL=(ALL) ALL
+
+#修改用户组
+usermod -aG wheel [username]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;更改计算机的名称&#34;&gt;更改计算机的名称&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo hostnamectl --static set-hostname &amp;lt;host-name&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;安装-mysql&#34;&gt;安装 MySQL&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;#添加源
+wget http://repo.mysql.com/mysql-community-release-el7-5.noarch.rpm
+
+#安装软件包
+rpm -ivh mysql-community-release-el7-5.noarch.rpm
+
+#yum 安装
+yum install mysql-server
+
+#启动 mysql
+systemctl start mysql
+
+#修改root密码
+mysqladmin -u root password &amp;quot;newpassword&amp;quot;
+
+#本地登录
+mysql -u root -p
+
+#查看用户
+mysql &amp;gt; select host,user from user;
+
+#添加远程用户
+mysql &amp;gt; Grant all privileges on *.* to &#39;zero&#39;@&#39;%&#39; identified by &#39;zero&#39; with grant option;
+
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Git 常用命令</title>
+      <link>http://f12998765.github.io/notes/git-note/</link>
+      <pubDate>Fri, 18 Nov 2016 18:20:00 +0800</pubDate>
+      
+      <guid>http://f12998765.github.io/notes/git-note/</guid>
+      <description>
+
+&lt;h2 id=&#34;设置配置文件&#34;&gt;设置配置文件&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git config [--global] user.name &amp;quot;[name]&amp;quot;
+git config [--global] user.email &amp;quot;[email]&amp;quot;
+git config --global color.ui true
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;生成ssh-key&#34;&gt;生成SSH Key&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# 检查是否存在
+cd ~/.ssh
+# 生成SSH Key，在id_rsa.pub中
+ssh-keygen -t rsa -C &amp;quot;your_email@example.com&amp;quot;
+# 测试
+ssh -T git@github.com
+ssh -T git@git.coding.net
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;https-方式记住密码&#34;&gt;HTTPS 方式记住密码&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git config credential.helper store
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;初始化仓库&#34;&gt;初始化仓库&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# 初始化仓库
+git init [project-name]
+# 克隆远程仓库
+git clone [project-URL]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;查看当前状态&#34;&gt;查看当前状态&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git status
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;添加到暂存区&#34;&gt;添加到暂存区&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git add [-A/.]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;提交代码&#34;&gt;提交代码&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git commit -m &amp;quot;edit message&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;创建分支&#34;&gt;创建分支&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# 列出所有本地分支
+git branch
+
+# 新建一个分支，但依然停留在当前分支
+git branch [branch-name]
+# 新建一个分支，并切换到该分支
+git checkout -b [branch]
+
+# 切换到指定分支，并更新工作区
+git checkout [branch-name]
+
+# 删除分支
+git branch -d [branch-name]
+
+# 合并指定分支到当前分支
+git merge [branch]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;远程仓库&#34;&gt;远程仓库&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# 增加一个新的远程仓库，并命名
+git remote add [name] [url]
+
+# 查看当前的远程仓库
+git remote -v
+# 需要多个远程仓库时，再添加一个新的远程仓库
+git remote set-url --add [name] [url]
+# 推送多个远程仓库
+git push all --all
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;推送&#34;&gt;推送&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# 完整命令
+git push origin [localbranch]:[remotebranch]
+# 忽略远程分支，代表远程分支与本地分支名相同
+git push origin [localbranch]
+# 忽略本地分支，代表删除远程分支
+git push origin :[remotebranch]
+# 忽略分支，默认本地分支与远程分支关联
+git push
+# 设置分支关联
+git push --set-upstream origin [remotebranch]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;拉取&#34;&gt;拉取&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# 从远程仓库下载分支
+git fetch origin master
+# 合并分支到当前分支
+git merge origin/master
+# 拉取远程仓库分支，与当前分支合并
+git pull origin master
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;待补充……&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Mybatis Note</title>
+      <link>http://f12998765.github.io/notes/mybatis-note/</link>
+      <pubDate>Fri, 18 Nov 2016 18:20:00 +0800</pubDate>
+      
+      <guid>http://f12998765.github.io/notes/mybatis-note/</guid>
+      <description>
+
+&lt;h1 id=&#34;mybatis-note&#34;&gt;Mybatis Note&lt;/h1&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Scraps of notes</title>
+      <link>http://f12998765.github.io/notes/scraps-of-notes/</link>
+      <pubDate>Fri, 18 Nov 2016 18:20:00 +0800</pubDate>
+      
+      <guid>http://f12998765.github.io/notes/scraps-of-notes/</guid>
+      <description>
+
+&lt;h1 id=&#34;scraps-of-notes&#34;&gt;Scraps of notes&lt;/h1&gt;
+
+&lt;h2 id=&#34;1-idea新建maven项目卡住显示-generating-project-in-batch-mode&#34;&gt;1. IDEA新建MAVEN项目卡住显示 : &amp;ldquo;Generating Project in Batch mode&amp;rdquo;&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;下载 &lt;code&gt;archetype-catalog.xml&lt;/code&gt; ,放到 &amp;ldquo;.m2\repository\org\apache\maven\archetype\archetype-catalog\2.4&amp;rdquo; 目录下
+
+&lt;ul&gt;
+&lt;li&gt;下载文件夹链接 &lt;code&gt;http://repo.maven.apache.org/maven2/&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;找到 &lt;code&gt;archetype-catalog.xml&lt;/code&gt; ,右键保存&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;在 &lt;code&gt;Settings&lt;/code&gt;&amp;gt; &lt;code&gt;Maven&lt;/code&gt; &amp;gt; &lt;code&gt;Runner&lt;/code&gt; &amp;gt; &lt;code&gt;VM Options&lt;/code&gt; 中添加 &lt;code&gt;-DarchetypeCatalog=internal&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;PS：注意右上角的灰字：for default project，而不是for current project&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;2-win-下快捷切换中英文符号&#34;&gt;2. Win 下快捷切换中英文符号&lt;/h2&gt;
+
+&lt;p&gt;快捷键 :  &amp;ldquo;&lt;code&gt;Ctrl&lt;/code&gt; + &lt;code&gt;.&lt;/code&gt;&amp;ldquo;&lt;/p&gt;
+
+&lt;h2 id=&#34;3-intellij-idea编译报错-information-java-javactask-源发行版-1-8-需要目标发行版-1-8&#34;&gt;3. IntelliJ Idea编译报错：&amp;rdquo;Information:java: javacTask: 源发行版 1.8 需要目标发行版 1.8&amp;rdquo;&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;IDEA :  File&amp;ndash;&amp;gt;Settings&amp;ndash;&amp;gt;Compiler&amp;ndash;&amp;gt;Java Compiler&lt;/li&gt;
+&lt;li&gt;设置相应Module的target byte code version的合适版本就行&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;4-tomcat-中取消项目地址&#34;&gt;4. Tomcat 中取消项目地址&lt;/h2&gt;
+
+&lt;p&gt;在tomcat -&amp;gt; conf -&amp;gt; server.xml 的&lt;Engine&gt;中添加&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-xml&#34;&gt;&amp;lt;Context path=&amp;quot;&amp;quot; docBase=&amp;quot;项目名&amp;quot; debug=&amp;quot;0&amp;quot; reloadable=&amp;quot;true&amp;quot;/&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;5-sftp-提示无权限&#34;&gt;5. sftp 提示无权限&lt;/h2&gt;
+
+&lt;p&gt;修改父目录的权限&lt;/p&gt;
+
+&lt;h2 id=&#34;6-linux-zip-压缩-命令&#34;&gt;6. Linux zip 压缩 命令&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;zip -r [filename.zip] [dir]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;7-异步加载js&#34;&gt;7. 异步加载js&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;var script = document.createElement(&amp;quot;script&amp;quot;);
+script.type = &amp;quot;text/javascript&amp;quot;;
+script.src = &amp;quot;http://libs.baidu.com/jquery/2.0.3/jquery.min.js&amp;quot;;
+document.getElementsByTagName(&#39;head&#39;)[0].appendChild(script);
+setTimeout(function() {
+    //Other Code    
+},100);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;8-children-返回对象的遍历&#34;&gt;8. children 返回对象的遍历&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://stackoverflow.com/questions/28442138/children-does-not-work-on-specified-index-of-jquery-return&#34;&gt;.children() does not work on specified index of jquery return&lt;/a&gt;
+It&amp;rsquo;s because it is no longer a jQuery object after you specify an index [7]. Thus, you are calling a jQuery method on a DOM element (which doesn&amp;rsquo;t work).&lt;/p&gt;
+
+&lt;p&gt;You could use the .eq() method instead:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;$(&#39;div&#39;).eq(7).children();
+or
+$($(&#39;div&#39;)[7]).children();
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;It&amp;rsquo;s worth pointing out that this would work because the DOM element is wrapped in $() - thus turning it into a jQuery object.&lt;/p&gt;
+
+&lt;h2 id=&#34;9-为什么listary-的注册码这么奇葩-已过期&#34;&gt;9. 为什么Listary 的注册码这么奇葩？(已过期)&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;姓    名（Name）：Vovan
+邮    箱（Email）：vovan666@6n8d7oa
+序 列 号（Code）：
+66666666666666666666666666666666
+66666666666666666666666666666666
+66666666666666666666666666666666
+66666666666666666666666666666666
+66666666666666666666666666666666
+66666666666666666666666666666666
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;10-笔记本开wifi热点&#34;&gt;10. 笔记本开wifi热点&lt;/h2&gt;
+
+&lt;p&gt;cmd 运行&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;netsh wlan set hostednetwork mode=allow ssid=wifi名 key=密码 keyUsage =persistent
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;例&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;netsh wlan set hostednetwork mode=allow ssid=xxoo key=woshidabendan keyUsage =persistent
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;启动&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;netsh wlan start hostednetwork
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;关闭&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;netsh wlan stop hostednetwork
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;11-staruml-license&#34;&gt;11. StarUML license&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;目录&lt;/strong&gt; C:\Program Files (x86)\StarUML\www\license\node\LicenseManagerDomain.js&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://moetu.org/images/2016/10/14/cec8de.png&#34; alt=&#34;cec8de.png&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;12-listary-pro-5-破解&#34;&gt;12. Listary pro 5 破解&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://pan.baidu.com/share/link?shareid=368037&amp;amp;uk=605837026#list/path=%2F&#34;&gt;百度云&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;13-flysee-关联文件无效&#34;&gt;13. FlySee 关联文件无效&lt;/h2&gt;
+
+&lt;p&gt;以管理员运行&lt;/p&gt;
+
+&lt;h2 id=&#34;14-java-可变参数列表&#34;&gt;14. java 可变参数列表&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;可以传入 0 个 或更多的参数，接收参数是数组类型&lt;/li&gt;
+&lt;li&gt;函数有多个参数时，必须放在最后&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;public void test(int num , String ... args) {
+    //....
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;15-泛型接口和泛型抽象类&#34;&gt;15. 泛型接口和泛型抽象类&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;泛型接口可以做基础的容器接口，定义基本的操作。&lt;/li&gt;
+&lt;li&gt;泛型抽象类实现泛型接口。&lt;/li&gt;
+&lt;li&gt;具体接口继承泛型接口，并定义自己的方法。&lt;/li&gt;
+&lt;li&gt;具体类继承泛型抽象类，并实现具体接口。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;16-maven-设置默认jdk版本&#34;&gt;16. Maven 设置默认JDK版本&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;a. 修改 settings.xml&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;vim %maven%/conf/settings.xml
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-xml&#34;&gt;&amp;lt;profiles&amp;gt;
+  &amp;lt;profile&amp;gt;
+    &amp;lt;id&amp;gt;development&amp;lt;/id&amp;gt;
+    &amp;lt;activation&amp;gt;
+      &amp;lt;jdk&amp;gt;1.8&amp;lt;/jdk&amp;gt;
+      &amp;lt;activeByDefault&amp;gt;true&amp;lt;/activeByDefault&amp;gt;
+    &amp;lt;/activation&amp;gt;
+    &amp;lt;properties&amp;gt;
+      &amp;lt;maven.compiler.source&amp;gt;1.8&amp;lt;/maven.compiler.source&amp;gt;
+      &amp;lt;maven.compiler.target&amp;gt;1.8&amp;lt;/maven.compiler.target&amp;gt;
+      &amp;lt;maven.compiler.compilerVersion&amp;gt;1.8&amp;lt;/maven.compiler.compilerVersion&amp;gt;
+    &amp;lt;/properties&amp;gt;
+  &amp;lt;/profile&amp;gt;
+&amp;lt;/profiles&amp;gt;
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;b. 修改 pom.xml&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-xml&#34;&gt;&amp;lt;build&amp;gt;
+  &amp;lt;plugins&amp;gt;
+    &amp;lt;plugin&amp;gt;
+      &amp;lt;groupId&amp;gt;org.apache.maven.plugins&amp;lt;/groupId&amp;gt;
+      &amp;lt;artifactId&amp;gt;maven-compiler-plugin&amp;lt;/artifactId&amp;gt;
+      &amp;lt;configuration&amp;gt;
+        &amp;lt;source&amp;gt;1.8&amp;lt;/source&amp;gt;
+        &amp;lt;target&amp;gt;1.8&amp;lt;/target&amp;gt;
+      &amp;lt;/configuration&amp;gt;
+    &amp;lt;/plugin&amp;gt;
+  &amp;lt;/plugins&amp;gt;
+&amp;lt;/build&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Spring MVC 中文乱码</title>
+      <link>http://f12998765.github.io/notes/springmvc-encoding/</link>
+      <pubDate>Fri, 18 Nov 2016 18:20:00 +0800</pubDate>
+      
+      <guid>http://f12998765.github.io/notes/springmvc-encoding/</guid>
+      <description>
+
+&lt;h1 id=&#34;spring-mvc-中文乱码&#34;&gt;Spring MVC 中文乱码&lt;/h1&gt;
+
+&lt;p&gt;摘要至：&lt;a href=&#34;http://blog.csdn.net/kalision/article/details/46441081/&#34;&gt;passport_daizi&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;jsp 页面设置&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-jsp&#34;&gt;&amp;lt;%page language=&amp;quot;java&amp;quot; contentType=&amp;quot;text/html;charset=utf-8&amp;quot; pageEncoding=&amp;quot;utf-8&amp;quot; %&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;表单提交的方式必须是 Post  ，get Sprng的编码过滤器不起效果&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;form action=&amp;quot;&amp;quot; name=&amp;quot;aform&amp;quot; method=&amp;quot;post&amp;quot; &amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;**
+在 web.xml 中添加编码过滤器,放在首个过滤器**&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;forceEncoding=true  无论请求中是否包含编码，都是用过滤器的编码解析&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-xml&#34;&gt;&amp;lt;filter&amp;gt;  
+        &amp;lt;filter-name&amp;gt;characterEncodingFilter&amp;lt;/filter-name&amp;gt;  
+        &amp;lt;filter-class&amp;gt;org.springframework.web.filter.CharacterEncodingFilter&amp;lt;/filter-class&amp;gt;  
+        &amp;lt;init-param&amp;gt;  
+            &amp;lt;param-name&amp;gt;encoding&amp;lt;/param-name&amp;gt;  
+            &amp;lt;param-value&amp;gt;UTF-8&amp;lt;/param-value&amp;gt;  
+        &amp;lt;/init-param&amp;gt;  
+        &amp;lt;init-param&amp;gt;  
+            &amp;lt;param-name&amp;gt;forceEncoding&amp;lt;/param-name&amp;gt;  
+            &amp;lt;param-value&amp;gt;true&amp;lt;/param-value&amp;gt;  
+        &amp;lt;/init-param&amp;gt;  
+    &amp;lt;/filter&amp;gt;  
+    &amp;lt;filter-mapping&amp;gt;  
+        &amp;lt;filter-name&amp;gt;characterEncodingFilter&amp;lt;/filter-name&amp;gt;  
+        &amp;lt;url-pattern&amp;gt;/*&amp;lt;/url-pattern&amp;gt;  
+    &amp;lt;/filter-mapping&amp;gt;  
+&amp;lt;/filter&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;连接数据库的参数设置&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-xml&#34;&gt;&amp;lt;property name=&amp;quot;url&amp;quot; value=&amp;quot;jdbc:mysql://localhost:3306/database?useUnicode=true&amp;amp;characterEncoding=UTF-8&amp;quot;&amp;gt;&amp;lt;/property&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;数据库的编码&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;utf8_general_ci&lt;/code&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
