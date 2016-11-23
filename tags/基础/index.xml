@@ -8,6 +8,138 @@
     <atom:link href="http://f12998765.github.io/tags/%E5%9F%BA%E7%A1%80/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Java 序列化</title>
+      <link>http://f12998765.github.io/java-notes/java%E5%BA%8F%E5%88%97%E5%8C%96/</link>
+      <pubDate>Wed, 23 Nov 2016 16:28:21 +0800</pubDate>
+      
+      <guid>http://f12998765.github.io/java-notes/java%E5%BA%8F%E5%88%97%E5%8C%96/</guid>
+      <description>
+
+&lt;h2 id=&#34;什么是序列化&#34;&gt;什么是序列化？&lt;/h2&gt;
+
+&lt;p&gt;序列化是为了保存对象的状态，将对象的状态装换为字节数组，反序列化就是重构对象。&lt;/p&gt;
+
+&lt;p&gt;就像是冰冻魔法&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;实际上，序列化的思想是 “冻结” 对象状态，传输对象状态（写到磁盘、通过网络传输等等），然后 “解冻” 状态，重新获得可用的 Java 对象。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;相关API&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;java.io.Serializable&lt;/li&gt;
+&lt;li&gt;java.io.Externalizable&lt;/li&gt;
+&lt;li&gt;ObjectOutput&lt;/li&gt;
+&lt;li&gt;ObjectInput&lt;/li&gt;
+&lt;li&gt;ObjectOutputStream&lt;/li&gt;
+&lt;li&gt;ObjectInputStream&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;怎么用&#34;&gt;怎么用？&lt;/h2&gt;
+
+&lt;p&gt;只要一个类实现了 &lt;code&gt;java.io.Serializable&lt;/code&gt; 接口就能被序列化,该接口仅作为一个标识，标识这个类可以进行序列化。&lt;/p&gt;
+
+&lt;p&gt;ObjectOutputStream.writeObject(Object); 将对象入输出流，序列化&lt;/p&gt;
+
+&lt;p&gt;ObjectInputStream.readObject(); 从流中读取对象，反序列化&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;标识:在进行序列化时，在 writeObject() 中会检测 obj instanceof Serializable&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&#34;例&#34;&gt;例&lt;/h3&gt;
+
+&lt;p&gt;序列化对象&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;import java.io.Serializable;
+
+public class Cat implements Serializable {
+    private String name;
+    private String age;
+    private static final long serialVersionUID = 1L;
+    public Cat() {
+    }
+
+    public Cat(String name, String age) {
+
+        this.name = name;
+        this.age = age;
+    }
+
+   //get() set()
+
+    @Override
+    public String toString() {
+        return &amp;quot;Cat{&amp;quot; +
+                &amp;quot;name=&#39;&amp;quot; + name + &#39;\&#39;&#39; +
+                &amp;quot;, age=&#39;&amp;quot; + age + &#39;\&#39;&#39; +
+                &#39;}&#39;;
+    }
+}
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;序列化过程&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;import com.x.model.Cat;
+
+import java.io.*;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Cat cat = new Cat(&amp;quot;huang&amp;quot;,&amp;quot;5&amp;quot;);
+        System.out.println(cat);
+
+
+
+        try (FileOutputStream file = new FileOutputStream(&amp;quot;he&amp;quot;); ObjectOutputStream oos =  new ObjectOutputStream(file);){
+            oos.writeObject(cat);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        try (FileInputStream file = new FileInputStream(&amp;quot;he&amp;quot;);ObjectInputStream ois = new ObjectInputStream(file)) {
+            Cat cat1 = (Cat)ois.readObject();
+            System.out.println(cat1);
+        } catch (IOException | ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;备注&#34;&gt;备注&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;使用 Externalizable 接口，需要重写 writeExternal() 和 readExternal() ，可自定义序列化。&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;序列化ID(private static final long serialVersionUID)不同，反序列化报java.io.InvalidClassException异常。&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;静态变量不会序列化。&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;使用 transient 关键字的变量不会序列化。&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;序列化中继承&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;父类实现序列化，子类默认继承&lt;/li&gt;
+&lt;li&gt;子类实现序列化，若父类变量也要保存则需要父类序列化；不需要父类序列化，反序列化时调用父类的无参构造函数。&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;参考连接&#34;&gt;参考连接&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.hollischuang.com/archives/1150&#34;&gt;Java对象的序列化与反序列化&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.ibm.com/developerworks/cn/java/j-5things1/&#34;&gt;关于 Java 对象序列化您不知道的 5 件事&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.ibm.com/developerworks/cn/java/j-lo-serial/&#34;&gt;Java 序列化的高级认识&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
       <title>String相关</title>
       <link>http://f12998765.github.io/java-notes/String%E7%9B%B8%E5%85%B3/</link>
       <pubDate>Tue, 22 Nov 2016 08:36:39 +0800</pubDate>
