@@ -8,6 +8,245 @@
     <atom:link href="http://f12998765.github.io/tags/%E5%9F%BA%E7%A1%80/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>String相关</title>
+      <link>http://f12998765.github.io/java-notes/String%E7%9B%B8%E5%85%B3/</link>
+      <pubDate>Tue, 22 Nov 2016 08:36:39 +0800</pubDate>
+      
+      <guid>http://f12998765.github.io/java-notes/String%E7%9B%B8%E5%85%B3/</guid>
+      <description>
+
+&lt;h2 id=&#34;string-成员变量&#34;&gt;String 成员变量&lt;/h2&gt;
+
+&lt;p&gt;String 是典型的&lt;a href=&#34;http://www.cnblogs.com/java-my-life/archive/2012/05/08/2487757.html&#34;&gt;不变模式设计&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://grepcode.com/file/repository.grepcode.com/java/root/jdk/openjdk/8u40-b25/java/lang/String.java?av=f&#34;&gt;JDK 8 源码地址&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://grepcode.com/file/repository.grepcode.com/java/root/jdk/openjdk/6-b27/java/lang/String.java?av=f&#34;&gt;JDK 6 源码地址&lt;/a&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;
+//JDK 1.8
+public final class String implements java.io.Serializable, Comparable&amp;lt;String&amp;gt;, CharSequence {
+	//The value is used for character storage.
+	private final char value[];
+
+	//Cache the hash code for the string
+	private int hash; // Default to 0
+}
+
+//JDK1.6
+public final class String implements java.io.Serializable, Comparable&amp;lt;String&amp;gt;, CharSequence{
+	//The value is used for character storage.
+	private final char value[];
+
+	//The offset is the first index of the storage that is used.
+	private final int offset;
+
+	//The count is the number of characters in the String.
+	private final int count;
+
+	//Cache the hash code for the string
+	private int hash; // Default to 0
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;常量池&#34;&gt;常量池&lt;/h2&gt;
+
+&lt;p&gt;java编译时会生成常量池（Constant pool），保存字面常量和符号引用（类名、方法名、接口名和字段名等）。&lt;/p&gt;
+
+&lt;h3 id=&#34;创建字符串对象&#34;&gt;创建字符串对象&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;new 运算符&lt;/li&gt;
+&lt;li&gt;字符串常量&lt;/li&gt;
+&lt;li&gt;&amp;rdquo;+&amp;ldquo;连接的表达式&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;相同的字符串常量或结果相同的字符串常量表达式创建字符串对象时，
+如果常量池中已经存在，相同序列的字符串，则该对象直接指向；不存在时，会在常量池创建一个新的字符串。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;String a1 = &amp;quot;abc&amp;quot;;
+String a2 = &amp;quot;abc&amp;quot;;
+String a3 = &amp;quot;a&amp;quot;+&amp;quot;bc&amp;quot;;
+System,out.println(a1==a2+&amp;quot;\t&amp;quot;+a2==a3); //true true
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;因为字符串序列相同，指向的常量池中同一个字符串，所以为true。&lt;/p&gt;
+
+&lt;p&gt;使用 new 创建字符串对象时，会在堆中创建一个新的String对象，并且该String对象的char value[]会指向常量池中的字符串，不存在则创建。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;
+String b1 = new String(&amp;quot;abc&amp;quot;);
+String b2 = new String(&amp;quot;abc&amp;quot;);
+System.out.println(b1==b2); //false
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;使用new会在堆中创建新的对象,地址当然不同.&lt;/p&gt;
+
+&lt;h3 id=&#34;string&#34;&gt;String +&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&amp;rdquo; &amp;ldquo;+[String] 或 [String]+[String]&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;会在编译时,调用StringBuilder的append()和toString(),最终指向的是堆上新创建的String对象.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;String c1 = &amp;quot;abc&amp;quot;;
+String c2 = &amp;quot;123&amp;quot;+c1;
+String c3 = &amp;quot;123abc&amp;quot;;
+System.out.println(c2==c3); //false
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&amp;rdquo; &amp;ldquo;+&amp;rdquo; &amp;ldquo;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;[final String]+[final String] 或 [final String]+&amp;rdquo; &amp;ldquo;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;当final修饰的对象发生连接动作时，虚拟机会进行优化，将表达式结果直接赋值给目标变量.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;final String a = &amp;quot;hello &amp;quot;;
+final String b = &amp;quot;world&amp;quot;;
+String c = a + &amp;quot;world&amp;quot;;
+String d = &amp;quot;hello world&amp;quot;;
+System.out.println(c==d); //true
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;string-intern&#34;&gt;String.intern()&lt;/h2&gt;
+
+&lt;p&gt;是一个 Native 方法，调用 C++的 StringTable::intern&lt;/p&gt;
+
+&lt;p&gt;如果常量池中已经存在该字符串，则返回池中的字符串；否则将此字符串添加到常量池中，并返回引用。&lt;/p&gt;
+
+&lt;h2 id=&#34;string-substring&#34;&gt;String.substring()&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;//JDK1.6
+public String substring(int beginIndex) {
+	return substring(beginIndex, count);
+}
+public String substring(int beginIndex, int endIndex) {
+	if (beginIndex &amp;lt; 0) {
+		throw new StringIndexOutOfBoundsException(beginIndex);
+	}
+	if (endIndex &amp;gt; count) {
+		throw new StringIndexOutOfBoundsException(endIndex);
+	}
+	if (beginIndex &amp;gt; endIndex) {
+		throw new StringIndexOutOfBoundsException(endIndex - beginIndex);
+	}
+	return ((beginIndex == 0) &amp;amp;&amp;amp; (endIndex == count)) ? this :
+		new String(offset + beginIndex, endIndex - beginIndex, value);
+}
+
+String(int offset, int count, char value[]) {
+	this.value = value;
+	this.offset = offset;
+	this.count = count;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;JDK1.6 中的实现只是调整了 offset 和 count ,使用的是共享的字符数组。&lt;/p&gt;
+
+&lt;p&gt;当使用substring截取一个很长的字符串的2个字符时，会占用这个长字符串，不能垃圾回收。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;//JDK 1.8
+public String substring(int beginIndex) {
+        if (beginIndex &amp;lt; 0) {
+            throw new StringIndexOutOfBoundsException(beginIndex);
+        }
+        int subLen = value.length - beginIndex;
+		if (subLen &amp;lt; 0) {
+            throw new StringIndexOutOfBoundsException(subLen);
+        }
+        return (beginIndex == 0) ? this : new String(value, beginIndex, subLen);
+}
+
+public String substring(int beginIndex, int endIndex) {
+		if (beginIndex &amp;lt; 0) {
+			throw new StringIndexOutOfBoundsException(beginIndex);
+		}
+		if (endIndex &amp;gt; value.length) {
+			throw new StringIndexOutOfBoundsException(endIndex);
+		}
+		int subLen = endIndex - beginIndex;
+		if (subLen &amp;lt; 0) {
+			throw new StringIndexOutOfBoundsException(subLen);
+		}
+		return ((beginIndex == 0) &amp;amp;&amp;amp; (endIndex == value.length)) ? this : new String(value, beginIndex, subLen);
+}
+
+public String(char value[], int offset, int count) {
+		if (offset &amp;lt; 0) {
+			throw new StringIndexOutOfBoundsException(offset);
+		}
+		if (count &amp;lt; 0) {
+			throw new StringIndexOutOfBoundsException(count);
+		}
+		// Note: offset or count might be near -1&amp;gt;&amp;gt;&amp;gt;1.
+		if (offset &amp;gt; value.length - count) {
+			throw new StringIndexOutOfBoundsException(offset + count);
+		}
+		this.value = Arrays.copyOfRange(value, offset, offset+count);
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;分析一下 substring 源码&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;报StringIndexOutOfBoundsException异常
+
+&lt;ul&gt;
+&lt;li&gt;beginIndex &amp;lt; 0&lt;/li&gt;
+&lt;li&gt;endIndex &amp;gt; value.length&lt;/li&gt;
+&lt;li&gt;subLen &amp;lt; 0&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;subLen 是新的字符串的长度&lt;/li&gt;
+&lt;li&gt;endIndex的意义不明确
+
+&lt;ul&gt;
+&lt;li&gt;理解为 beginIndex + subLen&lt;/li&gt;
+&lt;li&gt;beginIndex &amp;lt;= endIndex &amp;lt;= value.length&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;当截取范围与原字符串相同返回this，否则 new 一个新的String对象,在构造方法中复制生成了新的 value。&lt;/li&gt;
+&lt;li&gt;substring(1,1)
+
+&lt;ul&gt;
+&lt;li&gt;&amp;rdquo;&amp;ldquo;==s.substring(1,1) //true&lt;/li&gt;
+&lt;li&gt;&amp;rdquo;&amp;ldquo;.equals(s.substring(1,1)) //false&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;备注&#34;&gt;备注&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;通过反射机制可以对String进行修改&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;== 和 equals()&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;== 比较引用是否指向堆内存中的同一个String对象&lt;/li&gt;
+&lt;li&gt;equals() 比较的是字符串的内容是否相同&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;String StringBuilder StringBuffer 区别&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;String是不可变(final)类，每次在String对象上的操作都会生成一个新的对象；&lt;/li&gt;
+&lt;li&gt;StringBuffer和StringBuilder是可变的，它允许在原来对象上进行操作，而不用每次增加对象；&lt;/li&gt;
+&lt;li&gt;StringBuffer是线程安全的，但效率较低，而StringBuilder则不是线程安全的，效率最高&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;参考连接&#34;&gt;参考连接&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.importnew.com/21711.html&#34;&gt;浅谈Java String内幕（上）&lt;/a&gt; &amp;ndash; javap 查看字节码&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.hollischuang.com/archives/99&#34;&gt;Java 7 源码学习系列（一）——String&lt;/a&gt; &amp;ndash; 看源码解释&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://brokendreams.iteye.com/blog/2260870&#34;&gt;关于Java String的一些总结&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Java 核心类</title>
       <link>http://f12998765.github.io/java-notes/java-%E6%A0%B8%E5%BF%83%E7%B1%BB/</link>
       <pubDate>Fri, 18 Nov 2016 18:20:00 +0800</pubDate>

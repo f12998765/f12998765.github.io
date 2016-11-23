@@ -5,8 +5,320 @@
     <link>http://f12998765.github.io/index.xml</link>
     <description>Recent content on XIZERO</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 20 Nov 2016 12:19:55 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 22 Nov 2016 08:36:39 +0800</lastBuildDate>
     <atom:link href="http://f12998765.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>String相关</title>
+      <link>http://f12998765.github.io/java-notes/String%E7%9B%B8%E5%85%B3/</link>
+      <pubDate>Tue, 22 Nov 2016 08:36:39 +0800</pubDate>
+      
+      <guid>http://f12998765.github.io/java-notes/String%E7%9B%B8%E5%85%B3/</guid>
+      <description>
+
+&lt;h2 id=&#34;string-成员变量&#34;&gt;String 成员变量&lt;/h2&gt;
+
+&lt;p&gt;String 是典型的&lt;a href=&#34;http://www.cnblogs.com/java-my-life/archive/2012/05/08/2487757.html&#34;&gt;不变模式设计&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://grepcode.com/file/repository.grepcode.com/java/root/jdk/openjdk/8u40-b25/java/lang/String.java?av=f&#34;&gt;JDK 8 源码地址&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://grepcode.com/file/repository.grepcode.com/java/root/jdk/openjdk/6-b27/java/lang/String.java?av=f&#34;&gt;JDK 6 源码地址&lt;/a&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;
+//JDK 1.8
+public final class String implements java.io.Serializable, Comparable&amp;lt;String&amp;gt;, CharSequence {
+	//The value is used for character storage.
+	private final char value[];
+
+	//Cache the hash code for the string
+	private int hash; // Default to 0
+}
+
+//JDK1.6
+public final class String implements java.io.Serializable, Comparable&amp;lt;String&amp;gt;, CharSequence{
+	//The value is used for character storage.
+	private final char value[];
+
+	//The offset is the first index of the storage that is used.
+	private final int offset;
+
+	//The count is the number of characters in the String.
+	private final int count;
+
+	//Cache the hash code for the string
+	private int hash; // Default to 0
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;常量池&#34;&gt;常量池&lt;/h2&gt;
+
+&lt;p&gt;java编译时会生成常量池（Constant pool），保存字面常量和符号引用（类名、方法名、接口名和字段名等）。&lt;/p&gt;
+
+&lt;h3 id=&#34;创建字符串对象&#34;&gt;创建字符串对象&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;new 运算符&lt;/li&gt;
+&lt;li&gt;字符串常量&lt;/li&gt;
+&lt;li&gt;&amp;rdquo;+&amp;ldquo;连接的表达式&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;相同的字符串常量或结果相同的字符串常量表达式创建字符串对象时，
+如果常量池中已经存在，相同序列的字符串，则该对象直接指向；不存在时，会在常量池创建一个新的字符串。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;String a1 = &amp;quot;abc&amp;quot;;
+String a2 = &amp;quot;abc&amp;quot;;
+String a3 = &amp;quot;a&amp;quot;+&amp;quot;bc&amp;quot;;
+System,out.println(a1==a2+&amp;quot;\t&amp;quot;+a2==a3); //true true
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;因为字符串序列相同，指向的常量池中同一个字符串，所以为true。&lt;/p&gt;
+
+&lt;p&gt;使用 new 创建字符串对象时，会在堆中创建一个新的String对象，并且该String对象的char value[]会指向常量池中的字符串，不存在则创建。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;
+String b1 = new String(&amp;quot;abc&amp;quot;);
+String b2 = new String(&amp;quot;abc&amp;quot;);
+System.out.println(b1==b2); //false
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;使用new会在堆中创建新的对象,地址当然不同.&lt;/p&gt;
+
+&lt;h3 id=&#34;string&#34;&gt;String +&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&amp;rdquo; &amp;ldquo;+[String] 或 [String]+[String]&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;会在编译时,调用StringBuilder的append()和toString(),最终指向的是堆上新创建的String对象.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;String c1 = &amp;quot;abc&amp;quot;;
+String c2 = &amp;quot;123&amp;quot;+c1;
+String c3 = &amp;quot;123abc&amp;quot;;
+System.out.println(c2==c3); //false
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&amp;rdquo; &amp;ldquo;+&amp;rdquo; &amp;ldquo;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;[final String]+[final String] 或 [final String]+&amp;rdquo; &amp;ldquo;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;当final修饰的对象发生连接动作时，虚拟机会进行优化，将表达式结果直接赋值给目标变量.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;final String a = &amp;quot;hello &amp;quot;;
+final String b = &amp;quot;world&amp;quot;;
+String c = a + &amp;quot;world&amp;quot;;
+String d = &amp;quot;hello world&amp;quot;;
+System.out.println(c==d); //true
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;string-intern&#34;&gt;String.intern()&lt;/h2&gt;
+
+&lt;p&gt;是一个 Native 方法，调用 C++的 StringTable::intern&lt;/p&gt;
+
+&lt;p&gt;如果常量池中已经存在该字符串，则返回池中的字符串；否则将此字符串添加到常量池中，并返回引用。&lt;/p&gt;
+
+&lt;h2 id=&#34;string-substring&#34;&gt;String.substring()&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;//JDK1.6
+public String substring(int beginIndex) {
+	return substring(beginIndex, count);
+}
+public String substring(int beginIndex, int endIndex) {
+	if (beginIndex &amp;lt; 0) {
+		throw new StringIndexOutOfBoundsException(beginIndex);
+	}
+	if (endIndex &amp;gt; count) {
+		throw new StringIndexOutOfBoundsException(endIndex);
+	}
+	if (beginIndex &amp;gt; endIndex) {
+		throw new StringIndexOutOfBoundsException(endIndex - beginIndex);
+	}
+	return ((beginIndex == 0) &amp;amp;&amp;amp; (endIndex == count)) ? this :
+		new String(offset + beginIndex, endIndex - beginIndex, value);
+}
+
+String(int offset, int count, char value[]) {
+	this.value = value;
+	this.offset = offset;
+	this.count = count;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;JDK1.6 中的实现只是调整了 offset 和 count ,使用的是共享的字符数组。&lt;/p&gt;
+
+&lt;p&gt;当使用substring截取一个很长的字符串的2个字符时，会占用这个长字符串，不能垃圾回收。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;//JDK 1.8
+public String substring(int beginIndex) {
+        if (beginIndex &amp;lt; 0) {
+            throw new StringIndexOutOfBoundsException(beginIndex);
+        }
+        int subLen = value.length - beginIndex;
+		if (subLen &amp;lt; 0) {
+            throw new StringIndexOutOfBoundsException(subLen);
+        }
+        return (beginIndex == 0) ? this : new String(value, beginIndex, subLen);
+}
+
+public String substring(int beginIndex, int endIndex) {
+		if (beginIndex &amp;lt; 0) {
+			throw new StringIndexOutOfBoundsException(beginIndex);
+		}
+		if (endIndex &amp;gt; value.length) {
+			throw new StringIndexOutOfBoundsException(endIndex);
+		}
+		int subLen = endIndex - beginIndex;
+		if (subLen &amp;lt; 0) {
+			throw new StringIndexOutOfBoundsException(subLen);
+		}
+		return ((beginIndex == 0) &amp;amp;&amp;amp; (endIndex == value.length)) ? this : new String(value, beginIndex, subLen);
+}
+
+public String(char value[], int offset, int count) {
+		if (offset &amp;lt; 0) {
+			throw new StringIndexOutOfBoundsException(offset);
+		}
+		if (count &amp;lt; 0) {
+			throw new StringIndexOutOfBoundsException(count);
+		}
+		// Note: offset or count might be near -1&amp;gt;&amp;gt;&amp;gt;1.
+		if (offset &amp;gt; value.length - count) {
+			throw new StringIndexOutOfBoundsException(offset + count);
+		}
+		this.value = Arrays.copyOfRange(value, offset, offset+count);
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;分析一下 substring 源码&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;报StringIndexOutOfBoundsException异常
+
+&lt;ul&gt;
+&lt;li&gt;beginIndex &amp;lt; 0&lt;/li&gt;
+&lt;li&gt;endIndex &amp;gt; value.length&lt;/li&gt;
+&lt;li&gt;subLen &amp;lt; 0&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;subLen 是新的字符串的长度&lt;/li&gt;
+&lt;li&gt;endIndex的意义不明确
+
+&lt;ul&gt;
+&lt;li&gt;理解为 beginIndex + subLen&lt;/li&gt;
+&lt;li&gt;beginIndex &amp;lt;= endIndex &amp;lt;= value.length&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;当截取范围与原字符串相同返回this，否则 new 一个新的String对象,在构造方法中复制生成了新的 value。&lt;/li&gt;
+&lt;li&gt;substring(1,1)
+
+&lt;ul&gt;
+&lt;li&gt;&amp;rdquo;&amp;ldquo;==s.substring(1,1) //true&lt;/li&gt;
+&lt;li&gt;&amp;rdquo;&amp;ldquo;.equals(s.substring(1,1)) //false&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;备注&#34;&gt;备注&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;通过反射机制可以对String进行修改&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;== 和 equals()&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;== 比较引用是否指向堆内存中的同一个String对象&lt;/li&gt;
+&lt;li&gt;equals() 比较的是字符串的内容是否相同&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;String StringBuilder StringBuffer 区别&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;String是不可变(final)类，每次在String对象上的操作都会生成一个新的对象；&lt;/li&gt;
+&lt;li&gt;StringBuffer和StringBuilder是可变的，它允许在原来对象上进行操作，而不用每次增加对象；&lt;/li&gt;
+&lt;li&gt;StringBuffer是线程安全的，但效率较低，而StringBuilder则不是线程安全的，效率最高&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;参考连接&#34;&gt;参考连接&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.importnew.com/21711.html&#34;&gt;浅谈Java String内幕（上）&lt;/a&gt; &amp;ndash; javap 查看字节码&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.hollischuang.com/archives/99&#34;&gt;Java 7 源码学习系列（一）——String&lt;/a&gt; &amp;ndash; 看源码解释&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://brokendreams.iteye.com/blog/2260870&#34;&gt;关于Java String的一些总结&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>java更新日志</title>
+      <link>http://f12998765.github.io/java-notes/java%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97/</link>
+      <pubDate>Mon, 21 Nov 2016 20:12:08 +0800</pubDate>
+      
+      <guid>http://f12998765.github.io/java-notes/java%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97/</guid>
+      <description>
+
+&lt;h2 id=&#34;简介&#34;&gt;简介&lt;/h2&gt;
+
+&lt;p&gt;java 笔记从 2016 暑假开始，到 10月完成第一稿，因为自己还是个初学者，还有很多的不足和错误，也有因为不懂而未完成的部分，总体上是把自己的知识梳理了一下。&lt;/p&gt;
+
+&lt;p&gt;初次尝试写博客，现在看来这些更像是一些知识笔记，课本摘抄。&lt;/p&gt;
+
+&lt;h2 id=&#34;更新-１-java工程师成神之路-http-www-hollischuang-com-archives-1001&#34;&gt;更新＃１　－－　&lt;a href=&#34;http://www.hollischuang.com/archives/1001&#34;&gt;Java工程师成神之路&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;2016-11-21&lt;/p&gt;
+
+&lt;p&gt;今天思索了一个下午，明白自己必须从小目标开始。&lt;/p&gt;
+
+&lt;p&gt;跟着别人走一段路，不至于那么迷茫，绕不出来。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>关于未来 2016/11</title>
+      <link>http://f12998765.github.io/xi/go/</link>
+      <pubDate>Mon, 21 Nov 2016 08:39:53 +0800</pubDate>
+      
+      <guid>http://f12998765.github.io/xi/go/</guid>
+      <description>&lt;p&gt;11月21日 2016 :cloud:&lt;/p&gt;
+
+&lt;p&gt;这几周一直在迷茫，明知自己没有多少东西，但还是提不起劲来。&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;“意识到了自己没有办法成为 top 1% 的程序员，还应该选择程序员的道路么？”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;看到这句话的时候，的确很震惊，这不就是我的未来吗？&lt;/p&gt;
+
+&lt;p&gt;从二流的大学生成为二流的程序员……&lt;/p&gt;
+
+&lt;p&gt;瞬间秒杀掉了我所有的希望。&lt;/p&gt;
+
+&lt;p&gt;可是，没有人天生就是 NO1 ，你为什么不能成为那个 top 1%?&lt;/p&gt;
+
+&lt;p&gt;平地起高台，万事从头来。&lt;/p&gt;
+
+&lt;p&gt;你需要是一个一个的小目标，在不经意间你就会发现，原来那个遥不可及的目标已经没那么困难了。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;我的小目标：&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;总结整理 java web 基础&lt;/li&gt;
+&lt;li&gt;总结整理 java web 框架&lt;/li&gt;
+&lt;li&gt;学习计算机网络&lt;/li&gt;
+&lt;li&gt;学习操作系统&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;一个年前的目标&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;阅读 Spring 源码&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;一个遥不可及的目标&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;在硅谷工作&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     
     <item>
       <title>一个想法</title>
@@ -1799,202 +2111,6 @@ throws：用于方法名之后，表示该方法可能抛出异常的类型。&l
 &lt;li&gt;&lt;a href=&#34;http://www.hollischuang.com/archives/1292&#34;&gt;简单介绍Java中Comparable和Comparator&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
-    </item>
-    
-    <item>
-      <title>Java 接口、抽象类和多态</title>
-      <link>http://f12998765.github.io/java-notes/java-%E6%8E%A5%E5%8F%A3%E3%80%81%E6%8A%BD%E8%B1%A1%E7%B1%BB%E5%92%8C%E5%A4%9A%E6%80%81/</link>
-      <pubDate>Fri, 18 Nov 2016 18:20:00 +0800</pubDate>
-      
-      <guid>http://f12998765.github.io/java-notes/java-%E6%8E%A5%E5%8F%A3%E3%80%81%E6%8A%BD%E8%B1%A1%E7%B1%BB%E5%92%8C%E5%A4%9A%E6%80%81/</guid>
-      <description>
-
-&lt;p&gt;##什么是接口？
-接口是一种服务提供者与服务使用者之间的协议。&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;接口的定义&lt;/strong&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;访问修饰符 interface  接口名 extends  父接口列表{
-
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;strong&gt;接口的实现&lt;/strong&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;访问修饰符 class 类名 extends 父类 implements  接口列表{
-
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;##接口中的成员
-&lt;strong&gt;字段&lt;/strong&gt;
-* 必须初始化
-* 默认：&lt;code&gt;public&lt;/code&gt; &lt;code&gt;static&lt;/code&gt; &lt;code&gt;final&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;抽象方法&lt;/strong&gt;
-* 默认为： &lt;code&gt;public abstract&lt;/code&gt;
-* 没有主体，由分号结束&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;静态方法和默认方法&lt;/strong&gt;
-* Java 8 支持在接口中定义静态方法和默认方法&lt;/p&gt;
-
-&lt;p&gt;#抽象类
-* 抽象类和抽象方法有 &lt;code&gt;abstract&lt;/code&gt; 修饰符修饰。
-* 包含抽象方法的类必须定义为抽象类。
-* 抽象类不能被实例化，抽象方法必须在子类中被实现。
-* 只有通过子类继承抽象类并覆盖了抽象类中的&lt;strong&gt;所有&lt;/strong&gt;抽象方法后，该子类才可以实例化。否则，该子类还是一个抽象类。&lt;/p&gt;
-
-&lt;h1 id=&#34;什么时候使用抽象类和接口&#34;&gt;什么时候使用抽象类和接口？&lt;/h1&gt;
-
-&lt;p&gt;接口：
-* 实现多重继承&lt;/p&gt;
-
-&lt;p&gt;抽象类：
-* 成员方法需要默认实现
-* 基本方法不断改变&lt;/p&gt;
-
-&lt;h1 id=&#34;多态&#34;&gt;多态&lt;/h1&gt;
-
-&lt;p&gt;多态是同一个行为具有多个不同表现形式或形态的能力。&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;父类引用指向子类对象，调用重写的方法&lt;/strong&gt;
-&lt;strong&gt;接口引用指向实现类对象，调用实现的方法&lt;/strong&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;条件&#34;&gt;条件&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;继承超类或实现接口&lt;/li&gt;
-&lt;li&gt;方法的重写&lt;/li&gt;
-&lt;li&gt;父类引用指向子类对象或接口引用指向实现类对象&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Java 数组</title>
-      <link>http://f12998765.github.io/java-notes/java-%E6%95%B0%E7%BB%84%E5%92%8Carrays%E7%B1%BB/</link>
-      <pubDate>Fri, 18 Nov 2016 18:20:00 +0800</pubDate>
-      
-      <guid>http://f12998765.github.io/java-notes/java-%E6%95%B0%E7%BB%84%E5%92%8Carrays%E7%B1%BB/</guid>
-      <description>
-
-&lt;h2 id=&#34;什么是数组-及声明数组变量&#34;&gt;什么是数组？及声明数组变量&lt;/h2&gt;
-
-&lt;p&gt;数组是存放一组相同类型的容器。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;DataType [] arryName;
-
-DataType arryName [];
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;数组的初始化&#34;&gt;数组的初始化&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;DataType[] arrayName = new DataType[arraySize];
-
-DataType[] arrayName = {value0, value1, ..., valuek};
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;未初始化的数组会默认赋值 : int &amp;ndash;&amp;gt; 0、boolean &amp;ndash;&amp;gt; false 、对象 &amp;ndash;&amp;gt; null&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&#34;数组引用及长度&#34;&gt;数组引用及长度&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;arrayName[index] //数组通过下标引用，并且会检查数组越界。
-
-arrayName. length//每个数组都有一个属性length来表示长度
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;获取字符串的长度使用 length() 方法&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&#34;遍历数组&#34;&gt;遍历数组&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;Loop循环&lt;/strong&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;for(int i;i&amp;lt;arrayName.length;i++){
-//Statements
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;strong&gt;for-each循环&lt;/strong&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;for(DataType e:Array){
-//Statements
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;for-each循环只能处理一维数组，二维数组需要双层循环。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&#34;array类&#34;&gt;Array类&lt;/h2&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;方法有多个重载，详细信息查看&lt;a href=&#34;http://tool.oschina.net/uploads/apidocs/jdk-zh/java/util/Arrays.html&#34;&gt;Java API&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;方法&lt;/th&gt;
-&lt;th&gt;说明&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;asList&lt;/td&gt;
-&lt;td&gt;返回数组支持 的固定个大小的List&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;binarySearch&lt;/td&gt;
-&lt;td&gt;根据特定的键查找数组，返回索引&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;copyOf&lt;/td&gt;
-&lt;td&gt;创建一个指定长度的新数组，复制原数组的元素，根据长度进行截取和填充&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;copyOfRamge&lt;/td&gt;
-&lt;td&gt;根据原数组的指定范围创建新的数组&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;sort&lt;/td&gt;
-&lt;td&gt;数组排序&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;toString&lt;/td&gt;
-&lt;td&gt;返回数组的字符串表示&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;equals&lt;/td&gt;
-&lt;td&gt;比较数组是否相等&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;fill&lt;/td&gt;
-&lt;td&gt;将指定值赋值给全部元素&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Java 时间</title>
-      <link>http://f12998765.github.io/java-notes/java-%E6%97%B6%E9%97%B4/</link>
-      <pubDate>Fri, 18 Nov 2016 18:20:00 +0800</pubDate>
-      
-      <guid>http://f12998765.github.io/java-notes/java-%E6%97%B6%E9%97%B4/</guid>
-      <description></description>
     </item>
     
   </channel>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>XIZERO</title>
+    <link>http://f12998765.github.io/tags/%E6%97%A5%E5%BF%97/index.xml</link>
+    <description>Recent content on XIZERO</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <atom:link href="http://f12998765.github.io/tags/%E6%97%A5%E5%BF%97/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>java更新日志</title>
+      <link>http://f12998765.github.io/java-notes/java%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97/</link>
+      <pubDate>Mon, 21 Nov 2016 20:12:08 +0800</pubDate>
+      
+      <guid>http://f12998765.github.io/java-notes/java%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97/</guid>
+      <description>
+
+&lt;h2 id=&#34;简介&#34;&gt;简介&lt;/h2&gt;
+
+&lt;p&gt;java 笔记从 2016 暑假开始，到 10月完成第一稿，因为自己还是个初学者，还有很多的不足和错误，也有因为不懂而未完成的部分，总体上是把自己的知识梳理了一下。&lt;/p&gt;
+
+&lt;p&gt;初次尝试写博客，现在看来这些更像是一些知识笔记，课本摘抄。&lt;/p&gt;
+
+&lt;h2 id=&#34;更新-１-java工程师成神之路-http-www-hollischuang-com-archives-1001&#34;&gt;更新＃１　－－　&lt;a href=&#34;http://www.hollischuang.com/archives/1001&#34;&gt;Java工程师成神之路&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;2016-11-21&lt;/p&gt;
+
+&lt;p&gt;今天思索了一个下午，明白自己必须从小目标开始。&lt;/p&gt;
+
+&lt;p&gt;跟着别人走一段路，不至于那么迷茫，绕不出来。&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
