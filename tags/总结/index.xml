@@ -2159,48 +2159,47 @@ if(&amp;quot;Java&amp;quot;.equals(s1)   //常用
 &lt;ul&gt;
 &lt;li&gt;又叫泛型类型&lt;/li&gt;
 &lt;li&gt;可以填充任意类型的容器类&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;注意与泛型接口的使用&lt;/p&gt;
+&lt;li&gt;注意与泛型接口的使用&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;public class Em&amp;lt;T&amp;gt; {
-private T num;
-private T name;
+    private T num;
+    private T name;
 
-public T getNum() {
-    return num;
-}
+    public T getNum() {
+        return num;
+    }
 
-public void setNum(T num) {
-    this.num = num;
-}
+    public void setNum(T num) {
+        this.num = num;
+    }
 
-public T getName() {
-    return name;
-}
+    public T getName() {
+        return name;
+    }
 
-public void setName(T name) {
-    this.name = name;
-}
+    public void setName(T name) {
+        this.name = name;
+    }
 
-public Em() {
+    public Em() {
 
-}
+    }
 
-public Em(T num, T name) {
-    this.num = num;
-    this.name = name;
-}
+    public Em(T num, T name) {
+        this.num = num;
+        this.name = name;
+    }
 
-@Override
-public String toString() {
-    return &amp;quot;Em{&amp;quot; +
-            &amp;quot;num=&amp;quot; + num +
-            &amp;quot;, name=&amp;quot; + name +
-            &#39;}&#39;;
+    @Override
+    public String toString() {
+        return &amp;quot;Em{&amp;quot; +
+                &amp;quot;num=&amp;quot; + num +
+                &amp;quot;, name=&amp;quot; + name +
+                &#39;}&#39;;
+    }
 }
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;h2 id=&#34;泛型接口&#34;&gt;泛型接口&lt;/h2&gt;
 
@@ -2213,7 +2212,7 @@ public String toString() {
 
 &lt;h3 id=&#34;实现&#34;&gt;实现&lt;/h3&gt;
 
-&lt;p&gt;举个例子，上一章节说的 &lt;code&gt;Comparator&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;看　&lt;a href=&#34;http://xizero.com/java-notes/java-%E6%8E%92%E5%BA%8F/&#34;&gt;Java 排序&lt;/a&gt; 中的&lt;code&gt;Comparator&lt;/code&gt;&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;import java.util.Comparator;
 

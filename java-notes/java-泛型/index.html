@@ -49,48 +49,47 @@
 <ul>
 <li>又叫泛型类型</li>
 <li>可以填充任意类型的容器类</li>
-
-<li><p>注意与泛型接口的使用</p>
+<li>注意与泛型接口的使用</li>
+</ul>
 
 <pre><code class="language-java">public class Em&lt;T&gt; {
-private T num;
-private T name;
+    private T num;
+    private T name;
 
-public T getNum() {
-    return num;
-}
+    public T getNum() {
+        return num;
+    }
 
-public void setNum(T num) {
-    this.num = num;
-}
+    public void setNum(T num) {
+        this.num = num;
+    }
 
-public T getName() {
-    return name;
-}
+    public T getName() {
+        return name;
+    }
 
-public void setName(T name) {
-    this.name = name;
-}
+    public void setName(T name) {
+        this.name = name;
+    }
 
-public Em() {
+    public Em() {
 
-}
+    }
 
-public Em(T num, T name) {
-    this.num = num;
-    this.name = name;
-}
+    public Em(T num, T name) {
+        this.num = num;
+        this.name = name;
+    }
 
-@Override
-public String toString() {
-    return &quot;Em{&quot; +
-            &quot;num=&quot; + num +
-            &quot;, name=&quot; + name +
-            '}';
+    @Override
+    public String toString() {
+        return &quot;Em{&quot; +
+                &quot;num=&quot; + num +
+                &quot;, name=&quot; + name +
+                '}';
+    }
 }
-}
-</code></pre></li>
-</ul>
+</code></pre>
 
 <h2 id="泛型接口">泛型接口</h2>
 
@@ -103,7 +102,7 @@ public String toString() {
 
 <h3 id="实现">实现</h3>
 
-<p>举个例子，上一章节说的 <code>Comparator</code></p>
+<p>看　<a href="http://xizero.com/java-notes/java-%E6%8E%92%E5%BA%8F/">Java 排序</a> 中的<code>Comparator</code></p>
 
 <pre><code class="language-java">import java.util.Comparator;
 
