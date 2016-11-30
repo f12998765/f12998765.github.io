@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>XIZERO</title>
+    <link>http://f12998765.github.io/tags/index.xml</link>
+    <description>Recent content on XIZERO</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <atom:link href="http://f12998765.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>java 泛型 TKVE 含义</title>
+      <link>http://f12998765.github.io/java-notes/java-%E6%B3%9B%E5%9E%8B-TKVE/</link>
+      <pubDate>Thu, 24 Nov 2016 15:55:43 +0800</pubDate>
+      
+      <guid>http://f12998765.github.io/java-notes/java-%E6%B3%9B%E5%9E%8B-TKVE/</guid>
+      <description>
+
+&lt;h2 id=&#34;java-泛型经常使用的符号的含义&#34;&gt;Java 泛型经常使用的符号的含义&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;T &amp;ndash; Type / java 类&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;K &amp;ndash; Key / 键&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;V &amp;ndash; Value / 值&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;E &amp;ndash; Element / 集合中的元素&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;? &amp;ndash; 通配符&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;S、U、V &amp;ndash; 2nd、3rd、4th types&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;参考连接&#34;&gt;参考连接&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;www.hollischuang.com/archives/252&#34;&gt;Java泛型中K T V E ？ object等的含义&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

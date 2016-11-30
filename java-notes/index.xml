@@ -5,8 +5,40 @@
     <link>http://f12998765.github.io/java-notes/index.xml</link>
     <description>Recent content in Java-notes-rsses on XIZERO</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 23 Nov 2016 16:28:21 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 24 Nov 2016 15:55:43 +0800</lastBuildDate>
     <atom:link href="http://f12998765.github.io/java-notes/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>java 泛型 TKVE 含义</title>
+      <link>http://f12998765.github.io/java-notes/java-%E6%B3%9B%E5%9E%8B-TKVE/</link>
+      <pubDate>Thu, 24 Nov 2016 15:55:43 +0800</pubDate>
+      
+      <guid>http://f12998765.github.io/java-notes/java-%E6%B3%9B%E5%9E%8B-TKVE/</guid>
+      <description>
+
+&lt;h2 id=&#34;java-泛型经常使用的符号的含义&#34;&gt;Java 泛型经常使用的符号的含义&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;T &amp;ndash; Type / java 类&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;K &amp;ndash; Key / 键&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;V &amp;ndash; Value / 值&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;E &amp;ndash; Element / 集合中的元素&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;? &amp;ndash; 通配符&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;S、U、V &amp;ndash; 2nd、3rd、4th types&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;参考连接&#34;&gt;参考连接&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;www.hollischuang.com/archives/252&#34;&gt;Java泛型中K T V E ？ object等的含义&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     
     <item>
       <title>Java 序列化</title>
@@ -2505,40 +2537,6 @@ if(&amp;quot;Java&amp;quot;.equals(s1)   //常用
 &lt;h1 id=&#34;java-lang-system&#34;&gt;java.lang.System&lt;/h1&gt;
 
 &lt;h1 id=&#34;java-lang-scaner&#34;&gt;java.lang.Scaner&lt;/h1&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Java 概述</title>
-      <link>http://f12998765.github.io/java-notes/Java-%E6%A6%82%E8%BF%B0/</link>
-      <pubDate>Fri, 18 Nov 2016 18:20:00 +0800</pubDate>
-      
-      <guid>http://f12998765.github.io/java-notes/Java-%E6%A6%82%E8%BF%B0/</guid>
-      <description>
-
-&lt;h2 id=&#34;java的历史&#34;&gt;Java的历史&lt;/h2&gt;
-
-&lt;p&gt;1991 年Sun公司的James Gosling等人开始开发名称为 Oak 的语言&lt;/p&gt;
-
-&lt;p&gt;1994年将Oak语言更名为Java。&lt;/p&gt;
-
-&lt;p&gt;随着互联网的兴起，Java语言迅速崛起 。&lt;/p&gt;
-
-&lt;p&gt;2009年04月20日，美国甲骨文公司收购Sun，取得java的版权。&lt;/p&gt;
-
-&lt;h2 id=&#34;java技术体系&#34;&gt;&lt;strong&gt;Java技术体系&lt;/strong&gt;&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;JAVASE：&lt;/strong&gt;&lt;code&gt;Java Platform Standard Edition&lt;/code&gt;，完成桌面应用程序的开发，是其它两者的基础;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;JAVAEE：&lt;/strong&gt;&lt;code&gt;Java Platform Enterprise Edition&lt;/code&gt;，开发企业环境下的应用程序，主要针对web程序开发;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;JAVAME：&lt;/strong&gt;&lt;code&gt;Java Platform Micro Edition&lt;/code&gt;，开发电子消费产品和嵌入式设备，如手机中的程序。&lt;/p&gt;
-
-&lt;h2 id=&#34;java的特性&#34;&gt;Java的特性&lt;/h2&gt;
-
-&lt;p&gt;Java 是一种面向对象的编程语言。&lt;/p&gt;
-
-&lt;p&gt;其他，请自行Google了解。&lt;/p&gt;
 </description>
     </item>
     
