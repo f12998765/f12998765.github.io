@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>XIZERO</title>
+    <link>http://f12998765.github.io/tags/%E7%AE%A1%E7%90%86/index.xml</link>
+    <description>Recent content on XIZERO</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <atom:link href="http://f12998765.github.io/tags/%E7%AE%A1%E7%90%86/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>个人知识管理</title>
+      <link>http://f12998765.github.io/xi/%E4%B8%AA%E4%BA%BA%E7%9F%A5%E8%AF%86%E7%AE%A1%E7%90%86/</link>
+      <pubDate>Fri, 02 Dec 2016 14:46:03 +0800</pubDate>
+      
+      <guid>http://f12998765.github.io/xi/%E4%B8%AA%E4%BA%BA%E7%9F%A5%E8%AF%86%E7%AE%A1%E7%90%86/</guid>
+      <description>
+
+&lt;h2 id=&#34;personal-knowledge-management&#34;&gt;Personal Knowledge Management&lt;/h2&gt;
+
+&lt;p&gt;个人知识管理，收集、整理、学习、创造、分享.&lt;/p&gt;
+
+&lt;h2 id=&#34;工具&#34;&gt;工具&lt;/h2&gt;
+
+&lt;h3 id=&#34;记录想法-锤子便签-https-cloud-smartisan-com-notes&#34;&gt;记录想法 - &lt;a href=&#34;https://cloud.smartisan.com/#/notes&#34;&gt;锤子便签&lt;/a&gt;&lt;/h3&gt;
+
+&lt;h3 id=&#34;学习笔记-atom-https-atom-io&#34;&gt;学习笔记 - &lt;a href=&#34;https://atom.io/&#34;&gt;Atom&lt;/a&gt;&lt;/h3&gt;
+
+&lt;h3 id=&#34;代码片段-gistbox-https-app-gistboxapp-com-library-my-gists&#34;&gt;代码片段 - &lt;a href=&#34;https://app.gistboxapp.com/library/my-gists&#34;&gt;GistBox&lt;/a&gt;&lt;/h3&gt;
+
+&lt;h3 id=&#34;备份恢复-dropbox-https-www-dropbox-com-home&#34;&gt;备份恢复 - &lt;a href=&#34;https://www.dropbox.com/home&#34;&gt;Dropbox&lt;/a&gt;&lt;/h3&gt;
+
+&lt;h3 id=&#34;静态博客-hugo-http-gohugo-io&#34;&gt;静态博客 - &lt;a href=&#34;http://gohugo.io/&#34;&gt;Hugo&lt;/a&gt;&lt;/h3&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
