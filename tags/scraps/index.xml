@@ -25,6 +25,7 @@
 &lt;ul&gt;
 &lt;li&gt;下载文件夹链接 &lt;code&gt;http://repo.maven.apache.org/maven2/&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;找到 &lt;code&gt;archetype-catalog.xml&lt;/code&gt; ,右键保存&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.dropbox.com/s/mzmj2rn9if5dduh/archetype-catalog.xml?dl=0&#34;&gt;Dropbox&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;在 &lt;code&gt;Settings&lt;/code&gt;&amp;gt; &lt;code&gt;Maven&lt;/code&gt; &amp;gt; &lt;code&gt;Runner&lt;/code&gt; &amp;gt; &lt;code&gt;VM Options&lt;/code&gt; 中添加 &lt;code&gt;-DarchetypeCatalog=internal&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;PS：注意右上角的灰字：for default project，而不是for current project&lt;/li&gt;

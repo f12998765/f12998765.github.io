@@ -65,11 +65,14 @@
 <li><p>配置环境变量</p></li>
 </ol>
 
+<p>编辑</p>
+
 <pre><code class="language-bash">vi /etc/profile
+</code></pre>
 
-# 在文件末尾添加
+<p>在文件末尾添加</p>
 
-export JAVA_HOME=/usr/locl/jdk/**
+<pre><code>export JAVA_HOME=/usr/locl/jdk/**
 
 export JRE_HOME=${JAVA_HOME}/jre
 
@@ -102,9 +105,53 @@ source /etc/profile
 <li>地址：<a href="https://www.jetbrains.com/idea/">https://www.jetbrains.com/idea/</a></li>
 </ul></li>
 
-<li><p>解压到 <code>/opt</code></p></li>
+<li><p>解压到 <code>/usr/local/</code></p></li>
 
 <li><p>运行 <code>/bin/idea.sh</code></p></li>
+</ol>
+
+<blockquote>
+<p>提示错误 “Please validate either IDEA_JDK, JDK_HOME or JAVA_HOME
+environment variable points to valid JDK installation.”</p>
+
+<p>解决：</p>
+
+<p>在  */idea/bin/idea.sh 中第二行添加</p>
+
+<p><strong>export  IDEA_JDK = (jdk的路径/和JAVA_HOME 相同)</strong></p>
+
+<p>相关地址： <a href="http://stackoverflow.com/questions/8382641/installing-idea-on-ubuntu-11-10">http://stackoverflow.com/questions/8382641</a></p>
+</blockquote>
+
+<h2 id="安装-maven">安装 Maven</h2>
+
+<ol>
+<li>下载安装包
+
+<ul>
+<li>地址：<a href="https://maven.apache.org/">https://maven.apache.org/</a></li>
+</ul></li>
+<li>解压到 <code>/usr/local/</code></li>
+<li>更换国内源</li>
+</ol>
+
+<p>编辑配置文件</p>
+
+<pre><code class="language-bash">vi /maven/conf/settings.xml
+</code></pre>
+
+<p>在 <code>&lt;mirrors&gt;</code> 标签(146行)中添加</p>
+
+<pre><code class="language-xml">&lt;mirror&gt;
+    &lt;id&gt;nexus-aliyun&lt;/id&gt;
+    &lt;mirrorOf&gt;*&lt;/mirrorOf&gt;ben
+    &lt;name&gt;Nexus aliyun&lt;/name&gt;
+    &lt;url&gt;http://maven.aliyun.com/nexus/content/groups/public&lt;/url&gt;
+&lt;/mirror&gt;
+</code></pre>
+
+<ol>
+<li>更多查看 <a href="http://xizero.com/notes/scraps-of-notes/">http://xizero.com/notes/scraps-of-notes/</a></li>
 </ol>
 
 <h2 id="安装-datagrip">安装 DataGrip</h2>
@@ -116,7 +163,7 @@ source /etc/profile
 <li>地址：<a href="https://www.jetbrains.com/datagrip">https://www.jetbrains.com/datagrip</a></li>
 </ul></li>
 
-<li><p>解压到 <code>/opt</code></p></li>
+<li><p>解压到 <code>/usr/local/</code></p></li>
 
 <li><p>运行 <code>/bin/DataGrip.sh</code></p></li>
 </ol>
