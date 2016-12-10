@@ -8,6 +8,64 @@
     <atom:link href="http://f12998765.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Linux下的目录是干什么的</title>
+      <link>http://f12998765.github.io/notes/Linux%E4%B8%8B%E7%9A%84%E7%9B%AE%E5%BD%95%E6%98%AF%E5%B9%B2%E4%BB%80%E4%B9%88%E7%9A%84/</link>
+      <pubDate>Sat, 10 Dec 2016 19:24:50 +0800</pubDate>
+      
+      <guid>http://f12998765.github.io/notes/Linux%E4%B8%8B%E7%9A%84%E7%9B%AE%E5%BD%95%E6%98%AF%E5%B9%B2%E4%BB%80%E4%B9%88%E7%9A%84/</guid>
+      <description>
+
+&lt;h1 id=&#34;toc_0&#34;&gt;/&lt;/h1&gt;
+
+&lt;h2 id=&#34;根目录&#34;&gt;根目录&lt;/h2&gt;
+
+&lt;h1 id=&#34;root&#34;&gt;/root&lt;/h1&gt;
+
+&lt;h2 id=&#34;超级用户的目录&#34;&gt;超级用户的目录&lt;/h2&gt;
+
+&lt;h1 id=&#34;boot&#34;&gt;/boot&lt;/h1&gt;
+
+&lt;h2 id=&#34;系统启动文件&#34;&gt;系统启动文件&lt;/h2&gt;
+
+&lt;h1 id=&#34;bin&#34;&gt;/bin&lt;/h1&gt;
+
+&lt;h2 id=&#34;存放系统程序-默认指令程序&#34;&gt;存放系统程序，默认指令程序&lt;/h2&gt;
+
+&lt;h1 id=&#34;etc&#34;&gt;/etc&lt;/h1&gt;
+
+&lt;h2 id=&#34;存放系统配置文件&#34;&gt;存放系统配置文件&lt;/h2&gt;
+
+&lt;h1 id=&#34;dev&#34;&gt;/dev&lt;/h1&gt;
+
+&lt;h2 id=&#34;存放与外设有关的文件和驱动&#34;&gt;存放与外设有关的文件和驱动&lt;/h2&gt;
+
+&lt;h1 id=&#34;home&#34;&gt;/home&lt;/h1&gt;
+
+&lt;h2 id=&#34;存放用户数据&#34;&gt;存放用户数据&lt;/h2&gt;
+
+&lt;h1 id=&#34;tmp&#34;&gt;/tmp&lt;/h1&gt;
+
+&lt;h2 id=&#34;临时目录&#34;&gt;临时目录&lt;/h2&gt;
+
+&lt;h1 id=&#34;usr&#34;&gt;/usr&lt;/h1&gt;
+
+&lt;h2 id=&#34;存放非系统软件-例如游戏-开发工具等&#34;&gt;存放非系统软件，例如游戏、开发工具等&lt;/h2&gt;
+
+&lt;h1 id=&#34;opt&#34;&gt;/opt&lt;/h1&gt;
+
+&lt;h2 id=&#34;存放非正式程序&#34;&gt;存放非正式程序&lt;/h2&gt;
+
+&lt;h1 id=&#34;usr-local&#34;&gt;usr/local&lt;/h1&gt;
+
+&lt;h2 id=&#34;存放手动安装软件&#34;&gt;存放手动安装软件&lt;/h2&gt;
+
+&lt;h1 id=&#34;media&#34;&gt;/media&lt;/h1&gt;
+
+&lt;h2 id=&#34;挂载外部存储&#34;&gt;挂载外部存储&lt;/h2&gt;
+</description>
+    </item>
+    
+    <item>
       <title>java 泛型 TKVE 含义</title>
       <link>http://f12998765.github.io/java-notes/java-%E6%B3%9B%E5%9E%8B-TKVE/</link>
       <pubDate>Thu, 24 Nov 2016 15:55:43 +0800</pubDate>
