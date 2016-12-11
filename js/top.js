@@ -14,13 +14,5 @@ $(function(){
             //以1秒的间隔返回顶部
             $('body,html').animate({scrollTop:0},500);
     });
-    $("#gotop").mouseover(function(e) {
-        $(this).css("background","url(../img/z.png) no-repeat");
-        $(this).css("background-size","100% 100%");
-    });
-    $("#gotop").mouseout(function(e) {
-        $(this).css("background","url(../img/z.png) no-repeat");
-        $(this).css("background-size","100% 100%");
-    });
     goTop();//实现回到顶部元素的渐显与渐隐
 });
