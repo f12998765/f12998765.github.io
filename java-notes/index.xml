@@ -412,30 +412,6 @@ public String(char value[], int offset, int count) {
     </item>
     
     <item>
-      <title>java更新日志</title>
-      <link>http://f12998765.github.io/java-notes/java%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97/</link>
-      <pubDate>Mon, 21 Nov 2016 20:12:08 +0800</pubDate>
-      
-      <guid>http://f12998765.github.io/java-notes/java%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97/</guid>
-      <description>
-
-&lt;h2 id=&#34;简介&#34;&gt;简介&lt;/h2&gt;
-
-&lt;p&gt;java 笔记从 2016 暑假开始，到 10月完成第一稿，因为自己还是个初学者，还有很多的不足和错误，也有因为不懂而未完成的部分，总体上是把自己的知识梳理了一下。&lt;/p&gt;
-
-&lt;p&gt;初次尝试写博客，现在看来这些更像是一些知识笔记，课本摘抄。&lt;/p&gt;
-
-&lt;h2 id=&#34;更新-１-java工程师成神之路-http-www-hollischuang-com-archives-1001&#34;&gt;更新＃１　－－　&lt;a href=&#34;http://www.hollischuang.com/archives/1001&#34;&gt;Java工程师成神之路&lt;/a&gt;&lt;/h2&gt;
-
-&lt;p&gt;2016-11-21&lt;/p&gt;
-
-&lt;p&gt;今天思索了一个下午，明白自己必须从小目标开始。&lt;/p&gt;
-
-&lt;p&gt;跟着别人走一段路，不至于那么迷茫，绕不出来。&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
       <title>Java Annotation（注解）</title>
       <link>http://f12998765.github.io/java-notes/java-%E6%B3%A8%E8%A7%A3/</link>
       <pubDate>Fri, 18 Nov 2016 18:20:00 +0800</pubDate>
@@ -443,8 +419,9 @@ public String(char value[], int offset, int count) {
       <guid>http://f12998765.github.io/java-notes/java-%E6%B3%A8%E8%A7%A3/</guid>
       <description>
 
-&lt;p&gt;#Annotation（注解）
-Java提供的一种元程序中的元素关联任何信息和任何元数据（metadata）的途径和方法。
+&lt;h1 id=&#34;annotation-注解&#34;&gt;Annotation（注解）&lt;/h1&gt;
+
+&lt;p&gt;Java提供的一种元程序中的元素关联任何信息和任何元数据（metadata）的途径和方法。
 Annotion(注解)是一个接口，程序可以通过反射来获取指定程序元素的Annotion对象，然后通过Annotion对象来获取注解里面的元数据。
 它可以用于创建文档，跟踪代码中的依赖性，甚至执行基本编译时检查。从某些方面看，annotation就像修饰符一样被使用，并应用于包、类 型、构造方法、方法、成员变量、参数、本地变量的声明中。这些信息被存储在Annotation的“name=value”结构对中。&lt;/p&gt;
 
@@ -454,7 +431,7 @@ Annotion(注解)是一个接口，程序可以通过反射来获取指定程序�
 
 &lt;p&gt;&lt;strong&gt;注解类型是一种特殊的接口类型，注解是注解类型的一个实例&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;#注解类型&lt;/p&gt;
+&lt;h1 id=&#34;注解类型&#34;&gt;注解类型&lt;/h1&gt;
 
 &lt;ul&gt;
 &lt;li&gt;根据注解使用方法和用途：
@@ -468,7 +445,7 @@ Annotion(注解)是一个接口，程序可以通过反射来获取指定程序�
 如果注解类型有单个键值对 , 并且键的名称是 value , 那么可以忽略括号中的键&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;#元注解&lt;/p&gt;
+&lt;h1 id=&#34;元注解&#34;&gt;元注解&lt;/h1&gt;
 
 &lt;table&gt;
 &lt;thead&gt;
@@ -503,8 +480,9 @@ Annotion(注解)是一个接口，程序可以通过反射来获取指定程序�
 
 &lt;p&gt;位于  java.lang.annotation 下&lt;/p&gt;
 
-&lt;p&gt;##@Targe
-&lt;strong&gt;用于描述注解的使用对象&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;targe&#34;&gt;@Targe&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;用于描述注解的使用对象&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;value取值为java.lang.annnotation.RetentionPolicy 枚举的成员之一&lt;/p&gt;
 
@@ -559,9 +537,11 @@ Annotion(注解)是一个接口，程序可以通过反射来获取指定程序�
 &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;p&gt;默认策略 , 可作用于任意对象
-##@Retention
-&lt;strong&gt;定义了该Annotation被保留的时间长短&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;默认策略 , 可作用于任意对象&lt;/p&gt;
+
+&lt;h2 id=&#34;retention&#34;&gt;@Retention&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;定义了该Annotation被保留的时间长短&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;value取值为java.lang.annnotation.ElementType 枚举的成员之一&lt;/p&gt;
 
@@ -593,13 +573,15 @@ Annotion(注解)是一个接口，程序可以通过反射来获取指定程序�
 
 &lt;p&gt;默认保留策略为RetentionPolicy.CLASS&lt;/p&gt;
 
-&lt;p&gt;##@Documented
-&lt;strong&gt;当前注解的元素会被javadoc工具进行文档化&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;documented&#34;&gt;@Documented&lt;/h2&gt;
 
-&lt;p&gt;##@Inherited
-&lt;strong&gt;表示该注解类型被自动继承&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;当前注解的元素会被javadoc工具进行文档化&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;#系统内置标准注解：&lt;/p&gt;
+&lt;h2 id=&#34;inherited&#34;&gt;@Inherited&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;表示该注解类型被自动继承&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;系统内置标准注解&#34;&gt;系统内置标准注解：&lt;/h1&gt;
 
 &lt;table&gt;
 &lt;thead&gt;
@@ -639,18 +621,21 @@ Annotion(注解)是一个接口，程序可以通过反射来获取指定程序�
 &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;p&gt;##@Override
-&lt;strong&gt;告诉编译器该方法覆盖了超类/父类中的一个方法&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;override&#34;&gt;@Override&lt;/h2&gt;
 
-&lt;p&gt;##@Deprecated
-&lt;strong&gt;应用于方法或类型 , 表示该方法或类型是要废弃的&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;告诉编译器该方法覆盖了超类/父类中的一个方法&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;deprecated&#34;&gt;@Deprecated&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;应用于方法或类型 , 表示该方法或类型是要废弃的&lt;/strong&gt;&lt;/p&gt;
 
 &lt;blockquote&gt;
 &lt;p&gt;通常是因为有更好的方法或类型 , 并且兼容低版本&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;##@SuppressWarnnings
- &lt;strong&gt;抑制编译器警告&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;suppresswarnnings&#34;&gt;@SuppressWarnnings&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;抑制编译器警告&lt;/strong&gt;&lt;/p&gt;
 
 &lt;h3 id=&#34;suppresswarnings-value-注解的常见参数值的简单说明&#34;&gt;@SuppressWarnings(value={})注解的常见参数值的简单说明：&lt;/h3&gt;
 
@@ -700,8 +685,9 @@ Annotion(注解)是一个接口，程序可以通过反射来获取指定程序�
 &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;p&gt;#自定义注解
-&lt;strong&gt;一个注解类型是一个java接口&lt;/strong&gt;&lt;/p&gt;
+&lt;h1 id=&#34;自定义注解&#34;&gt;自定义注解&lt;/h1&gt;
+
+&lt;p&gt;&lt;strong&gt;一个注解类型是一个java接口&lt;/strong&gt;&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;@Inherited
 @Retention
@@ -712,35 +698,39 @@ public @interface CustomAnnotation ( ) {
 }
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;#使用反射来查询注解
-java.lang.Class&lt;/p&gt;
+&lt;h1 id=&#34;使用反射来查询注解&#34;&gt;使用反射来查询注解&lt;/h1&gt;
 
-&lt;p&gt;##如果存在，返回指定注解类型的注解；不存在则返回null&lt;/p&gt;
+&lt;p&gt;java.lang.Class&lt;/p&gt;
+
+&lt;h2 id=&#34;如果存在-返回指定注解类型的注解-不存在则返回null&#34;&gt;如果存在，返回指定注解类型的注解；不存在则返回null&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;public &amp;lt;A extends java.lang.annotation.Annotation&amp;gt; A  getAnnotation ( Class&amp;lt;A&amp;gt; annotationClass )
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;##返回该类中所有注解&lt;/p&gt;
+&lt;h2 id=&#34;返回该类中所有注解&#34;&gt;返回该类中所有注解&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;public java.lang.annotation.Annotation[] getAnnotations ( )
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;##判断该类是不是一个注解类型&lt;/p&gt;
+&lt;h2 id=&#34;判断该类是不是一个注解类型&#34;&gt;判断该类是不是一个注解类型&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;public boolean isAnnotation()
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;##判断指定类型的一个注解是否出现在该类上&lt;/p&gt;
+&lt;h2 id=&#34;判断指定类型的一个注解是否出现在该类上&#34;&gt;判断指定类型的一个注解是否出现在该类上&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;public boolean isAnnotationPressent( Class&amp;lt;? extends java.lang.annotation.Annotation&amp;gt; annotationClass)
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;#参考
-- &lt;a href=&#34;http://blog.csdn.net/cwcwj3069/article/details/52252670&#34;&gt;《深入理解Java：注解》 cwcwj3069 - CSDN博客 &lt;/a&gt;
-- &lt;a href=&#34;http://www.cnblogs.com/kgrdomore/p/5806321.html&#34;&gt;《注解的基本盘点》 墨迹修 - 博客园博客 &lt;/a&gt;
-- &lt;a href=&#34;http://gityuan.com/2016/01/23/java-annotation/&#34;&gt;《Java注解(Annotation)》 Gityuan - 个人博客 &lt;/a&gt;
-- &lt;a href=&#34;http://www.cnblogs.com/tianzhijiexian/p/4807813.html&#34;&gt;《Java 注解》 Developer_Kale - 博客园博客  &lt;/a&gt;
-- 《Java 和 Android 开发学习指南》 （第2版）， [加] Budi Kurniawan 著 ，李强 译  ，人民邮电出版社 2016-3&lt;/p&gt;
+&lt;h1 id=&#34;参考&#34;&gt;参考&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://blog.csdn.net/cwcwj3069/article/details/52252670&#34;&gt;《深入理解Java：注解》 cwcwj3069 - CSDN博客 &lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.cnblogs.com/kgrdomore/p/5806321.html&#34;&gt;《注解的基本盘点》 墨迹修 - 博客园博客 &lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://gityuan.com/2016/01/23/java-annotation/&#34;&gt;《Java注解(Annotation)》 Gityuan - 个人博客 &lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.cnblogs.com/tianzhijiexian/p/4807813.html&#34;&gt;《Java 注解》 Developer_Kale - 博客园博客  &lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;《Java 和 Android 开发学习指南》 （第2版）， [加] Budi Kurniawan 著 ，李强 译  ，人民邮电出版社 2016-3&lt;/li&gt;
+&lt;/ul&gt;
 </description>
     </item>
     
@@ -2537,6 +2527,40 @@ if(&amp;quot;Java&amp;quot;.equals(s1)   //常用
 &lt;h1 id=&#34;java-lang-system&#34;&gt;java.lang.System&lt;/h1&gt;
 
 &lt;h1 id=&#34;java-lang-scaner&#34;&gt;java.lang.Scaner&lt;/h1&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Java 概述</title>
+      <link>http://f12998765.github.io/java-notes/Java-%E6%A6%82%E8%BF%B0/</link>
+      <pubDate>Fri, 18 Nov 2016 18:20:00 +0800</pubDate>
+      
+      <guid>http://f12998765.github.io/java-notes/Java-%E6%A6%82%E8%BF%B0/</guid>
+      <description>
+
+&lt;h2 id=&#34;java的历史&#34;&gt;Java的历史&lt;/h2&gt;
+
+&lt;p&gt;1991 年Sun公司的James Gosling等人开始开发名称为 Oak 的语言&lt;/p&gt;
+
+&lt;p&gt;1994年将Oak语言更名为Java。&lt;/p&gt;
+
+&lt;p&gt;随着互联网的兴起，Java语言迅速崛起 。&lt;/p&gt;
+
+&lt;p&gt;2009年04月20日，美国甲骨文公司收购Sun，取得java的版权。&lt;/p&gt;
+
+&lt;h2 id=&#34;java技术体系&#34;&gt;&lt;strong&gt;Java技术体系&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;JAVASE：&lt;/strong&gt;&lt;code&gt;Java Platform Standard Edition&lt;/code&gt;，完成桌面应用程序的开发，是其它两者的基础;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;JAVAEE：&lt;/strong&gt;&lt;code&gt;Java Platform Enterprise Edition&lt;/code&gt;，开发企业环境下的应用程序，主要针对web程序开发;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;JAVAME：&lt;/strong&gt;&lt;code&gt;Java Platform Micro Edition&lt;/code&gt;，开发电子消费产品和嵌入式设备，如手机中的程序。&lt;/p&gt;
+
+&lt;h2 id=&#34;java的特性&#34;&gt;Java的特性&lt;/h2&gt;
+
+&lt;p&gt;Java 是一种面向对象的编程语言。&lt;/p&gt;
+
+&lt;p&gt;其他，请自行Google了解。&lt;/p&gt;
 </description>
     </item>
     

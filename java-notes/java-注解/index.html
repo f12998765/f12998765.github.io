@@ -9,11 +9,14 @@
 <link rel="alternate" href="/index.xml" type="application/rss+xml" title="XIZERO">
 <link href="https://cdn.bootcss.com/highlight.js/9.7.0/styles/tomorrow.min.css" rel="stylesheet">
 <script src="https://cdn.bootcss.com/highlight.js/9.8.0/highlight.min.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script src="../js/top.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
 <title>Java Annotation（注解） - XIZERO</title>
 </head>
 <body>
 
+<div id="gotop"></div>
 
 	
 
@@ -51,8 +54,9 @@
 	<div class="md_content">
 		
 
-<p>#Annotation（注解）
-Java提供的一种元程序中的元素关联任何信息和任何元数据（metadata）的途径和方法。
+<h1 id="annotation-注解">Annotation（注解）</h1>
+
+<p>Java提供的一种元程序中的元素关联任何信息和任何元数据（metadata）的途径和方法。
 Annotion(注解)是一个接口，程序可以通过反射来获取指定程序元素的Annotion对象，然后通过Annotion对象来获取注解里面的元数据。
 它可以用于创建文档，跟踪代码中的依赖性，甚至执行基本编译时检查。从某些方面看，annotation就像修饰符一样被使用，并应用于包、类 型、构造方法、方法、成员变量、参数、本地变量的声明中。这些信息被存储在Annotation的“name=value”结构对中。</p>
 
@@ -62,7 +66,7 @@ Annotion(注解)是一个接口，程序可以通过反射来获取指定程序�
 
 <p><strong>注解类型是一种特殊的接口类型，注解是注解类型的一个实例</strong></p>
 
-<p>#注解类型</p>
+<h1 id="注解类型">注解类型</h1>
 
 <ul>
 <li>根据注解使用方法和用途：
@@ -76,7 +80,7 @@ Annotion(注解)是一个接口，程序可以通过反射来获取指定程序�
 如果注解类型有单个键值对 , 并且键的名称是 value , 那么可以忽略括号中的键</li>
 </ul>
 
-<p>#元注解</p>
+<h1 id="元注解">元注解</h1>
 
 <table>
 <thead>
@@ -111,8 +115,9 @@ Annotion(注解)是一个接口，程序可以通过反射来获取指定程序�
 
 <p>位于  java.lang.annotation 下</p>
 
-<p>##@Targe
-<strong>用于描述注解的使用对象</strong></p>
+<h2 id="targe">@Targe</h2>
+
+<p><strong>用于描述注解的使用对象</strong></p>
 
 <p>value取值为java.lang.annnotation.RetentionPolicy 枚举的成员之一</p>
 
@@ -167,9 +172,11 @@ Annotion(注解)是一个接口，程序可以通过反射来获取指定程序�
 </tbody>
 </table>
 
-<p>默认策略 , 可作用于任意对象
-##@Retention
-<strong>定义了该Annotation被保留的时间长短</strong></p>
+<p>默认策略 , 可作用于任意对象</p>
+
+<h2 id="retention">@Retention</h2>
+
+<p><strong>定义了该Annotation被保留的时间长短</strong></p>
 
 <p>value取值为java.lang.annnotation.ElementType 枚举的成员之一</p>
 
@@ -201,13 +208,15 @@ Annotion(注解)是一个接口，程序可以通过反射来获取指定程序�
 
 <p>默认保留策略为RetentionPolicy.CLASS</p>
 
-<p>##@Documented
-<strong>当前注解的元素会被javadoc工具进行文档化</strong></p>
+<h2 id="documented">@Documented</h2>
 
-<p>##@Inherited
-<strong>表示该注解类型被自动继承</strong></p>
+<p><strong>当前注解的元素会被javadoc工具进行文档化</strong></p>
 
-<p>#系统内置标准注解：</p>
+<h2 id="inherited">@Inherited</h2>
+
+<p><strong>表示该注解类型被自动继承</strong></p>
+
+<h1 id="系统内置标准注解">系统内置标准注解：</h1>
 
 <table>
 <thead>
@@ -247,18 +256,21 @@ Annotion(注解)是一个接口，程序可以通过反射来获取指定程序�
 </tbody>
 </table>
 
-<p>##@Override
-<strong>告诉编译器该方法覆盖了超类/父类中的一个方法</strong></p>
+<h2 id="override">@Override</h2>
 
-<p>##@Deprecated
-<strong>应用于方法或类型 , 表示该方法或类型是要废弃的</strong></p>
+<p><strong>告诉编译器该方法覆盖了超类/父类中的一个方法</strong></p>
+
+<h2 id="deprecated">@Deprecated</h2>
+
+<p><strong>应用于方法或类型 , 表示该方法或类型是要废弃的</strong></p>
 
 <blockquote>
 <p>通常是因为有更好的方法或类型 , 并且兼容低版本</p>
 </blockquote>
 
-<p>##@SuppressWarnnings
- <strong>抑制编译器警告</strong></p>
+<h2 id="suppresswarnnings">@SuppressWarnnings</h2>
+
+<p><strong>抑制编译器警告</strong></p>
 
 <h3 id="suppresswarnings-value-注解的常见参数值的简单说明">@SuppressWarnings(value={})注解的常见参数值的简单说明：</h3>
 
@@ -308,8 +320,9 @@ Annotion(注解)是一个接口，程序可以通过反射来获取指定程序�
 </tbody>
 </table>
 
-<p>#自定义注解
-<strong>一个注解类型是一个java接口</strong></p>
+<h1 id="自定义注解">自定义注解</h1>
+
+<p><strong>一个注解类型是一个java接口</strong></p>
 
 <pre><code class="language-java">@Inherited
 @Retention
@@ -320,35 +333,39 @@ public @interface CustomAnnotation ( ) {
 }
 </code></pre>
 
-<p>#使用反射来查询注解
-java.lang.Class</p>
+<h1 id="使用反射来查询注解">使用反射来查询注解</h1>
 
-<p>##如果存在，返回指定注解类型的注解；不存在则返回null</p>
+<p>java.lang.Class</p>
+
+<h2 id="如果存在-返回指定注解类型的注解-不存在则返回null">如果存在，返回指定注解类型的注解；不存在则返回null</h2>
 
 <pre><code class="language-java">public &lt;A extends java.lang.annotation.Annotation&gt; A  getAnnotation ( Class&lt;A&gt; annotationClass )
 </code></pre>
 
-<p>##返回该类中所有注解</p>
+<h2 id="返回该类中所有注解">返回该类中所有注解</h2>
 
 <pre><code class="language-java">public java.lang.annotation.Annotation[] getAnnotations ( )
 </code></pre>
 
-<p>##判断该类是不是一个注解类型</p>
+<h2 id="判断该类是不是一个注解类型">判断该类是不是一个注解类型</h2>
 
 <pre><code class="language-java">public boolean isAnnotation()
 </code></pre>
 
-<p>##判断指定类型的一个注解是否出现在该类上</p>
+<h2 id="判断指定类型的一个注解是否出现在该类上">判断指定类型的一个注解是否出现在该类上</h2>
 
 <pre><code class="language-java">public boolean isAnnotationPressent( Class&lt;? extends java.lang.annotation.Annotation&gt; annotationClass)
 </code></pre>
 
-<p>#参考
-- <a href="http://blog.csdn.net/cwcwj3069/article/details/52252670">《深入理解Java：注解》 cwcwj3069 - CSDN博客 </a>
-- <a href="http://www.cnblogs.com/kgrdomore/p/5806321.html">《注解的基本盘点》 墨迹修 - 博客园博客 </a>
-- <a href="http://gityuan.com/2016/01/23/java-annotation/">《Java注解(Annotation)》 Gityuan - 个人博客 </a>
-- <a href="http://www.cnblogs.com/tianzhijiexian/p/4807813.html">《Java 注解》 Developer_Kale - 博客园博客  </a>
-- 《Java 和 Android 开发学习指南》 （第2版）， [加] Budi Kurniawan 著 ，李强 译  ，人民邮电出版社 2016-3</p>
+<h1 id="参考">参考</h1>
+
+<ul>
+<li><a href="http://blog.csdn.net/cwcwj3069/article/details/52252670">《深入理解Java：注解》 cwcwj3069 - CSDN博客 </a></li>
+<li><a href="http://www.cnblogs.com/kgrdomore/p/5806321.html">《注解的基本盘点》 墨迹修 - 博客园博客 </a></li>
+<li><a href="http://gityuan.com/2016/01/23/java-annotation/">《Java注解(Annotation)》 Gityuan - 个人博客 </a></li>
+<li><a href="http://www.cnblogs.com/tianzhijiexian/p/4807813.html">《Java 注解》 Developer_Kale - 博客园博客  </a></li>
+<li>《Java 和 Android 开发学习指南》 （第2版）， [加] Budi Kurniawan 著 ，李强 译  ，人民邮电出版社 2016-3</li>
+</ul>
 
 	</div>
 </div>
