@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>XIZERO</title>
-    <link>http://xizero.com/tags/index.xml</link>
+    <link>https://www.xizero.com/tags/index.xml</link>
     <description>Recent content on XIZERO</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="http://xizero.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://www.xizero.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>java 泛型 TKVE 含义</title>
-      <link>http://xizero.com/java/java-%E6%B3%9B%E5%9E%8B-TKVE/</link>
+      <link>https://www.xizero.com/java/java-%E6%B3%9B%E5%9E%8B-TKVE/</link>
       <pubDate>Thu, 24 Nov 2016 15:55:43 +0800</pubDate>
       
-      <guid>http://xizero.com/java/java-%E6%B3%9B%E5%9E%8B-TKVE/</guid>
+      <guid>https://www.xizero.com/java/java-%E6%B3%9B%E5%9E%8B-TKVE/</guid>
       <description>
 
 &lt;h2 id=&#34;java-泛型经常使用的符号的含义&#34;&gt;Java 泛型经常使用的符号的含义&lt;/h2&gt;

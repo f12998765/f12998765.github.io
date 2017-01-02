@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>多态 on XIZERO</title>
-    <link>http://xizero.com/tags/%E5%A4%9A%E6%80%81/index.xml</link>
+    <link>https://www.xizero.com/tags/%E5%A4%9A%E6%80%81/index.xml</link>
     <description>Recent content in 多态 on XIZERO</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="http://xizero.com/tags/%E5%A4%9A%E6%80%81/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://www.xizero.com/tags/%E5%A4%9A%E6%80%81/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Java 接口 抽象类 多态</title>
-      <link>http://xizero.com/java/java-%E6%8E%A5%E5%8F%A3-%E6%8A%BD%E8%B1%A1%E7%B1%BB-%E5%A4%9A%E6%80%81/</link>
+      <link>https://www.xizero.com/java/java-%E6%8E%A5%E5%8F%A3-%E6%8A%BD%E8%B1%A1%E7%B1%BB-%E5%A4%9A%E6%80%81/</link>
       <pubDate>Fri, 18 Nov 2016 18:20:00 +0800</pubDate>
       
-      <guid>http://xizero.com/java/java-%E6%8E%A5%E5%8F%A3-%E6%8A%BD%E8%B1%A1%E7%B1%BB-%E5%A4%9A%E6%80%81/</guid>
+      <guid>https://www.xizero.com/java/java-%E6%8E%A5%E5%8F%A3-%E6%8A%BD%E8%B1%A1%E7%B1%BB-%E5%A4%9A%E6%80%81/</guid>
       <description>
 
 &lt;h2 id=&#34;什么是接口&#34;&gt;什么是接口？&lt;/h2&gt;

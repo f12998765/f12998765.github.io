@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Javas on XIZERO</title>
-    <link>http://xizero.com/java/index.xml</link>
+    <link>https://www.xizero.com/java/index.xml</link>
     <description>Recent content in Javas on XIZERO</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 24 Nov 2016 15:55:43 +0800</lastBuildDate>
-    <atom:link href="http://xizero.com/java/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://www.xizero.com/java/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>java 泛型 TKVE 含义</title>
-      <link>http://xizero.com/java/java-%E6%B3%9B%E5%9E%8B-TKVE/</link>
+      <link>https://www.xizero.com/java/java-%E6%B3%9B%E5%9E%8B-TKVE/</link>
       <pubDate>Thu, 24 Nov 2016 15:55:43 +0800</pubDate>
       
-      <guid>http://xizero.com/java/java-%E6%B3%9B%E5%9E%8B-TKVE/</guid>
+      <guid>https://www.xizero.com/java/java-%E6%B3%9B%E5%9E%8B-TKVE/</guid>
       <description>
 
 &lt;h2 id=&#34;java-泛型经常使用的符号的含义&#34;&gt;Java 泛型经常使用的符号的含义&lt;/h2&gt;
@@ -43,10 +43,10 @@
     
     <item>
       <title>Java 序列化</title>
-      <link>http://xizero.com/java/java-%E5%BA%8F%E5%88%97%E5%8C%96/</link>
+      <link>https://www.xizero.com/java/java-%E5%BA%8F%E5%88%97%E5%8C%96/</link>
       <pubDate>Wed, 23 Nov 2016 16:28:21 +0800</pubDate>
       
-      <guid>http://xizero.com/java/java-%E5%BA%8F%E5%88%97%E5%8C%96/</guid>
+      <guid>https://www.xizero.com/java/java-%E5%BA%8F%E5%88%97%E5%8C%96/</guid>
       <description>
 
 &lt;h2 id=&#34;什么是序列化&#34;&gt;什么是序列化？&lt;/h2&gt;
@@ -175,10 +175,10 @@ public class Main {
     
     <item>
       <title>String 相关</title>
-      <link>http://xizero.com/java/String%20%E7%9B%B8%E5%85%B3/</link>
+      <link>https://www.xizero.com/java/String%20%E7%9B%B8%E5%85%B3/</link>
       <pubDate>Tue, 22 Nov 2016 08:36:39 +0800</pubDate>
       
-      <guid>http://xizero.com/java/String%20%E7%9B%B8%E5%85%B3/</guid>
+      <guid>https://www.xizero.com/java/String%20%E7%9B%B8%E5%85%B3/</guid>
       <description>
 
 &lt;h2 id=&#34;string-成员变量&#34;&gt;String 成员变量&lt;/h2&gt;
@@ -414,10 +414,10 @@ public String(char value[], int offset, int count) {
     
     <item>
       <title>Java IO</title>
-      <link>http://xizero.com/java/java-io/</link>
+      <link>https://www.xizero.com/java/java-io/</link>
       <pubDate>Fri, 18 Nov 2016 18:20:00 +0800</pubDate>
       
-      <guid>http://xizero.com/java/java-io/</guid>
+      <guid>https://www.xizero.com/java/java-io/</guid>
       <description>
 
 &lt;blockquote&gt;
@@ -711,10 +711,10 @@ Path p_ = Paths.get(&amp;quot;/home&amp;quot;,&amp;quot;user&amp;quot;);
     
     <item>
       <title>Java 修饰符</title>
-      <link>http://xizero.com/java/java-%E4%BF%AE%E9%A5%B0%E7%AC%A6/</link>
+      <link>https://www.xizero.com/java/java-%E4%BF%AE%E9%A5%B0%E7%AC%A6/</link>
       <pubDate>Fri, 18 Nov 2016 18:20:00 +0800</pubDate>
       
-      <guid>http://xizero.com/java/java-%E4%BF%AE%E9%A5%B0%E7%AC%A6/</guid>
+      <guid>https://www.xizero.com/java/java-%E4%BF%AE%E9%A5%B0%E7%AC%A6/</guid>
       <description>
 
 &lt;h2 id=&#34;分类&#34;&gt;分类&lt;/h2&gt;
@@ -922,10 +922,10 @@ import static packageName.className.*;
     
     <item>
       <title>Java 反射</title>
-      <link>http://xizero.com/java/java-%E5%8F%8D%E5%B0%84/</link>
+      <link>https://www.xizero.com/java/java-%E5%8F%8D%E5%B0%84/</link>
       <pubDate>Fri, 18 Nov 2016 18:20:00 +0800</pubDate>
       
-      <guid>http://xizero.com/java/java-%E5%8F%8D%E5%B0%84/</guid>
+      <guid>https://www.xizero.com/java/java-%E5%8F%8D%E5%B0%84/</guid>
       <description>
 
 &lt;p&gt;&lt;strong&gt;反射是将java 类中的各种成分映射成相应的类。&lt;/strong&gt;&lt;/p&gt;
@@ -1141,10 +1141,10 @@ Array.set(数组实例,序列,值);
     
     <item>
       <title>Java 异常</title>
-      <link>http://xizero.com/java/java-%E5%BC%82%E5%B8%B8/</link>
+      <link>https://www.xizero.com/java/java-%E5%BC%82%E5%B8%B8/</link>
       <pubDate>Fri, 18 Nov 2016 18:20:00 +0800</pubDate>
       
-      <guid>http://xizero.com/java/java-%E5%BC%82%E5%B8%B8/</guid>
+      <guid>https://www.xizero.com/java/java-%E5%BC%82%E5%B8%B8/</guid>
       <description>
 
 &lt;h2 id=&#34;定义&#34;&gt;定义&lt;/h2&gt;
@@ -1204,10 +1204,10 @@ throws：用于方法名之后，表示该方法可能抛出异常的类型。&l
     
     <item>
       <title>Java 排序</title>
-      <link>http://xizero.com/java/java-%E6%8E%92%E5%BA%8F/</link>
+      <link>https://www.xizero.com/java/java-%E6%8E%92%E5%BA%8F/</link>
       <pubDate>Fri, 18 Nov 2016 18:20:00 +0800</pubDate>
       
-      <guid>http://xizero.com/java/java-%E6%8E%92%E5%BA%8F/</guid>
+      <guid>https://www.xizero.com/java/java-%E6%8E%92%E5%BA%8F/</guid>
       <description>
 
 &lt;h1 id=&#34;comparable-vs-comparator&#34;&gt;Comparable vs Comparator&lt;/h1&gt;
@@ -1304,10 +1304,10 @@ throws：用于方法名之后，表示该方法可能抛出异常的类型。&l
     
     <item>
       <title>Java 接口 抽象类 多态</title>
-      <link>http://xizero.com/java/java-%E6%8E%A5%E5%8F%A3-%E6%8A%BD%E8%B1%A1%E7%B1%BB-%E5%A4%9A%E6%80%81/</link>
+      <link>https://www.xizero.com/java/java-%E6%8E%A5%E5%8F%A3-%E6%8A%BD%E8%B1%A1%E7%B1%BB-%E5%A4%9A%E6%80%81/</link>
       <pubDate>Fri, 18 Nov 2016 18:20:00 +0800</pubDate>
       
-      <guid>http://xizero.com/java/java-%E6%8E%A5%E5%8F%A3-%E6%8A%BD%E8%B1%A1%E7%B1%BB-%E5%A4%9A%E6%80%81/</guid>
+      <guid>https://www.xizero.com/java/java-%E6%8E%A5%E5%8F%A3-%E6%8A%BD%E8%B1%A1%E7%B1%BB-%E5%A4%9A%E6%80%81/</guid>
       <description>
 
 &lt;h2 id=&#34;什么是接口&#34;&gt;什么是接口？&lt;/h2&gt;
@@ -1379,10 +1379,10 @@ throws：用于方法名之后，表示该方法可能抛出异常的类型。&l
     
     <item>
       <title>Java 数组</title>
-      <link>http://xizero.com/java/java-%E6%95%B0%E7%BB%84%E5%92%8Carrays%E7%B1%BB/</link>
+      <link>https://www.xizero.com/java/java-%E6%95%B0%E7%BB%84%E5%92%8Carrays%E7%B1%BB/</link>
       <pubDate>Fri, 18 Nov 2016 18:20:00 +0800</pubDate>
       
-      <guid>http://xizero.com/java/java-%E6%95%B0%E7%BB%84%E5%92%8Carrays%E7%B1%BB/</guid>
+      <guid>https://www.xizero.com/java/java-%E6%95%B0%E7%BB%84%E5%92%8Carrays%E7%B1%BB/</guid>
       <description>
 
 &lt;h2 id=&#34;什么是数组-及声明数组变量&#34;&gt;什么是数组？及声明数组变量&lt;/h2&gt;
@@ -1497,19 +1497,19 @@ arrayName. length//每个数组都有一个属性length来表示长度
     
     <item>
       <title>Java 时间</title>
-      <link>http://xizero.com/java/java-%E6%97%B6%E9%97%B4/</link>
+      <link>https://www.xizero.com/java/java-%E6%97%B6%E9%97%B4/</link>
       <pubDate>Fri, 18 Nov 2016 18:20:00 +0800</pubDate>
       
-      <guid>http://xizero.com/java/java-%E6%97%B6%E9%97%B4/</guid>
+      <guid>https://www.xizero.com/java/java-%E6%97%B6%E9%97%B4/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Java 枚举</title>
-      <link>http://xizero.com/java/java-%E6%9E%9A%E4%B8%BE/</link>
+      <link>https://www.xizero.com/java/java-%E6%9E%9A%E4%B8%BE/</link>
       <pubDate>Fri, 18 Nov 2016 18:20:00 +0800</pubDate>
       
-      <guid>http://xizero.com/java/java-%E6%9E%9A%E4%B8%BE/</guid>
+      <guid>https://www.xizero.com/java/java-%E6%9E%9A%E4%B8%BE/</guid>
       <description>
 
 &lt;h2 id=&#34;创建&#34;&gt;创建&lt;/h2&gt;
@@ -1709,10 +1709,10 @@ arrayName. length//每个数组都有一个属性length来表示长度
     
     <item>
       <title>Java 核心类</title>
-      <link>http://xizero.com/java/java-%E6%A0%B8%E5%BF%83%E7%B1%BB/</link>
+      <link>https://www.xizero.com/java/java-%E6%A0%B8%E5%BF%83%E7%B1%BB/</link>
       <pubDate>Fri, 18 Nov 2016 18:20:00 +0800</pubDate>
       
-      <guid>http://xizero.com/java/java-%E6%A0%B8%E5%BF%83%E7%B1%BB/</guid>
+      <guid>https://www.xizero.com/java/java-%E6%A0%B8%E5%BF%83%E7%B1%BB/</guid>
       <description>
 
 &lt;h1 id=&#34;java-lang-object&#34;&gt;java.lang.Object&lt;/h1&gt;
@@ -2216,10 +2216,10 @@ if(&amp;quot;Java&amp;quot;.equals(s1)   //常用
     
     <item>
       <title>Java 概述</title>
-      <link>http://xizero.com/java/Java-%E6%A6%82%E8%BF%B0/</link>
+      <link>https://www.xizero.com/java/Java-%E6%A6%82%E8%BF%B0/</link>
       <pubDate>Fri, 18 Nov 2016 18:20:00 +0800</pubDate>
       
-      <guid>http://xizero.com/java/Java-%E6%A6%82%E8%BF%B0/</guid>
+      <guid>https://www.xizero.com/java/Java-%E6%A6%82%E8%BF%B0/</guid>
       <description>
 
 &lt;h2 id=&#34;java的历史&#34;&gt;Java的历史&lt;/h2&gt;
@@ -2250,10 +2250,10 @@ if(&amp;quot;Java&amp;quot;.equals(s1)   //常用
     
     <item>
       <title>Java 泛型</title>
-      <link>http://xizero.com/java/java-%E6%B3%9B%E5%9E%8B/</link>
+      <link>https://www.xizero.com/java/java-%E6%B3%9B%E5%9E%8B/</link>
       <pubDate>Fri, 18 Nov 2016 18:20:00 +0800</pubDate>
       
-      <guid>http://xizero.com/java/java-%E6%B3%9B%E5%9E%8B/</guid>
+      <guid>https://www.xizero.com/java/java-%E6%B3%9B%E5%9E%8B/</guid>
       <description>
 
 &lt;h2 id=&#34;容器类&#34;&gt;容器类&lt;/h2&gt;
