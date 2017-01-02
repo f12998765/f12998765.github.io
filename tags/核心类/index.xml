@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>核心类 on XIZERO</title>
-    <link>http://127.0.0.1/tags/%E6%A0%B8%E5%BF%83%E7%B1%BB/index.xml</link>
+    <link>http://xizero.com/tags/%E6%A0%B8%E5%BF%83%E7%B1%BB/index.xml</link>
     <description>Recent content in 核心类 on XIZERO</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="http://127.0.0.1/tags/%E6%A0%B8%E5%BF%83%E7%B1%BB/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://xizero.com/tags/%E6%A0%B8%E5%BF%83%E7%B1%BB/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Java 核心类</title>
-      <link>http://127.0.0.1/java/java-%E6%A0%B8%E5%BF%83%E7%B1%BB/</link>
+      <link>http://xizero.com/java/java-%E6%A0%B8%E5%BF%83%E7%B1%BB/</link>
       <pubDate>Fri, 18 Nov 2016 18:20:00 +0800</pubDate>
       
-      <guid>http://127.0.0.1/java/java-%E6%A0%B8%E5%BF%83%E7%B1%BB/</guid>
+      <guid>http://xizero.com/java/java-%E6%A0%B8%E5%BF%83%E7%B1%BB/</guid>
       <description>
 
 &lt;h1 id=&#34;java-lang-object&#34;&gt;java.lang.Object&lt;/h1&gt;

@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>开发环境 on XIZERO</title>
-    <link>http://127.0.0.1/tags/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/index.xml</link>
+    <link>http://xizero.com/tags/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/index.xml</link>
     <description>Recent content in 开发环境 on XIZERO</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="http://127.0.0.1/tags/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://xizero.com/tags/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>搭建 Java 开发环境 linux</title>
-      <link>http://127.0.0.1/java/%E6%90%AD%E5%BB%BA-java-%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83-linux/</link>
+      <link>http://xizero.com/java/%E6%90%AD%E5%BB%BA-java-%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83-linux/</link>
       <pubDate>Fri, 18 Nov 2016 18:20:00 +0800</pubDate>
       
-      <guid>http://127.0.0.1/java/%E6%90%AD%E5%BB%BA-java-%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83-linux/</guid>
+      <guid>http://xizero.com/java/%E6%90%AD%E5%BB%BA-java-%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83-linux/</guid>
       <description>
 
 &lt;h2 id=&#34;安装-jdk&#34;&gt;安装 JDK&lt;/h2&gt;
@@ -90,10 +90,10 @@ source /etc/profile
     
     <item>
       <title>搭建 Java 开发环境 win</title>
-      <link>http://127.0.0.1/java/%E6%90%AD%E5%BB%BA-Java-%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83-Win/</link>
+      <link>http://xizero.com/java/%E6%90%AD%E5%BB%BA-Java-%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83-Win/</link>
       <pubDate>Fri, 18 Nov 2016 18:20:00 +0800</pubDate>
       
-      <guid>http://127.0.0.1/java/%E6%90%AD%E5%BB%BA-Java-%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83-Win/</guid>
+      <guid>http://xizero.com/java/%E6%90%AD%E5%BB%BA-Java-%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83-Win/</guid>
       <description>
 
 &lt;h2 id=&#34;安装jdk&#34;&gt;安装JDK&lt;/h2&gt;

@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Scraps on XIZERO</title>
-    <link>http://127.0.0.1/tags/scraps/index.xml</link>
+    <link>http://xizero.com/tags/scraps/index.xml</link>
     <description>Recent content in Scraps on XIZERO</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="http://127.0.0.1/tags/scraps/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://xizero.com/tags/scraps/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>零碎笔记</title>
-      <link>http://127.0.0.1/note/%E9%9B%B6%E7%A2%8E%E7%AC%94%E8%AE%B0/</link>
+      <link>http://xizero.com/note/%E9%9B%B6%E7%A2%8E%E7%AC%94%E8%AE%B0/</link>
       <pubDate>Fri, 18 Nov 2016 18:20:00 +0800</pubDate>
       
-      <guid>http://127.0.0.1/note/%E9%9B%B6%E7%A2%8E%E7%AC%94%E8%AE%B0/</guid>
+      <guid>http://xizero.com/note/%E9%9B%B6%E7%A2%8E%E7%AC%94%E8%AE%B0/</guid>
       <description>
 
 &lt;h2 id=&#34;1-idea新建maven项目卡住显示-generating-project-in-batch-mode&#34;&gt;1. IDEA新建MAVEN项目卡住显示 : &amp;ldquo;Generating Project in Batch mode&amp;rdquo;&lt;/h2&gt;

@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>异常 on XIZERO</title>
-    <link>http://127.0.0.1/tags/%E5%BC%82%E5%B8%B8/index.xml</link>
+    <link>http://xizero.com/tags/%E5%BC%82%E5%B8%B8/index.xml</link>
     <description>Recent content in 异常 on XIZERO</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="http://127.0.0.1/tags/%E5%BC%82%E5%B8%B8/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://xizero.com/tags/%E5%BC%82%E5%B8%B8/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Java 异常</title>
-      <link>http://127.0.0.1/java/java-%E5%BC%82%E5%B8%B8/</link>
+      <link>http://xizero.com/java/java-%E5%BC%82%E5%B8%B8/</link>
       <pubDate>Fri, 18 Nov 2016 18:20:00 +0800</pubDate>
       
-      <guid>http://127.0.0.1/java/java-%E5%BC%82%E5%B8%B8/</guid>
+      <guid>http://xizero.com/java/java-%E5%BC%82%E5%B8%B8/</guid>
       <description>
 
 &lt;h2 id=&#34;定义&#34;&gt;定义&lt;/h2&gt;

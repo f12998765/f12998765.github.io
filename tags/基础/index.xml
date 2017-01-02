@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>基础 on XIZERO</title>
-    <link>http://127.0.0.1/tags/%E5%9F%BA%E7%A1%80/index.xml</link>
+    <link>http://xizero.com/tags/%E5%9F%BA%E7%A1%80/index.xml</link>
     <description>Recent content in 基础 on XIZERO</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="http://127.0.0.1/tags/%E5%9F%BA%E7%A1%80/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://xizero.com/tags/%E5%9F%BA%E7%A1%80/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>String 相关</title>
-      <link>http://127.0.0.1/java/String%20%E7%9B%B8%E5%85%B3/</link>
+      <link>http://xizero.com/java/String%20%E7%9B%B8%E5%85%B3/</link>
       <pubDate>Tue, 22 Nov 2016 08:36:39 +0800</pubDate>
       
-      <guid>http://127.0.0.1/java/String%20%E7%9B%B8%E5%85%B3/</guid>
+      <guid>http://xizero.com/java/String%20%E7%9B%B8%E5%85%B3/</guid>
       <description>
 
 &lt;h2 id=&#34;string-成员变量&#34;&gt;String 成员变量&lt;/h2&gt;
@@ -249,10 +249,10 @@ public String(char value[], int offset, int count) {
     
     <item>
       <title>Java 语法基础</title>
-      <link>http://127.0.0.1/java/java-%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80/</link>
+      <link>http://xizero.com/java/java-%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80/</link>
       <pubDate>Fri, 18 Nov 2016 18:20:00 +0800</pubDate>
       
-      <guid>http://127.0.0.1/java/java-%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80/</guid>
+      <guid>http://xizero.com/java/java-%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80/</guid>
       <description>
 
 &lt;h2 id=&#34;1-什么是变量&#34;&gt;1 什么是变量？&lt;/h2&gt;

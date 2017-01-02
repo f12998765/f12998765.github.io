@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Linux on XIZERO</title>
-    <link>http://127.0.0.1/tags/linux/index.xml</link>
+    <link>http://xizero.com/tags/linux/index.xml</link>
     <description>Recent content in Linux on XIZERO</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="http://127.0.0.1/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://xizero.com/tags/linux/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Centos 配置</title>
-      <link>http://127.0.0.1/note/Centos%20%E9%85%8D%E7%BD%AE/</link>
+      <link>http://xizero.com/note/Centos%20%E9%85%8D%E7%BD%AE/</link>
       <pubDate>Fri, 18 Nov 2016 18:20:00 +0800</pubDate>
       
-      <guid>http://127.0.0.1/note/Centos%20%E9%85%8D%E7%BD%AE/</guid>
+      <guid>http://xizero.com/note/Centos%20%E9%85%8D%E7%BD%AE/</guid>
       <description>
 
 &lt;h2 id=&#34;ssh-配置修改&#34;&gt;SSH 配置修改&lt;/h2&gt;
@@ -90,10 +90,10 @@ mysql &amp;gt; Grant all privileges on *.* to &#39;zero&#39;@&#39;%&#39; identif
     
     <item>
       <title>搭建 Java 开发环境 linux</title>
-      <link>http://127.0.0.1/java/%E6%90%AD%E5%BB%BA-java-%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83-linux/</link>
+      <link>http://xizero.com/java/%E6%90%AD%E5%BB%BA-java-%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83-linux/</link>
       <pubDate>Fri, 18 Nov 2016 18:20:00 +0800</pubDate>
       
-      <guid>http://127.0.0.1/java/%E6%90%AD%E5%BB%BA-java-%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83-linux/</guid>
+      <guid>http://xizero.com/java/%E6%90%AD%E5%BB%BA-java-%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83-linux/</guid>
       <description>
 
 &lt;h2 id=&#34;安装-jdk&#34;&gt;安装 JDK&lt;/h2&gt;

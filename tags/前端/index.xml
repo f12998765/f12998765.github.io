@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>前端 on XIZERO</title>
-    <link>http://127.0.0.1/tags/%E5%89%8D%E7%AB%AF/index.xml</link>
+    <link>http://xizero.com/tags/%E5%89%8D%E7%AB%AF/index.xml</link>
     <description>Recent content in 前端 on XIZERO</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="http://127.0.0.1/tags/%E5%89%8D%E7%AB%AF/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://xizero.com/tags/%E5%89%8D%E7%AB%AF/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>一个想法</title>
-      <link>http://127.0.0.1/zero/%E4%B8%80%E4%B8%AA%E6%83%B3%E6%B3%95/</link>
+      <link>http://xizero.com/zero/%E4%B8%80%E4%B8%AA%E6%83%B3%E6%B3%95/</link>
       <pubDate>Sun, 20 Nov 2016 12:19:55 +0800</pubDate>
       
-      <guid>http://127.0.0.1/zero/%E4%B8%80%E4%B8%AA%E6%83%B3%E6%B3%95/</guid>
+      <guid>http://xizero.com/zero/%E4%B8%80%E4%B8%AA%E6%83%B3%E6%B3%95/</guid>
       <description>&lt;p&gt;自己做了一个小东西，一个简单的 &lt;a href=&#34;http://hao.xizero.com&#34;&gt;网址索引&lt;/a&gt;。&lt;/p&gt;
 
 &lt;p&gt;因为要显示每个网站的favicon，google一下，找到了一些还能用公共的api。&lt;/p&gt;

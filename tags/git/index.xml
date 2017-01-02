@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Git on XIZERO</title>
-    <link>http://127.0.0.1/tags/git/index.xml</link>
+    <link>http://xizero.com/tags/git/index.xml</link>
     <description>Recent content in Git on XIZERO</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="http://127.0.0.1/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://xizero.com/tags/git/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Git 常用命令</title>
-      <link>http://127.0.0.1/note/Git%20%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</link>
+      <link>http://xizero.com/note/Git%20%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</link>
       <pubDate>Fri, 18 Nov 2016 18:20:00 +0800</pubDate>
       
-      <guid>http://127.0.0.1/note/Git%20%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</guid>
+      <guid>http://xizero.com/note/Git%20%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</guid>
       <description>
 
 &lt;h2 id=&#34;设置配置文件&#34;&gt;设置配置文件&lt;/h2&gt;
