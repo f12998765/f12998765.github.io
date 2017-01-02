@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>XIZERO</title>
-    <link>http://f12998765.github.io/tags/win/index.xml</link>
-    <description>Recent content on XIZERO</description>
+    <title>Win on XIZERO</title>
+    <link>http://127.0.0.1/tags/win/index.xml</link>
+    <description>Recent content in Win on XIZERO</description>
     <generator>Hugo -- gohugo.io</generator>
-    <atom:link href="http://f12998765.github.io/tags/win/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <atom:link href="http://127.0.0.1/tags/win/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Win Software</title>
-      <link>http://f12998765.github.io/notes/win-software/</link>
+      <title>win 软件推荐</title>
+      <link>http://127.0.0.1/note/win%20%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90/</link>
       <pubDate>Fri, 18 Nov 2016 18:20:00 +0800</pubDate>
       
-      <guid>http://f12998765.github.io/notes/win-software/</guid>
+      <guid>http://127.0.0.1/note/win%20%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90/</guid>
       <description>
 
 &lt;h1 id=&#34;win-software&#34;&gt;Win Software&lt;/h1&gt;
@@ -156,87 +157,11 @@
     </item>
     
     <item>
-      <title>搭建 Java 开发环境 win</title>
-      <link>http://f12998765.github.io/java-notes/%E6%90%AD%E5%BB%BA-Java-%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83-Win/</link>
+      <title>win 重装恢复</title>
+      <link>http://127.0.0.1/note/win%20%E9%87%8D%E8%A3%85%E6%81%A2%E5%A4%8D/</link>
       <pubDate>Fri, 18 Nov 2016 18:20:00 +0800</pubDate>
       
-      <guid>http://f12998765.github.io/java-notes/%E6%90%AD%E5%BB%BA-Java-%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83-Win/</guid>
-      <description>
-
-&lt;h2 id=&#34;安装jdk&#34;&gt;安装JDK&lt;/h2&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;JDK：Java Development Kit，&lt;/strong&gt;java的开发工具包和运行环境&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;JRE：Java Runtime Environment，&lt;/strong&gt;java程序的运行环境&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;1、打开下载页面 &amp;lt;&lt;a href=&#34;http://www.oracle.com/technetwork/java/javase/downloads/index.html&#34;&gt;下载链接&lt;/a&gt;&amp;gt;&lt;/p&gt;
-
-&lt;p&gt;2、选择对应系统的java 开发工具包下载 &lt;strong&gt;Java SE Development Kit&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;3、运行安装程序，默认安装&lt;/p&gt;
-
-&lt;h2 id=&#34;配置环境变量&#34;&gt;配置环境变量&lt;/h2&gt;
-
-&lt;p&gt;打开： &lt;strong&gt;控制面板 &amp;ndash;&amp;gt; 系统和安全 &amp;ndash;&amp;gt; 系统 &amp;ndash;&amp;gt; 高级系统设置 &amp;ndash;&amp;gt; 环境变量&lt;/strong&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;如果使用1.5以上版本的JDK，不用设置CLASSPATH环境变量&lt;/strong&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th align=&#34;left&#34;&gt;变量名&lt;/th&gt;
-&lt;th align=&#34;left&#34;&gt;变量值&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;&lt;strong&gt;JAVA_HOME&lt;/strong&gt;&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;C:\Program Files\Java\jdk1.8.0 //根据实际路径配置&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;&lt;strong&gt;Path&lt;/strong&gt;&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;%JAVA_HOME%\bin;%JAVA_HOME%\jre\bin;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h2 id=&#34;验证&#34;&gt;验证&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;win+R &amp;ndash;&amp;gt; 输入cmd &amp;ndash;&amp;gt; 运行命令&lt;/strong&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;java
-javac
-java -version
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;javac命令和java命令的区别
-Javac：编译.java文件，生成.Class文件
-Java：加载类库，运行.class文件&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&#34;开发工具&#34;&gt;开发工具&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.eclipse.org/&#34;&gt;Eclipse&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.jetbrains.com/idea/&#34;&gt;IntelliJ IDEA&lt;/a&gt;(推荐)&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://notepad-plus-plus.org/&#34;&gt;NotePad++&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>重装系统 - win</title>
-      <link>http://f12998765.github.io/notes/reinstall-win/</link>
-      <pubDate>Fri, 18 Nov 2016 18:20:00 +0800</pubDate>
-      
-      <guid>http://f12998765.github.io/notes/reinstall-win/</guid>
+      <guid>http://127.0.0.1/note/win%20%E9%87%8D%E8%A3%85%E6%81%A2%E5%A4%8D/</guid>
       <description>
 
 &lt;h1 id=&#34;重装系统-win&#34;&gt;重装系统 - win&lt;/h1&gt;
@@ -348,23 +273,93 @@ Java：加载类库，运行.class文件&lt;/p&gt;
 end
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;配置开发环境&#34;&gt;配置开发环境&lt;/h3&gt;
+&lt;p&gt;###配置开发环境
+* &lt;a href=&#34;https://notepad-plus-plus.org/&#34;&gt;Notpad++&lt;/a&gt;
+* 安装&lt;a href=&#34;http://www.oracle.com/technetwork/java/javase/downloads/index.html&#34;&gt;JDK&lt;/a&gt;
+* &lt;a href=&#34;https://www.jetbrains.com/idea/&#34;&gt;IDEA&lt;/a&gt;
+* Atom、Sublime、VS Code
+* &lt;a href=&#34;http://mobaxterm.mobatek.net/&#34;&gt;MobaXterm&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;###安装其他软件
+* &lt;a href=&#34;http://music.163.com/#/download&#34;&gt;网易云音乐&lt;/a&gt;
+* &lt;a href=&#34;http://zh.snipaste.com/&#34;&gt;Snipaste&lt;/a&gt;
+* &lt;a href=&#34;http://im.qq.com/lightqq/&#34;&gt;QQ精简版&lt;/a&gt;
+* Steam&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>搭建 Java 开发环境 win</title>
+      <link>http://127.0.0.1/java/%E6%90%AD%E5%BB%BA-Java-%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83-Win/</link>
+      <pubDate>Fri, 18 Nov 2016 18:20:00 +0800</pubDate>
+      
+      <guid>http://127.0.0.1/java/%E6%90%AD%E5%BB%BA-Java-%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83-Win/</guid>
+      <description>
+
+&lt;h2 id=&#34;安装jdk&#34;&gt;安装JDK&lt;/h2&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;JDK：Java Development Kit，&lt;/strong&gt;java的开发工具包和运行环境&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;JRE：Java Runtime Environment，&lt;/strong&gt;java程序的运行环境&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;1、打开下载页面 &amp;lt;&lt;a href=&#34;http://www.oracle.com/technetwork/java/javase/downloads/index.html&#34;&gt;下载链接&lt;/a&gt;&amp;gt;&lt;/p&gt;
+
+&lt;p&gt;2、选择对应系统的java 开发工具包下载 &lt;strong&gt;Java SE Development Kit&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;3、运行安装程序，默认安装&lt;/p&gt;
+
+&lt;h2 id=&#34;配置环境变量&#34;&gt;配置环境变量&lt;/h2&gt;
+
+&lt;p&gt;打开： &lt;strong&gt;控制面板 &amp;ndash;&amp;gt; 系统和安全 &amp;ndash;&amp;gt; 系统 &amp;ndash;&amp;gt; 高级系统设置 &amp;ndash;&amp;gt; 环境变量&lt;/strong&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;如果使用1.5以上版本的JDK，不用设置CLASSPATH环境变量&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;left&#34;&gt;变量名&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;变量值&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;strong&gt;JAVA_HOME&lt;/strong&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;C:\Program Files\Java\jdk1.8.0 //根据实际路径配置&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;strong&gt;Path&lt;/strong&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;%JAVA_HOME%\bin;%JAVA_HOME%\jre\bin;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&#34;验证&#34;&gt;验证&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;win+R &amp;ndash;&amp;gt; 输入cmd &amp;ndash;&amp;gt; 运行命令&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;java
+javac
+java -version
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;javac命令和java命令的区别
+Javac：编译.java文件，生成.Class文件
+Java：加载类库，运行.class文件&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&#34;开发工具&#34;&gt;开发工具&lt;/h2&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://notepad-plus-plus.org/&#34;&gt;Notpad++&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;安装&lt;a href=&#34;http://www.oracle.com/technetwork/java/javase/downloads/index.html&#34;&gt;JDK&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.jetbrains.com/idea/&#34;&gt;IDEA&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Atom、Sublime、VS Code&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://mobaxterm.mobatek.net/&#34;&gt;MobaXterm&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;安装其他软件&#34;&gt;安装其他软件&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://music.163.com/#/download&#34;&gt;网易云音乐&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://zh.snipaste.com/&#34;&gt;Snipaste&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://im.qq.com/lightqq/&#34;&gt;QQ精简版&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Steam&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.eclipse.org/&#34;&gt;Eclipse&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.jetbrains.com/idea/&#34;&gt;IntelliJ IDEA&lt;/a&gt;(推荐)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://notepad-plus-plus.org/&#34;&gt;NotePad++&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
     </item>

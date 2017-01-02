@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<meta name="generator" content="Hugo 0.18.1" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="//fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="/css/main.css">
+<link rel="alternate" href="/index.xml" type="application/rss+xml" title="XIZERO">
+<link href="https://cdn.bootcss.com/highlight.js/9.7.0/styles/tomorrow.min.css" rel="stylesheet">
+<script src="https://cdn.bootcss.com/highlight.js/9.8.0/highlight.min.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script src="http://127.0.0.1/js/top.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<title>搭建 Java 开发环境 win - XIZERO</title>
+</head>
+<body>
+
+<div id="gotop" title="🚀 go top"></div>
+
+<div class="top">
+
+	<div class="gos">
+		<span class="go"><a href="/">Home</a></span>
+		<span class="go"><a href="/tags">Tags</a></span>
+		<span class="go"><a href="/about">About</a></span>
+	</div>
+	
+	
+		<div class="tit">
+			搭建 Java 开发环境 win
+		</div>
+
+	
+
+</div>
+
+
+
+
+<div class="con">
+	
+
+<h2 id="安装jdk">安装JDK</h2>
+
+<blockquote>
+<p><strong>JDK：Java Development Kit，</strong>java的开发工具包和运行环境</p>
+
+<p><strong>JRE：Java Runtime Environment，</strong>java程序的运行环境</p>
+</blockquote>
+
+<p>1、打开下载页面 &lt;<a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">下载链接</a>&gt;</p>
+
+<p>2、选择对应系统的java 开发工具包下载 <strong>Java SE Development Kit</strong></p>
+
+<p>3、运行安装程序，默认安装</p>
+
+<h2 id="配置环境变量">配置环境变量</h2>
+
+<p>打开： <strong>控制面板 &ndash;&gt; 系统和安全 &ndash;&gt; 系统 &ndash;&gt; 高级系统设置 &ndash;&gt; 环境变量</strong></p>
+
+<blockquote>
+<p><strong>如果使用1.5以上版本的JDK，不用设置CLASSPATH环境变量</strong></p>
+</blockquote>
+
+<table>
+<thead>
+<tr>
+<th align="left">变量名</th>
+<th align="left">变量值</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left"><strong>JAVA_HOME</strong></td>
+<td align="left">C:\Program Files\Java\jdk1.8.0 //根据实际路径配置</td>
+</tr>
+
+<tr>
+<td align="left"><strong>Path</strong></td>
+<td align="left">%JAVA_HOME%\bin;%JAVA_HOME%\jre\bin;</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="验证">验证</h2>
+
+<p><strong>win+R &ndash;&gt; 输入cmd &ndash;&gt; 运行命令</strong></p>
+
+<pre><code class="language-bash">java
+javac
+java -version
+</code></pre>
+
+<blockquote>
+<p>javac命令和java命令的区别
+Javac：编译.java文件，生成.Class文件
+Java：加载类库，运行.class文件</p>
+</blockquote>
+
+<h2 id="开发工具">开发工具</h2>
+
+<ul>
+<li><a href="http://www.eclipse.org/">Eclipse</a></li>
+<li><a href="https://www.jetbrains.com/idea/">IntelliJ IDEA</a>(推荐)</li>
+<li><a href="https://notepad-plus-plus.org/">NotePad++</a></li>
+</ul>
+
+</div>
+
+
+<div class="boo">
+	<span></span>
+</div>
+<div class="footer">
+	@XIZERO Powered by <a href="http://hugo.spf13.com/">Hugo</a> and <a href="#">bigbig</a>
+</div>
+</body>
+</html>
+

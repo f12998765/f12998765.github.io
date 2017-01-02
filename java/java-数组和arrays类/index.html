@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<meta name="generator" content="Hugo 0.18.1" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="//fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="/css/main.css">
+<link rel="alternate" href="/index.xml" type="application/rss+xml" title="XIZERO">
+<link href="https://cdn.bootcss.com/highlight.js/9.7.0/styles/tomorrow.min.css" rel="stylesheet">
+<script src="https://cdn.bootcss.com/highlight.js/9.8.0/highlight.min.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script src="http://127.0.0.1/js/top.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<title>Java 数组 - XIZERO</title>
+</head>
+<body>
+
+<div id="gotop" title="🚀 go top"></div>
+
+<div class="top">
+
+	<div class="gos">
+		<span class="go"><a href="/">Home</a></span>
+		<span class="go"><a href="/tags">Tags</a></span>
+		<span class="go"><a href="/about">About</a></span>
+	</div>
+	
+	
+		<div class="tit">
+			Java 数组
+		</div>
+
+	
+
+</div>
+
+
+
+
+<div class="con">
+	
+
+<h2 id="什么是数组-及声明数组变量">什么是数组？及声明数组变量</h2>
+
+<p>数组是存放一组相同类型的容器。</p>
+
+<pre><code class="language-java">DataType [] arryName;
+
+DataType arryName [];
+</code></pre>
+
+<h2 id="数组的初始化">数组的初始化</h2>
+
+<pre><code class="language-java">DataType[] arrayName = new DataType[arraySize];
+
+DataType[] arrayName = {value0, value1, ..., valuek};
+</code></pre>
+
+<blockquote>
+<p>未初始化的数组会默认赋值 : int &ndash;&gt; 0、boolean &ndash;&gt; false 、对象 &ndash;&gt; null</p>
+</blockquote>
+
+<h2 id="数组引用及长度">数组引用及长度</h2>
+
+<pre><code class="language-java">arrayName[index] //数组通过下标引用，并且会检查数组越界。
+
+arrayName. length//每个数组都有一个属性length来表示长度
+</code></pre>
+
+<blockquote>
+<p>获取字符串的长度使用 length() 方法</p>
+</blockquote>
+
+<h2 id="遍历数组">遍历数组</h2>
+
+<p><strong>Loop循环</strong></p>
+
+<pre><code class="language-java">for(int i;i&lt;arrayName.length;i++){
+//Statements
+}
+</code></pre>
+
+<p><strong>for-each循环</strong></p>
+
+<pre><code class="language-java">for(DataType e:Array){
+//Statements
+}
+</code></pre>
+
+<blockquote>
+<p>for-each循环只能处理一维数组，二维数组需要双层循环。</p>
+</blockquote>
+
+<h2 id="array类">Array类</h2>
+
+<blockquote>
+<p>方法有多个重载，详细信息查看<a href="http://tool.oschina.net/uploads/apidocs/jdk-zh/java/util/Arrays.html">Java API</a></p>
+</blockquote>
+
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>说明</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>asList</td>
+<td>返回数组支持 的固定个大小的List</td>
+</tr>
+
+<tr>
+<td>binarySearch</td>
+<td>根据特定的键查找数组，返回索引</td>
+</tr>
+
+<tr>
+<td>copyOf</td>
+<td>创建一个指定长度的新数组，复制原数组的元素，根据长度进行截取和填充</td>
+</tr>
+
+<tr>
+<td>copyOfRamge</td>
+<td>根据原数组的指定范围创建新的数组</td>
+</tr>
+
+<tr>
+<td>sort</td>
+<td>数组排序</td>
+</tr>
+
+<tr>
+<td>toString</td>
+<td>返回数组的字符串表示</td>
+</tr>
+
+<tr>
+<td>equals</td>
+<td>比较数组是否相等</td>
+</tr>
+
+<tr>
+<td>fill</td>
+<td>将指定值赋值给全部元素</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+<div class="boo">
+	<span></span>
+</div>
+<div class="footer">
+	@XIZERO Powered by <a href="http://hugo.spf13.com/">Hugo</a> and <a href="#">bigbig</a>
+</div>
+</body>
+</html>
+

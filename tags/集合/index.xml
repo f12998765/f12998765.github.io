@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>XIZERO</title>
-    <link>http://f12998765.github.io/tags/%E9%9B%86%E5%90%88/index.xml</link>
-    <description>Recent content on XIZERO</description>
+    <title>集合 on XIZERO</title>
+    <link>http://127.0.0.1/tags/%E9%9B%86%E5%90%88/index.xml</link>
+    <description>Recent content in 集合 on XIZERO</description>
     <generator>Hugo -- gohugo.io</generator>
-    <atom:link href="http://f12998765.github.io/tags/%E9%9B%86%E5%90%88/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <atom:link href="http://127.0.0.1/tags/%E9%9B%86%E5%90%88/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Java 集合</title>
-      <link>http://f12998765.github.io/java-notes/java-%E9%9B%86%E5%90%88/</link>
+      <link>http://127.0.0.1/java/java-%E9%9B%86%E5%90%88/</link>
       <pubDate>Fri, 18 Nov 2016 18:20:00 +0800</pubDate>
       
-      <guid>http://f12998765.github.io/java-notes/java-%E9%9B%86%E5%90%88/</guid>
+      <guid>http://127.0.0.1/java/java-%E9%9B%86%E5%90%88/</guid>
       <description>
 
 &lt;h2 id=&#34;uml&#34;&gt;UML&lt;/h2&gt;

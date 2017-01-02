@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>XIZERO</title>
-    <link>http://f12998765.github.io/tags/%E5%8F%8D%E5%B0%84/index.xml</link>
-    <description>Recent content on XIZERO</description>
+    <title>反射 on XIZERO</title>
+    <link>http://127.0.0.1/tags/%E5%8F%8D%E5%B0%84/index.xml</link>
+    <description>Recent content in 反射 on XIZERO</description>
     <generator>Hugo -- gohugo.io</generator>
-    <atom:link href="http://f12998765.github.io/tags/%E5%8F%8D%E5%B0%84/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <atom:link href="http://127.0.0.1/tags/%E5%8F%8D%E5%B0%84/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Java 反射</title>
-      <link>http://f12998765.github.io/java-notes/java-%E5%8F%8D%E5%B0%84/</link>
+      <link>http://127.0.0.1/java/java-%E5%8F%8D%E5%B0%84/</link>
       <pubDate>Fri, 18 Nov 2016 18:20:00 +0800</pubDate>
       
-      <guid>http://f12998765.github.io/java-notes/java-%E5%8F%8D%E5%B0%84/</guid>
+      <guid>http://127.0.0.1/java/java-%E5%8F%8D%E5%B0%84/</guid>
       <description>
 
 &lt;p&gt;&lt;strong&gt;反射是将java 类中的各种成分映射成相应的类。&lt;/strong&gt;&lt;/p&gt;
@@ -220,12 +221,9 @@ Array.set(数组实例,序列,值);
 &lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;Class class_ = class.getComponentType();
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h1 id=&#34;参考&#34;&gt;参考&lt;/h1&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.cnblogs.com/penghongwei/p/3299688.html&#34;&gt;Java 反射 【译】&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://tutorials.jenkov.com/java-reflection/index.html&#34;&gt;java-reflection [英] &lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;#参考
+- &lt;a href=&#34;http://www.cnblogs.com/penghongwei/p/3299688.html&#34;&gt;Java 反射 【译】&lt;/a&gt;
+- &lt;a href=&#34;http://tutorials.jenkov.com/java-reflection/index.html&#34;&gt;java-reflection [英] &lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     

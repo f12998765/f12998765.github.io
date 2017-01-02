@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>XIZERO</title>
-    <link>http://f12998765.github.io/tags/note/index.xml</link>
-    <description>Recent content on XIZERO</description>
+    <title>Note on XIZERO</title>
+    <link>http://127.0.0.1/tags/note/index.xml</link>
+    <description>Recent content in Note on XIZERO</description>
     <generator>Hugo -- gohugo.io</generator>
-    <atom:link href="http://f12998765.github.io/tags/note/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <atom:link href="http://127.0.0.1/tags/note/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Centos 配置指南</title>
-      <link>http://f12998765.github.io/notes/centos-note/</link>
+      <title>Centos 配置</title>
+      <link>http://127.0.0.1/note/Centos%20%E9%85%8D%E7%BD%AE/</link>
       <pubDate>Fri, 18 Nov 2016 18:20:00 +0800</pubDate>
       
-      <guid>http://f12998765.github.io/notes/centos-note/</guid>
+      <guid>http://127.0.0.1/note/Centos%20%E9%85%8D%E7%BD%AE/</guid>
       <description>
 
 &lt;h2 id=&#34;ssh-配置修改&#34;&gt;SSH 配置修改&lt;/h2&gt;
@@ -89,10 +90,10 @@ mysql &amp;gt; Grant all privileges on *.* to &#39;zero&#39;@&#39;%&#39; identif
     
     <item>
       <title>Git 常用命令</title>
-      <link>http://f12998765.github.io/notes/git-note/</link>
+      <link>http://127.0.0.1/note/Git%20%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</link>
       <pubDate>Fri, 18 Nov 2016 18:20:00 +0800</pubDate>
       
-      <guid>http://f12998765.github.io/notes/git-note/</guid>
+      <guid>http://127.0.0.1/note/Git%20%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</guid>
       <description>
 
 &lt;h2 id=&#34;设置配置文件&#34;&gt;设置配置文件&lt;/h2&gt;
@@ -203,11 +204,11 @@ git pull origin master
     </item>
     
     <item>
-      <title>Mybatis Note</title>
-      <link>http://f12998765.github.io/notes/mybatis-note/</link>
+      <title>Mybatis 笔记</title>
+      <link>http://127.0.0.1/note/Mybatis%20%E7%AC%94%E8%AE%B0/</link>
       <pubDate>Fri, 18 Nov 2016 18:20:00 +0800</pubDate>
       
-      <guid>http://f12998765.github.io/notes/mybatis-note/</guid>
+      <guid>http://127.0.0.1/note/Mybatis%20%E7%AC%94%E8%AE%B0/</guid>
       <description>
 
 &lt;h1 id=&#34;mybatis-note&#34;&gt;Mybatis Note&lt;/h1&gt;
@@ -215,14 +216,166 @@ git pull origin master
     </item>
     
     <item>
-      <title>Scraps of notes</title>
-      <link>http://f12998765.github.io/notes/scraps-of-notes/</link>
+      <title>Spring MVC 中文乱码</title>
+      <link>http://127.0.0.1/note/springmvc-encoding/</link>
       <pubDate>Fri, 18 Nov 2016 18:20:00 +0800</pubDate>
       
-      <guid>http://f12998765.github.io/notes/scraps-of-notes/</guid>
+      <guid>http://127.0.0.1/note/springmvc-encoding/</guid>
       <description>
 
-&lt;h1 id=&#34;scraps-of-notes&#34;&gt;Scraps of notes&lt;/h1&gt;
+&lt;h1 id=&#34;spring-mvc-中文乱码&#34;&gt;Spring MVC 中文乱码&lt;/h1&gt;
+
+&lt;p&gt;摘要至：&lt;a href=&#34;http://blog.csdn.net/kalision/article/details/46441081/&#34;&gt;passport_daizi&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;jsp 页面设置&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-jsp&#34;&gt;&amp;lt;%page language=&amp;quot;java&amp;quot; contentType=&amp;quot;text/html;charset=utf-8&amp;quot; pageEncoding=&amp;quot;utf-8&amp;quot; %&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;表单提交的方式必须是 Post  ，get Sprng的编码过滤器不起效果&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;form action=&amp;quot;&amp;quot; name=&amp;quot;aform&amp;quot; method=&amp;quot;post&amp;quot; &amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;**
+在 web.xml 中添加编码过滤器,放在首个过滤器**&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;forceEncoding=true  无论请求中是否包含编码，都是用过滤器的编码解析&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-xml&#34;&gt;&amp;lt;filter&amp;gt;  
+        &amp;lt;filter-name&amp;gt;characterEncodingFilter&amp;lt;/filter-name&amp;gt;  
+        &amp;lt;filter-class&amp;gt;org.springframework.web.filter.CharacterEncodingFilter&amp;lt;/filter-class&amp;gt;  
+        &amp;lt;init-param&amp;gt;  
+            &amp;lt;param-name&amp;gt;encoding&amp;lt;/param-name&amp;gt;  
+            &amp;lt;param-value&amp;gt;UTF-8&amp;lt;/param-value&amp;gt;  
+        &amp;lt;/init-param&amp;gt;  
+        &amp;lt;init-param&amp;gt;  
+            &amp;lt;param-name&amp;gt;forceEncoding&amp;lt;/param-name&amp;gt;  
+            &amp;lt;param-value&amp;gt;true&amp;lt;/param-value&amp;gt;  
+        &amp;lt;/init-param&amp;gt;  
+    &amp;lt;/filter&amp;gt;  
+    &amp;lt;filter-mapping&amp;gt;  
+        &amp;lt;filter-name&amp;gt;characterEncodingFilter&amp;lt;/filter-name&amp;gt;  
+        &amp;lt;url-pattern&amp;gt;/*&amp;lt;/url-pattern&amp;gt;  
+    &amp;lt;/filter-mapping&amp;gt;  
+&amp;lt;/filter&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;连接数据库的参数设置&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-xml&#34;&gt;&amp;lt;property name=&amp;quot;url&amp;quot; value=&amp;quot;jdbc:mysql://localhost:3306/database?useUnicode=true&amp;amp;characterEncoding=UTF-8&amp;quot;&amp;gt;&amp;lt;/property&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;数据库的编码&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;utf8_general_ci&lt;/code&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>java Framework</title>
+      <link>http://127.0.0.1/note/java-framework/</link>
+      <pubDate>Fri, 18 Nov 2016 18:20:00 +0800</pubDate>
+      
+      <guid>http://127.0.0.1/note/java-framework/</guid>
+      <description>
+
+&lt;h1 id=&#34;java-framework&#34;&gt;java Framework&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Lombok
+
+&lt;ul&gt;
+&lt;li&gt;使用注解消除冗长代码&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://projectlombok.org/&#34;&gt;https://projectlombok.org/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/rzwitserloot/lombok&#34;&gt;Github&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Google Guava
+
+&lt;ul&gt;
+&lt;li&gt;Google 开发工具包&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/google/guava&#34;&gt;Github&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Logback
+
+&lt;ul&gt;
+&lt;li&gt;日志工具&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://logback.qos.ch/&#34;&gt;http://logback.qos.ch/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;OkHttp
+
+&lt;ul&gt;
+&lt;li&gt;HTTP client&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://square.github.io/okhttp/&#34;&gt;http://square.github.io/okhttp/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/square/okhttp&#34;&gt;Github&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Apache Commons
+
+&lt;ul&gt;
+&lt;li&gt;扩展库&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://commons.apache.org/&#34;&gt;https://commons.apache.org/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Jenkins
+
+&lt;ul&gt;
+&lt;li&gt;持续集成&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://jenkins.io/&#34;&gt;https://jenkins.io/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/jenkinsci&#34;&gt;Github&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Dropwizard
+
+&lt;ul&gt;
+&lt;li&gt;Java REST&amp;lt;&lt;strong&gt;???&lt;/strong&gt;&amp;gt;  服务器栈&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.dropwizard.io/&#34;&gt;http://www.dropwizard.io/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/dropwizard/dropwizard&#34;&gt;Gtihub&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;JWT
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://jwt.io/&#34;&gt;https://jwt.io/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/jwtk/jjwt&#34;&gt;JJWT&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;##了解一些的Java框架和工具
+- &lt;a href=&#34;https://spring.io/&#34;&gt;Spring&lt;/a&gt;
+- Mybatis
+    - &lt;a href=&#34;https://github.com/mybatis/&#34;&gt;Github&lt;/a&gt;
+    - &lt;a href=&#34;http://www.mybatis.org/mybatis-3/zh/&#34;&gt;中文官网&lt;/a&gt;
+    - &lt;a href=&#34;http://www.mybatis.org/generator/&#34;&gt;MyBatis Generator&lt;/a&gt;
+- Maven
+    - &lt;a href=&#34;https://maven.apache.org/&#34;&gt;官网&lt;/a&gt;
+    - &lt;a href=&#34;http://search.maven.org/&#34;&gt;Maven Central Repository&lt;/a&gt;
+- &lt;a href=&#34;http://tomcat.apache.org/&#34;&gt;Tomcat&lt;/a&gt;
+- &lt;a href=&#34;https://hc.apache.org/httpcomponents-client-ga/&#34;&gt;Apache HttpComponents&lt;/a&gt;
+- &lt;a href=&#34;https://jsoup.org/&#34;&gt;jsoup&lt;/a&gt;
+- jackson
+    - &lt;a href=&#34;https://github.com/FasterXML/jackson&#34;&gt;Github&lt;/a&gt;
+    - &lt;a href=&#34;http://mvnrepository.com/search?q=Jackson&#34;&gt;Maven&lt;/a&gt;
+- SWAGGER
+    - &lt;a href=&#34;http://swagger.io/&#34;&gt;http://swagger.io/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;##一些不会用的Java框架和工具
+- &lt;a href=&#34;http://www.groovy-lang.org/&#34;&gt;Groovy&lt;/a&gt;
+    - &lt;a href=&#34;https://github.com/apache/groovy&#34;&gt;Github&lt;/a&gt;
+- &lt;a href=&#34;https://gradle.org/&#34;&gt;Gradle&lt;/a&gt; &amp;ndash; 项目构建
+- &lt;a href=&#34;http://junit.org/junit5/&#34;&gt;JUnit5&lt;/a&gt; &amp;ndash; Java单元测试
+- &lt;a href=&#34;http://logging.apache.org/log4j/2.x/&#34;&gt;Log4j&lt;/a&gt; &amp;ndash; 日志记录
+- &lt;a href=&#34;http://www.eclemma.org/jacoco/&#34;&gt;JaCoCo&lt;/a&gt; &amp;ndash; 代码覆盖率
+- &lt;a href=&#34;http://nginx.org/&#34;&gt;Nginx&lt;/a&gt;
+- Javadoc&amp;ndash; 文档注释&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>零碎笔记</title>
+      <link>http://127.0.0.1/note/%E9%9B%B6%E7%A2%8E%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Fri, 18 Nov 2016 18:20:00 +0800</pubDate>
+      
+      <guid>http://127.0.0.1/note/%E9%9B%B6%E7%A2%8E%E7%AC%94%E8%AE%B0/</guid>
+      <description>
 
 &lt;h2 id=&#34;1-idea新建maven项目卡住显示-generating-project-in-batch-mode&#34;&gt;1. IDEA新建MAVEN项目卡住显示 : &amp;ldquo;Generating Project in Batch mode&amp;rdquo;&lt;/h2&gt;
 
@@ -236,10 +389,6 @@ git pull origin master
 &lt;li&gt;在 &lt;code&gt;Settings&lt;/code&gt;&amp;gt; &lt;code&gt;Maven&lt;/code&gt; &amp;gt; &lt;code&gt;Runner&lt;/code&gt; &amp;gt; &lt;code&gt;VM Options&lt;/code&gt; 中添加 &lt;code&gt;-DarchetypeCatalog=internal&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;PS：注意右上角的灰字：for default project，而不是for current project&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.dropbox.com/s/mzmj2rn9if5dduh/archetype-catalog.xml?dl=0&#34;&gt;Dropbox&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
 
 &lt;h2 id=&#34;2-win-下快捷切换中英文符号&#34;&gt;2. Win 下快捷切换中英文符号&lt;/h2&gt;
 
@@ -406,65 +555,6 @@ $($(&#39;div&#39;)[7]).children();
   &amp;lt;/plugins&amp;gt;
 &amp;lt;/build&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Spring MVC 中文乱码</title>
-      <link>http://f12998765.github.io/notes/springmvc-encoding/</link>
-      <pubDate>Fri, 18 Nov 2016 18:20:00 +0800</pubDate>
-      
-      <guid>http://f12998765.github.io/notes/springmvc-encoding/</guid>
-      <description>
-
-&lt;h1 id=&#34;spring-mvc-中文乱码&#34;&gt;Spring MVC 中文乱码&lt;/h1&gt;
-
-&lt;p&gt;摘要至：&lt;a href=&#34;http://blog.csdn.net/kalision/article/details/46441081/&#34;&gt;passport_daizi&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;jsp 页面设置&lt;/strong&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-jsp&#34;&gt;&amp;lt;%page language=&amp;quot;java&amp;quot; contentType=&amp;quot;text/html;charset=utf-8&amp;quot; pageEncoding=&amp;quot;utf-8&amp;quot; %&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;strong&gt;表单提交的方式必须是 Post  ，get Sprng的编码过滤器不起效果&lt;/strong&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;form action=&amp;quot;&amp;quot; name=&amp;quot;aform&amp;quot; method=&amp;quot;post&amp;quot; &amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;**
-在 web.xml 中添加编码过滤器,放在首个过滤器**&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;forceEncoding=true  无论请求中是否包含编码，都是用过滤器的编码解析&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-xml&#34;&gt;&amp;lt;filter&amp;gt;  
-        &amp;lt;filter-name&amp;gt;characterEncodingFilter&amp;lt;/filter-name&amp;gt;  
-        &amp;lt;filter-class&amp;gt;org.springframework.web.filter.CharacterEncodingFilter&amp;lt;/filter-class&amp;gt;  
-        &amp;lt;init-param&amp;gt;  
-            &amp;lt;param-name&amp;gt;encoding&amp;lt;/param-name&amp;gt;  
-            &amp;lt;param-value&amp;gt;UTF-8&amp;lt;/param-value&amp;gt;  
-        &amp;lt;/init-param&amp;gt;  
-        &amp;lt;init-param&amp;gt;  
-            &amp;lt;param-name&amp;gt;forceEncoding&amp;lt;/param-name&amp;gt;  
-            &amp;lt;param-value&amp;gt;true&amp;lt;/param-value&amp;gt;  
-        &amp;lt;/init-param&amp;gt;  
-    &amp;lt;/filter&amp;gt;  
-    &amp;lt;filter-mapping&amp;gt;  
-        &amp;lt;filter-name&amp;gt;characterEncodingFilter&amp;lt;/filter-name&amp;gt;  
-        &amp;lt;url-pattern&amp;gt;/*&amp;lt;/url-pattern&amp;gt;  
-    &amp;lt;/filter-mapping&amp;gt;  
-&amp;lt;/filter&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;strong&gt;连接数据库的参数设置&lt;/strong&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-xml&#34;&gt;&amp;lt;property name=&amp;quot;url&amp;quot; value=&amp;quot;jdbc:mysql://localhost:3306/database?useUnicode=true&amp;amp;characterEncoding=UTF-8&amp;quot;&amp;gt;&amp;lt;/property&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;strong&gt;数据库的编码&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;utf8_general_ci&lt;/code&gt;&lt;/p&gt;
 </description>
     </item>
     

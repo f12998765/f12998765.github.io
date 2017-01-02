@@ -2,204 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>XIZERO</title>
-    <link>http://f12998765.github.io/index.xml</link>
+    <link>http://127.0.0.1/index.xml</link>
     <description>Recent content on XIZERO</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 10 Dec 2016 19:24:50 +0800</lastBuildDate>
-    <atom:link href="http://f12998765.github.io/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>Linux下的目录是干什么的</title>
-      <link>http://f12998765.github.io/notes/Linux%E4%B8%8B%E7%9A%84%E7%9B%AE%E5%BD%95%E6%98%AF%E5%B9%B2%E4%BB%80%E4%B9%88%E7%9A%84/</link>
-      <pubDate>Sat, 10 Dec 2016 19:24:50 +0800</pubDate>
-      
-      <guid>http://f12998765.github.io/notes/Linux%E4%B8%8B%E7%9A%84%E7%9B%AE%E5%BD%95%E6%98%AF%E5%B9%B2%E4%BB%80%E4%B9%88%E7%9A%84/</guid>
-      <description>
-
-&lt;h1 id=&#34;toc_0&#34;&gt;/&lt;/h1&gt;
-
-&lt;h2 id=&#34;根目录&#34;&gt;根目录&lt;/h2&gt;
-
-&lt;h1 id=&#34;root&#34;&gt;/root&lt;/h1&gt;
-
-&lt;h2 id=&#34;超级用户的目录&#34;&gt;超级用户的目录&lt;/h2&gt;
-
-&lt;h1 id=&#34;boot&#34;&gt;/boot&lt;/h1&gt;
-
-&lt;h2 id=&#34;系统启动文件&#34;&gt;系统启动文件&lt;/h2&gt;
-
-&lt;h1 id=&#34;bin&#34;&gt;/bin&lt;/h1&gt;
-
-&lt;h2 id=&#34;存放系统程序-默认指令程序&#34;&gt;存放系统程序，默认指令程序&lt;/h2&gt;
-
-&lt;h1 id=&#34;etc&#34;&gt;/etc&lt;/h1&gt;
-
-&lt;h2 id=&#34;存放系统配置文件&#34;&gt;存放系统配置文件&lt;/h2&gt;
-
-&lt;h1 id=&#34;dev&#34;&gt;/dev&lt;/h1&gt;
-
-&lt;h2 id=&#34;存放与外设有关的文件和驱动&#34;&gt;存放与外设有关的文件和驱动&lt;/h2&gt;
-
-&lt;h1 id=&#34;home&#34;&gt;/home&lt;/h1&gt;
-
-&lt;h2 id=&#34;存放用户数据&#34;&gt;存放用户数据&lt;/h2&gt;
-
-&lt;h1 id=&#34;tmp&#34;&gt;/tmp&lt;/h1&gt;
-
-&lt;h2 id=&#34;临时目录&#34;&gt;临时目录&lt;/h2&gt;
-
-&lt;h1 id=&#34;usr&#34;&gt;/usr&lt;/h1&gt;
-
-&lt;h2 id=&#34;存放非系统软件-例如游戏-开发工具等&#34;&gt;存放非系统软件，例如游戏、开发工具等&lt;/h2&gt;
-
-&lt;h1 id=&#34;opt&#34;&gt;/opt&lt;/h1&gt;
-
-&lt;h2 id=&#34;存放非正式程序&#34;&gt;存放非正式程序&lt;/h2&gt;
-
-&lt;h1 id=&#34;usr-local&#34;&gt;usr/local&lt;/h1&gt;
-
-&lt;h2 id=&#34;存放手动安装软件&#34;&gt;存放手动安装软件&lt;/h2&gt;
-
-&lt;h1 id=&#34;media&#34;&gt;/media&lt;/h1&gt;
-
-&lt;h2 id=&#34;挂载外部存储&#34;&gt;挂载外部存储&lt;/h2&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>在Centos7中安装 PPTP VPN</title>
-      <link>http://f12998765.github.io/notes/pptp/</link>
-      <pubDate>Mon, 05 Dec 2016 19:56:31 +0800</pubDate>
-      
-      <guid>http://f12998765.github.io/notes/pptp/</guid>
-      <description>
-
-&lt;blockquote&gt;
-&lt;p&gt;这篇文章只是简单的记录&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&#34;安装软件&#34;&gt;安装软件&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;yum install ppp pptpd
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;配置pptp&#34;&gt;配置PPTP&lt;/h2&gt;
-
-&lt;h3 id=&#34;etc-pptpd-conf&#34;&gt;/etc/pptpd.conf&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;vim /etc/pptpd.conf
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;查找localip和remoteip，去掉前面的注释“#”，结果如下&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;localip 192.168.0.1
-remoteip 192.168.0.234-238,192.168.0.245
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;etc-ppp-options-pptpd&#34;&gt;/etc/ppp/options/pptpd&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;vim /etc/ppp/options/pptpd
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;查找”ms-dns”,去掉注释”#”,结果如下&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;ms-dns 8.8.8.8
-ms-dns 8.8.4.4
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;etc-ppp-chap-secrets&#34;&gt;/etc/ppp/chap-secrets&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;vim /etc/ppp/chap-secrets
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;添加连接账户,格式如下&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;用户名 pptpd 密码 *
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;etc-sysctl-conf&#34;&gt;/etc/sysctl.conf&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;vim /etc/sysctl.conf
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;在最后添加&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;net.ipv4.ip_forward=1
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;终端运行&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sysctl -p
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;配置firewalld&#34;&gt;配置Firewalld&lt;/h2&gt;
-
-&lt;p&gt;启动 Firewalld&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;systemctl start  firewalld
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;运行&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;firewall-cmd --permanent --direct --add-rule ipv4 filter INPUT 0 -i eth0 -p tcp --dport 1723 -j ACCEPT
-firewall-cmd --permanent --direct --add-rule ipv4 filter INPUT 0 -p gre -j ACCEPT
-firewall-cmd --permanent --direct --add-rule ipv4 filter POSTROUTING 0 -t nat -o eth0 -j MASQUERADE
-firewall-cmd --permanent --direct --add-rule ipv4 filter FORWARD 0 -i ppp+ -o eth0 -j ACCEPT
-firewall-cmd --permanent --direct --add-rule ipv4 filter FORWARD 0 -i eth0 -o ppp+ -j ACCEPT
-firewall-cmd --reload
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;启动pptp&#34;&gt;启动PPTP&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;#启动
-systemctl start pptpd
-
-#重启
-systemctl restart pptpd
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;参考资料&#34;&gt;参考资料&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.wanghailin.cn/centos-7-vpn/&#34;&gt;Centos 7搭建VPN（PPTP）服务器方法&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.lightning-ashe.com/develop/setup-pptp-server-on-centos/&#34;&gt;Setup PPTP Server on CentOS&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://feiio.com/2016/05/15/CentOS7-0%E6%90%AD%E5%BB%BAVPN-PPTP-%E6%9C%8D%E5%8A%A1%E5%99%A8/&#34;&gt;CentOS7.0搭建VPN(PPTP)服务器&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>个人知识管理</title>
-      <link>http://f12998765.github.io/xi/%E4%B8%AA%E4%BA%BA%E7%9F%A5%E8%AF%86%E7%AE%A1%E7%90%86/</link>
-      <pubDate>Fri, 02 Dec 2016 14:46:03 +0800</pubDate>
-      
-      <guid>http://f12998765.github.io/xi/%E4%B8%AA%E4%BA%BA%E7%9F%A5%E8%AF%86%E7%AE%A1%E7%90%86/</guid>
-      <description>
-
-&lt;h2 id=&#34;personal-knowledge-management&#34;&gt;Personal Knowledge Management&lt;/h2&gt;
-
-&lt;p&gt;个人知识管理，收集、整理、学习、创造、分享.&lt;/p&gt;
-
-&lt;h2 id=&#34;工具&#34;&gt;工具&lt;/h2&gt;
-
-&lt;h3 id=&#34;记录想法-锤子便签-https-cloud-smartisan-com-notes&#34;&gt;记录想法 - &lt;a href=&#34;https://cloud.smartisan.com/#/notes&#34;&gt;锤子便签&lt;/a&gt;&lt;/h3&gt;
-
-&lt;h3 id=&#34;学习笔记-atom-https-atom-io&#34;&gt;学习笔记 - &lt;a href=&#34;https://atom.io/&#34;&gt;Atom&lt;/a&gt;&lt;/h3&gt;
-
-&lt;h3 id=&#34;代码片段-gistbox-https-app-gistboxapp-com-library-my-gists&#34;&gt;代码片段 - &lt;a href=&#34;https://app.gistboxapp.com/library/my-gists&#34;&gt;GistBox&lt;/a&gt;&lt;/h3&gt;
-
-&lt;h3 id=&#34;备份恢复-dropbox-https-www-dropbox-com-home&#34;&gt;备份恢复 - &lt;a href=&#34;https://www.dropbox.com/home&#34;&gt;Dropbox&lt;/a&gt;&lt;/h3&gt;
-
-&lt;h3 id=&#34;静态博客-hugo-http-gohugo-io&#34;&gt;静态博客 - &lt;a href=&#34;http://gohugo.io/&#34;&gt;Hugo&lt;/a&gt;&lt;/h3&gt;
-</description>
-    </item>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 24 Nov 2016 15:55:43 +0800</lastBuildDate>
+    <atom:link href="http://127.0.0.1/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>java 泛型 TKVE 含义</title>
-      <link>http://f12998765.github.io/java-notes/java-%E6%B3%9B%E5%9E%8B-TKVE/</link>
+      <link>http://127.0.0.1/java/java-%E6%B3%9B%E5%9E%8B-TKVE/</link>
       <pubDate>Thu, 24 Nov 2016 15:55:43 +0800</pubDate>
       
-      <guid>http://f12998765.github.io/java-notes/java-%E6%B3%9B%E5%9E%8B-TKVE/</guid>
+      <guid>http://127.0.0.1/java/java-%E6%B3%9B%E5%9E%8B-TKVE/</guid>
       <description>
 
 &lt;h2 id=&#34;java-泛型经常使用的符号的含义&#34;&gt;Java 泛型经常使用的符号的含义&lt;/h2&gt;
@@ -228,10 +43,10 @@ systemctl restart pptpd
     
     <item>
       <title>Java 序列化</title>
-      <link>http://f12998765.github.io/java-notes/java%E5%BA%8F%E5%88%97%E5%8C%96/</link>
+      <link>http://127.0.0.1/java/java-%E5%BA%8F%E5%88%97%E5%8C%96/</link>
       <pubDate>Wed, 23 Nov 2016 16:28:21 +0800</pubDate>
       
-      <guid>http://f12998765.github.io/java-notes/java%E5%BA%8F%E5%88%97%E5%8C%96/</guid>
+      <guid>http://127.0.0.1/java/java-%E5%BA%8F%E5%88%97%E5%8C%96/</guid>
       <description>
 
 &lt;h2 id=&#34;什么是序列化&#34;&gt;什么是序列化？&lt;/h2&gt;
@@ -359,11 +174,11 @@ public class Main {
     </item>
     
     <item>
-      <title>String相关</title>
-      <link>http://f12998765.github.io/java-notes/String%E7%9B%B8%E5%85%B3/</link>
+      <title>String 相关</title>
+      <link>http://127.0.0.1/java/String%20%E7%9B%B8%E5%85%B3/</link>
       <pubDate>Tue, 22 Nov 2016 08:36:39 +0800</pubDate>
       
-      <guid>http://f12998765.github.io/java-notes/String%E7%9B%B8%E5%85%B3/</guid>
+      <guid>http://127.0.0.1/java/String%20%E7%9B%B8%E5%85%B3/</guid>
       <description>
 
 &lt;h2 id=&#34;string-成员变量&#34;&gt;String 成员变量&lt;/h2&gt;
@@ -599,10 +414,10 @@ public String(char value[], int offset, int count) {
     
     <item>
       <title>关于未来 2016/11</title>
-      <link>http://f12998765.github.io/xi/go/</link>
+      <link>http://127.0.0.1/zero/2016-11-21/</link>
       <pubDate>Mon, 21 Nov 2016 08:39:53 +0800</pubDate>
       
-      <guid>http://f12998765.github.io/xi/go/</guid>
+      <guid>http://127.0.0.1/zero/2016-11-21/</guid>
       <description>&lt;p&gt;11月21日 2016 :cloud:&lt;/p&gt;
 
 &lt;p&gt;这几周一直在迷茫，明知自己没有多少东西，但还是提不起劲来。&lt;/p&gt;
@@ -632,20 +447,21 @@ public String(char value[], int offset, int count) {
 &lt;li&gt;学习操作系统&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;strong&gt;一个年前的目标&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;一个2017的目标&lt;/strong&gt;&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;阅读 Spring 源码&lt;/li&gt;
+&lt;li&gt;开始新的生活&lt;/li&gt;
 &lt;/ul&gt;
 </description>
     </item>
     
     <item>
       <title>一个想法</title>
-      <link>http://f12998765.github.io/xi/%E4%B8%80%E4%B8%AA%E6%83%B3%E6%B3%95/</link>
+      <link>http://127.0.0.1/zero/%E4%B8%80%E4%B8%AA%E6%83%B3%E6%B3%95/</link>
       <pubDate>Sun, 20 Nov 2016 12:19:55 +0800</pubDate>
       
-      <guid>http://f12998765.github.io/xi/%E4%B8%80%E4%B8%AA%E6%83%B3%E6%B3%95/</guid>
+      <guid>http://127.0.0.1/zero/%E4%B8%80%E4%B8%AA%E6%83%B3%E6%B3%95/</guid>
       <description>&lt;p&gt;自己做了一个小东西，一个简单的 &lt;a href=&#34;http://hao.xizero.com&#34;&gt;网址索引&lt;/a&gt;。&lt;/p&gt;
 
 &lt;p&gt;因为要显示每个网站的favicon，google一下，找到了一些还能用公共的api。&lt;/p&gt;
@@ -795,17 +611,27 @@ if (img.complete) {}
     
     <item>
       <title>About</title>
-      <link>http://f12998765.github.io/about/</link>
+      <link>http://127.0.0.1/about/</link>
       <pubDate>Sat, 19 Nov 2016 19:22:33 +0800</pubDate>
       
-      <guid>http://f12998765.github.io/about/</guid>
-      <description>&lt;p&gt;11月19日，2016.&lt;/p&gt;
+      <guid>http://127.0.0.1/about/</guid>
+      <description>
+
+&lt;h1 id=&#34;1月2日-2017&#34;&gt;1月2日，2017 🌤&lt;/h1&gt;
+
+&lt;p&gt;元旦放假这几天，重新修改了主题，做了一些变化&lt;/p&gt;
+
+&lt;p&gt;调整了网站的结构，分类归档&lt;/p&gt;
+
+&lt;p&gt;今年，充满挑战和机遇，我应该怎么做？&lt;/p&gt;
+
+&lt;p&gt;🐳&lt;/p&gt;
+
+&lt;h1 id=&#34;11月19日-2016&#34;&gt;11月19日，2016.&lt;/h1&gt;
 
 &lt;p&gt;早晨来了一场大雪，或许在深夜便开始了。&lt;/p&gt;
 
 &lt;p&gt;这两天，学着别人的模板主题，自己拙略地仿写了一个，虽然粗糙，但毕竟费了一番心血。&lt;/p&gt;
-
-&lt;p&gt;听首歌。&lt;/p&gt;
 
 &lt;iframe frameborder=&#34;no&#34; border=&#34;0&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; width=330 height=86 src=&#34;http://music.163.com/outchain/player?type=2&amp;id=28757341&amp;auto=1&amp;height=66&#34;&gt;&lt;/iframe&gt;
 
@@ -814,20 +640,15 @@ if (img.complete) {}
 &lt;p&gt;轨迹也是这个时代的缩影，随着人潮和催促而蹉跎。&lt;/p&gt;
 
 &lt;p&gt;这个网站是个开始。&lt;/p&gt;
-
-&lt;p&gt;link :&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://github.com/f12998765&#34;&gt;&lt;img src=&#34;../img/github.png&#34; alt=&#34;github&#34; /&gt;&lt;/a&gt;
-&lt;a href=&#34;https://twitter.com/f12998765&#34;&gt;&lt;img src=&#34;../img/twitter.png&#34; alt=&#34;twitter&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
     <item>
-      <title>Centos 配置指南</title>
-      <link>http://f12998765.github.io/notes/centos-note/</link>
+      <title>Centos 配置</title>
+      <link>http://127.0.0.1/note/Centos%20%E9%85%8D%E7%BD%AE/</link>
       <pubDate>Fri, 18 Nov 2016 18:20:00 +0800</pubDate>
       
-      <guid>http://f12998765.github.io/notes/centos-note/</guid>
+      <guid>http://127.0.0.1/note/Centos%20%E9%85%8D%E7%BD%AE/</guid>
       <description>
 
 &lt;h2 id=&#34;ssh-配置修改&#34;&gt;SSH 配置修改&lt;/h2&gt;
@@ -904,10 +725,10 @@ mysql &amp;gt; Grant all privileges on *.* to &#39;zero&#39;@&#39;%&#39; identif
     
     <item>
       <title>Git 常用命令</title>
-      <link>http://f12998765.github.io/notes/git-note/</link>
+      <link>http://127.0.0.1/note/Git%20%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</link>
       <pubDate>Fri, 18 Nov 2016 18:20:00 +0800</pubDate>
       
-      <guid>http://f12998765.github.io/notes/git-note/</guid>
+      <guid>http://127.0.0.1/note/Git%20%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</guid>
       <description>
 
 &lt;h2 id=&#34;设置配置文件&#34;&gt;设置配置文件&lt;/h2&gt;
@@ -1018,334 +839,11 @@ git pull origin master
     </item>
     
     <item>
-      <title>Java Annotation（注解）</title>
-      <link>http://f12998765.github.io/java-notes/java-%E6%B3%A8%E8%A7%A3/</link>
-      <pubDate>Fri, 18 Nov 2016 18:20:00 +0800</pubDate>
-      
-      <guid>http://f12998765.github.io/java-notes/java-%E6%B3%A8%E8%A7%A3/</guid>
-      <description>
-
-&lt;h1 id=&#34;annotation-注解&#34;&gt;Annotation（注解）&lt;/h1&gt;
-
-&lt;p&gt;Java提供的一种元程序中的元素关联任何信息和任何元数据（metadata）的途径和方法。
-Annotion(注解)是一个接口，程序可以通过反射来获取指定程序元素的Annotion对象，然后通过Annotion对象来获取注解里面的元数据。
-它可以用于创建文档，跟踪代码中的依赖性，甚至执行基本编译时检查。从某些方面看，annotation就像修饰符一样被使用，并应用于包、类 型、构造方法、方法、成员变量、参数、本地变量的声明中。这些信息被存储在Annotation的“name=value”结构对中。&lt;/p&gt;
-
-&lt;p&gt;当一个接口直接继承java.lang.annotation.Annotation接口时，仍是接口，而并非注解。要想自定义注解类型，只能通过@interface关键字的方式，其实通过该方式会隐含地继承.Annotation接口。&lt;/p&gt;
-
-&lt;h1 id=&#34;注解和注解类型&#34;&gt;注解和注解类型&lt;/h1&gt;
-
-&lt;p&gt;&lt;strong&gt;注解类型是一种特殊的接口类型，注解是注解类型的一个实例&lt;/strong&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;注解类型&#34;&gt;注解类型&lt;/h1&gt;
-
-&lt;ul&gt;
-&lt;li&gt;根据注解使用方法和用途：
-    1.JDK内置系统注解
-    2.元注解
-    3.自定义注解&lt;/li&gt;
-&lt;li&gt;根据注解键值对的个数：
-    1.标记注解
-    2.单值注解
-    3.多值注解　　
-如果注解类型有单个键值对 , 并且键的名称是 value , 那么可以忽略括号中的键&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&#34;元注解&#34;&gt;元注解&lt;/h1&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;注解&lt;/th&gt;
-&lt;th&gt;作用&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;@Target&lt;/td&gt;
-&lt;td&gt;用于描述注解的使用对象&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;@Retention&lt;/td&gt;
-&lt;td&gt;表示注解类型的存活时长&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;@Documented&lt;/td&gt;
-&lt;td&gt;表示含有该注解类型的元素(带有注释的)会通过javadoc或类似工具进行文档化&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;@Inherited&lt;/td&gt;
-&lt;td&gt;表示注解类型能被自动继承&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;位于  java.lang.annotation 下&lt;/p&gt;
-
-&lt;h2 id=&#34;targe&#34;&gt;@Targe&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;用于描述注解的使用对象&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;value取值为java.lang.annnotation.RetentionPolicy 枚举的成员之一&lt;/p&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;ElementType&lt;/th&gt;
-&lt;th&gt;作用&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;ANNOTATION_TYPE&lt;/td&gt;
-&lt;td&gt;注解类型声明&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;CONSTRUCTOR&lt;/td&gt;
-&lt;td&gt;构造方法声明&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;FIELD&lt;/td&gt;
-&lt;td&gt;字段声明（包括枚举常量）&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;LOCAL_VARIABLE&lt;/td&gt;
-&lt;td&gt;局部变量声明&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;METHOD&lt;/td&gt;
-&lt;td&gt;方法声明&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;PACKAGE&lt;/td&gt;
-&lt;td&gt;包声明&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;PARAMETER&lt;/td&gt;
-&lt;td&gt;参数声明&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;TYPE&lt;/td&gt;
-&lt;td&gt;类、接口（包括注解类型）或枚举声明&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;默认策略 , 可作用于任意对象&lt;/p&gt;
-
-&lt;h2 id=&#34;retention&#34;&gt;@Retention&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;定义了该Annotation被保留的时间长短&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;value取值为java.lang.annnotation.ElementType 枚举的成员之一&lt;/p&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;RetentionPolicy&lt;/th&gt;
-&lt;th&gt;含义&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;SOURCE&lt;/td&gt;
-&lt;td&gt;源文件有效&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;CLASS&lt;/td&gt;
-&lt;td&gt;Class字节码文件有效&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;RUNTIME&lt;/td&gt;
-&lt;td&gt;运行时有效 , 可通过反射性地读取注解&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;默认保留策略为RetentionPolicy.CLASS&lt;/p&gt;
-
-&lt;h2 id=&#34;documented&#34;&gt;@Documented&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;当前注解的元素会被javadoc工具进行文档化&lt;/strong&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;inherited&#34;&gt;@Inherited&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;表示该注解类型被自动继承&lt;/strong&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;系统内置标准注解&#34;&gt;系统内置标准注解：&lt;/h1&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;内建注解&lt;/th&gt;
-&lt;th&gt;类型&lt;/th&gt;
-&lt;th&gt;作用&lt;/th&gt;
-&lt;th&gt;Target&lt;/th&gt;
-&lt;th&gt;Retention&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;Override&lt;/td&gt;
-&lt;td&gt;标记注解&lt;/td&gt;
-&lt;td&gt;修饰此方法覆盖了父类的方法&lt;/td&gt;
-&lt;td&gt;METHOD&lt;/td&gt;
-&lt;td&gt;SOURCE&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;SuppressWarnings&lt;/td&gt;
-&lt;td&gt;标记注解&lt;/td&gt;
-&lt;td&gt;修饰已经过时的方法&lt;/td&gt;
-&lt;td&gt;除ANNOTATION_TYPE和PACKAGE外的所有&lt;/td&gt;
-&lt;td&gt;SOURCE&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Deprecated&lt;/td&gt;
-&lt;td&gt;单值注解&lt;/td&gt;
-&lt;td&gt;压制提醒 , 抑制编译器警告&lt;/td&gt;
-&lt;td&gt;除ANNOTATION_TYPE外的所有&lt;/td&gt;
-&lt;td&gt;RUNTIME&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h2 id=&#34;override&#34;&gt;@Override&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;告诉编译器该方法覆盖了超类/父类中的一个方法&lt;/strong&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;deprecated&#34;&gt;@Deprecated&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;应用于方法或类型 , 表示该方法或类型是要废弃的&lt;/strong&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;通常是因为有更好的方法或类型 , 并且兼容低版本&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&#34;suppresswarnnings&#34;&gt;@SuppressWarnnings&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;抑制编译器警告&lt;/strong&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;suppresswarnings-value-注解的常见参数值的简单说明&#34;&gt;@SuppressWarnings(value={})注解的常见参数值的简单说明：&lt;/h3&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;参数值&lt;/th&gt;
-&lt;th&gt;说明&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;deprecation&lt;/td&gt;
-&lt;td&gt;使用了不赞成使用的类或方法时的警告&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;unchecked&lt;/td&gt;
-&lt;td&gt;执行了未检查的转换时的警告，例如当使用集合时没有用泛型 (Generics) 来指定集合保存的类型&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;fallthrough&lt;/td&gt;
-&lt;td&gt;当 switch 程序块 case 直接通往下一种情况而没有 break 时的警告&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;path&lt;/td&gt;
-&lt;td&gt;在类路径、源文件路径等中有不存在的路径时的警告&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;serial&lt;/td&gt;
-&lt;td&gt;当在可序列化的类上缺少 serialVersionUID 定义时的警告&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;finally&lt;/td&gt;
-&lt;td&gt;任何 finally 子句不能正常完成时的警告&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;all&lt;/td&gt;
-&lt;td&gt;关于以上所有情况的警告&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h1 id=&#34;自定义注解&#34;&gt;自定义注解&lt;/h1&gt;
-
-&lt;p&gt;&lt;strong&gt;一个注解类型是一个java接口&lt;/strong&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;@Inherited
-@Retention
-@Documented
-@Target(value=ANNOTATION_TYPE)
-public @interface CustomAnnotation ( ) {
-
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h1 id=&#34;使用反射来查询注解&#34;&gt;使用反射来查询注解&lt;/h1&gt;
-
-&lt;p&gt;java.lang.Class&lt;/p&gt;
-
-&lt;h2 id=&#34;如果存在-返回指定注解类型的注解-不存在则返回null&#34;&gt;如果存在，返回指定注解类型的注解；不存在则返回null&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;public &amp;lt;A extends java.lang.annotation.Annotation&amp;gt; A  getAnnotation ( Class&amp;lt;A&amp;gt; annotationClass )
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;返回该类中所有注解&#34;&gt;返回该类中所有注解&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;public java.lang.annotation.Annotation[] getAnnotations ( )
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;判断该类是不是一个注解类型&#34;&gt;判断该类是不是一个注解类型&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;public boolean isAnnotation()
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;判断指定类型的一个注解是否出现在该类上&#34;&gt;判断指定类型的一个注解是否出现在该类上&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;public boolean isAnnotationPressent( Class&amp;lt;? extends java.lang.annotation.Annotation&amp;gt; annotationClass)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h1 id=&#34;参考&#34;&gt;参考&lt;/h1&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://blog.csdn.net/cwcwj3069/article/details/52252670&#34;&gt;《深入理解Java：注解》 cwcwj3069 - CSDN博客 &lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.cnblogs.com/kgrdomore/p/5806321.html&#34;&gt;《注解的基本盘点》 墨迹修 - 博客园博客 &lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://gityuan.com/2016/01/23/java-annotation/&#34;&gt;《Java注解(Annotation)》 Gityuan - 个人博客 &lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.cnblogs.com/tianzhijiexian/p/4807813.html&#34;&gt;《Java 注解》 Developer_Kale - 博客园博客  &lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;《Java 和 Android 开发学习指南》 （第2版）， [加] Budi Kurniawan 著 ，李强 译  ，人民邮电出版社 2016-3&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
       <title>Java IO</title>
-      <link>http://f12998765.github.io/java-notes/java-io/</link>
+      <link>http://127.0.0.1/java/java-io/</link>
       <pubDate>Fri, 18 Nov 2016 18:20:00 +0800</pubDate>
       
-      <guid>http://f12998765.github.io/java-notes/java-io/</guid>
+      <guid>http://127.0.0.1/java/java-io/</guid>
       <description>
 
 &lt;blockquote&gt;
@@ -1633,219 +1131,16 @@ Path p_ = Paths.get(&amp;quot;/home&amp;quot;,&amp;quot;user&amp;quot;);
 &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;p&gt;deleteIfExists(Path)  删除不存在path时，不会报 NoSuchFileException  异常 。&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Java enum</title>
-      <link>http://f12998765.github.io/java-notes/java-%E6%9E%9A%E4%B8%BE/</link>
-      <pubDate>Fri, 18 Nov 2016 18:20:00 +0800</pubDate>
-      
-      <guid>http://f12998765.github.io/java-notes/java-%E6%9E%9A%E4%B8%BE/</guid>
-      <description>
-
-&lt;h2 id=&#34;创建&#34;&gt;创建&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;public enum enumName{
-    parm1,
-    parm2,
-    ...
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;创建枚举类型要使用 enum 关键字，隐含了所创建的类型都是 java.lang.Enum 类（抽象类）的子类&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;枚举类型符合通用模式 Class Enum&lt;E extends Enum&lt;E&gt;&amp;gt;，而 E 表示枚举类型的名称。&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;枚举类型的每一个值都将映射到 protected Enum(String name, int ordinal) 构造函数中&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;switch&#34;&gt;switch&lt;/h2&gt;
-
-&lt;p&gt;例:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;public class App
-{
-     private enum INT{
-        one,two,three
-    }
-    public static void main(String[] args) {
-        INT c = INT.one;
-
-       // 注意case中必须写成one
-        switch (c){
-            case one:{
-                System.out.println(&amp;quot;1&amp;quot;);
-                break;
-            }
-            case two:{
-                System.out.println(&amp;quot;2&amp;quot;);
-                break;
-            }
-            case three:{
-                System.out.println(&amp;quot;3&amp;quot;);
-                break;
-            }
-            default:{
-                System.out.println(&amp;quot;0&amp;quot;);
-            }
-        }
-    }
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;成员变量与构造函数&#34;&gt;成员变量与构造函数&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;如果定义的枚举有自己的构造函数必须声明私有的&lt;/strong&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;public class App
-{
-     private enum INT{
-        one(1,&amp;quot;one&amp;quot;),two(2,&amp;quot;two&amp;quot;),three(2,&amp;quot;three&amp;quot;);//注意有分号  
-
-         int i;
-         String name;
-
-        INT(int i, String name) {
-             this.i = i;
-             this.name = name;
-         }
-         public int getI() {
-             return i;
-         }
-         public void setI(int i) {
-             this.i = i;
-         }
-         public String getName() {
-             return name;
-         }
-         public void setName(String name) {
-             this.name = name;
-         }
-     }
-    public static void main(String[] args) {
-
-        INT[] ints = INT.values();
-        for(INT n :ints){
-            System.out.println(&amp;quot;name : \t&amp;quot;+n.getName());
-            System.out.println(&amp;quot;index : \t&amp;quot;+n.getI());
-            System.out.println(&amp;quot;oridary : \t&amp;quot;+n.ordinal());
-            System.out.println(&amp;quot;this : \t&amp;quot;+n);
-            System.out.println(&amp;quot;name : \t&amp;quot;+n.name());
-            System.out.println(&amp;quot;name : \t&amp;quot;+n.valueOf(&amp;quot;two&amp;quot;));
-            System.out.println(&amp;quot;---------------------&amp;quot;);
-        }
-    }
-}
-
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;方法&#34;&gt;方法&lt;/h2&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;方法&lt;/th&gt;
-&lt;th&gt;作用&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;ordinal()&lt;/td&gt;
-&lt;td&gt;返回枚举值在枚举类种的顺序&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;values()&lt;/td&gt;
-&lt;td&gt;静态方法，返回一个包含全部枚举值的数组&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;toString()&lt;/td&gt;
-&lt;td&gt;返回枚举常量的名称&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;valueOf()&lt;/td&gt;
-&lt;td&gt;返回带指定名称的指定枚举类型的枚举常量&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h2 id=&#34;实现接口&#34;&gt;实现接口&lt;/h2&gt;
-
-&lt;p&gt;可以更方便地对枚举中的值进行排序、比较等操作，封装性更好.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;   interface INT_ {
-        void read();
-
-        String getState();
-    }
-
-     private enum INT implements INT_{
-        one(1,&amp;quot;one&amp;quot;),two(2,&amp;quot;two&amp;quot;),three(2,&amp;quot;three&amp;quot;);
-
-         int i;
-         String name;
-
-        INT(int i, String name) {
-             this.i = i;
-             this.name = name;
-         }
-
-         @Override
-         public void read() {
-
-         }
-
-         @Override
-         public String getState() {
-             return null;
-         }
-     }
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;enummap-和-enumset&#34;&gt;EnumMap 和 EnumSet&lt;/h2&gt;
-
-&lt;h3 id=&#34;enummap&#34;&gt;EnumMap&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;    public static void main(String[] args) {
-
-        EnumMap&amp;lt;INT,String&amp;gt; ints = new EnumMap&amp;lt;INT,String&amp;gt;(INT.class);
-        ints.put(INT.one,&amp;quot;11111111&amp;quot;);
-        ints.put(INT.two,&amp;quot;22222222&amp;quot;);
-        ints.put(INT.three,&amp;quot;333333333&amp;quot;);
-        Set&amp;lt;INT&amp;gt; keys = ints.keySet();
-        for(INT i:keys)
-        {
-            System.out.println(i.name()+&amp;quot; &amp;quot;+i.ordinal()+&amp;quot; &amp;quot;+ints.get(i));
-        }
-    }
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;enumset&#34;&gt;EnumSet&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;    public static void main(String[] args) {
-
-        EnumSet&amp;lt;INT&amp;gt; ints = EnumSet.allOf(INT.class);
-        for(INT i : ints)
-        {
-            System.out.println(i);
-        }
-    }
-&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;*deleteIfExists(Path)  删除不存在path时，不会报 NoSuchFileException 异常 *&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Java 修饰符</title>
-      <link>http://f12998765.github.io/java-notes/java-%E4%BF%AE%E9%A5%B0%E7%AC%A6/</link>
+      <link>http://127.0.0.1/java/java-%E4%BF%AE%E9%A5%B0%E7%AC%A6/</link>
       <pubDate>Fri, 18 Nov 2016 18:20:00 +0800</pubDate>
       
-      <guid>http://f12998765.github.io/java-notes/java-%E4%BF%AE%E9%A5%B0%E7%AC%A6/</guid>
+      <guid>http://127.0.0.1/java/java-%E4%BF%AE%E9%A5%B0%E7%AC%A6/</guid>
       <description>
 
 &lt;h2 id=&#34;分类&#34;&gt;分类&lt;/h2&gt;
@@ -2048,6 +1343,581 @@ import static packageName.className.*;
 &lt;p&gt;Volatile 修饰的成员变量在每次被线程访问时，都强制从共享内存中重新读取该成员变量的值。而且，当成员变量发生变化时，会强制线程将变化值回写到共享内存。这样在任何时刻，两个不同的线程总是看到某个成员变量的同一个值。&lt;/p&gt;
 
 &lt;p&gt;一个 volatile 对象引用可能是 null。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Java 反射</title>
+      <link>http://127.0.0.1/java/java-%E5%8F%8D%E5%B0%84/</link>
+      <pubDate>Fri, 18 Nov 2016 18:20:00 +0800</pubDate>
+      
+      <guid>http://127.0.0.1/java/java-%E5%8F%8D%E5%B0%84/</guid>
+      <description>
+
+&lt;p&gt;&lt;strong&gt;反射是将java 类中的各种成分映射成相应的类。&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;JAVA反射机制是在运行状态中，对于任意一个类，都能够知道这个类的所有属性和方法；对于任意一个对象，都能够调用它的任意一个方法和属性；这种动态获取的信息以及动态调用对象的方法的功能称为java语言的反射机制。&lt;/p&gt;
+
+&lt;h2 id=&#34;class-name&#34;&gt;Class Name&lt;/h2&gt;
+
+&lt;h3 id=&#34;获取完整类名&#34;&gt;获取完整类名&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;String className = class.getName();
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;获取不包含包名的类名&#34;&gt;获取不包含包名的类名&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;String simpleClassName = class.getWSimpleName();
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;class-modifies&#34;&gt;Class Modifies&lt;/h2&gt;
+
+&lt;h3 id=&#34;获取修饰class-对象的访问修饰符&#34;&gt;获取修饰Class 对象的访问修饰符&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;int modifiers = class.getModifiers();
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;检查修饰符&#34;&gt;检查修饰符&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;import  java.lang.reflect.Modifier;
+
+Modifier.isAbstract(int modifiers)
+Modifier.isFinal(int modifiers)
+Modifier.isInterface(int modifiers)
+Modifier.isNative(int modifiers)
+Modifier.isPrivate(int modifiers)
+Modifier.isProtected(int modifiers)
+Modifier.isPublic(int modifiers)
+Modifier.isStatic(int modifiers)
+Modifier.isStrict(int modifiers)
+Modifier.isSynchronized(int modifiers)
+Modifier.isTransient(int modifiers)
+Modifier.isVolatile(int modifiers)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;package-info&#34;&gt;Package Info&lt;/h2&gt;
+
+&lt;p&gt;获取包的相关信息：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Package package = class.getPackage();
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;superclass&#34;&gt;Superclass&lt;/h2&gt;
+
+&lt;p&gt;获取超类&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;Class superclass = class.getSuperclass();
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;implemented-interfaces&#34;&gt;Implemented Interfaces&lt;/h2&gt;
+
+&lt;p&gt;获得类实现的接口的列表&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;Class[] interfaces = class.getInterfaces();
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;要获取一个给定类的完整的所实现接口的列表，需要递归查询该类以及它的超类。&lt;/p&gt;
+
+&lt;h2 id=&#34;constructors&#34;&gt;Constructors&lt;/h2&gt;
+
+&lt;h3 id=&#34;获得构造函数&#34;&gt;获得构造函数&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;Constructor[] constructors = class.getConstructors();
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;获取指定参数的构造函数&#34;&gt;获取指定参数的构造函数&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;Constructor constructor = class.getConstructor(new Class[]{String.class});
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;获取构造函数的参数&#34;&gt;获取构造函数的参数&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;Class[] parameterTypes = constructor.getParameterTypes();
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;调用构造函数-实例化对象&#34;&gt;调用构造函数，实例化对象&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;Constructor constructor = MyObject.class.getConstructor(String.class);
+MyObject myObject = (MyObject) constructor.newInstance(&amp;quot;参数&amp;quot;);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;methods&#34;&gt;Methods&lt;/h2&gt;
+
+&lt;h3 id=&#34;获取类中的公共方法&#34;&gt;获取类中的公共方法&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;Method[] method = class.getMethods();
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;获取指定的方法&#34;&gt;获取指定的方法&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;//不存在与参数匹配的方法时，报 NoSuchMethodException 异常
+Method method = class.getMethod(&amp;quot;doSomething&amp;quot;, new Class[]{String.class});
+Method method = aClass.getMethod(&amp;quot;doSomething&amp;quot;, null);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;获取方法的参数&#34;&gt;获取方法的参数&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;Class[] parameterTypes = method.getParameterTypes();
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;获取方法的返回值类型&#34;&gt;获取方法的返回值类型&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;Class returnType = method.getReturnType();
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;调用方法&#34;&gt;调用方法&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;Method.invoke(Object target, Object... parameters)
+//参数  target  是要调用方法的对象
+//静态方法需要提供null作为参数，非静态方法需要提供对象的实例。
+
+Method method = MyObject.class.getMethod(&amp;quot;doSomething&amp;quot;, String.class);
+Object returnValue = method.invoke(null, &amp;quot;parameter-value1&amp;quot;);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;fields&#34;&gt;Fields&lt;/h2&gt;
+
+&lt;h3 id=&#34;获取类的公共字段&#34;&gt;获取类的公共字段&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;Field[] fields = class.getFields();
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;获取指定字段名的字段&#34;&gt;获取指定字段名的字段&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;Field field = class.getField(&amp;quot;字段名&amp;quot;);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;根据字段获取字段名&#34;&gt;根据字段获取字段名&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;String fieldName = field.getName();
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;根据字段获取字段类型&#34;&gt;根据字段获取字段类型&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;Class fieldType = field.getType();
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;通过字段获取设置字段的值&#34;&gt;通过字段获取设置字段的值&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;//参数objectInstance必须是拥有该字段的实例
+Class  class_  = MyObject.class
+Field field = class_.getField(&amp;quot;字段名&amp;quot;);
+MyObject objectInstance = new MyObject();
+Object value = field.get(objectInstance);
+field.set(objetInstance, value);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;annotations&#34;&gt;Annotations&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;Annotation[] annotations = class.getAnnotations();
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;关于私有成员&#34;&gt;关于私有成员&lt;/h2&gt;
+
+&lt;h3 id=&#34;私有字段&#34;&gt;私有字段&lt;/h3&gt;
+
+&lt;p&gt;获得私有字段，仅仅在当前类中&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;Field field = class.getDeclaredField(String name);
+
+Field[] fields = class.getDeclaredFields();
+
+field.setAccessible(true); //关闭对特定的Field实例的访问检查
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;私有方法&#34;&gt;私有方法&lt;/h3&gt;
+
+&lt;p&gt;获得私有方法，仅仅在当前类中&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;Method  method = class.getDeclaredMethod(String name, Class[ ] parameterTypes);
+
+Method[] method = class.getDeclaredMethods();
+
+method.setAccessible(true); //关闭对特定的Method实例的访问检查
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;数组&#34;&gt;数组&lt;/h2&gt;
+
+&lt;h3 id=&#34;创建数组&#34;&gt;创建数组&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;import java.lang.reflect.Array;
+
+int[] intArray = (int[]) Array.newInstance(int.class, 3);
+//第一个参数int.class指定了数组类型。
+//第二个参数声明了数组大小。
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;get-和-set&#34;&gt;get 和 set&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;Array.get(数组实例,序列);
+
+Array.set(数组实例,序列,值);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;获取数组的类型&#34;&gt;获取数组的类型&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;Class class_ = class.getComponentType();
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;#参考
+- &lt;a href=&#34;http://www.cnblogs.com/penghongwei/p/3299688.html&#34;&gt;Java 反射 【译】&lt;/a&gt;
+- &lt;a href=&#34;http://tutorials.jenkov.com/java-reflection/index.html&#34;&gt;java-reflection [英] &lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Java 异常</title>
+      <link>http://127.0.0.1/java/java-%E5%BC%82%E5%B8%B8/</link>
+      <pubDate>Fri, 18 Nov 2016 18:20:00 +0800</pubDate>
+      
+      <guid>http://127.0.0.1/java/java-%E5%BC%82%E5%B8%B8/</guid>
+      <description>
+
+&lt;h2 id=&#34;定义&#34;&gt;定义&lt;/h2&gt;
+
+&lt;p&gt;编译错误和运行时错误&lt;/p&gt;
+
+&lt;h2 id=&#34;捕获异常&#34;&gt;捕获异常&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;try {
+//会产生异常的代码
+} catch (Exception e){
+//处理异常的代码
+}
+finally {
+//不管是否产生异常都会执行的代码
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;捕获多个异常&#34;&gt;捕获多个异常&lt;/h2&gt;
+
+&lt;p&gt;1.7 支持单一的catch语句中捕获多个异常，每个异常之间使用管道符号 &lt;code&gt;|&lt;/code&gt;隔开&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;catch (excepetion-1 | exception-2 ... e) {
+    // 相同的处理代码
+}
+catch (excepetion-n e) {
+    //其他的处理代码
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;try-with-resource&#34;&gt;try-with-resource&lt;/h2&gt;
+
+&lt;p&gt;1.7 之前的关闭资源时，会使用 finally ，但是关闭时产生异常会嵌套很多层。
+1.7 添加 try-with-resource 语句，但是只用实现了 java.lang.AutoCloseable 的类才能关掉。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;//try ( resource ) { }
+try (Statement stmt = con.createStatement()) { }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;java-lang-exception&#34;&gt;java.lang.Exception&lt;/h2&gt;
+
+&lt;p&gt;Exception 覆盖了 toString () , 返回对异常的说明。
+printStackTrace 方法 对 Exception 追踪，打印出对异常的描述。&lt;/p&gt;
+
+&lt;p&gt;catch 语句的顺序很重要，JVM 根据其顺序来匹配异常，Exception 的 catch 语句必须放在最后。&lt;/p&gt;
+
+&lt;h3 id=&#34;throw-和-throws&#34;&gt;throw 和 throws&lt;/h3&gt;
+
+&lt;p&gt;throw : 用于抛出一个异常对象。
+throws：用于方法名之后，表示该方法可能抛出异常的类型。&lt;/p&gt;
+
+&lt;h3 id=&#34;自定义异常&#34;&gt;自定义异常&lt;/h3&gt;
+
+&lt;p&gt;通过继承异常类，可以自定义异常。通过throw来抛出自定义异常。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Java 排序</title>
+      <link>http://127.0.0.1/java/java-%E6%8E%92%E5%BA%8F/</link>
+      <pubDate>Fri, 18 Nov 2016 18:20:00 +0800</pubDate>
+      
+      <guid>http://127.0.0.1/java/java-%E6%8E%92%E5%BA%8F/</guid>
+      <description>
+
+&lt;h1 id=&#34;comparable-vs-comparator&#34;&gt;Comparable vs Comparator&lt;/h1&gt;
+
+&lt;h2 id=&#34;comparable&#34;&gt;Comparable&lt;/h2&gt;
+
+&lt;p&gt;Comparable 需要比较的对象类继承该接口，并实现 &lt;code&gt;compareTo(Object obj)&lt;/code&gt; 方法。&lt;/p&gt;
+
+&lt;h3 id=&#34;api-http-tool-oschina-net-uploads-apidocs-jdk-zh-java-lang-comparable-html&#34;&gt;&lt;a href=&#34;http://tool.oschina.net/uploads/apidocs/jdk-zh/java/lang/Comparable.html&#34;&gt;API&lt;/a&gt;&lt;/h3&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;方法&lt;/th&gt;
+&lt;th&gt;摘要&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;int    compareTo(T o)&lt;/td&gt;
+&lt;td&gt;比较此对象与指定对象的顺序。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;strong&gt;注意使用泛型&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;public class 类名 implements Comparable&amp;lt;类名&amp;gt;{
+    //……
+    @Override
+    public int compareTo(类名 o) {
+        //大于返回正数，小于返回负数，等于返回0
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;备注&#34;&gt;备注&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;java.util.Collections.sort(List)&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;java.util.Arrays.sort(Object[])&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;comparator&#34;&gt;Comparator&lt;/h2&gt;
+
+&lt;p&gt;Comparator 需要创建一个比较器（类），来继承该接口，并实现 &lt;code&gt;compare(Object o1, Objecto2)&lt;/code&gt; 方法。&lt;/p&gt;
+
+&lt;p&gt;适合定义多种比较属性。&lt;/p&gt;
+
+&lt;h3 id=&#34;api-http-tool-oschina-net-uploads-apidocs-jdk-zh-java-util-comparator-html&#34;&gt;&lt;a href=&#34;http://tool.oschina.net/uploads/apidocs/jdk-zh/java/util/Comparator.html&#34;&gt;API&lt;/a&gt;&lt;/h3&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;方法&lt;/th&gt;
+&lt;th&gt;摘要&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;int    compare(T o1, T o2)&lt;/td&gt;
+&lt;td&gt;比较用来排序的两个参数。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&#34;例&#34;&gt;例&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;public class EmComparable implements Comparator&amp;lt;类名&amp;gt; {
+    @Override
+    public int compare(类名 o1,类名 o2) {
+        //大于返回正数，小于返回负数，等于返回0
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;备注-1&#34;&gt;备注&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;java.util.Collections.sort(List, Comparator)&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;java.util.Arrays.sort(Object[], Comparator)&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;参考&#34;&gt;参考&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://fuxueliang.com/tech/2013/05/26/java-sorting-comparator-vs-comparable-tutorial/&#34;&gt;Java排序: Comparator vs Comparable 入门&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.hollischuang.com/archives/1292&#34;&gt;简单介绍Java中Comparable和Comparator&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Java 接口 抽象类 多态</title>
+      <link>http://127.0.0.1/java/java-%E6%8E%A5%E5%8F%A3-%E6%8A%BD%E8%B1%A1%E7%B1%BB-%E5%A4%9A%E6%80%81/</link>
+      <pubDate>Fri, 18 Nov 2016 18:20:00 +0800</pubDate>
+      
+      <guid>http://127.0.0.1/java/java-%E6%8E%A5%E5%8F%A3-%E6%8A%BD%E8%B1%A1%E7%B1%BB-%E5%A4%9A%E6%80%81/</guid>
+      <description>
+
+&lt;h2 id=&#34;什么是接口&#34;&gt;什么是接口？&lt;/h2&gt;
+
+&lt;p&gt;接口是一种服务提供者与服务使用者之间的协议。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;接口的定义&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;访问修饰符 interface  接口名 extends  父接口列表{
+
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;接口的实现&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;访问修饰符 class 类名 extends 父类 implements  接口列表{
+
+}
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;接口中的成员&#34;&gt;接口中的成员&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;字段&lt;/strong&gt;
+* 必须初始化
+* 默认：&lt;code&gt;public&lt;/code&gt; &lt;code&gt;static&lt;/code&gt; &lt;code&gt;final&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;抽象方法&lt;/strong&gt;
+* 默认为： &lt;code&gt;public abstract&lt;/code&gt;
+* 没有主体，由分号结束&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;静态方法和默认方法&lt;/strong&gt;
+* Java 8 支持在接口中定义静态方法和默认方法&lt;/p&gt;
+
+&lt;h1 id=&#34;抽象类&#34;&gt;抽象类&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;抽象类和抽象方法有 &lt;code&gt;abstract&lt;/code&gt; 修饰符修饰。&lt;/li&gt;
+&lt;li&gt;包含抽象方法的类必须定义为抽象类。&lt;/li&gt;
+&lt;li&gt;抽象类不能被实例化，抽象方法必须在子类中被实现。&lt;/li&gt;
+&lt;li&gt;只有通过子类继承抽象类并覆盖了抽象类中的&lt;strong&gt;所有&lt;/strong&gt;抽象方法后，该子类才可以实例化。否则，该子类还是一个抽象类。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;什么时候使用抽象类和接口&#34;&gt;什么时候使用抽象类和接口？&lt;/h1&gt;
+
+&lt;p&gt;接口：
+* 实现多重继承&lt;/p&gt;
+
+&lt;p&gt;抽象类：
+* 成员方法需要默认实现
+* 基本方法不断改变&lt;/p&gt;
+
+&lt;h1 id=&#34;多态&#34;&gt;多态&lt;/h1&gt;
+
+&lt;p&gt;多态是同一个行为具有多个不同表现形式或形态的能力。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;父类引用指向子类对象，调用重写的方法&lt;/strong&gt;
+&lt;strong&gt;接口引用指向实现类对象，调用实现的方法&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;条件&#34;&gt;条件&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;继承超类或实现接口&lt;/li&gt;
+&lt;li&gt;方法的重写&lt;/li&gt;
+&lt;li&gt;父类引用指向子类对象或接口引用指向实现类对象&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Java 数组</title>
+      <link>http://127.0.0.1/java/java-%E6%95%B0%E7%BB%84%E5%92%8Carrays%E7%B1%BB/</link>
+      <pubDate>Fri, 18 Nov 2016 18:20:00 +0800</pubDate>
+      
+      <guid>http://127.0.0.1/java/java-%E6%95%B0%E7%BB%84%E5%92%8Carrays%E7%B1%BB/</guid>
+      <description>
+
+&lt;h2 id=&#34;什么是数组-及声明数组变量&#34;&gt;什么是数组？及声明数组变量&lt;/h2&gt;
+
+&lt;p&gt;数组是存放一组相同类型的容器。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;DataType [] arryName;
+
+DataType arryName [];
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;数组的初始化&#34;&gt;数组的初始化&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;DataType[] arrayName = new DataType[arraySize];
+
+DataType[] arrayName = {value0, value1, ..., valuek};
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;未初始化的数组会默认赋值 : int &amp;ndash;&amp;gt; 0、boolean &amp;ndash;&amp;gt; false 、对象 &amp;ndash;&amp;gt; null&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&#34;数组引用及长度&#34;&gt;数组引用及长度&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;arrayName[index] //数组通过下标引用，并且会检查数组越界。
+
+arrayName. length//每个数组都有一个属性length来表示长度
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;获取字符串的长度使用 length() 方法&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&#34;遍历数组&#34;&gt;遍历数组&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Loop循环&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;for(int i;i&amp;lt;arrayName.length;i++){
+//Statements
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;for-each循环&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;for(DataType e:Array){
+//Statements
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;for-each循环只能处理一维数组，二维数组需要双层循环。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&#34;array类&#34;&gt;Array类&lt;/h2&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;方法有多个重载，详细信息查看&lt;a href=&#34;http://tool.oschina.net/uploads/apidocs/jdk-zh/java/util/Arrays.html&#34;&gt;Java API&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;方法&lt;/th&gt;
+&lt;th&gt;说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;asList&lt;/td&gt;
+&lt;td&gt;返回数组支持 的固定个大小的List&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;binarySearch&lt;/td&gt;
+&lt;td&gt;根据特定的键查找数组，返回索引&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;copyOf&lt;/td&gt;
+&lt;td&gt;创建一个指定长度的新数组，复制原数组的元素，根据长度进行截取和填充&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;copyOfRamge&lt;/td&gt;
+&lt;td&gt;根据原数组的指定范围创建新的数组&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;sort&lt;/td&gt;
+&lt;td&gt;数组排序&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;toString&lt;/td&gt;
+&lt;td&gt;返回数组的字符串表示&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;equals&lt;/td&gt;
+&lt;td&gt;比较数组是否相等&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;fill&lt;/td&gt;
+&lt;td&gt;将指定值赋值给全部元素&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
 </description>
     </item>
     

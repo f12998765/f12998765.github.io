@@ -1,21 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>XIZERO</title>
-    <link>http://f12998765.github.io/tags/scraps/index.xml</link>
-    <description>Recent content on XIZERO</description>
+    <title>Scraps on XIZERO</title>
+    <link>http://127.0.0.1/tags/scraps/index.xml</link>
+    <description>Recent content in Scraps on XIZERO</description>
     <generator>Hugo -- gohugo.io</generator>
-    <atom:link href="http://f12998765.github.io/tags/scraps/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <atom:link href="http://127.0.0.1/tags/scraps/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Scraps of notes</title>
-      <link>http://f12998765.github.io/notes/scraps-of-notes/</link>
+      <title>零碎笔记</title>
+      <link>http://127.0.0.1/note/%E9%9B%B6%E7%A2%8E%E7%AC%94%E8%AE%B0/</link>
       <pubDate>Fri, 18 Nov 2016 18:20:00 +0800</pubDate>
       
-      <guid>http://f12998765.github.io/notes/scraps-of-notes/</guid>
+      <guid>http://127.0.0.1/note/%E9%9B%B6%E7%A2%8E%E7%AC%94%E8%AE%B0/</guid>
       <description>
-
-&lt;h1 id=&#34;scraps-of-notes&#34;&gt;Scraps of notes&lt;/h1&gt;
 
 &lt;h2 id=&#34;1-idea新建maven项目卡住显示-generating-project-in-batch-mode&#34;&gt;1. IDEA新建MAVEN项目卡住显示 : &amp;ldquo;Generating Project in Batch mode&amp;rdquo;&lt;/h2&gt;
 
@@ -29,10 +28,6 @@
 &lt;li&gt;在 &lt;code&gt;Settings&lt;/code&gt;&amp;gt; &lt;code&gt;Maven&lt;/code&gt; &amp;gt; &lt;code&gt;Runner&lt;/code&gt; &amp;gt; &lt;code&gt;VM Options&lt;/code&gt; 中添加 &lt;code&gt;-DarchetypeCatalog=internal&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;PS：注意右上角的灰字：for default project，而不是for current project&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.dropbox.com/s/mzmj2rn9if5dduh/archetype-catalog.xml?dl=0&#34;&gt;Dropbox&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
 
 &lt;h2 id=&#34;2-win-下快捷切换中英文符号&#34;&gt;2. Win 下快捷切换中英文符号&lt;/h2&gt;
 

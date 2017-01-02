@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>XIZERO</title>
-    <link>http://f12998765.github.io/tags/framework/index.xml</link>
-    <description>Recent content on XIZERO</description>
+    <title>Framework on XIZERO</title>
+    <link>http://127.0.0.1/tags/framework/index.xml</link>
+    <description>Recent content in Framework on XIZERO</description>
     <generator>Hugo -- gohugo.io</generator>
-    <atom:link href="http://f12998765.github.io/tags/framework/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <atom:link href="http://127.0.0.1/tags/framework/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>java Framework</title>
-      <link>http://f12998765.github.io/notes/java-framework/</link>
+      <link>http://127.0.0.1/note/java-framework/</link>
       <pubDate>Fri, 18 Nov 2016 18:20:00 +0800</pubDate>
       
-      <guid>http://f12998765.github.io/notes/java-framework/</guid>
+      <guid>http://127.0.0.1/note/java-framework/</guid>
       <description>
 
 &lt;h1 id=&#34;java-framework&#34;&gt;java Framework&lt;/h1&gt;
@@ -72,54 +73,33 @@
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;了解一些的java框架和工具&#34;&gt;了解一些的Java框架和工具&lt;/h2&gt;
+&lt;p&gt;##了解一些的Java框架和工具
+- &lt;a href=&#34;https://spring.io/&#34;&gt;Spring&lt;/a&gt;
+- Mybatis
+    - &lt;a href=&#34;https://github.com/mybatis/&#34;&gt;Github&lt;/a&gt;
+    - &lt;a href=&#34;http://www.mybatis.org/mybatis-3/zh/&#34;&gt;中文官网&lt;/a&gt;
+    - &lt;a href=&#34;http://www.mybatis.org/generator/&#34;&gt;MyBatis Generator&lt;/a&gt;
+- Maven
+    - &lt;a href=&#34;https://maven.apache.org/&#34;&gt;官网&lt;/a&gt;
+    - &lt;a href=&#34;http://search.maven.org/&#34;&gt;Maven Central Repository&lt;/a&gt;
+- &lt;a href=&#34;http://tomcat.apache.org/&#34;&gt;Tomcat&lt;/a&gt;
+- &lt;a href=&#34;https://hc.apache.org/httpcomponents-client-ga/&#34;&gt;Apache HttpComponents&lt;/a&gt;
+- &lt;a href=&#34;https://jsoup.org/&#34;&gt;jsoup&lt;/a&gt;
+- jackson
+    - &lt;a href=&#34;https://github.com/FasterXML/jackson&#34;&gt;Github&lt;/a&gt;
+    - &lt;a href=&#34;http://mvnrepository.com/search?q=Jackson&#34;&gt;Maven&lt;/a&gt;
+- SWAGGER
+    - &lt;a href=&#34;http://swagger.io/&#34;&gt;http://swagger.io/&lt;/a&gt;&lt;/p&gt;
 
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://spring.io/&#34;&gt;Spring&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Mybatis
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/mybatis/&#34;&gt;Github&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.mybatis.org/mybatis-3/zh/&#34;&gt;中文官网&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.mybatis.org/generator/&#34;&gt;MyBatis Generator&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Maven
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://maven.apache.org/&#34;&gt;官网&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://search.maven.org/&#34;&gt;Maven Central Repository&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://tomcat.apache.org/&#34;&gt;Tomcat&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://hc.apache.org/httpcomponents-client-ga/&#34;&gt;Apache HttpComponents&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://jsoup.org/&#34;&gt;jsoup&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;jackson
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/FasterXML/jackson&#34;&gt;Github&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://mvnrepository.com/search?q=Jackson&#34;&gt;Maven&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;SWAGGER
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://swagger.io/&#34;&gt;http://swagger.io/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;一些不会用的java框架和工具&#34;&gt;一些不会用的Java框架和工具&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.groovy-lang.org/&#34;&gt;Groovy&lt;/a&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/apache/groovy&#34;&gt;Github&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://gradle.org/&#34;&gt;Gradle&lt;/a&gt; &amp;ndash; 项目构建&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://junit.org/junit5/&#34;&gt;JUnit5&lt;/a&gt; &amp;ndash; Java单元测试&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://logging.apache.org/log4j/2.x/&#34;&gt;Log4j&lt;/a&gt; &amp;ndash; 日志记录&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.eclemma.org/jacoco/&#34;&gt;JaCoCo&lt;/a&gt; &amp;ndash; 代码覆盖率&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://nginx.org/&#34;&gt;Nginx&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Javadoc&amp;ndash; 文档注释&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;##一些不会用的Java框架和工具
+- &lt;a href=&#34;http://www.groovy-lang.org/&#34;&gt;Groovy&lt;/a&gt;
+    - &lt;a href=&#34;https://github.com/apache/groovy&#34;&gt;Github&lt;/a&gt;
+- &lt;a href=&#34;https://gradle.org/&#34;&gt;Gradle&lt;/a&gt; &amp;ndash; 项目构建
+- &lt;a href=&#34;http://junit.org/junit5/&#34;&gt;JUnit5&lt;/a&gt; &amp;ndash; Java单元测试
+- &lt;a href=&#34;http://logging.apache.org/log4j/2.x/&#34;&gt;Log4j&lt;/a&gt; &amp;ndash; 日志记录
+- &lt;a href=&#34;http://www.eclemma.org/jacoco/&#34;&gt;JaCoCo&lt;/a&gt; &amp;ndash; 代码覆盖率
+- &lt;a href=&#34;http://nginx.org/&#34;&gt;Nginx&lt;/a&gt;
+- Javadoc&amp;ndash; 文档注释&lt;/p&gt;
 </description>
     </item>
     

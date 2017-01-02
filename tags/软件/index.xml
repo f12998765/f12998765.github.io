@@ -1,80 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>XIZERO</title>
-    <link>http://f12998765.github.io/tags/%E8%BD%AF%E4%BB%B6/index.xml</link>
-    <description>Recent content on XIZERO</description>
+    <title>软件 on XIZERO</title>
+    <link>http://127.0.0.1/tags/%E8%BD%AF%E4%BB%B6/index.xml</link>
+    <description>Recent content in 软件 on XIZERO</description>
     <generator>Hugo -- gohugo.io</generator>
-    <atom:link href="http://f12998765.github.io/tags/%E8%BD%AF%E4%BB%B6/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <atom:link href="http://127.0.0.1/tags/%E8%BD%AF%E4%BB%B6/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Software Plug-ins</title>
-      <link>http://f12998765.github.io/notes/software-plug-ins/</link>
+      <title>win 软件推荐</title>
+      <link>http://127.0.0.1/note/win%20%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90/</link>
       <pubDate>Fri, 18 Nov 2016 18:20:00 +0800</pubDate>
       
-      <guid>http://f12998765.github.io/notes/software-plug-ins/</guid>
-      <description>
-
-&lt;h1 id=&#34;software-plug-ins&#34;&gt;Software Plug-ins&lt;/h1&gt;
-
-&lt;h2 id=&#34;google-chrome&#34;&gt;Google Chrome&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;EditThisCookie &lt;strong&gt;xox&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;Postman&lt;/li&gt;
-&lt;li&gt;Web Server for Chrome&lt;/li&gt;
-&lt;li&gt;Enhanced Steam&lt;/li&gt;
-&lt;li&gt;Flower Password &lt;strong&gt;xox&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;Hunmble New Tab Page &lt;strong&gt;xox&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;New Tab Clock&lt;/li&gt;
-&lt;li&gt;Proxy SwitchyOmega &lt;strong&gt;xox&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;Apps Launcher&lt;/li&gt;
-&lt;li&gt;uBlock Origin &lt;strong&gt;xox&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;Instapaper&lt;/li&gt;
-&lt;li&gt;GitHub Plus&lt;/li&gt;
-&lt;li&gt;GitHub Stars Tagger&lt;/li&gt;
-&lt;li&gt;网易邮箱&lt;/li&gt;
-&lt;li&gt;猎豹翻译&lt;/li&gt;
-&lt;li&gt;小番茄钟&lt;/li&gt;
-&lt;li&gt;哔哩哔哩助手&lt;/li&gt;
-&lt;li&gt;Octotree&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;atom&#34;&gt;Atom&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Emmet&lt;/li&gt;
-&lt;li&gt;docblockr&lt;/li&gt;
-&lt;li&gt;atom-ternjs&lt;/li&gt;
-&lt;li&gt;autocomplete-modules&lt;/li&gt;
-&lt;li&gt;autocomplete-paths&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://atom.io/packages/javascript-snippets&#34;&gt;javascript-snippets&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://atom.io/packages/jquery-snippets&#34;&gt;jquery-snippets&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;file-icons&lt;/li&gt;
-&lt;li&gt;expose&lt;/li&gt;
-&lt;li&gt;pigments&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;minimap&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;minimap-find-and-replace&lt;/li&gt;
-&lt;li&gt;minimap-linter&lt;/li&gt;
-&lt;li&gt;minimap-highlight-selected&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;git-time-machine&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;color-picker&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Win Software</title>
-      <link>http://f12998765.github.io/notes/win-software/</link>
-      <pubDate>Fri, 18 Nov 2016 18:20:00 +0800</pubDate>
-      
-      <guid>http://f12998765.github.io/notes/win-software/</guid>
+      <guid>http://127.0.0.1/note/win%20%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90/</guid>
       <description>
 
 &lt;h1 id=&#34;win-software&#34;&gt;Win Software&lt;/h1&gt;
@@ -213,6 +152,66 @@
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;http://www.wepe.com.cn/&#34;&gt;微PE&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>软件扩展推荐</title>
+      <link>http://127.0.0.1/note/%E8%BD%AF%E4%BB%B6%E6%89%A9%E5%B1%95%E6%8E%A8%E8%8D%90/</link>
+      <pubDate>Fri, 18 Nov 2016 18:20:00 +0800</pubDate>
+      
+      <guid>http://127.0.0.1/note/%E8%BD%AF%E4%BB%B6%E6%89%A9%E5%B1%95%E6%8E%A8%E8%8D%90/</guid>
+      <description>
+
+&lt;h2 id=&#34;google-chrome&#34;&gt;Google Chrome&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;EditThisCookie &lt;strong&gt;xox&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Postman&lt;/li&gt;
+&lt;li&gt;Web Server for Chrome&lt;/li&gt;
+&lt;li&gt;Enhanced Steam&lt;/li&gt;
+&lt;li&gt;Flower Password &lt;strong&gt;xox&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Hunmble New Tab Page &lt;strong&gt;xox&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;New Tab Clock&lt;/li&gt;
+&lt;li&gt;Proxy SwitchyOmega &lt;strong&gt;xox&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Apps Launcher&lt;/li&gt;
+&lt;li&gt;uBlock Origin &lt;strong&gt;xox&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Instapaper&lt;/li&gt;
+&lt;li&gt;GitHub Plus&lt;/li&gt;
+&lt;li&gt;GitHub Stars Tagger&lt;/li&gt;
+&lt;li&gt;网易邮箱&lt;/li&gt;
+&lt;li&gt;猎豹翻译&lt;/li&gt;
+&lt;li&gt;小番茄钟&lt;/li&gt;
+&lt;li&gt;哔哩哔哩助手&lt;/li&gt;
+&lt;li&gt;Octotree&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;atom&#34;&gt;Atom&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Emmet&lt;/li&gt;
+&lt;li&gt;docblockr&lt;/li&gt;
+&lt;li&gt;atom-ternjs&lt;/li&gt;
+&lt;li&gt;autocomplete-modules&lt;/li&gt;
+&lt;li&gt;autocomplete-paths&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://atom.io/packages/javascript-snippets&#34;&gt;javascript-snippets&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://atom.io/packages/jquery-snippets&#34;&gt;jquery-snippets&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;file-icons&lt;/li&gt;
+&lt;li&gt;expose&lt;/li&gt;
+&lt;li&gt;pigments&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;minimap&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;minimap-find-and-replace&lt;/li&gt;
+&lt;li&gt;minimap-linter&lt;/li&gt;
+&lt;li&gt;minimap-highlight-selected&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;git-time-machine&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;color-picker&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
     </item>

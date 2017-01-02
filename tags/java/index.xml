@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>XIZERO</title>
-    <link>http://f12998765.github.io/tags/java/index.xml</link>
-    <description>Recent content on XIZERO</description>
+    <title>Java on XIZERO</title>
+    <link>http://127.0.0.1/tags/java/index.xml</link>
+    <description>Recent content in Java on XIZERO</description>
     <generator>Hugo -- gohugo.io</generator>
-    <atom:link href="http://f12998765.github.io/tags/java/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <atom:link href="http://127.0.0.1/tags/java/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Java 序列化</title>
-      <link>http://f12998765.github.io/java-notes/java%E5%BA%8F%E5%88%97%E5%8C%96/</link>
+      <link>http://127.0.0.1/java/java-%E5%BA%8F%E5%88%97%E5%8C%96/</link>
       <pubDate>Wed, 23 Nov 2016 16:28:21 +0800</pubDate>
       
-      <guid>http://f12998765.github.io/java-notes/java%E5%BA%8F%E5%88%97%E5%8C%96/</guid>
+      <guid>http://127.0.0.1/java/java-%E5%BA%8F%E5%88%97%E5%8C%96/</guid>
       <description>
 
 &lt;h2 id=&#34;什么是序列化&#34;&gt;什么是序列化？&lt;/h2&gt;
@@ -140,11 +141,11 @@ public class Main {
     </item>
     
     <item>
-      <title>String相关</title>
-      <link>http://f12998765.github.io/java-notes/String%E7%9B%B8%E5%85%B3/</link>
+      <title>String 相关</title>
+      <link>http://127.0.0.1/java/String%20%E7%9B%B8%E5%85%B3/</link>
       <pubDate>Tue, 22 Nov 2016 08:36:39 +0800</pubDate>
       
-      <guid>http://f12998765.github.io/java-notes/String%E7%9B%B8%E5%85%B3/</guid>
+      <guid>http://127.0.0.1/java/String%20%E7%9B%B8%E5%85%B3/</guid>
       <description>
 
 &lt;h2 id=&#34;string-成员变量&#34;&gt;String 成员变量&lt;/h2&gt;
@@ -379,334 +380,11 @@ public String(char value[], int offset, int count) {
     </item>
     
     <item>
-      <title>Java Annotation（注解）</title>
-      <link>http://f12998765.github.io/java-notes/java-%E6%B3%A8%E8%A7%A3/</link>
-      <pubDate>Fri, 18 Nov 2016 18:20:00 +0800</pubDate>
-      
-      <guid>http://f12998765.github.io/java-notes/java-%E6%B3%A8%E8%A7%A3/</guid>
-      <description>
-
-&lt;h1 id=&#34;annotation-注解&#34;&gt;Annotation（注解）&lt;/h1&gt;
-
-&lt;p&gt;Java提供的一种元程序中的元素关联任何信息和任何元数据（metadata）的途径和方法。
-Annotion(注解)是一个接口，程序可以通过反射来获取指定程序元素的Annotion对象，然后通过Annotion对象来获取注解里面的元数据。
-它可以用于创建文档，跟踪代码中的依赖性，甚至执行基本编译时检查。从某些方面看，annotation就像修饰符一样被使用，并应用于包、类 型、构造方法、方法、成员变量、参数、本地变量的声明中。这些信息被存储在Annotation的“name=value”结构对中。&lt;/p&gt;
-
-&lt;p&gt;当一个接口直接继承java.lang.annotation.Annotation接口时，仍是接口，而并非注解。要想自定义注解类型，只能通过@interface关键字的方式，其实通过该方式会隐含地继承.Annotation接口。&lt;/p&gt;
-
-&lt;h1 id=&#34;注解和注解类型&#34;&gt;注解和注解类型&lt;/h1&gt;
-
-&lt;p&gt;&lt;strong&gt;注解类型是一种特殊的接口类型，注解是注解类型的一个实例&lt;/strong&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;注解类型&#34;&gt;注解类型&lt;/h1&gt;
-
-&lt;ul&gt;
-&lt;li&gt;根据注解使用方法和用途：
-    1.JDK内置系统注解
-    2.元注解
-    3.自定义注解&lt;/li&gt;
-&lt;li&gt;根据注解键值对的个数：
-    1.标记注解
-    2.单值注解
-    3.多值注解　　
-如果注解类型有单个键值对 , 并且键的名称是 value , 那么可以忽略括号中的键&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&#34;元注解&#34;&gt;元注解&lt;/h1&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;注解&lt;/th&gt;
-&lt;th&gt;作用&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;@Target&lt;/td&gt;
-&lt;td&gt;用于描述注解的使用对象&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;@Retention&lt;/td&gt;
-&lt;td&gt;表示注解类型的存活时长&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;@Documented&lt;/td&gt;
-&lt;td&gt;表示含有该注解类型的元素(带有注释的)会通过javadoc或类似工具进行文档化&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;@Inherited&lt;/td&gt;
-&lt;td&gt;表示注解类型能被自动继承&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;位于  java.lang.annotation 下&lt;/p&gt;
-
-&lt;h2 id=&#34;targe&#34;&gt;@Targe&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;用于描述注解的使用对象&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;value取值为java.lang.annnotation.RetentionPolicy 枚举的成员之一&lt;/p&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;ElementType&lt;/th&gt;
-&lt;th&gt;作用&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;ANNOTATION_TYPE&lt;/td&gt;
-&lt;td&gt;注解类型声明&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;CONSTRUCTOR&lt;/td&gt;
-&lt;td&gt;构造方法声明&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;FIELD&lt;/td&gt;
-&lt;td&gt;字段声明（包括枚举常量）&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;LOCAL_VARIABLE&lt;/td&gt;
-&lt;td&gt;局部变量声明&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;METHOD&lt;/td&gt;
-&lt;td&gt;方法声明&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;PACKAGE&lt;/td&gt;
-&lt;td&gt;包声明&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;PARAMETER&lt;/td&gt;
-&lt;td&gt;参数声明&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;TYPE&lt;/td&gt;
-&lt;td&gt;类、接口（包括注解类型）或枚举声明&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;默认策略 , 可作用于任意对象&lt;/p&gt;
-
-&lt;h2 id=&#34;retention&#34;&gt;@Retention&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;定义了该Annotation被保留的时间长短&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;value取值为java.lang.annnotation.ElementType 枚举的成员之一&lt;/p&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;RetentionPolicy&lt;/th&gt;
-&lt;th&gt;含义&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;SOURCE&lt;/td&gt;
-&lt;td&gt;源文件有效&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;CLASS&lt;/td&gt;
-&lt;td&gt;Class字节码文件有效&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;RUNTIME&lt;/td&gt;
-&lt;td&gt;运行时有效 , 可通过反射性地读取注解&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;默认保留策略为RetentionPolicy.CLASS&lt;/p&gt;
-
-&lt;h2 id=&#34;documented&#34;&gt;@Documented&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;当前注解的元素会被javadoc工具进行文档化&lt;/strong&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;inherited&#34;&gt;@Inherited&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;表示该注解类型被自动继承&lt;/strong&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;系统内置标准注解&#34;&gt;系统内置标准注解：&lt;/h1&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;内建注解&lt;/th&gt;
-&lt;th&gt;类型&lt;/th&gt;
-&lt;th&gt;作用&lt;/th&gt;
-&lt;th&gt;Target&lt;/th&gt;
-&lt;th&gt;Retention&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;Override&lt;/td&gt;
-&lt;td&gt;标记注解&lt;/td&gt;
-&lt;td&gt;修饰此方法覆盖了父类的方法&lt;/td&gt;
-&lt;td&gt;METHOD&lt;/td&gt;
-&lt;td&gt;SOURCE&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;SuppressWarnings&lt;/td&gt;
-&lt;td&gt;标记注解&lt;/td&gt;
-&lt;td&gt;修饰已经过时的方法&lt;/td&gt;
-&lt;td&gt;除ANNOTATION_TYPE和PACKAGE外的所有&lt;/td&gt;
-&lt;td&gt;SOURCE&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Deprecated&lt;/td&gt;
-&lt;td&gt;单值注解&lt;/td&gt;
-&lt;td&gt;压制提醒 , 抑制编译器警告&lt;/td&gt;
-&lt;td&gt;除ANNOTATION_TYPE外的所有&lt;/td&gt;
-&lt;td&gt;RUNTIME&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h2 id=&#34;override&#34;&gt;@Override&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;告诉编译器该方法覆盖了超类/父类中的一个方法&lt;/strong&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;deprecated&#34;&gt;@Deprecated&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;应用于方法或类型 , 表示该方法或类型是要废弃的&lt;/strong&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;通常是因为有更好的方法或类型 , 并且兼容低版本&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&#34;suppresswarnnings&#34;&gt;@SuppressWarnnings&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;抑制编译器警告&lt;/strong&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;suppresswarnings-value-注解的常见参数值的简单说明&#34;&gt;@SuppressWarnings(value={})注解的常见参数值的简单说明：&lt;/h3&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;参数值&lt;/th&gt;
-&lt;th&gt;说明&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;deprecation&lt;/td&gt;
-&lt;td&gt;使用了不赞成使用的类或方法时的警告&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;unchecked&lt;/td&gt;
-&lt;td&gt;执行了未检查的转换时的警告，例如当使用集合时没有用泛型 (Generics) 来指定集合保存的类型&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;fallthrough&lt;/td&gt;
-&lt;td&gt;当 switch 程序块 case 直接通往下一种情况而没有 break 时的警告&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;path&lt;/td&gt;
-&lt;td&gt;在类路径、源文件路径等中有不存在的路径时的警告&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;serial&lt;/td&gt;
-&lt;td&gt;当在可序列化的类上缺少 serialVersionUID 定义时的警告&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;finally&lt;/td&gt;
-&lt;td&gt;任何 finally 子句不能正常完成时的警告&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;all&lt;/td&gt;
-&lt;td&gt;关于以上所有情况的警告&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h1 id=&#34;自定义注解&#34;&gt;自定义注解&lt;/h1&gt;
-
-&lt;p&gt;&lt;strong&gt;一个注解类型是一个java接口&lt;/strong&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;@Inherited
-@Retention
-@Documented
-@Target(value=ANNOTATION_TYPE)
-public @interface CustomAnnotation ( ) {
-
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h1 id=&#34;使用反射来查询注解&#34;&gt;使用反射来查询注解&lt;/h1&gt;
-
-&lt;p&gt;java.lang.Class&lt;/p&gt;
-
-&lt;h2 id=&#34;如果存在-返回指定注解类型的注解-不存在则返回null&#34;&gt;如果存在，返回指定注解类型的注解；不存在则返回null&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;public &amp;lt;A extends java.lang.annotation.Annotation&amp;gt; A  getAnnotation ( Class&amp;lt;A&amp;gt; annotationClass )
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;返回该类中所有注解&#34;&gt;返回该类中所有注解&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;public java.lang.annotation.Annotation[] getAnnotations ( )
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;判断该类是不是一个注解类型&#34;&gt;判断该类是不是一个注解类型&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;public boolean isAnnotation()
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;判断指定类型的一个注解是否出现在该类上&#34;&gt;判断指定类型的一个注解是否出现在该类上&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;public boolean isAnnotationPressent( Class&amp;lt;? extends java.lang.annotation.Annotation&amp;gt; annotationClass)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h1 id=&#34;参考&#34;&gt;参考&lt;/h1&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://blog.csdn.net/cwcwj3069/article/details/52252670&#34;&gt;《深入理解Java：注解》 cwcwj3069 - CSDN博客 &lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.cnblogs.com/kgrdomore/p/5806321.html&#34;&gt;《注解的基本盘点》 墨迹修 - 博客园博客 &lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://gityuan.com/2016/01/23/java-annotation/&#34;&gt;《Java注解(Annotation)》 Gityuan - 个人博客 &lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.cnblogs.com/tianzhijiexian/p/4807813.html&#34;&gt;《Java 注解》 Developer_Kale - 博客园博客  &lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;《Java 和 Android 开发学习指南》 （第2版）， [加] Budi Kurniawan 著 ，李强 译  ，人民邮电出版社 2016-3&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
       <title>Java IO</title>
-      <link>http://f12998765.github.io/java-notes/java-io/</link>
+      <link>http://127.0.0.1/java/java-io/</link>
       <pubDate>Fri, 18 Nov 2016 18:20:00 +0800</pubDate>
       
-      <guid>http://f12998765.github.io/java-notes/java-io/</guid>
+      <guid>http://127.0.0.1/java/java-io/</guid>
       <description>
 
 &lt;blockquote&gt;
@@ -994,219 +672,16 @@ Path p_ = Paths.get(&amp;quot;/home&amp;quot;,&amp;quot;user&amp;quot;);
 &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;p&gt;deleteIfExists(Path)  删除不存在path时，不会报 NoSuchFileException  异常 。&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Java enum</title>
-      <link>http://f12998765.github.io/java-notes/java-%E6%9E%9A%E4%B8%BE/</link>
-      <pubDate>Fri, 18 Nov 2016 18:20:00 +0800</pubDate>
-      
-      <guid>http://f12998765.github.io/java-notes/java-%E6%9E%9A%E4%B8%BE/</guid>
-      <description>
-
-&lt;h2 id=&#34;创建&#34;&gt;创建&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;public enum enumName{
-    parm1,
-    parm2,
-    ...
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;创建枚举类型要使用 enum 关键字，隐含了所创建的类型都是 java.lang.Enum 类（抽象类）的子类&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;枚举类型符合通用模式 Class Enum&lt;E extends Enum&lt;E&gt;&amp;gt;，而 E 表示枚举类型的名称。&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;枚举类型的每一个值都将映射到 protected Enum(String name, int ordinal) 构造函数中&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;switch&#34;&gt;switch&lt;/h2&gt;
-
-&lt;p&gt;例:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;public class App
-{
-     private enum INT{
-        one,two,three
-    }
-    public static void main(String[] args) {
-        INT c = INT.one;
-
-       // 注意case中必须写成one
-        switch (c){
-            case one:{
-                System.out.println(&amp;quot;1&amp;quot;);
-                break;
-            }
-            case two:{
-                System.out.println(&amp;quot;2&amp;quot;);
-                break;
-            }
-            case three:{
-                System.out.println(&amp;quot;3&amp;quot;);
-                break;
-            }
-            default:{
-                System.out.println(&amp;quot;0&amp;quot;);
-            }
-        }
-    }
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;成员变量与构造函数&#34;&gt;成员变量与构造函数&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;如果定义的枚举有自己的构造函数必须声明私有的&lt;/strong&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;public class App
-{
-     private enum INT{
-        one(1,&amp;quot;one&amp;quot;),two(2,&amp;quot;two&amp;quot;),three(2,&amp;quot;three&amp;quot;);//注意有分号  
-
-         int i;
-         String name;
-
-        INT(int i, String name) {
-             this.i = i;
-             this.name = name;
-         }
-         public int getI() {
-             return i;
-         }
-         public void setI(int i) {
-             this.i = i;
-         }
-         public String getName() {
-             return name;
-         }
-         public void setName(String name) {
-             this.name = name;
-         }
-     }
-    public static void main(String[] args) {
-
-        INT[] ints = INT.values();
-        for(INT n :ints){
-            System.out.println(&amp;quot;name : \t&amp;quot;+n.getName());
-            System.out.println(&amp;quot;index : \t&amp;quot;+n.getI());
-            System.out.println(&amp;quot;oridary : \t&amp;quot;+n.ordinal());
-            System.out.println(&amp;quot;this : \t&amp;quot;+n);
-            System.out.println(&amp;quot;name : \t&amp;quot;+n.name());
-            System.out.println(&amp;quot;name : \t&amp;quot;+n.valueOf(&amp;quot;two&amp;quot;));
-            System.out.println(&amp;quot;---------------------&amp;quot;);
-        }
-    }
-}
-
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;方法&#34;&gt;方法&lt;/h2&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;方法&lt;/th&gt;
-&lt;th&gt;作用&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;ordinal()&lt;/td&gt;
-&lt;td&gt;返回枚举值在枚举类种的顺序&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;values()&lt;/td&gt;
-&lt;td&gt;静态方法，返回一个包含全部枚举值的数组&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;toString()&lt;/td&gt;
-&lt;td&gt;返回枚举常量的名称&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;valueOf()&lt;/td&gt;
-&lt;td&gt;返回带指定名称的指定枚举类型的枚举常量&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h2 id=&#34;实现接口&#34;&gt;实现接口&lt;/h2&gt;
-
-&lt;p&gt;可以更方便地对枚举中的值进行排序、比较等操作，封装性更好.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;   interface INT_ {
-        void read();
-
-        String getState();
-    }
-
-     private enum INT implements INT_{
-        one(1,&amp;quot;one&amp;quot;),two(2,&amp;quot;two&amp;quot;),three(2,&amp;quot;three&amp;quot;);
-
-         int i;
-         String name;
-
-        INT(int i, String name) {
-             this.i = i;
-             this.name = name;
-         }
-
-         @Override
-         public void read() {
-
-         }
-
-         @Override
-         public String getState() {
-             return null;
-         }
-     }
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;enummap-和-enumset&#34;&gt;EnumMap 和 EnumSet&lt;/h2&gt;
-
-&lt;h3 id=&#34;enummap&#34;&gt;EnumMap&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;    public static void main(String[] args) {
-
-        EnumMap&amp;lt;INT,String&amp;gt; ints = new EnumMap&amp;lt;INT,String&amp;gt;(INT.class);
-        ints.put(INT.one,&amp;quot;11111111&amp;quot;);
-        ints.put(INT.two,&amp;quot;22222222&amp;quot;);
-        ints.put(INT.three,&amp;quot;333333333&amp;quot;);
-        Set&amp;lt;INT&amp;gt; keys = ints.keySet();
-        for(INT i:keys)
-        {
-            System.out.println(i.name()+&amp;quot; &amp;quot;+i.ordinal()+&amp;quot; &amp;quot;+ints.get(i));
-        }
-    }
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;enumset&#34;&gt;EnumSet&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;    public static void main(String[] args) {
-
-        EnumSet&amp;lt;INT&amp;gt; ints = EnumSet.allOf(INT.class);
-        for(INT i : ints)
-        {
-            System.out.println(i);
-        }
-    }
-&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;*deleteIfExists(Path)  删除不存在path时，不会报 NoSuchFileException 异常 *&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Java 修饰符</title>
-      <link>http://f12998765.github.io/java-notes/java-%E4%BF%AE%E9%A5%B0%E7%AC%A6/</link>
+      <link>http://127.0.0.1/java/java-%E4%BF%AE%E9%A5%B0%E7%AC%A6/</link>
       <pubDate>Fri, 18 Nov 2016 18:20:00 +0800</pubDate>
       
-      <guid>http://f12998765.github.io/java-notes/java-%E4%BF%AE%E9%A5%B0%E7%AC%A6/</guid>
+      <guid>http://127.0.0.1/java/java-%E4%BF%AE%E9%A5%B0%E7%AC%A6/</guid>
       <description>
 
 &lt;h2 id=&#34;分类&#34;&gt;分类&lt;/h2&gt;
@@ -1414,10 +889,10 @@ import static packageName.className.*;
     
     <item>
       <title>Java 反射</title>
-      <link>http://f12998765.github.io/java-notes/java-%E5%8F%8D%E5%B0%84/</link>
+      <link>http://127.0.0.1/java/java-%E5%8F%8D%E5%B0%84/</link>
       <pubDate>Fri, 18 Nov 2016 18:20:00 +0800</pubDate>
       
-      <guid>http://f12998765.github.io/java-notes/java-%E5%8F%8D%E5%B0%84/</guid>
+      <guid>http://127.0.0.1/java/java-%E5%8F%8D%E5%B0%84/</guid>
       <description>
 
 &lt;p&gt;&lt;strong&gt;反射是将java 类中的各种成分映射成相应的类。&lt;/strong&gt;&lt;/p&gt;
@@ -1625,21 +1100,18 @@ Array.set(数组实例,序列,值);
 &lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;Class class_ = class.getComponentType();
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h1 id=&#34;参考&#34;&gt;参考&lt;/h1&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.cnblogs.com/penghongwei/p/3299688.html&#34;&gt;Java 反射 【译】&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://tutorials.jenkov.com/java-reflection/index.html&#34;&gt;java-reflection [英] &lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;#参考
+- &lt;a href=&#34;http://www.cnblogs.com/penghongwei/p/3299688.html&#34;&gt;Java 反射 【译】&lt;/a&gt;
+- &lt;a href=&#34;http://tutorials.jenkov.com/java-reflection/index.html&#34;&gt;java-reflection [英] &lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Java 异常</title>
-      <link>http://f12998765.github.io/java-notes/java-%E5%BC%82%E5%B8%B8/</link>
+      <link>http://127.0.0.1/java/java-%E5%BC%82%E5%B8%B8/</link>
       <pubDate>Fri, 18 Nov 2016 18:20:00 +0800</pubDate>
       
-      <guid>http://f12998765.github.io/java-notes/java-%E5%BC%82%E5%B8%B8/</guid>
+      <guid>http://127.0.0.1/java/java-%E5%BC%82%E5%B8%B8/</guid>
       <description>
 
 &lt;h2 id=&#34;定义&#34;&gt;定义&lt;/h2&gt;
@@ -1699,10 +1171,10 @@ throws：用于方法名之后，表示该方法可能抛出异常的类型。&l
     
     <item>
       <title>Java 排序</title>
-      <link>http://f12998765.github.io/java-notes/java-%E6%8E%92%E5%BA%8F/</link>
+      <link>http://127.0.0.1/java/java-%E6%8E%92%E5%BA%8F/</link>
       <pubDate>Fri, 18 Nov 2016 18:20:00 +0800</pubDate>
       
-      <guid>http://f12998765.github.io/java-notes/java-%E6%8E%92%E5%BA%8F/</guid>
+      <guid>http://127.0.0.1/java/java-%E6%8E%92%E5%BA%8F/</guid>
       <description>
 
 &lt;h1 id=&#34;comparable-vs-comparator&#34;&gt;Comparable vs Comparator&lt;/h1&gt;
@@ -1798,15 +1270,16 @@ throws：用于方法名之后，表示该方法可能抛出异常的类型。&l
     </item>
     
     <item>
-      <title>Java 接口、抽象类和多态</title>
-      <link>http://f12998765.github.io/java-notes/java-%E6%8E%A5%E5%8F%A3%E3%80%81%E6%8A%BD%E8%B1%A1%E7%B1%BB%E5%92%8C%E5%A4%9A%E6%80%81/</link>
+      <title>Java 接口 抽象类 多态</title>
+      <link>http://127.0.0.1/java/java-%E6%8E%A5%E5%8F%A3-%E6%8A%BD%E8%B1%A1%E7%B1%BB-%E5%A4%9A%E6%80%81/</link>
       <pubDate>Fri, 18 Nov 2016 18:20:00 +0800</pubDate>
       
-      <guid>http://f12998765.github.io/java-notes/java-%E6%8E%A5%E5%8F%A3%E3%80%81%E6%8A%BD%E8%B1%A1%E7%B1%BB%E5%92%8C%E5%A4%9A%E6%80%81/</guid>
+      <guid>http://127.0.0.1/java/java-%E6%8E%A5%E5%8F%A3-%E6%8A%BD%E8%B1%A1%E7%B1%BB-%E5%A4%9A%E6%80%81/</guid>
       <description>
 
-&lt;p&gt;##什么是接口？
-接口是一种服务提供者与服务使用者之间的协议。&lt;/p&gt;
+&lt;h2 id=&#34;什么是接口&#34;&gt;什么是接口？&lt;/h2&gt;
+
+&lt;p&gt;接口是一种服务提供者与服务使用者之间的协议。&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;接口的定义&lt;/strong&gt;&lt;/p&gt;
 
@@ -1820,10 +1293,12 @@ throws：用于方法名之后，表示该方法可能抛出异常的类型。&l
 &lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;访问修饰符 class 类名 extends 父类 implements  接口列表{
 
 }
+
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;##接口中的成员
-&lt;strong&gt;字段&lt;/strong&gt;
+&lt;h2 id=&#34;接口中的成员&#34;&gt;接口中的成员&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;字段&lt;/strong&gt;
 * 必须初始化
 * 默认：&lt;code&gt;public&lt;/code&gt; &lt;code&gt;static&lt;/code&gt; &lt;code&gt;final&lt;/code&gt;&lt;/p&gt;
 
@@ -1834,11 +1309,14 @@ throws：用于方法名之后，表示该方法可能抛出异常的类型。&l
 &lt;p&gt;&lt;strong&gt;静态方法和默认方法&lt;/strong&gt;
 * Java 8 支持在接口中定义静态方法和默认方法&lt;/p&gt;
 
-&lt;p&gt;#抽象类
-* 抽象类和抽象方法有 &lt;code&gt;abstract&lt;/code&gt; 修饰符修饰。
-* 包含抽象方法的类必须定义为抽象类。
-* 抽象类不能被实例化，抽象方法必须在子类中被实现。
-* 只有通过子类继承抽象类并覆盖了抽象类中的&lt;strong&gt;所有&lt;/strong&gt;抽象方法后，该子类才可以实例化。否则，该子类还是一个抽象类。&lt;/p&gt;
+&lt;h1 id=&#34;抽象类&#34;&gt;抽象类&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;抽象类和抽象方法有 &lt;code&gt;abstract&lt;/code&gt; 修饰符修饰。&lt;/li&gt;
+&lt;li&gt;包含抽象方法的类必须定义为抽象类。&lt;/li&gt;
+&lt;li&gt;抽象类不能被实例化，抽象方法必须在子类中被实现。&lt;/li&gt;
+&lt;li&gt;只有通过子类继承抽象类并覆盖了抽象类中的&lt;strong&gt;所有&lt;/strong&gt;抽象方法后，该子类才可以实例化。否则，该子类还是一个抽象类。&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h1 id=&#34;什么时候使用抽象类和接口&#34;&gt;什么时候使用抽象类和接口？&lt;/h1&gt;
 
@@ -1868,10 +1346,10 @@ throws：用于方法名之后，表示该方法可能抛出异常的类型。&l
     
     <item>
       <title>Java 数组</title>
-      <link>http://f12998765.github.io/java-notes/java-%E6%95%B0%E7%BB%84%E5%92%8Carrays%E7%B1%BB/</link>
+      <link>http://127.0.0.1/java/java-%E6%95%B0%E7%BB%84%E5%92%8Carrays%E7%B1%BB/</link>
       <pubDate>Fri, 18 Nov 2016 18:20:00 +0800</pubDate>
       
-      <guid>http://f12998765.github.io/java-notes/java-%E6%95%B0%E7%BB%84%E5%92%8Carrays%E7%B1%BB/</guid>
+      <guid>http://127.0.0.1/java/java-%E6%95%B0%E7%BB%84%E5%92%8Carrays%E7%B1%BB/</guid>
       <description>
 
 &lt;h2 id=&#34;什么是数组-及声明数组变量&#34;&gt;什么是数组？及声明数组变量&lt;/h2&gt;
@@ -1986,19 +1464,222 @@ arrayName. length//每个数组都有一个属性length来表示长度
     
     <item>
       <title>Java 时间</title>
-      <link>http://f12998765.github.io/java-notes/java-%E6%97%B6%E9%97%B4/</link>
+      <link>http://127.0.0.1/java/java-%E6%97%B6%E9%97%B4/</link>
       <pubDate>Fri, 18 Nov 2016 18:20:00 +0800</pubDate>
       
-      <guid>http://f12998765.github.io/java-notes/java-%E6%97%B6%E9%97%B4/</guid>
+      <guid>http://127.0.0.1/java/java-%E6%97%B6%E9%97%B4/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Java 核心类</title>
-      <link>http://f12998765.github.io/java-notes/java-%E6%A0%B8%E5%BF%83%E7%B1%BB/</link>
+      <title>Java 枚举</title>
+      <link>http://127.0.0.1/java/java-%E6%9E%9A%E4%B8%BE/</link>
       <pubDate>Fri, 18 Nov 2016 18:20:00 +0800</pubDate>
       
-      <guid>http://f12998765.github.io/java-notes/java-%E6%A0%B8%E5%BF%83%E7%B1%BB/</guid>
+      <guid>http://127.0.0.1/java/java-%E6%9E%9A%E4%B8%BE/</guid>
+      <description>
+
+&lt;h2 id=&#34;创建&#34;&gt;创建&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;public enum enumName{
+    parm1,
+    parm2,
+    ...
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;创建枚举类型要使用 enum 关键字，隐含了所创建的类型都是 java.lang.Enum 类（抽象类）的子类&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;枚举类型符合通用模式 Class Enum&lt;E extends Enum&lt;E&gt;&amp;gt;，而 E 表示枚举类型的名称。&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;枚举类型的每一个值都将映射到 protected Enum(String name, int ordinal) 构造函数中&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;switch&#34;&gt;switch&lt;/h2&gt;
+
+&lt;p&gt;例:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;public class App
+{
+     private enum INT{
+        one,two,three
+    }
+    public static void main(String[] args) {
+        INT c = INT.one;
+
+       // 注意case中必须写成one
+        switch (c){
+            case one:{
+                System.out.println(&amp;quot;1&amp;quot;);
+                break;
+            }
+            case two:{
+                System.out.println(&amp;quot;2&amp;quot;);
+                break;
+            }
+            case three:{
+                System.out.println(&amp;quot;3&amp;quot;);
+                break;
+            }
+            default:{
+                System.out.println(&amp;quot;0&amp;quot;);
+            }
+        }
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;成员变量与构造函数&#34;&gt;成员变量与构造函数&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;如果定义的枚举有自己的构造函数必须声明私有的&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;public class App
+{
+     private enum INT{
+        one(1,&amp;quot;one&amp;quot;),two(2,&amp;quot;two&amp;quot;),three(2,&amp;quot;three&amp;quot;);//注意有分号  
+
+         int i;
+         String name;
+
+        INT(int i, String name) {
+             this.i = i;
+             this.name = name;
+         }
+         public int getI() {
+             return i;
+         }
+         public void setI(int i) {
+             this.i = i;
+         }
+         public String getName() {
+             return name;
+         }
+         public void setName(String name) {
+             this.name = name;
+         }
+     }
+    public static void main(String[] args) {
+
+        INT[] ints = INT.values();
+        for(INT n :ints){
+            System.out.println(&amp;quot;name : \t&amp;quot;+n.getName());
+            System.out.println(&amp;quot;index : \t&amp;quot;+n.getI());
+            System.out.println(&amp;quot;oridary : \t&amp;quot;+n.ordinal());
+            System.out.println(&amp;quot;this : \t&amp;quot;+n);
+            System.out.println(&amp;quot;name : \t&amp;quot;+n.name());
+            System.out.println(&amp;quot;name : \t&amp;quot;+n.valueOf(&amp;quot;two&amp;quot;));
+            System.out.println(&amp;quot;---------------------&amp;quot;);
+        }
+    }
+}
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;方法&#34;&gt;方法&lt;/h2&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;方法&lt;/th&gt;
+&lt;th&gt;作用&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;ordinal()&lt;/td&gt;
+&lt;td&gt;返回枚举值在枚举类种的顺序&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;values()&lt;/td&gt;
+&lt;td&gt;静态方法，返回一个包含全部枚举值的数组&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;toString()&lt;/td&gt;
+&lt;td&gt;返回枚举常量的名称&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;valueOf()&lt;/td&gt;
+&lt;td&gt;返回带指定名称的指定枚举类型的枚举常量&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&#34;实现接口&#34;&gt;实现接口&lt;/h2&gt;
+
+&lt;p&gt;可以更方便地对枚举中的值进行排序、比较等操作，封装性更好.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;   interface INT_ {
+        void read();
+
+        String getState();
+    }
+
+     private enum INT implements INT_{
+        one(1,&amp;quot;one&amp;quot;),two(2,&amp;quot;two&amp;quot;),three(2,&amp;quot;three&amp;quot;);
+
+         int i;
+         String name;
+
+        INT(int i, String name) {
+             this.i = i;
+             this.name = name;
+         }
+
+         @Override
+         public void read() {
+
+         }
+
+         @Override
+         public String getState() {
+             return null;
+         }
+     }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;enummap-和-enumset&#34;&gt;EnumMap 和 EnumSet&lt;/h2&gt;
+
+&lt;h3 id=&#34;enummap&#34;&gt;EnumMap&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;    public static void main(String[] args) {
+
+        EnumMap&amp;lt;INT,String&amp;gt; ints = new EnumMap&amp;lt;INT,String&amp;gt;(INT.class);
+        ints.put(INT.one,&amp;quot;11111111&amp;quot;);
+        ints.put(INT.two,&amp;quot;22222222&amp;quot;);
+        ints.put(INT.three,&amp;quot;333333333&amp;quot;);
+        Set&amp;lt;INT&amp;gt; keys = ints.keySet();
+        for(INT i:keys)
+        {
+            System.out.println(i.name()+&amp;quot; &amp;quot;+i.ordinal()+&amp;quot; &amp;quot;+ints.get(i));
+        }
+    }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;enumset&#34;&gt;EnumSet&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;    public static void main(String[] args) {
+
+        EnumSet&amp;lt;INT&amp;gt; ints = EnumSet.allOf(INT.class);
+        for(INT i : ints)
+        {
+            System.out.println(i);
+        }
+    }
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Java 核心类</title>
+      <link>http://127.0.0.1/java/java-%E6%A0%B8%E5%BF%83%E7%B1%BB/</link>
+      <pubDate>Fri, 18 Nov 2016 18:20:00 +0800</pubDate>
+      
+      <guid>http://127.0.0.1/java/java-%E6%A0%B8%E5%BF%83%E7%B1%BB/</guid>
       <description>
 
 &lt;h1 id=&#34;java-lang-object&#34;&gt;java.lang.Object&lt;/h1&gt;
@@ -2502,10 +2183,10 @@ if(&amp;quot;Java&amp;quot;.equals(s1)   //常用
     
     <item>
       <title>Java 概述</title>
-      <link>http://f12998765.github.io/java-notes/Java-%E6%A6%82%E8%BF%B0/</link>
+      <link>http://127.0.0.1/java/Java-%E6%A6%82%E8%BF%B0/</link>
       <pubDate>Fri, 18 Nov 2016 18:20:00 +0800</pubDate>
       
-      <guid>http://f12998765.github.io/java-notes/Java-%E6%A6%82%E8%BF%B0/</guid>
+      <guid>http://127.0.0.1/java/Java-%E6%A6%82%E8%BF%B0/</guid>
       <description>
 
 &lt;h2 id=&#34;java的历史&#34;&gt;Java的历史&lt;/h2&gt;
@@ -2536,10 +2217,10 @@ if(&amp;quot;Java&amp;quot;.equals(s1)   //常用
     
     <item>
       <title>Java 泛型</title>
-      <link>http://f12998765.github.io/java-notes/java-%E6%B3%9B%E5%9E%8B/</link>
+      <link>http://127.0.0.1/java/java-%E6%B3%9B%E5%9E%8B/</link>
       <pubDate>Fri, 18 Nov 2016 18:20:00 +0800</pubDate>
       
-      <guid>http://f12998765.github.io/java-notes/java-%E6%B3%9B%E5%9E%8B/</guid>
+      <guid>http://127.0.0.1/java/java-%E6%B3%9B%E5%9E%8B/</guid>
       <description>
 
 &lt;h2 id=&#34;容器类&#34;&gt;容器类&lt;/h2&gt;
@@ -2683,6 +2364,329 @@ List&lt;String&gt; 和 List&lt;Object&gt; 是不匹配的，即使 String 是 Ob
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://segmentfault.com/a/1190000002646193&#34;&gt;Java泛型：泛型类、泛型接口和泛型方法&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Java 注解</title>
+      <link>http://127.0.0.1/java/java-%E6%B3%A8%E8%A7%A3/</link>
+      <pubDate>Fri, 18 Nov 2016 18:20:00 +0800</pubDate>
+      
+      <guid>http://127.0.0.1/java/java-%E6%B3%A8%E8%A7%A3/</guid>
+      <description>
+
+&lt;h1 id=&#34;annotation-注解&#34;&gt;Annotation（注解）&lt;/h1&gt;
+
+&lt;p&gt;Java提供的一种元程序中的元素关联任何信息和任何元数据（metadata）的途径和方法。
+Annotion(注解)是一个接口，程序可以通过反射来获取指定程序元素的Annotion对象，然后通过Annotion对象来获取注解里面的元数据。
+它可以用于创建文档，跟踪代码中的依赖性，甚至执行基本编译时检查。从某些方面看，annotation就像修饰符一样被使用，并应用于包、类 型、构造方法、方法、成员变量、参数、本地变量的声明中。这些信息被存储在Annotation的“name=value”结构对中。&lt;/p&gt;
+
+&lt;p&gt;当一个接口直接继承java.lang.annotation.Annotation接口时，仍是接口，而并非注解。要想自定义注解类型，只能通过@interface关键字的方式，其实通过该方式会隐含地继承.Annotation接口。&lt;/p&gt;
+
+&lt;h1 id=&#34;注解和注解类型&#34;&gt;注解和注解类型&lt;/h1&gt;
+
+&lt;p&gt;&lt;strong&gt;注解类型是一种特殊的接口类型，注解是注解类型的一个实例&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;注解类型&#34;&gt;注解类型&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;根据注解使用方法和用途：
+    1.JDK内置系统注解
+    2.元注解
+    3.自定义注解&lt;/li&gt;
+&lt;li&gt;根据注解键值对的个数：
+    1.标记注解
+    2.单值注解
+    3.多值注解　　
+如果注解类型有单个键值对 , 并且键的名称是 value , 那么可以忽略括号中的键&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;元注解&#34;&gt;元注解&lt;/h1&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;注解&lt;/th&gt;
+&lt;th&gt;作用&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;@Target&lt;/td&gt;
+&lt;td&gt;用于描述注解的使用对象&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;@Retention&lt;/td&gt;
+&lt;td&gt;表示注解类型的存活时长&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;@Documented&lt;/td&gt;
+&lt;td&gt;表示含有该注解类型的元素(带有注释的)会通过javadoc或类似工具进行文档化&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;@Inherited&lt;/td&gt;
+&lt;td&gt;表示注解类型能被自动继承&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;位于  java.lang.annotation 下&lt;/p&gt;
+
+&lt;h2 id=&#34;targe&#34;&gt;@Targe&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;用于描述注解的使用对象&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;value取值为java.lang.annnotation.RetentionPolicy 枚举的成员之一&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;ElementType&lt;/th&gt;
+&lt;th&gt;作用&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;ANNOTATION_TYPE&lt;/td&gt;
+&lt;td&gt;注解类型声明&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;CONSTRUCTOR&lt;/td&gt;
+&lt;td&gt;构造方法声明&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;FIELD&lt;/td&gt;
+&lt;td&gt;字段声明（包括枚举常量）&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;LOCAL_VARIABLE&lt;/td&gt;
+&lt;td&gt;局部变量声明&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;METHOD&lt;/td&gt;
+&lt;td&gt;方法声明&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;PACKAGE&lt;/td&gt;
+&lt;td&gt;包声明&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;PARAMETER&lt;/td&gt;
+&lt;td&gt;参数声明&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;TYPE&lt;/td&gt;
+&lt;td&gt;类、接口（包括注解类型）或枚举声明&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;默认策略 , 可作用于任意对象&lt;/p&gt;
+
+&lt;h2 id=&#34;retention&#34;&gt;@Retention&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;定义了该Annotation被保留的时间长短&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;value取值为java.lang.annnotation.ElementType 枚举的成员之一&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;RetentionPolicy&lt;/th&gt;
+&lt;th&gt;含义&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;SOURCE&lt;/td&gt;
+&lt;td&gt;源文件有效&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;CLASS&lt;/td&gt;
+&lt;td&gt;Class字节码文件有效&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;RUNTIME&lt;/td&gt;
+&lt;td&gt;运行时有效 , 可通过反射性地读取注解&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;默认保留策略为RetentionPolicy.CLASS&lt;/p&gt;
+
+&lt;h2 id=&#34;documented&#34;&gt;@Documented&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;当前注解的元素会被javadoc工具进行文档化&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;inherited&#34;&gt;@Inherited&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;表示该注解类型被自动继承&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;系统内置标准注解&#34;&gt;系统内置标准注解：&lt;/h1&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;内建注解&lt;/th&gt;
+&lt;th&gt;类型&lt;/th&gt;
+&lt;th&gt;作用&lt;/th&gt;
+&lt;th&gt;Target&lt;/th&gt;
+&lt;th&gt;Retention&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Override&lt;/td&gt;
+&lt;td&gt;标记注解&lt;/td&gt;
+&lt;td&gt;修饰此方法覆盖了父类的方法&lt;/td&gt;
+&lt;td&gt;METHOD&lt;/td&gt;
+&lt;td&gt;SOURCE&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;SuppressWarnings&lt;/td&gt;
+&lt;td&gt;标记注解&lt;/td&gt;
+&lt;td&gt;修饰已经过时的方法&lt;/td&gt;
+&lt;td&gt;除ANNOTATION_TYPE和PACKAGE外的所有&lt;/td&gt;
+&lt;td&gt;SOURCE&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Deprecated&lt;/td&gt;
+&lt;td&gt;单值注解&lt;/td&gt;
+&lt;td&gt;压制提醒 , 抑制编译器警告&lt;/td&gt;
+&lt;td&gt;除ANNOTATION_TYPE外的所有&lt;/td&gt;
+&lt;td&gt;RUNTIME&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&#34;override&#34;&gt;@Override&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;告诉编译器该方法覆盖了超类/父类中的一个方法&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;deprecated&#34;&gt;@Deprecated&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;应用于方法或类型 , 表示该方法或类型是要废弃的&lt;/strong&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;通常是因为有更好的方法或类型 , 并且兼容低版本&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&#34;suppresswarnnings&#34;&gt;@SuppressWarnnings&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;抑制编译器警告&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;suppresswarnings-value-注解的常见参数值的简单说明&#34;&gt;@SuppressWarnings(value={})注解的常见参数值的简单说明：&lt;/h3&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;参数值&lt;/th&gt;
+&lt;th&gt;说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;deprecation&lt;/td&gt;
+&lt;td&gt;使用了不赞成使用的类或方法时的警告&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;unchecked&lt;/td&gt;
+&lt;td&gt;执行了未检查的转换时的警告，例如当使用集合时没有用泛型 (Generics) 来指定集合保存的类型&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;fallthrough&lt;/td&gt;
+&lt;td&gt;当 switch 程序块 case 直接通往下一种情况而没有 break 时的警告&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;path&lt;/td&gt;
+&lt;td&gt;在类路径、源文件路径等中有不存在的路径时的警告&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;serial&lt;/td&gt;
+&lt;td&gt;当在可序列化的类上缺少 serialVersionUID 定义时的警告&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;finally&lt;/td&gt;
+&lt;td&gt;任何 finally 子句不能正常完成时的警告&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;all&lt;/td&gt;
+&lt;td&gt;关于以上所有情况的警告&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h1 id=&#34;自定义注解&#34;&gt;自定义注解&lt;/h1&gt;
+
+&lt;p&gt;&lt;strong&gt;一个注解类型是一个java接口&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;@Inherited
+@Retention
+@Documented
+@Target(value=ANNOTATION_TYPE)
+public @interface CustomAnnotation ( ) {
+
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&#34;使用反射来查询注解&#34;&gt;使用反射来查询注解&lt;/h1&gt;
+
+&lt;p&gt;java.lang.Class&lt;/p&gt;
+
+&lt;h2 id=&#34;如果存在-返回指定注解类型的注解-不存在则返回null&#34;&gt;如果存在，返回指定注解类型的注解；不存在则返回null&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;public &amp;lt;A extends java.lang.annotation.Annotation&amp;gt; A  getAnnotation ( Class&amp;lt;A&amp;gt; annotationClass )
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;返回该类中所有注解&#34;&gt;返回该类中所有注解&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;public java.lang.annotation.Annotation[] getAnnotations ( )
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;判断该类是不是一个注解类型&#34;&gt;判断该类是不是一个注解类型&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;public boolean isAnnotation()
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;判断指定类型的一个注解是否出现在该类上&#34;&gt;判断指定类型的一个注解是否出现在该类上&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;public boolean isAnnotationPressent( Class&amp;lt;? extends java.lang.annotation.Annotation&amp;gt; annotationClass)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&#34;参考&#34;&gt;参考&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://blog.csdn.net/cwcwj3069/article/details/52252670&#34;&gt;《深入理解Java：注解》 cwcwj3069 - CSDN博客 &lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.cnblogs.com/kgrdomore/p/5806321.html&#34;&gt;《注解的基本盘点》 墨迹修 - 博客园博客 &lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://gityuan.com/2016/01/23/java-annotation/&#34;&gt;《Java注解(Annotation)》 Gityuan - 个人博客 &lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.cnblogs.com/tianzhijiexian/p/4807813.html&#34;&gt;《Java 注解》 Developer_Kale - 博客园博客  &lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;《Java 和 Android 开发学习指南》 （第2版）， [加] Budi Kurniawan 著 ，李强 译  ，人民邮电出版社 2016-3&lt;/li&gt;
 &lt;/ul&gt;
 </description>
     </item>

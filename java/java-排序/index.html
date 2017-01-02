@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<meta name="generator" content="Hugo 0.18.1" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="//fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="/css/main.css">
+<link rel="alternate" href="/index.xml" type="application/rss+xml" title="XIZERO">
+<link href="https://cdn.bootcss.com/highlight.js/9.7.0/styles/tomorrow.min.css" rel="stylesheet">
+<script src="https://cdn.bootcss.com/highlight.js/9.8.0/highlight.min.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script src="http://127.0.0.1/js/top.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<title>Java 排序 - XIZERO</title>
+</head>
+<body>
+
+<div id="gotop" title="🚀 go top"></div>
+
+<div class="top">
+
+	<div class="gos">
+		<span class="go"><a href="/">Home</a></span>
+		<span class="go"><a href="/tags">Tags</a></span>
+		<span class="go"><a href="/about">About</a></span>
+	</div>
+	
+	
+		<div class="tit">
+			Java 排序
+		</div>
+
+	
+
+</div>
+
+
+
+
+<div class="con">
+	
+
+<h1 id="comparable-vs-comparator">Comparable vs Comparator</h1>
+
+<h2 id="comparable">Comparable</h2>
+
+<p>Comparable 需要比较的对象类继承该接口，并实现 <code>compareTo(Object obj)</code> 方法。</p>
+
+<h3 id="api-http-tool-oschina-net-uploads-apidocs-jdk-zh-java-lang-comparable-html"><a href="http://tool.oschina.net/uploads/apidocs/jdk-zh/java/lang/Comparable.html">API</a></h3>
+
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>摘要</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>int    compareTo(T o)</td>
+<td>比较此对象与指定对象的顺序。</td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>注意使用泛型</strong></p>
+
+<pre><code class="language-java">public class 类名 implements Comparable&lt;类名&gt;{
+    //……
+    @Override
+    public int compareTo(类名 o) {
+        //大于返回正数，小于返回负数，等于返回0
+    }
+}
+</code></pre>
+
+<h3 id="备注">备注</h3>
+
+<ul>
+<li><code>java.util.Collections.sort(List)</code></li>
+<li><code>java.util.Arrays.sort(Object[])</code></li>
+</ul>
+
+<h2 id="comparator">Comparator</h2>
+
+<p>Comparator 需要创建一个比较器（类），来继承该接口，并实现 <code>compare(Object o1, Objecto2)</code> 方法。</p>
+
+<p>适合定义多种比较属性。</p>
+
+<h3 id="api-http-tool-oschina-net-uploads-apidocs-jdk-zh-java-util-comparator-html"><a href="http://tool.oschina.net/uploads/apidocs/jdk-zh/java/util/Comparator.html">API</a></h3>
+
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>摘要</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>int    compare(T o1, T o2)</td>
+<td>比较用来排序的两个参数。</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="例">例</h3>
+
+<pre><code class="language-java">public class EmComparable implements Comparator&lt;类名&gt; {
+    @Override
+    public int compare(类名 o1,类名 o2) {
+        //大于返回正数，小于返回负数，等于返回0
+    }
+}
+</code></pre>
+
+<h3 id="备注-1">备注</h3>
+
+<ul>
+<li><code>java.util.Collections.sort(List, Comparator)</code></li>
+<li><code>java.util.Arrays.sort(Object[], Comparator)</code></li>
+</ul>
+
+<h2 id="参考">参考</h2>
+
+<ul>
+<li><a href="http://fuxueliang.com/tech/2013/05/26/java-sorting-comparator-vs-comparable-tutorial/">Java排序: Comparator vs Comparable 入门</a></li>
+<li><a href="http://www.hollischuang.com/archives/1292">简单介绍Java中Comparable和Comparator</a></li>
+</ul>
+
+</div>
+
+
+<div class="boo">
+	<span></span>
+</div>
+<div class="footer">
+	@XIZERO Powered by <a href="http://hugo.spf13.com/">Hugo</a> and <a href="#">bigbig</a>
+</div>
+</body>
+</html>
+

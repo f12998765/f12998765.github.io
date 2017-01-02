@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<meta name="generator" content="Hugo 0.18.1" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="//fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="/css/main.css">
+<link rel="alternate" href="/index.xml" type="application/rss+xml" title="XIZERO">
+<link href="https://cdn.bootcss.com/highlight.js/9.7.0/styles/tomorrow.min.css" rel="stylesheet">
+<script src="https://cdn.bootcss.com/highlight.js/9.8.0/highlight.min.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script src="http://127.0.0.1/js/top.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<title>Java 类与对象 - XIZERO</title>
+</head>
+<body>
+
+<div id="gotop" title="🚀 go top"></div>
+
+<div class="top">
+
+	<div class="gos">
+		<span class="go"><a href="/">Home</a></span>
+		<span class="go"><a href="/tags">Tags</a></span>
+		<span class="go"><a href="/about">About</a></span>
+	</div>
+	
+	
+		<div class="tit">
+			Java 类与对象
+		</div>
+
+	
+
+</div>
+
+
+
+
+<div class="con">
+	
+
+<h2 id="什么是类">什么是类？</h2>
+
+<p><strong>类是实体的抽象，对象是类的实例化。</strong></p>
+
+<pre><code class="language-java">
+访问修饰符 class 类名{
+
+ //成员变量
+
+ //构造方法
+
+ //成员方法
+
+}
+
+</code></pre>
+
+<h2 id="变量的类型-作用域和生存期">变量的类型、作用域和生存期</h2>
+
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>定义</th>
+<th>作用域</th>
+<th>生存期</th>
+<th>初始值</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>成员变量</td>
+<td>实体的属性，在类中声明，但是它方法、构造器或者语句块外</td>
+<td>当前类</td>
+<td>随对象的创建而创建， 随对象销毁而销毁</td>
+<td>默认初始值：数字 &ndash; &gt; 0，布尔型 &ndash;&gt; <code>false</code>，对象引用 &ndash;&gt; null</td>
+</tr>
+
+<tr>
+<td>局部变量</td>
+<td>定义在方法、语句块中的变量以及形参</td>
+<td>局部有效</td>
+<td>作用范围结束，就会释放空间</td>
+<td>没有默认初始值，使用时必须赋值</td>
+</tr>
+
+<tr>
+<td>静态变量 \/ 类变量</td>
+<td>用关键字static修饰的成员变量</td>
+<td>多个对象共享一个变量</td>
+<td>随着类的加载而存在，随着类的消失而消失</td>
+<td>可用类名或对象名访问</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="成员方法">成员方法</h2>
+
+<p><strong>方法是实体的功能实现</strong></p>
+
+<pre><code class="language-java">
+访问修饰符 返回值类型 函数名(参数类型 参数名) {
+
+ //执行语句
+
+ return 返回值;
+
+}
+
+</code></pre>
+
+<h3 id="方法的重载">方法的重载</h3>
+
+<ul>
+<li><p>相同的方法名，不同参数的类型、参数的个数和参数的顺序</p></li>
+
+<li><p><strong>返回值</strong>与方法的重载无关。</p></li>
+</ul>
+
+<h2 id="构造方法">构造方法</h2>
+
+<p><strong>在类实例化过程中有且仅调用一次的无返回值方法，对对象进行初始化。</strong></p>
+
+<p>特点</p>
+
+<ul>
+<li><p>方法名<strong>与类名相同</strong></p></li>
+
+<li><p>不可以显示调用</p></li>
+
+<li><p><strong>不需要</strong>定义返回值类型，没有返回值</p></li>
+</ul>
+
+<blockquote>
+<p>a.没有定义构造函数时，会自动生成无参构造函数，否则不会生成。</p>
+
+<p>b.多个构造函数是重载的体现。</p>
+</blockquote>
+
+<h2 id="对象">对象</h2>
+
+<p><strong>对象是类的实例化</strong></p>
+
+<pre><code class="language-java">ClasaName name=new ClassName();
+</code></pre>
+
+<ul>
+<li><p>对象的创建 :</p>
+
+<ul>
+<li>声明变量 &ndash;&gt; 实例化 &ndash;&gt; 初始化</li>
+</ul></li>
+
+<li><p>执行顺序（优先级从高到低）：</p>
+
+<ul>
+<li>静态代码块&gt;mian方法&gt;构造代码块&gt;构造方法</li>
+</ul></li>
+</ul>
+
+<h3 id="创建一个对象都在内存中做了什么事情">创建一个对象都在内存中做了什么事情？</h3>
+
+<ol>
+<li><p>加载硬盘中<code>.class</code> 文件到内存</p></li>
+
+<li><p><code>main()</code>执行时，在栈内存中创建<code>main()</code>的空间(压栈-入栈)，<code>main()</code>的栈区中创建变量</p></li>
+
+<li><p><code>new</code>在堆内存中创建实体空间</p></li>
+
+<li><p>在实体空间中进行属性的空间分配，并且进行默认初始化</p></li>
+
+<li><p>对属性进行显示初始化，即对其赋值</p></li>
+
+<li><p>进行实体的构造代码块初始化</p></li>
+
+<li><p>调用该实体对应的构造函数，进行构造函数初始化</p></li>
+
+<li><p>将实体空间首地址赋值给变量，变量就引用了该实体，即指向了该对象</p></li>
+</ol>
+
+<h2 id="代码块">代码块</h2>
+
+<p><strong>用{ }封装的多行代码</strong></p>
+
+<table>
+<thead>
+<tr>
+<th>代码块</th>
+<th>定义</th>
+<th>特性</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>普通代码块</td>
+<td>方法或语句中出现的代码块</td>
+<td>按顺序执行，最小作用域</td>
+</tr>
+
+<tr>
+<td>构造代码块</td>
+<td>在类中的未用static修饰的代码块</td>
+<td>对变量赋值，执行语句。创建对象时执行，早于构造函数</td>
+</tr>
+
+<tr>
+<td>静态代码块</td>
+<td>在类中用static修饰的代码块</td>
+<td>仅会在第一次对象实例化时创建执行</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+<div class="boo">
+	<span></span>
+</div>
+<div class="footer">
+	@XIZERO Powered by <a href="http://hugo.spf13.com/">Hugo</a> and <a href="#">bigbig</a>
+</div>
+</body>
+</html>
+

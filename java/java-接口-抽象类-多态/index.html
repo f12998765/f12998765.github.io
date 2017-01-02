@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<meta name="generator" content="Hugo 0.18.1" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="//fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="/css/main.css">
+<link rel="alternate" href="/index.xml" type="application/rss+xml" title="XIZERO">
+<link href="https://cdn.bootcss.com/highlight.js/9.7.0/styles/tomorrow.min.css" rel="stylesheet">
+<script src="https://cdn.bootcss.com/highlight.js/9.8.0/highlight.min.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script src="http://127.0.0.1/js/top.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<title>Java 接口 抽象类 多态 - XIZERO</title>
+</head>
+<body>
+
+<div id="gotop" title="🚀 go top"></div>
+
+<div class="top">
+
+	<div class="gos">
+		<span class="go"><a href="/">Home</a></span>
+		<span class="go"><a href="/tags">Tags</a></span>
+		<span class="go"><a href="/about">About</a></span>
+	</div>
+	
+	
+		<div class="tit">
+			Java 接口 抽象类 多态
+		</div>
+
+	
+
+</div>
+
+
+
+
+<div class="con">
+	
+
+<h2 id="什么是接口">什么是接口？</h2>
+
+<p>接口是一种服务提供者与服务使用者之间的协议。</p>
+
+<p><strong>接口的定义</strong></p>
+
+<pre><code class="language-java">访问修饰符 interface  接口名 extends  父接口列表{
+
+}
+</code></pre>
+
+<p><strong>接口的实现</strong></p>
+
+<pre><code class="language-java">访问修饰符 class 类名 extends 父类 implements  接口列表{
+
+}
+
+</code></pre>
+
+<h2 id="接口中的成员">接口中的成员</h2>
+
+<p><strong>字段</strong>
+* 必须初始化
+* 默认：<code>public</code> <code>static</code> <code>final</code></p>
+
+<p><strong>抽象方法</strong>
+* 默认为： <code>public abstract</code>
+* 没有主体，由分号结束</p>
+
+<p><strong>静态方法和默认方法</strong>
+* Java 8 支持在接口中定义静态方法和默认方法</p>
+
+<h1 id="抽象类">抽象类</h1>
+
+<ul>
+<li>抽象类和抽象方法有 <code>abstract</code> 修饰符修饰。</li>
+<li>包含抽象方法的类必须定义为抽象类。</li>
+<li>抽象类不能被实例化，抽象方法必须在子类中被实现。</li>
+<li>只有通过子类继承抽象类并覆盖了抽象类中的<strong>所有</strong>抽象方法后，该子类才可以实例化。否则，该子类还是一个抽象类。</li>
+</ul>
+
+<h1 id="什么时候使用抽象类和接口">什么时候使用抽象类和接口？</h1>
+
+<p>接口：
+* 实现多重继承</p>
+
+<p>抽象类：
+* 成员方法需要默认实现
+* 基本方法不断改变</p>
+
+<h1 id="多态">多态</h1>
+
+<p>多态是同一个行为具有多个不同表现形式或形态的能力。</p>
+
+<p><strong>父类引用指向子类对象，调用重写的方法</strong>
+<strong>接口引用指向实现类对象，调用实现的方法</strong></p>
+
+<h2 id="条件">条件</h2>
+
+<ul>
+<li>继承超类或实现接口</li>
+<li>方法的重写</li>
+<li>父类引用指向子类对象或接口引用指向实现类对象</li>
+</ul>
+
+</div>
+
+
+<div class="boo">
+	<span></span>
+</div>
+<div class="footer">
+	@XIZERO Powered by <a href="http://hugo.spf13.com/">Hugo</a> and <a href="#">bigbig</a>
+</div>
+</body>
+</html>
+

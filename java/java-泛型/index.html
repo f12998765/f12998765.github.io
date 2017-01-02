@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<meta name="generator" content="Hugo 0.18.1" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="//fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="/css/main.css">
+<link rel="alternate" href="/index.xml" type="application/rss+xml" title="XIZERO">
+<link href="https://cdn.bootcss.com/highlight.js/9.7.0/styles/tomorrow.min.css" rel="stylesheet">
+<script src="https://cdn.bootcss.com/highlight.js/9.8.0/highlight.min.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script src="http://127.0.0.1/js/top.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<title>Java 泛型 - XIZERO</title>
+</head>
+<body>
+
+<div id="gotop" title="🚀 go top"></div>
+
+<div class="top">
+
+	<div class="gos">
+		<span class="go"><a href="/">Home</a></span>
+		<span class="go"><a href="/tags">Tags</a></span>
+		<span class="go"><a href="/about">About</a></span>
+	</div>
+	
+	
+		<div class="tit">
+			Java 泛型
+		</div>
+
+	
+
+</div>
+
+
+
+
+<div class="con">
+	
+
+<h2 id="容器类">容器类</h2>
+
+<ul>
+<li>又叫泛型类型</li>
+<li>可以填充任意类型的容器类</li>
+<li>注意与泛型接口的使用</li>
+</ul>
+
+<pre><code class="language-java">public class Em&lt;T&gt; {
+    private T num;
+    private T name;
+
+    public T getNum() {
+        return num;
+    }
+
+    public void setNum(T num) {
+        this.num = num;
+    }
+
+    public T getName() {
+        return name;
+    }
+
+    public void setName(T name) {
+        this.name = name;
+    }
+
+    public Em() {
+
+    }
+
+    public Em(T num, T name) {
+        this.num = num;
+        this.name = name;
+    }
+
+    @Override
+    public String toString() {
+        return &quot;Em{&quot; +
+                &quot;num=&quot; + num +
+                &quot;, name=&quot; + name +
+                '}';
+    }
+}
+</code></pre>
+
+<h2 id="泛型接口">泛型接口</h2>
+
+<h3 id="定义">定义</h3>
+
+<pre><code class="language-java">public interface Generator&lt;T&gt; {
+    public T next();
+}
+</code></pre>
+
+<h3 id="实现">实现</h3>
+
+<p>看　<a href="http://xizero.com/java-notes/java-%E6%8E%92%E5%BA%8F/">Java 排序</a> 中的<code>Comparator</code></p>
+
+<pre><code class="language-java">import java.util.Comparator;
+
+public class EmComparable implements Comparator&lt;Em&lt;Integer&gt;&gt; {
+
+    @Override
+    public int compare(Em&lt;Integer&gt; o1,Em&lt;Integer&gt;o2) {
+        if(o1.getNum()&gt;o2.getNum())
+            return 1;
+        else if(o1.getNum()&lt;o2.getNum())
+            return -1;
+        else
+            return 0;
+    }
+}
+</code></pre>
+
+<h2 id="泛型方法">泛型方法</h2>
+
+<p><strong>尽量使用</strong></p>
+
+<p>出现在关键字 <code>final</code> 之后，返回类型之前。</p>
+
+<p>不需要指定参数类型，可自动推断。</p>
+
+<p>和可变参数的例子</p>
+
+<pre><code class="language-java">    public static &lt;T&gt; void out(T... args) {
+        for (T t : args) {
+            System.out.println(t);
+        }
+    }
+</code></pre>
+
+<h2 id="通配符">通配符</h2>
+
+<h3 id="前言">前言</h3>
+
+<p>List<ClassType> 中可以存放
+- ClassType 的实例
+- ClassType（类）的子类实例
+- ClassType（接口）的实现类的实例</p>
+
+<p><strong>注意</strong>
+List<String> 和 List<Object> 是不匹配的，即使 String 是 Object 的子类。</p>
+
+<h3 id="通配符-1">? 通配符</h3>
+
+<p>List&lt;?&gt; 可以表示任意类型的列表，即可以将 List<String> 传给下面的这个方法</p>
+
+<pre><code class="language-java">public void test(List&lt;?&gt; list)
+{
+    //……
+}
+</code></pre>
+
+<p><strong>注意</strong>
+在声明或创建一个容器类时，使用通配符是非法的。</p>
+
+<pre><code class="language-java">List&lt;?&gt; list = new ArrayList&lt;?&gt;(); // 这个是非法的
+</code></pre>
+
+<h3 id="界限通配符">界限通配符</h3>
+
+<p>上界</p>
+
+<pre><code class="language-java">&lt;? extends 父类&gt;
+</code></pre>
+
+<p>下界</p>
+
+<pre><code class="language-java">&lt;? super 子类&gt;
+</code></pre>
+
+<h2 id="泛型数组">泛型数组</h2>
+
+<p>Google</p>
+
+<h2 id="参考">参考</h2>
+
+<ul>
+<li><a href="https://segmentfault.com/a/1190000002646193">Java泛型：泛型类、泛型接口和泛型方法</a></li>
+</ul>
+
+</div>
+
+
+<div class="boo">
+	<span></span>
+</div>
+<div class="footer">
+	@XIZERO Powered by <a href="http://hugo.spf13.com/">Hugo</a> and <a href="#">bigbig</a>
+</div>
+</body>
+</html>
+

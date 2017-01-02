@@ -1,22 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>XIZERO</title>
-    <link>http://f12998765.github.io/tags/%E5%A4%9A%E6%80%81/index.xml</link>
-    <description>Recent content on XIZERO</description>
+    <title>多态 on XIZERO</title>
+    <link>http://127.0.0.1/tags/%E5%A4%9A%E6%80%81/index.xml</link>
+    <description>Recent content in 多态 on XIZERO</description>
     <generator>Hugo -- gohugo.io</generator>
-    <atom:link href="http://f12998765.github.io/tags/%E5%A4%9A%E6%80%81/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <atom:link href="http://127.0.0.1/tags/%E5%A4%9A%E6%80%81/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Java 接口、抽象类和多态</title>
-      <link>http://f12998765.github.io/java-notes/java-%E6%8E%A5%E5%8F%A3%E3%80%81%E6%8A%BD%E8%B1%A1%E7%B1%BB%E5%92%8C%E5%A4%9A%E6%80%81/</link>
+      <title>Java 接口 抽象类 多态</title>
+      <link>http://127.0.0.1/java/java-%E6%8E%A5%E5%8F%A3-%E6%8A%BD%E8%B1%A1%E7%B1%BB-%E5%A4%9A%E6%80%81/</link>
       <pubDate>Fri, 18 Nov 2016 18:20:00 +0800</pubDate>
       
-      <guid>http://f12998765.github.io/java-notes/java-%E6%8E%A5%E5%8F%A3%E3%80%81%E6%8A%BD%E8%B1%A1%E7%B1%BB%E5%92%8C%E5%A4%9A%E6%80%81/</guid>
+      <guid>http://127.0.0.1/java/java-%E6%8E%A5%E5%8F%A3-%E6%8A%BD%E8%B1%A1%E7%B1%BB-%E5%A4%9A%E6%80%81/</guid>
       <description>
 
-&lt;p&gt;##什么是接口？
-接口是一种服务提供者与服务使用者之间的协议。&lt;/p&gt;
+&lt;h2 id=&#34;什么是接口&#34;&gt;什么是接口？&lt;/h2&gt;
+
+&lt;p&gt;接口是一种服务提供者与服务使用者之间的协议。&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;接口的定义&lt;/strong&gt;&lt;/p&gt;
 
@@ -30,10 +32,12 @@
 &lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;访问修饰符 class 类名 extends 父类 implements  接口列表{
 
 }
+
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;##接口中的成员
-&lt;strong&gt;字段&lt;/strong&gt;
+&lt;h2 id=&#34;接口中的成员&#34;&gt;接口中的成员&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;字段&lt;/strong&gt;
 * 必须初始化
 * 默认：&lt;code&gt;public&lt;/code&gt; &lt;code&gt;static&lt;/code&gt; &lt;code&gt;final&lt;/code&gt;&lt;/p&gt;
 
@@ -44,11 +48,14 @@
 &lt;p&gt;&lt;strong&gt;静态方法和默认方法&lt;/strong&gt;
 * Java 8 支持在接口中定义静态方法和默认方法&lt;/p&gt;
 
-&lt;p&gt;#抽象类
-* 抽象类和抽象方法有 &lt;code&gt;abstract&lt;/code&gt; 修饰符修饰。
-* 包含抽象方法的类必须定义为抽象类。
-* 抽象类不能被实例化，抽象方法必须在子类中被实现。
-* 只有通过子类继承抽象类并覆盖了抽象类中的&lt;strong&gt;所有&lt;/strong&gt;抽象方法后，该子类才可以实例化。否则，该子类还是一个抽象类。&lt;/p&gt;
+&lt;h1 id=&#34;抽象类&#34;&gt;抽象类&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;抽象类和抽象方法有 &lt;code&gt;abstract&lt;/code&gt; 修饰符修饰。&lt;/li&gt;
+&lt;li&gt;包含抽象方法的类必须定义为抽象类。&lt;/li&gt;
+&lt;li&gt;抽象类不能被实例化，抽象方法必须在子类中被实现。&lt;/li&gt;
+&lt;li&gt;只有通过子类继承抽象类并覆盖了抽象类中的&lt;strong&gt;所有&lt;/strong&gt;抽象方法后，该子类才可以实例化。否则，该子类还是一个抽象类。&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h1 id=&#34;什么时候使用抽象类和接口&#34;&gt;什么时候使用抽象类和接口？&lt;/h1&gt;
 

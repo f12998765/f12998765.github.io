@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<meta name="generator" content="Hugo 0.18.1" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="//fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="/css/main.css">
+<link rel="alternate" href="/index.xml" type="application/rss+xml" title="XIZERO">
+<link href="https://cdn.bootcss.com/highlight.js/9.7.0/styles/tomorrow.min.css" rel="stylesheet">
+<script src="https://cdn.bootcss.com/highlight.js/9.8.0/highlight.min.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script src="http://127.0.0.1/js/top.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<title>Centos 配置 - XIZERO</title>
+</head>
+<body>
+
+<div id="gotop" title="🚀 go top"></div>
+
+<div class="top">
+
+	<div class="gos">
+		<span class="go"><a href="/">Home</a></span>
+		<span class="go"><a href="/tags">Tags</a></span>
+		<span class="go"><a href="/about">About</a></span>
+	</div>
+	
+	
+		<div class="tit">
+			Centos 配置
+		</div>
+
+	
+
+</div>
+
+
+
+
+<div class="con">
+	
+
+<h2 id="ssh-配置修改">SSH 配置修改</h2>
+
+<pre><code class="language-bash">#修改ssh配置
+vim /etc/ssh/sshd_config
+
+#使用第二代通讯协定
+Protocol 2
+
+#不容许空白密码
+PermitEmptyPasswords no
+
+#禁止root 使用SSH 登入
+PermitRootLogin no
+
+#重新启动sshd
+systemctl restart sshd.service
+</code></pre>
+
+<h2 id="更新系统和软件">更新系统和软件</h2>
+
+<pre><code class="language-bash">yum update &amp;&amp; yum upgrade
+</code></pre>
+
+<h2 id="创建用户赋予权限">创建用户赋予权限</h2>
+
+<pre><code class="language-bash">#创建用户，修改密码
+useradd [username]
+passwd [username]
+
+#修改权限
+EDITOR=nano visudo
+#修改 %wheel ALL=(ALL) ALL
+
+#修改用户组
+usermod -aG wheel [username]
+</code></pre>
+
+<h2 id="更改计算机的名称">更改计算机的名称</h2>
+
+<pre><code class="language-bash">sudo hostnamectl --static set-hostname &lt;host-name&gt;
+</code></pre>
+
+<h2 id="安装-mysql">安装 MySQL</h2>
+
+<pre><code class="language-bash">#添加源
+wget http://repo.mysql.com/mysql-community-release-el7-5.noarch.rpm
+
+#安装软件包
+rpm -ivh mysql-community-release-el7-5.noarch.rpm
+
+#yum 安装
+yum install mysql-server
+
+#启动 mysql
+systemctl start mysql
+
+#修改root密码
+mysqladmin -u root password &quot;newpassword&quot;
+
+#本地登录
+mysql -u root -p
+
+#查看用户
+mysql &gt; select host,user from user;
+
+#添加远程用户
+mysql &gt; Grant all privileges on *.* to 'zero'@'%' identified by 'zero' with grant option;
+
+</code></pre>
+
+</div>
+
+
+<div class="boo">
+	<span></span>
+</div>
+<div class="footer">
+	@XIZERO Powered by <a href="http://hugo.spf13.com/">Hugo</a> and <a href="#">bigbig</a>
+</div>
+</body>
+</html>
+

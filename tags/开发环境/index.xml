@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>XIZERO</title>
-    <link>http://f12998765.github.io/tags/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/index.xml</link>
-    <description>Recent content on XIZERO</description>
+    <title>开发环境 on XIZERO</title>
+    <link>http://127.0.0.1/tags/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/index.xml</link>
+    <description>Recent content in 开发环境 on XIZERO</description>
     <generator>Hugo -- gohugo.io</generator>
-    <atom:link href="http://f12998765.github.io/tags/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <atom:link href="http://127.0.0.1/tags/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>搭建 Java 开发环境 linux</title>
-      <link>http://f12998765.github.io/java-notes/%E6%90%AD%E5%BB%BA-java-%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83-linux/</link>
+      <link>http://127.0.0.1/java/%E6%90%AD%E5%BB%BA-java-%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83-linux/</link>
       <pubDate>Fri, 18 Nov 2016 18:20:00 +0800</pubDate>
       
-      <guid>http://f12998765.github.io/java-notes/%E6%90%AD%E5%BB%BA-java-%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83-linux/</guid>
+      <guid>http://127.0.0.1/java/%E6%90%AD%E5%BB%BA-java-%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83-linux/</guid>
       <description>
 
 &lt;h2 id=&#34;安装-jdk&#34;&gt;安装 JDK&lt;/h2&gt;
@@ -29,14 +30,11 @@
 &lt;li&gt;&lt;p&gt;配置环境变量&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;编辑&lt;/p&gt;
-
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;vi /etc/profile
-&lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;在文件末尾添加&lt;/p&gt;
+# 在文件末尾添加
 
-&lt;pre&gt;&lt;code&gt;export JAVA_HOME=/usr/locl/jdk/**
+export JAVA_HOME=/usr/locl/jdk/**
 
 export JRE_HOME=${JAVA_HOME}/jre
 
@@ -69,54 +67,10 @@ source /etc/profile
 &lt;li&gt;地址：&lt;a href=&#34;https://www.jetbrains.com/idea/&#34;&gt;https://www.jetbrains.com/idea/&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;解压到 &lt;code&gt;/usr/local/&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;解压到 &lt;code&gt;/opt&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;运行 &lt;code&gt;/bin/idea.sh&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;提示错误 “Please validate either IDEA_JDK, JDK_HOME or JAVA_HOME
-environment variable points to valid JDK installation.”&lt;/p&gt;
-
-&lt;p&gt;解决：&lt;/p&gt;
-
-&lt;p&gt;在  */idea/bin/idea.sh 中第二行添加&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;export  IDEA_JDK = (jdk的路径/和JAVA_HOME 相同)&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;相关地址： &lt;a href=&#34;http://stackoverflow.com/questions/8382641/installing-idea-on-ubuntu-11-10&#34;&gt;http://stackoverflow.com/questions/8382641&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&#34;安装-maven&#34;&gt;安装 Maven&lt;/h2&gt;
-
-&lt;ol&gt;
-&lt;li&gt;下载安装包
-
-&lt;ul&gt;
-&lt;li&gt;地址：&lt;a href=&#34;https://maven.apache.org/&#34;&gt;https://maven.apache.org/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;解压到 &lt;code&gt;/usr/local/&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;更换国内源&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;编辑配置文件&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;vi /maven/conf/settings.xml
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;在 &lt;code&gt;&amp;lt;mirrors&amp;gt;&lt;/code&gt; 标签(146行)中添加&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-xml&#34;&gt;&amp;lt;mirror&amp;gt;
-    &amp;lt;id&amp;gt;nexus-aliyun&amp;lt;/id&amp;gt;
-    &amp;lt;mirrorOf&amp;gt;*&amp;lt;/mirrorOf&amp;gt;ben
-    &amp;lt;name&amp;gt;Nexus aliyun&amp;lt;/name&amp;gt;
-    &amp;lt;url&amp;gt;http://maven.aliyun.com/nexus/content/groups/public&amp;lt;/url&amp;gt;
-&amp;lt;/mirror&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;更多查看 &lt;a href=&#34;http://xizero.com/notes/scraps-of-notes/&#34;&gt;http://xizero.com/notes/scraps-of-notes/&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
 
 &lt;h2 id=&#34;安装-datagrip&#34;&gt;安装 DataGrip&lt;/h2&gt;
 
@@ -127,7 +81,7 @@ environment variable points to valid JDK installation.”&lt;/p&gt;
 &lt;li&gt;地址：&lt;a href=&#34;https://www.jetbrains.com/datagrip&#34;&gt;https://www.jetbrains.com/datagrip&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;解压到 &lt;code&gt;/usr/local/&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;解压到 &lt;code&gt;/opt&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;运行 &lt;code&gt;/bin/DataGrip.sh&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
@@ -136,10 +90,10 @@ environment variable points to valid JDK installation.”&lt;/p&gt;
     
     <item>
       <title>搭建 Java 开发环境 win</title>
-      <link>http://f12998765.github.io/java-notes/%E6%90%AD%E5%BB%BA-Java-%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83-Win/</link>
+      <link>http://127.0.0.1/java/%E6%90%AD%E5%BB%BA-Java-%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83-Win/</link>
       <pubDate>Fri, 18 Nov 2016 18:20:00 +0800</pubDate>
       
-      <guid>http://f12998765.github.io/java-notes/%E6%90%AD%E5%BB%BA-Java-%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83-Win/</guid>
+      <guid>http://127.0.0.1/java/%E6%90%AD%E5%BB%BA-Java-%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83-Win/</guid>
       <description>
 
 &lt;h2 id=&#34;安装jdk&#34;&gt;安装JDK&lt;/h2&gt;
