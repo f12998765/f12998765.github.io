@@ -46,13 +46,22 @@
 
 <h2 id="安装jdk">安装JDK</h2>
 
-<blockquote>
-<p><strong>JDK：Java Development Kit，</strong>java的开发工具包和运行环境</p>
+<ul>
+<li>JDK
 
-<p><strong>JRE：Java Runtime Environment，</strong>java程序的运行环境</p>
-</blockquote>
+<ul>
+<li>Java Development Kit</li>
+<li>开发工具包和运行环境</li>
+</ul></li>
+<li>JRE
 
-<p>1、打开下载页面 &lt;<a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">下载链接</a>&gt;</p>
+<ul>
+<li>Java Runtime Environment</li>
+<li>程序的运行环境</li>
+</ul></li>
+</ul>
+
+<p>1、下载页面 &lt;<a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">下载链接</a>&gt;</p>
 
 <p>2、选择对应系统的java 开发工具包下载 <strong>Java SE Development Kit</strong></p>
 
@@ -60,55 +69,149 @@
 
 <h2 id="配置环境变量">配置环境变量</h2>
 
-<p>打开： <strong>控制面板 &ndash;&gt; 系统和安全 &ndash;&gt; 系统 &ndash;&gt; 高级系统设置 &ndash;&gt; 环境变量</strong></p>
+<h3 id="打开">打开</h3>
+
+<pre><code>控制面板 --&gt; 系统和安全 --&gt; 系统 --&gt; 高级系统设置 --&gt; 环境变量
+</code></pre>
 
 <blockquote>
 <p><strong>如果使用1.5以上版本的JDK，不用设置CLASSPATH环境变量</strong></p>
 </blockquote>
 
-<table>
-<thead>
-<tr>
-<th align="left">变量名</th>
-<th align="left">变量值</th>
-</tr>
-</thead>
+<h3 id="设置变量">设置变量</h3>
 
-<tbody>
-<tr>
-<td align="left"><strong>JAVA_HOME</strong></td>
-<td align="left">C:\Program Files\Java\jdk1.8.0 //根据实际路径配置</td>
-</tr>
+<ul>
+<li><p>JAVA_HOME</p>
 
-<tr>
-<td align="left"><strong>Path</strong></td>
-<td align="left">%JAVA_HOME%\bin;%JAVA_HOME%\jre\bin;</td>
-</tr>
-</tbody>
-</table>
+<ul>
+<li>C:\Program Files\Java\jdk1.8.0 //根据实际路径配置
+<br /></li>
+</ul></li>
 
-<h2 id="验证">验证</h2>
+<li><p>Path</p>
+
+<ul>
+<li>%JAVA_HOME%\bin;</li>
+<li>%JAVA_HOME%\jre\bin;
+<br /></li>
+</ul></li>
+</ul>
+
+<h3 id="验证">验证</h3>
 
 <p><strong>win+R &ndash;&gt; 输入cmd &ndash;&gt; 运行命令</strong></p>
 
-<pre><code class="language-bash">java
-javac
+<pre><code class="language-bash"># 加载类库，运行.class文件
+java 
+# 编译.java文件，生成.Class文件
+javac 
+# 查看版本
 java -version
 </code></pre>
 
+<h2 id="intellij-idea">IntelliJ IDEA</h2>
+
+<p><a href="https://www.jetbrains.com/idea/">官网</a></p>
+
+<p>学习 java se ，使用社区版（Community）就可以了。</p>
+
+<p>如果是学生，可以申请学生授权，&lt;<a href="https://sales.jetbrains.com/hc/zh-cn/articles/207154369-%E5%AD%A6%E7%94%9F%E6%8E%88%E6%9D%83%E7%94%B3%E8%AF%B7%E6%96%B9%E5%BC%8F">官方解答</a>&gt;。</p>
+
 <blockquote>
-<p>javac命令和java命令的区别
-Javac：编译.java文件，生成.Class文件
-Java：加载类库，运行.class文件</p>
+<p>如果没有校园邮箱或ISIC国际学生证，可以拍照发送学生证。</p>
 </blockquote>
 
-<h2 id="开发工具">开发工具</h2>
+<p>一份很好的 IDEA 教程 ：<a href="https://github.com/judasn/IntelliJ-IDEA-Tutorial/">https://github.com/judasn/IntelliJ-IDEA-Tutorial/</a></p>
 
-<ul>
-<li><a href="http://www.eclipse.org/">Eclipse</a></li>
-<li><a href="https://www.jetbrains.com/idea/">IntelliJ IDEA</a>(推荐)</li>
-<li><a href="https://notepad-plus-plus.org/">NotePad++</a></li>
-</ul>
+<h2 id="maven">Maven</h2>
+
+<p>很棒的项目构建工具</p>
+
+<p><a href="https://maven.apache.org/">Apache Maven</a></p>
+
+<p><a href="https://mvnrepository.com/">Maven Repository</a></p>
+
+<h3 id="安装">安装</h3>
+
+<p>下载解压，配置环境变量
+- MAVEN_HOME
+- Path
+    - %MAVEN_HOME%\bin</p>
+
+<h3 id="修改配置文件">修改配置文件</h3>
+
+<p>路径</p>
+
+<pre><code>apache-maven-*\conf\settings.xml
+</code></pre>
+
+<p>大概 55 行左右添加，设置本地仓库路径</p>
+
+<pre><code class="language-xml">&lt;localRepository&gt;d:/m2/repository&lt;/localRepository&gt;
+</code></pre>
+
+<p>大概 55 行左右添加，设置远程仓库镜像</p>
+
+<pre><code class="language-xml">&lt;mirror&gt;
+    &lt;id&gt;nexus-aliyun&lt;/id&gt;
+    &lt;mirrorOf&gt;*&lt;/mirrorOf&gt;ben
+    &lt;name&gt;Nexus aliyun&lt;/name&gt;
+    &lt;url&gt;http://maven.aliyun.com/nexus/content/groups/public&lt;/url&gt;
+&lt;/mirror&gt;
+</code></pre>
+
+<h2 id="tomcat">Tomcat</h2>
+
+<p><a href="http://tomcat.apache.org/">Apache Tomcat</a>
+下载安装或解压</p>
+
+<h2 id="mysql">Mysql</h2>
+
+<p>因为 MySQL 太耗资源，可以在云服务器上使用 docker 建个远程数据库</p>
+
+<h3 id="安装-docker">安装 docker</h3>
+
+<p>服务器是 ubuntu,使用脚本安装[
+<a href="https://get.daocloud.io/">daocloud.io</a></p>
+
+<pre><code> curl -sSL https://get.daocloud.io/docker | sh
+</code></pre>
+
+<p>国内镜像地址，<a href="https://hub.alauda.cn/">灵雀云</a></p>
+
+<h3 id="安装-mysql">安装 Mysql</h3>
+
+<p>灵雀云 mysql 地址 : <a href="https://hub.alauda.cn/repos/library/mysql">library&gt;mysql</a>
+下载 mysql 镜像</p>
+
+<pre><code>docker pull registry.alauda.cn/library/mysql
+</code></pre>
+
+<p>创建，运行容器
+&gt; MYSQL_ROOT_PASSWORD 设置root密码</p>
+
+<pre><code class="language-bash">docker run --name mysql -v /home/eastren/mysql:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=root -d -p 3306:3306 registry.alauda.cn/library/mysql
+</code></pre>
+
+<p>进入容器</p>
+
+<pre><code> sudo docker exec -it  mysql  /bin/bash  
+</code></pre>
+
+<p>创建远程连接用户</p>
+
+<pre><code class="language-bash">grant all privileges on *.* to 'username' @'%' identified by 'password';
+# 刷新
+flush privileges;
+</code></pre>
+
+<h3 id="本地连接">本地连接</h3>
+
+<p>可以随便选择，数据库图形管理软件</p>
+
+<p>推荐：<a href="http://www.heidisql.com/">HeidiSQL - MySQL, MSSQL and PostgreSQL made easy</a></p>
+
+<p>下载安装，数据库连接地址是云服务器公网 ip</p>
 
 </div>
 
