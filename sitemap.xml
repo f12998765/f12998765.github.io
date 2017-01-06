@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.xizero.com/note/Github%20Pages%20%E9%85%8D%E7%BD%AE%20https/</loc>
+    <lastmod>2017-01-06T19:15:00+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.xizero.com/java/java-%E6%B3%9B%E5%9E%8B-TKVE/</loc>
     <lastmod>2016-11-24T15:55:43+08:00</lastmod>
   </url>
@@ -182,12 +187,6 @@
   </url>
   
   <url>
-    <loc>https://www.xizero.com/tags/</loc>
-    <lastmod>2016-11-24T15:55:43+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://www.xizero.com/tags/annotation/</loc>
     <lastmod>2016-11-18T18:20:00+08:00</lastmod>
     <priority>0</priority>
@@ -230,6 +229,18 @@
   </url>
   
   <url>
+    <loc>https://www.xizero.com/tags/github-pages/</loc>
+    <lastmod>2017-01-06T19:15:00+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.xizero.com/tags/https/</loc>
+    <lastmod>2017-01-06T19:15:00+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://www.xizero.com/tags/io/</loc>
     <lastmod>2016-11-18T18:20:00+08:00</lastmod>
     <priority>0</priority>
@@ -237,7 +248,7 @@
   
   <url>
     <loc>https://www.xizero.com/tags/java/</loc>
-    <lastmod>2016-11-23T16:28:21+08:00</lastmod>
+    <lastmod>2016-11-24T15:55:43+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -260,6 +271,12 @@
   </url>
   
   <url>
+    <loc>https://www.xizero.com/tags/nginx/</loc>
+    <lastmod>2017-01-06T19:15:00+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://www.xizero.com/tags/note/</loc>
     <lastmod>2016-11-18T18:20:00+08:00</lastmod>
     <priority>0</priority>
@@ -267,7 +284,7 @@
   
   <url>
     <loc>https://www.xizero.com/note/</loc>
-    <lastmod>2016-11-18T18:20:00+08:00</lastmod>
+    <lastmod>2017-01-06T19:15:00+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -314,7 +331,7 @@
   
   <url>
     <loc>https://www.xizero.com/</loc>
-    <lastmod>2016-11-24T15:55:43+08:00</lastmod>
+    <lastmod>2017-01-06T19:15:00+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -458,7 +475,7 @@
   
   <url>
     <loc>https://www.xizero.com/tags/%E6%B3%9B%E5%9E%8B/</loc>
-    <lastmod>2016-11-18T18:20:00+08:00</lastmod>
+    <lastmod>2016-11-24T15:55:43+08:00</lastmod>
     <priority>0</priority>
   </url>
   

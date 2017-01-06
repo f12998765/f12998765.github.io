@@ -6,8 +6,97 @@
     <description>Recent content on XIZERO</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 24 Nov 2016 15:55:43 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 06 Jan 2017 19:15:00 +0800</lastBuildDate>
     <atom:link href="https://www.xizero.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Github Pages 配置 https</title>
+      <link>https://www.xizero.com/note/Github%20Pages%20%E9%85%8D%E7%BD%AE%20https/</link>
+      <pubDate>Fri, 06 Jan 2017 19:15:00 +0800</pubDate>
+      
+      <guid>https://www.xizero.com/note/Github%20Pages%20%E9%85%8D%E7%BD%AE%20https/</guid>
+      <description>
+
+&lt;h1 id=&#34;github-pages-配置-https&#34;&gt;Github Pages 配置 https&lt;/h1&gt;
+
+&lt;p&gt;Github Pages 不支持自定义域名https，虽然使用第三方的解析代理可以实现，但是却不稳定也并不知道什么时候失效，凡事要靠自己来。&lt;/p&gt;
+
+&lt;p&gt;搜索查找，知道使用 &lt;strong&gt;Nginx 反向代理&lt;/strong&gt; 可以实现。&lt;/p&gt;
+
+&lt;p&gt;下面是一些简单的笔记，需要一个ubuntu环境的云服务器，其他环境自行查找。&lt;/p&gt;
+
+&lt;h2 id=&#34;安装-nginx&#34;&gt;安装 Nginx&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;apt-get install nginx
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;域名解析&#34;&gt;域名解析&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;删除 Github Pages 上的 CNAME ，不使用自定义域名。&lt;/li&gt;
+&lt;li&gt;在域名解析商那，将自定义域名用A解析到云服务器&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;申请证书&#34;&gt;申请证书&lt;/h2&gt;
+
+&lt;p&gt;可以搜索 Let’s Encrypt&lt;/p&gt;
+
+&lt;h2 id=&#34;nginx-配置&#34;&gt;Nginx 配置&lt;/h2&gt;
+
+&lt;p&gt;如果默认安装，&lt;code&gt;/etc/nginx/conf.d&lt;/code&gt; 目录是自定义配置文件的存放的地方，新建一个 &lt;code&gt;.conf&lt;/code&gt; 文件，文件名随意。&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;xxx.com 表示你的自定义域名&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;添加一个虚拟主机，监听 80 ，让 http 跳转到 https&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;server {
+        listen 80 ;
+        server_name xxx.com;
+        rewrite ^(.*)$  https://xxx.com$1 permanent;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;添加一个虚拟主机，监听 443 ，&lt;code&gt;location /&lt;/code&gt; 设置反向代理 Github pages，&lt;code&gt;ssl_certificate&lt;/code&gt;等设置证书，最后的 &lt;code&gt;location&lt;/code&gt; 设置缓存时间。&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;添加证书的时候，注意路径，使用 &lt;code&gt;nginx -t xxx.conf&lt;/code&gt; 查看配置文件是否错误，多看看日志&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;pre&gt;&lt;code&gt;server {
+        listen 443 ssl;
+        server_name xxx.com;
+        ssl on;
+        ssl_certificate conf.d/xxx.com_bundle.crt;
+        ssl_certificate_key conf.d/xxx.com.key;
+        location / {
+                proxy_pass https://xxx.github.io/;
+                proxy_redirect     off;
+                proxy_set_header   X-Real-IP  $remote_addr;
+                proxy_set_header   X-Forwarded-For  $proxy_add_x_forwarded_for;
+        }
+        location ~ /purge(/.*){
+            expires 10m;
+        }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;运行-nginx&#34;&gt;运行 nginx&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;service nginx start
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;参考&#34;&gt;参考&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://imciel.com/2016/05/09/github-pages-reverse-proxy-https/&#34;&gt;反向代理 GitHub Pages 并配置博客 HTTPS 访问&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://taozj.org/201603/blog-site-under-https.html#&#34;&gt;我的博客用上HTTPS啦&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://echo.pm/lnmp-nginx-ssl-https&#34;&gt;在 Nginx（LNMP）上配置 NameCheap SSL 证书并开启强制 HTTPS 的方法&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://segmentfault.com/q/1010000006614489&#34;&gt;nginx ssl强制跳转&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     
     <item>
       <title>java 泛型 TKVE 含义</title>
@@ -1800,124 +1889,6 @@ throws：用于方法名之后，表示该方法可能抛出异常的类型。&l
 &lt;li&gt;方法的重写&lt;/li&gt;
 &lt;li&gt;父类引用指向子类对象或接口引用指向实现类对象&lt;/li&gt;
 &lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Java 数组</title>
-      <link>https://www.xizero.com/java/java-%E6%95%B0%E7%BB%84%E5%92%8Carrays%E7%B1%BB/</link>
-      <pubDate>Fri, 18 Nov 2016 18:20:00 +0800</pubDate>
-      
-      <guid>https://www.xizero.com/java/java-%E6%95%B0%E7%BB%84%E5%92%8Carrays%E7%B1%BB/</guid>
-      <description>
-
-&lt;h2 id=&#34;什么是数组-及声明数组变量&#34;&gt;什么是数组？及声明数组变量&lt;/h2&gt;
-
-&lt;p&gt;数组是存放一组相同类型的容器。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;DataType [] arryName;
-
-DataType arryName [];
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;数组的初始化&#34;&gt;数组的初始化&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;DataType[] arrayName = new DataType[arraySize];
-
-DataType[] arrayName = {value0, value1, ..., valuek};
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;未初始化的数组会默认赋值 : int &amp;ndash;&amp;gt; 0、boolean &amp;ndash;&amp;gt; false 、对象 &amp;ndash;&amp;gt; null&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&#34;数组引用及长度&#34;&gt;数组引用及长度&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;arrayName[index] //数组通过下标引用，并且会检查数组越界。
-
-arrayName. length//每个数组都有一个属性length来表示长度
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;获取字符串的长度使用 length() 方法&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&#34;遍历数组&#34;&gt;遍历数组&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;Loop循环&lt;/strong&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;for(int i;i&amp;lt;arrayName.length;i++){
-//Statements
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;strong&gt;for-each循环&lt;/strong&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;for(DataType e:Array){
-//Statements
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;for-each循环只能处理一维数组，二维数组需要双层循环。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&#34;array类&#34;&gt;Array类&lt;/h2&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;方法有多个重载，详细信息查看&lt;a href=&#34;http://tool.oschina.net/uploads/apidocs/jdk-zh/java/util/Arrays.html&#34;&gt;Java API&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;方法&lt;/th&gt;
-&lt;th&gt;说明&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;asList&lt;/td&gt;
-&lt;td&gt;返回数组支持 的固定个大小的List&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;binarySearch&lt;/td&gt;
-&lt;td&gt;根据特定的键查找数组，返回索引&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;copyOf&lt;/td&gt;
-&lt;td&gt;创建一个指定长度的新数组，复制原数组的元素，根据长度进行截取和填充&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;copyOfRamge&lt;/td&gt;
-&lt;td&gt;根据原数组的指定范围创建新的数组&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;sort&lt;/td&gt;
-&lt;td&gt;数组排序&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;toString&lt;/td&gt;
-&lt;td&gt;返回数组的字符串表示&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;equals&lt;/td&gt;
-&lt;td&gt;比较数组是否相等&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;fill&lt;/td&gt;
-&lt;td&gt;将指定值赋值给全部元素&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
 </description>
     </item>
     

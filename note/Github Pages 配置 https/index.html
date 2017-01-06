@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<meta name="generator" content="Hugo 0.18.1" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="alternate" href="https://www.xizero.com//index.xml" type="application/rss+xml" title="XIZERO">
+<link href="https://www.xizero.com/css/tomorrow.min.css" rel="stylesheet">
+<link href="https://www.xizero.com//css/main.css" rel="stylesheet">
+<link href="https://www.xizero.com/css/jqcloud.css" rel="stylesheet">
+<script src="https://www.xizero.com/js/high.min.js"></script>
+<script src="https://www.xizero.com/js/jqury.min.js"></script>
+<script src="https://www.xizero.com/js/top.js"></script>
+<script src="https://www.xizero.com/js/jqcloud.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<title>Github Pages 配置 https - XIZERO</title>
+</head>
+<body>
+
+<div id="gotop" title="🚀 go top"></div>
+
+<div class="top">
+
+	<div class="gos">
+		<span class="go"><a href="https://www.xizero.com/">Home</a></span>
+		<span class="go"><a href="/tags/">Tags</a></span>
+		<span class="go"><a href="/about/">About</a></span>
+	</div>
+	
+	
+		<div class="tit">
+			Github Pages 配置 https
+		</div>
+
+	
+
+</div>
+
+
+
+
+<div class="con">
+	
+
+<h1 id="github-pages-配置-https">Github Pages 配置 https</h1>
+
+<p>Github Pages 不支持自定义域名https，虽然使用第三方的解析代理可以实现，但是却不稳定也并不知道什么时候失效，凡事要靠自己来。</p>
+
+<p>搜索查找，知道使用 <strong>Nginx 反向代理</strong> 可以实现。</p>
+
+<p>下面是一些简单的笔记，需要一个ubuntu环境的云服务器，其他环境自行查找。</p>
+
+<h2 id="安装-nginx">安装 Nginx</h2>
+
+<pre><code>apt-get install nginx
+</code></pre>
+
+<h2 id="域名解析">域名解析</h2>
+
+<ol>
+<li>删除 Github Pages 上的 CNAME ，不使用自定义域名。</li>
+<li>在域名解析商那，将自定义域名用A解析到云服务器</li>
+</ol>
+
+<h2 id="申请证书">申请证书</h2>
+
+<p>可以搜索 Let’s Encrypt</p>
+
+<h2 id="nginx-配置">Nginx 配置</h2>
+
+<p>如果默认安装，<code>/etc/nginx/conf.d</code> 目录是自定义配置文件的存放的地方，新建一个 <code>.conf</code> 文件，文件名随意。</p>
+
+<blockquote>
+<p>xxx.com 表示你的自定义域名</p>
+</blockquote>
+
+<p>添加一个虚拟主机，监听 80 ，让 http 跳转到 https</p>
+
+<pre><code>server {
+        listen 80 ;
+        server_name xxx.com;
+        rewrite ^(.*)$  https://xxx.com$1 permanent;
+}
+</code></pre>
+
+<p>添加一个虚拟主机，监听 443 ，<code>location /</code> 设置反向代理 Github pages，<code>ssl_certificate</code>等设置证书，最后的 <code>location</code> 设置缓存时间。</p>
+
+<blockquote>
+<p>添加证书的时候，注意路径，使用 <code>nginx -t xxx.conf</code> 查看配置文件是否错误，多看看日志</p>
+</blockquote>
+
+<pre><code>server {
+        listen 443 ssl;
+        server_name xxx.com;
+        ssl on;
+        ssl_certificate conf.d/xxx.com_bundle.crt;
+        ssl_certificate_key conf.d/xxx.com.key;
+        location / {
+                proxy_pass https://xxx.github.io/;
+                proxy_redirect     off;
+                proxy_set_header   X-Real-IP  $remote_addr;
+                proxy_set_header   X-Forwarded-For  $proxy_add_x_forwarded_for;
+        }
+        location ~ /purge(/.*){
+            expires 10m;
+        }
+}
+</code></pre>
+
+<h2 id="运行-nginx">运行 nginx</h2>
+
+<pre><code>service nginx start
+</code></pre>
+
+<h2 id="参考">参考</h2>
+
+<ul>
+<li><a href="https://imciel.com/2016/05/09/github-pages-reverse-proxy-https/">反向代理 GitHub Pages 并配置博客 HTTPS 访问</a></li>
+<li><a href="https://taozj.org/201603/blog-site-under-https.html#">我的博客用上HTTPS啦</a></li>
+<li><a href="https://echo.pm/lnmp-nginx-ssl-https">在 Nginx（LNMP）上配置 NameCheap SSL 证书并开启强制 HTTPS 的方法</a></li>
+<li><a href="https://segmentfault.com/q/1010000006614489">nginx ssl强制跳转</a></li>
+</ul>
+
+</div>
+
+
+<div class="boo">
+	<span></span>
+</div>
+<div class="footer">
+	@XIZERO Powered by <a href="http://hugo.spf13.com/">Hugo</a> and <a href="#">bigbig</a>
+</div>
+</body>
+</html>
+
