@@ -233,6 +233,7 @@ Maven Repository：&lt;a href=&#34;https://mvnrepository.com/&#34;&gt;Maven Repo
 &lt;li&gt;双击DisableWindowsConsumerFeatures，在数值数据输入1，确定&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;设置资源管理器默认打开我的电脑&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://support.office.com/zh-cn/article/%E5%85%B3%E9%97%AD%E6%88%96%E5%8D%B8%E8%BD%BD-OneDrive-f32a17ce-3336-40fe-9c38-6efb09f944b0?ui=zh-CN&amp;amp;rs=zh-CN&amp;amp;ad=CN&#34;&gt;关闭或卸载 OneDrive&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;h2 id=&#34;连接网络-配置系统&#34;&gt;连接网络，配置系统&lt;/h2&gt;
@@ -338,6 +339,18 @@ Maven Repository：&lt;a href=&#34;https://mvnrepository.com/&#34;&gt;Maven Repo
       
       <guid>https://www.xizero.com/tool/win10%20%E7%B3%BB%E7%BB%9F%E9%87%8D%E8%A3%85%E6%89%8B%E5%86%8C/</guid>
       <description>
+
+&lt;h2 id=&#34;删除-onedriver-上的电脑&#34;&gt;删除 OneDriver 上的电脑&lt;/h2&gt;
+
+&lt;p&gt;地址：&lt;a href=&#34;https://onedrive.live.com&#34;&gt;https://onedrive.live.com&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;清除同步隐私&#34;&gt;清除同步隐私&lt;/h2&gt;
+
+&lt;p&gt;地址：&lt;a href=&#34;https://account.microsoft.com/privacy#/&#34;&gt;https://account.microsoft.com/privacy#/&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;删除应用商店设备&#34;&gt;删除应用商店设备&lt;/h2&gt;
+
+&lt;p&gt;地址：&lt;a href=&#34;https://account.microsoft.com/devices/store&#34;&gt;https://account.microsoft.com/devices/store&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;删除-github-上的-ssh-密钥&#34;&gt;删除 Github 上的 SSH 密钥&lt;/h2&gt;
 
