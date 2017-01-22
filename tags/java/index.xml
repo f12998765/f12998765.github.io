@@ -9,16 +9,657 @@
     <atom:link href="https://www.xizero.com/tags/java/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Java 开发环境恢复手册</title>
+      <link>https://www.xizero.com/tool/Java%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%81%A2%E5%A4%8D%E6%89%8B%E5%86%8C/</link>
+      <pubDate>Fri, 20 Jan 2017 12:00:00 +0800</pubDate>
+      
+      <guid>https://www.xizero.com/tool/Java%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%81%A2%E5%A4%8D%E6%89%8B%E5%86%8C/</guid>
+      <description>
+
+&lt;h2 id=&#34;notepad&#34;&gt;Notepad++&lt;/h2&gt;
+
+&lt;p&gt;官网：&lt;a href=&#34;https://notepad-plus-plus.org/&#34;&gt;https://notepad-plus-plus.org/&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;git-for-windows&#34;&gt;Git for Windows&lt;/h2&gt;
+
+&lt;p&gt;官网：&lt;a href=&#34;https://git-scm.com/&#34;&gt;https://git-scm.com/&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;安装&#34;&gt;安装&lt;/h3&gt;
+
+&lt;p&gt;添加快捷方式到桌面&lt;/p&gt;
+
+&lt;p&gt;添加 git bash 到右键菜单&lt;/p&gt;
+
+&lt;h3 id=&#34;更换主题&#34;&gt;更换主题&lt;/h3&gt;
+
+&lt;p&gt;网址：&lt;a href=&#34;http://ciembor.github.io/4bit/&#34;&gt;http://ciembor.github.io/4bit/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;编辑用户目录下的 .minttyrc 文件&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;BoldAsFont=-1
+Columns=99
+Rows=33
+Font=Lucida Console
+FontHeight=12
+BackgroundColour=13,25,38
+ForegroundColour=217,230,242
+CursorColour=217,230,242
+Black=0,0,0
+BoldBlack=38,38,38
+Red=184,122,122
+BoldRed=219,189,189
+Green=122,184,122
+BoldGreen=189,219,189
+Yellow=184,184,122
+BoldYellow=219,219,189
+Blue=122,122,184
+BoldBlue=189,189,219
+Magenta=184,122,184
+BoldMagenta=219,189,219
+Cyan=122,184,184
+BoldCyan=189,219,219
+White=217,217,217
+BoldWhite=255,255,255
+Locale=C
+Charset=GBK
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;配置文件&#34;&gt;配置文件&lt;/h3&gt;
+
+&lt;p&gt;配置用户名和邮箱&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git config --global user.name &amp;quot;[name]&amp;quot;
+git config --global user.email &amp;quot;[email]&amp;quot;
+git config --global color.ui true
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;打印全局配置&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git config --list
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;ssh-key&#34;&gt;SSH key&lt;/h3&gt;
+
+&lt;p&gt;检查用户目录下是否存在隐藏文件夹 .ssh&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;cd ~/.ssh
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;生成SSH Key，在 &lt;code&gt;.ssh/id_rsa.pub&lt;/code&gt; 中&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;ssh-keygen -t rsa -C &amp;quot;your_email&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;在 Github 中添加，并测试&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;ssh -T git@github.com
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;source-tree&#34;&gt;Source Tree&lt;/h2&gt;
+
+&lt;p&gt;官网：&lt;a href=&#34;https://www.sourcetreeapp.com/&#34;&gt;https://www.sourcetreeapp.com/&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;安装配置&#34;&gt;安装配置&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;跳过默认设置&lt;/li&gt;
+&lt;li&gt;使用系统Git&lt;/li&gt;
+&lt;li&gt;添加 SSH key&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;hugo&#34;&gt;Hugo&lt;/h2&gt;
+
+&lt;p&gt;官网：&lt;a href=&#34;https://gohugo.io/&#34;&gt;https://gohugo.io/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;下载地址：&lt;a href=&#34;https://github.com/spf13/hugo/releases&#34;&gt;https://github.com/spf13/hugo/releases&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;安装-1&#34;&gt;安装&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;解压，重命名为 hugo.exe ，放在 &lt;code&gt;D:/Software/hugo/bin/&lt;/code&gt; 下&lt;/li&gt;
+&lt;li&gt;配置环境变量 Path&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;visual-studio-code&#34;&gt;Visual Studio Code&lt;/h2&gt;
+
+&lt;p&gt;官网：&lt;a href=&#34;https://code.visualstudio.com/&#34;&gt;https://code.visualstudio.com/&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;jdk&#34;&gt;JDK&lt;/h2&gt;
+
+&lt;p&gt;官网：&lt;a href=&#34;http://www.oracle.com/technetwork/java/javase/downloads/index.html&#34;&gt;http://www.oracle.com/technetwork/java/javase/downloads/index.html&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;配置环境变量&#34;&gt;配置环境变量&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;JAVA_HOME&lt;/li&gt;
+&lt;li&gt;Path
+
+&lt;ul&gt;
+&lt;li&gt;%JAVA_HOME%\bin;&lt;/li&gt;
+&lt;li&gt;%JAVA_HOME%\jre\bin;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;tomcat&#34;&gt;Tomcat&lt;/h2&gt;
+
+&lt;p&gt;官网：&lt;a href=&#34;http://tomcat.apache.org/&#34;&gt;http://tomcat.apache.org/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;下载执行文件安装&lt;/p&gt;
+
+&lt;h2 id=&#34;maven&#34;&gt;Maven&lt;/h2&gt;
+
+&lt;p&gt;官网：&lt;a href=&#34;https://maven.apache.org/&#34;&gt;https://maven.apache.org/&lt;/a&gt;
+Maven Repository：&lt;a href=&#34;https://mvnrepository.com/&#34;&gt;Maven Repository&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;安装配置-1&#34;&gt;安装配置&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;解压到 &lt;code&gt;C:\Program Files\Apache Software Foundation&lt;/code&gt; 下，重命名为 Maven&lt;/li&gt;
+&lt;li&gt;配置环境变量
+
+&lt;ul&gt;
+&lt;li&gt;MAVEN_HOME&lt;/li&gt;
+&lt;li&gt;Path
+
+&lt;ul&gt;
+&lt;li&gt;%MAVEN_HOME%\bin&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;修改配置文件 &lt;code&gt;conf/setting.xml&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;设置本地仓库&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-xml&#34;&gt;&amp;lt;localRepository&amp;gt;d:/m2/repository&amp;lt;/localRepository&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;设置远程仓库镜像&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-xml&#34;&gt;&amp;lt;mirror&amp;gt;
+    &amp;lt;id&amp;gt;nexus-aliyun&amp;lt;/id&amp;gt;
+    &amp;lt;mirrorOf&amp;gt;*&amp;lt;/mirrorOf&amp;gt;ben
+    &amp;lt;name&amp;gt;Nexus aliyun&amp;lt;/name&amp;gt;
+    &amp;lt;url&amp;gt;http://maven.aliyun.com/nexus/content/groups/public&amp;lt;/url&amp;gt;
+&amp;lt;/mirror&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;intelij-idea&#34;&gt;InteLiJ IDEA&lt;/h2&gt;
+
+&lt;p&gt;官网：&lt;a href=&#34;https://www.jetbrains.com/idea/&#34;&gt;https://www.jetbrains.com/idea/&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;配置&#34;&gt;配置&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;登陆激活&lt;/li&gt;
+&lt;li&gt;去掉不需要的插件&lt;/li&gt;
+&lt;li&gt;设置默认设置
+
+&lt;ul&gt;
+&lt;li&gt;设置默认Maven&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&#34;idea新建maven项目卡住显示-generating-project-in-batch-mode&#34;&gt;IDEA新建MAVEN项目卡住显示 : &amp;ldquo;Generating Project in Batch mode&amp;rdquo;&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;下载 &lt;code&gt;archetype-catalog.xml&lt;/code&gt;  - -  &lt;a href=&#34;http://repo.maven.apache.org/maven2/&#34;&gt;http://repo.maven.apache.org/maven2/&lt;/a&gt;，找到 &lt;code&gt;archetype-catalog.xml&lt;/code&gt; ,右键保存&lt;/li&gt;
+&lt;li&gt;放到 &amp;ldquo;.m2\repository\org\apache\maven\archetype\archetype-catalog\2.4&amp;rdquo; 下&lt;/li&gt;
+&lt;li&gt;在 &lt;code&gt;Settings&lt;/code&gt;&amp;gt; &lt;code&gt;Maven&lt;/code&gt; &amp;gt; &lt;code&gt;Runner&lt;/code&gt; &amp;gt; &lt;code&gt;VM Options&lt;/code&gt; 中添加 &lt;code&gt;-DarchetypeCatalog=internal&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;PS：注意右上角的灰字：for default project，而不是for current project&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Java 多态</title>
+      <link>https://www.xizero.com/java/Java-%E5%A4%9A%E6%80%81/</link>
+      <pubDate>Sun, 08 Jan 2017 04:11:00 +0800</pubDate>
+      
+      <guid>https://www.xizero.com/java/Java-%E5%A4%9A%E6%80%81/</guid>
+      <description>
+
+&lt;h1 id=&#34;多态&#34;&gt;多态&lt;/h1&gt;
+
+&lt;p&gt;多态是同一个行为具有多个不同表现形式或形态的能力。&lt;/p&gt;
+
+&lt;p&gt;方法的重写、重载与动态连接构成多态性&lt;/p&gt;
+
+&lt;h2 id=&#34;条件&#34;&gt;条件&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;继承/实现&lt;/li&gt;
+&lt;li&gt;方法的重写和重载&lt;/li&gt;
+&lt;li&gt;父类引用指向子类实现&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;父类引用只能调用父类中定义的变量和方法，以及子类中重写的方法&lt;/p&gt;
+
+&lt;p&gt;动态链接指：父类引用会调用子类实现重写或实现的方法&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Java web 序言</title>
-      <link>https://www.xizero.com/java_web/Java%20web%20%E5%BA%8F%E8%A8%80/</link>
+      <link>https://www.xizero.com/javaee/Java%20web%20%E5%BA%8F%E8%A8%80/</link>
       <pubDate>Fri, 06 Jan 2017 20:56:00 +0800</pubDate>
       
-      <guid>https://www.xizero.com/java_web/Java%20web%20%E5%BA%8F%E8%A8%80/</guid>
+      <guid>https://www.xizero.com/javaee/Java%20web%20%E5%BA%8F%E8%A8%80/</guid>
       <description>
 
 &lt;h1 id=&#34;java-web-序言&#34;&gt;Java web 序言&lt;/h1&gt;
 
 &lt;p&gt;不管怎样，学习越来越迷茫，每一步走地犹犹豫豫，忘记地越来越多，所以写一份总结。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Apache Tomcat</title>
+      <link>https://www.xizero.com/java/java-%E6%B3%9B%E5%9E%8B/</link>
+      <pubDate>Tue, 13 Dec 2016 12:00:00 +0800</pubDate>
+      
+      <guid>https://www.xizero.com/java/java-%E6%B3%9B%E5%9E%8B/</guid>
+      <description>
+
+&lt;h1 id=&#34;泛型&#34;&gt;泛型&lt;/h1&gt;
+
+&lt;h2 id=&#34;泛型是什么&#34;&gt;泛型是什么?&lt;/h2&gt;
+
+&lt;p&gt;泛型是一种编译器机制，在编写代码时&lt;strong&gt;参数化类型&lt;/strong&gt;，在实例化化时&lt;strong&gt;指定&lt;/strong&gt;。&lt;/p&gt;
+
+&lt;h2 id=&#34;泛型编程&#34;&gt;泛型编程&lt;/h2&gt;
+
+&lt;h3 id=&#34;泛型类-容器类&#34;&gt;泛型类/容器类&lt;/h3&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;泛型类中依然可以使用基本类型和引用类型，不一定都要参数化类型&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;定义一个泛型类&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;在类名后使用 &amp;lt;&amp;gt; 定义一个参数化类型。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;public class App&amp;lt;T&amp;gt; {
+    private T x;
+
+    public T getX() {
+        return x;
+    }
+
+    public void setX(T x) {
+        this.x = x;
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;实例化泛型类&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;public class Main{
+    public static void main(String[] args) {
+        
+        //指定类型为 String
+        App&amp;lt;String&amp;gt; app = new App&amp;lt;&amp;gt;();
+        app.setX(&amp;quot;Hello World!&amp;quot;);
+        System.out.println(app.getX()); //Hello World!
+
+        //指定类型为 Integer
+        App&amp;lt;Integer&amp;gt; app1 = new App&amp;lt;&amp;gt;();
+        app1.setX(100);
+        System.out.println(app1.getX()); // 100
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;实例化时指定的参数类型必须是类，不能是&lt;strong&gt;基本类型&lt;/strong&gt;，原因看 泛型的实现原理 。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;定义一个有多个参数类型的泛型类&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;在 &amp;lt;&amp;gt; 中可以定义多个参数化类型，之间用 , 隔开&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;public class App1&amp;lt;T,U,B&amp;gt;{
+
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;实例化&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;App1&amp;lt;String,Integer,String&amp;gt; app1 = new App1&amp;lt;&amp;gt;();
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;定义一个泛型抽象类&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;public abstract class App2&amp;lt;T&amp;gt; {
+    private T y;
+
+    public T getY() {
+        return y;
+    }
+
+    public void setY(T y) {
+        this.y = y;
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;继承抽象泛型类&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;public class App3 extends App2&amp;lt;String&amp;gt; {
+    public static void main(String[] args) {
+        App3 app3 = new App3();
+        app3.setY(&amp;quot;泛型抽象类&amp;quot;);
+        System.out.println(app3.getY());
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;参数化类型的名称可以自定义，常用的有KTVE，具体含义看 。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&#34;泛型接口&#34;&gt;泛型接口&lt;/h3&gt;
+
+&lt;p&gt;定义一个泛型接口&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;接口中参数化类型的定义和类的一样&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;public interface IApp&amp;lt;T&amp;gt;{
+    public T get();
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;接口继承泛型接口&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;public interface IApp1 extends IApp&amp;lt;String&amp;gt; {
+    public String getAll();
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;泛型接口实现&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;public  class AppImpl implements IApp&amp;lt;String&amp;gt; {
+    @Override
+    public String get() {
+        return null;
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;泛型方法&#34;&gt;泛型方法&lt;/h3&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;泛型方法不只可以泛型类、泛型接口中定义，&lt;strong&gt;普通类&lt;/strong&gt;中也可以&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;定义一个泛型方法&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;在普通方法中定义参数化类型，在访问修饰符之后，返回类型之前，使用 &amp;lt;&amp;gt; 定义。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;//使用参数化类型定义参数的类型
+public &amp;lt;T&amp;gt; void hello(T t){
+    System.out.println(&amp;quot;Hello&amp;quot;+t);
+}
+
+//使用参数化类型定义返回类型
+public &amp;lt;T&amp;gt; T hello2(){
+    return null;
+}
+
+//一起使用
+public &amp;lt;T&amp;gt; T hello3(T t){
+    return t;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;定义一个静态的泛型方法&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;在静态泛型中定义参数化类型，在static 之后，返回类型之前&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;public static &amp;lt;T&amp;gt; T world(T t){
+    return t;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;一个可变参数的例子&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;public static &amp;lt;T&amp;gt; void out(T... args) {
+    for (T t : args) {
+        System.out.println(t);
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;使用泛型方法&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;//像普通的方法一样用
+app.hello();
+//指定参数化类型
+app.&amp;lt;String&amp;gt;hello();
+//静态方法也一样
+App.world();
+App.&amp;lt;String&amp;gt;world();
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;泛型的继承&#34;&gt;泛型的继承&lt;/h2&gt;
+
+&lt;h3 id=&#34;泛型类的继承&#34;&gt;泛型类的继承&lt;/h3&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;类型参数是当前类定义的。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;//type parameter of App1
+public class App1&amp;lt;T&amp;gt; extends App0&amp;lt;T&amp;gt;{
+
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;泛型类实现泛型接口&#34;&gt;泛型类实现泛型接口&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;public class App&amp;lt;T&amp;gt; extends IApp&amp;lt;T&amp;gt;{
+
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;泛型接口继承泛型接口&#34;&gt;泛型接口继承泛型接口&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;public class IApp1&amp;lt;T&amp;gt; extends IApp0&amp;lt;T&amp;gt;{
+
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;通配符和上下界&#34;&gt;通配符和上下界&lt;/h2&gt;
+
+&lt;h3 id=&#34;通配符&#34;&gt;通配符 ?&lt;/h3&gt;
+
+&lt;p&gt;通配符 ? 表示未知类型，不确定类型。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;只是用来在实例化时填充&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;例&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;//定义一个通用的容器类引用
+App&amp;lt;?&amp;gt; app;
+
+//指向不同对象
+app = new App&amp;lt;String&amp;gt;();
+
+app = new App&amp;lt;Integer&amp;gt;();
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;上下界&#34;&gt;上下界&lt;/h3&gt;
+
+&lt;p&gt;关键字: extends super&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&amp;lt; ? extends T&amp;gt; : 声明上界，表示参数化的类型是 T 或 T 的子类型&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&amp;lt; ? super T&amp;gt;：声明下界，表示参数的类型是 T 或 T 的父类型，直至 Object&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;理解通配符和上下界的三个方面
+- 引用指向的实现对象是否在上下界范围内
+- 添加元素时，注意类型是否确定，注意多态（父类引用指向子类实现对象）
+- 返回值的类型&lt;/p&gt;
+
+&lt;p&gt;**深入理解 &amp;lt; ? extends T&amp;gt; **&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;public class Main {
+    static class A{};
+    static class B extends A{};
+    static class C extends B{};
+    
+    public static void main(String[] args) {
+        List&amp;lt;? extends A&amp;gt; list = new ArrayList&amp;lt;B&amp;gt;();
+        //编译器报错
+        //list.add(new A());
+        //list.add(new B());
+        //list.add(new C());
+        list.add(null);
+
+        B b = list.get(0);
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;list 指向的是 A 或者 A 的子类型的ArrayList 对象&lt;/p&gt;
+
+&lt;p&gt;list 不能添加非空元素，原因是 &lt;strong&gt;编译器无法确定List所持有的类型&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;但可以取出时，值得类型是 A ，因为多态，父类引用指向子类实现。&lt;/p&gt;
+
+&lt;p&gt;**深入理解 &amp;lt; ? super T&amp;gt; **&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;public class Main {
+    static class A{};
+    static class B extends A{};
+    static class C extends B{};
+    public static void main(String[] args) {
+        List&amp;lt;? super B&amp;gt; list = new ArrayList&amp;lt;B&amp;gt;();
+        //注释掉的编译错误
+        //list.add(new A());
+        list.add(new B());
+        list.add(new Object());
+        //list.add(null);
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;List&amp;lt; ? super B&amp;gt; list 可以指向是 B 或 B 的父类型的 ArrayList 对象&lt;/p&gt;
+
+&lt;p&gt;但是可以添加的元素类型应该是 B 或 B 的子类型，可以添加原因也是多态&lt;/p&gt;
+
+&lt;p&gt;从list中取值，返回的是 Object&lt;/p&gt;
+
+&lt;h2 id=&#34;pecs原则&#34;&gt;PECS原则&lt;/h2&gt;
+
+&lt;p&gt;如果要从集合中读取类型T的数据，并且&lt;strong&gt;不能写入&lt;/strong&gt;，可以使用 ? extends 通配符；(Producer Extends)&lt;/p&gt;
+
+&lt;p&gt;如果要从集合中写入类型T的数据，并且&lt;strong&gt;不需要读取&lt;/strong&gt;，可以使用 ? super 通配符；(Consumer Super)&lt;/p&gt;
+
+&lt;p&gt;如果既要存又要取，那么就不要使用任何通配符。&lt;/p&gt;
+
+&lt;p&gt;出 处 ：&lt;a href=&#34;http://flyingcat2013.blog.51cto.com/7061638/1616068&#34;&gt;Java泛型中的PECS原则&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;和-t-的区别&#34;&gt;? 和 T 的区别&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;? 用在&lt;strong&gt;实例&lt;/strong&gt;泛型时，填充范围。&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;T 用在&lt;strong&gt;定义&lt;/strong&gt;泛型时，参数化类型。&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;与上下界一起使用时，区别还是一样。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&#34;泛型的实现原理&#34;&gt;泛型的实现原理&lt;/h2&gt;
+
+&lt;p&gt;泛型的实现在编译阶段，通过&lt;strong&gt;类型擦除&lt;/strong&gt;实现&lt;/p&gt;
+
+&lt;h3 id=&#34;type-erasure-http-docs-oracle-com-javase-tutorial-java-generics-erasure-html&#34;&gt;&lt;a href=&#34;http://docs.oracle.com/javase/tutorial/java/generics/erasure.html&#34;&gt;Type Erasure&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;Generics were introduced to the Java language to provide tighter type checks at compile time and to support generic programming.&lt;/p&gt;
+
+&lt;p&gt;Java 引入泛型，可以在编译时提供更严格的类型检查，并且支持泛型编程。&lt;/p&gt;
+
+&lt;p&gt;To implement generics, the Java compiler applies type erasure to:&lt;/p&gt;
+
+&lt;p&gt;为了实现泛型，java 编译器使用类型擦除 ：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Replace all type parameters in generic types with their bounds or Object if the type parameters are unbounded. The produced bytecode, therefore, contains only ordinary classes, interfaces, and methods.&lt;/li&gt;
+&lt;li&gt;Insert type casts if necessary to preserve type safety.&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Generate bridge methods to preserve polymorphism in extended generic types.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;将所有参数类型替换成其边界，如果没有边界替换成 Object 。因此，产生的字节码文件仅仅包含普通类、接口和方法。&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;必要时添加类型转换以保存类型安全&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;生成桥方法以在扩展泛型时保持多态性&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Type erasure ensures that no new classes are created for parameterized types; consequently, generics incur no runtime overhead.&lt;/p&gt;
+
+&lt;p&gt;类型擦除确保不因为参数化类型而创建新类； 因此，泛型不会产生运行时开销。&lt;/p&gt;
+
+&lt;h3 id=&#34;几种擦除&#34;&gt;几种擦除&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;T&gt;  &amp;ndash;&amp;gt; Object&lt;/li&gt;
+&lt;li&gt;&amp;lt;? extends T&amp;gt; &amp;ndash;&amp;gt; T&lt;/li&gt;
+&lt;li&gt;&amp;lt;? super T&amp;gt; &amp;ndash;&amp;gt; Object&lt;/li&gt;
+&lt;li&gt;添加桥接方法，保证多态性&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;与之前的深入理解有关&lt;/p&gt;
+
+&lt;h3 id=&#34;类型擦除的相关&#34;&gt;类型擦除的相关&lt;/h3&gt;
+
+&lt;p&gt;1.类型擦除，在编译之前进行类型检查&lt;/p&gt;
+
+&lt;p&gt;2.泛型与重载&lt;/p&gt;
+
+&lt;p&gt;因为类型擦除，所以下面的两个方法的参数类型相同，会报错，both methods hava same erasure.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;public void a(List&amp;lt;Object&amp;gt; list){};
+public void a(List&amp;lt;String&amp;gt; list){};
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;3.泛型与多态&lt;/p&gt;
+
+&lt;p&gt;会生成桥方法，以保证多态&lt;/p&gt;
+
+&lt;p&gt;4.泛型与static&lt;/p&gt;
+
+&lt;p&gt;类的参数化类型不能定义静态变量和方法。&lt;/p&gt;
+
+&lt;p&gt;但是泛型方法可以定义成静态方法，它使用的自己的参数类型。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;public static &amp;lt;T&amp;gt; T get( STring s){};
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;泛型类的所有静态变量是共享的。&lt;/p&gt;
+
+&lt;h2 id=&#34;参考&#34;&gt;参考&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.cnblogs.com/sharewind/archive/2012/11/26/2788698.html&#34;&gt;Java泛型通配符extends与super&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.hollischuang.com/archives/255&#34;&gt;Java泛型中extends和super的理解&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.hollischuang.com/archives/226&#34;&gt;Java的类型擦除&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://blog.csdn.net/lonelyroamer/article/details/7868820&#34;&gt;java泛型（二）、泛型的内部原理：类型擦除以及类型擦除带来的问题&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 </description>
     </item>
     
@@ -205,26 +846,26 @@ public class Main {
 &lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;
 //JDK 1.8
 public final class String implements java.io.Serializable, Comparable&amp;lt;String&amp;gt;, CharSequence {
-	//The value is used for character storage.
-	private final char value[];
+    //The value is used for character storage.
+    private final char value[];
 
-	//Cache the hash code for the string
-	private int hash; // Default to 0
+    //Cache the hash code for the string
+    private int hash; // Default to 0
 }
 
 //JDK1.6
 public final class String implements java.io.Serializable, Comparable&amp;lt;String&amp;gt;, CharSequence{
-	//The value is used for character storage.
-	private final char value[];
+    //The value is used for character storage.
+    private final char value[];
 
-	//The offset is the first index of the storage that is used.
-	private final int offset;
+    //The offset is the first index of the storage that is used.
+    private final int offset;
 
-	//The count is the number of characters in the String.
-	private final int count;
+    //The count is the number of characters in the String.
+    private final int count;
 
-	//Cache the hash code for the string
-	private int hash; // Default to 0
+    //Cache the hash code for the string
+    private int hash; // Default to 0
 }
 &lt;/code&gt;&lt;/pre&gt;
 
@@ -300,26 +941,26 @@ System.out.println(c==d); //true
 
 &lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;//JDK1.6
 public String substring(int beginIndex) {
-	return substring(beginIndex, count);
+    return substring(beginIndex, count);
 }
 public String substring(int beginIndex, int endIndex) {
-	if (beginIndex &amp;lt; 0) {
-		throw new StringIndexOutOfBoundsException(beginIndex);
-	}
-	if (endIndex &amp;gt; count) {
-		throw new StringIndexOutOfBoundsException(endIndex);
-	}
-	if (beginIndex &amp;gt; endIndex) {
-		throw new StringIndexOutOfBoundsException(endIndex - beginIndex);
-	}
-	return ((beginIndex == 0) &amp;amp;&amp;amp; (endIndex == count)) ? this :
-		new String(offset + beginIndex, endIndex - beginIndex, value);
+    if (beginIndex &amp;lt; 0) {
+        throw new StringIndexOutOfBoundsException(beginIndex);
+    }
+    if (endIndex &amp;gt; count) {
+        throw new StringIndexOutOfBoundsException(endIndex);
+    }
+    if (beginIndex &amp;gt; endIndex) {
+        throw new StringIndexOutOfBoundsException(endIndex - beginIndex);
+    }
+    return ((beginIndex == 0) &amp;amp;&amp;amp; (endIndex == count)) ? this :
+        new String(offset + beginIndex, endIndex - beginIndex, value);
 }
 
 String(int offset, int count, char value[]) {
-	this.value = value;
-	this.offset = offset;
-	this.count = count;
+    this.value = value;
+    this.offset = offset;
+    this.count = count;
 }
 &lt;/code&gt;&lt;/pre&gt;
 
@@ -333,38 +974,38 @@ public String substring(int beginIndex) {
             throw new StringIndexOutOfBoundsException(beginIndex);
         }
         int subLen = value.length - beginIndex;
-		if (subLen &amp;lt; 0) {
+        if (subLen &amp;lt; 0) {
             throw new StringIndexOutOfBoundsException(subLen);
         }
         return (beginIndex == 0) ? this : new String(value, beginIndex, subLen);
 }
 
 public String substring(int beginIndex, int endIndex) {
-		if (beginIndex &amp;lt; 0) {
-			throw new StringIndexOutOfBoundsException(beginIndex);
-		}
-		if (endIndex &amp;gt; value.length) {
-			throw new StringIndexOutOfBoundsException(endIndex);
-		}
-		int subLen = endIndex - beginIndex;
-		if (subLen &amp;lt; 0) {
-			throw new StringIndexOutOfBoundsException(subLen);
-		}
-		return ((beginIndex == 0) &amp;amp;&amp;amp; (endIndex == value.length)) ? this : new String(value, beginIndex, subLen);
+        if (beginIndex &amp;lt; 0) {
+            throw new StringIndexOutOfBoundsException(beginIndex);
+        }
+        if (endIndex &amp;gt; value.length) {
+            throw new StringIndexOutOfBoundsException(endIndex);
+        }
+        int subLen = endIndex - beginIndex;
+        if (subLen &amp;lt; 0) {
+            throw new StringIndexOutOfBoundsException(subLen);
+        }
+        return ((beginIndex == 0) &amp;amp;&amp;amp; (endIndex == value.length)) ? this : new String(value, beginIndex, subLen);
 }
 
 public String(char value[], int offset, int count) {
-		if (offset &amp;lt; 0) {
-			throw new StringIndexOutOfBoundsException(offset);
-		}
-		if (count &amp;lt; 0) {
-			throw new StringIndexOutOfBoundsException(count);
-		}
-		// Note: offset or count might be near -1&amp;gt;&amp;gt;&amp;gt;1.
-		if (offset &amp;gt; value.length - count) {
-			throw new StringIndexOutOfBoundsException(offset + count);
-		}
-		this.value = Arrays.copyOfRange(value, offset, offset+count);
+        if (offset &amp;lt; 0) {
+            throw new StringIndexOutOfBoundsException(offset);
+        }
+        if (count &amp;lt; 0) {
+            throw new StringIndexOutOfBoundsException(count);
+        }
+        // Note: offset or count might be near -1&amp;gt;&amp;gt;&amp;gt;1.
+        if (offset &amp;gt; value.length - count) {
+            throw new StringIndexOutOfBoundsException(offset + count);
+        }
+        this.value = Arrays.copyOfRange(value, offset, offset+count);
 }
 &lt;/code&gt;&lt;/pre&gt;
 
@@ -1316,11 +1957,11 @@ throws：用于方法名之后，表示该方法可能抛出异常的类型。&l
     </item>
     
     <item>
-      <title>Java 接口 抽象类 多态</title>
-      <link>https://www.xizero.com/java/java-%E6%8E%A5%E5%8F%A3-%E6%8A%BD%E8%B1%A1%E7%B1%BB-%E5%A4%9A%E6%80%81/</link>
+      <title>Java 接口 抽象类</title>
+      <link>https://www.xizero.com/java/java-%E6%8E%A5%E5%8F%A3-%E6%8A%BD%E8%B1%A1%E7%B1%BB/</link>
       <pubDate>Fri, 18 Nov 2016 18:20:00 +0800</pubDate>
       
-      <guid>https://www.xizero.com/java/java-%E6%8E%A5%E5%8F%A3-%E6%8A%BD%E8%B1%A1%E7%B1%BB-%E5%A4%9A%E6%80%81/</guid>
+      <guid>https://www.xizero.com/java/java-%E6%8E%A5%E5%8F%A3-%E6%8A%BD%E8%B1%A1%E7%B1%BB/</guid>
       <description>
 
 &lt;h2 id=&#34;什么是接口&#34;&gt;什么是接口？&lt;/h2&gt;
@@ -1372,21 +2013,6 @@ throws：用于方法名之后，表示该方法可能抛出异常的类型。&l
 &lt;p&gt;抽象类：
 * 成员方法需要默认实现
 * 基本方法不断改变&lt;/p&gt;
-
-&lt;h1 id=&#34;多态&#34;&gt;多态&lt;/h1&gt;
-
-&lt;p&gt;多态是同一个行为具有多个不同表现形式或形态的能力。&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;父类引用指向子类对象，调用重写的方法&lt;/strong&gt;
-&lt;strong&gt;接口引用指向实现类对象，调用实现的方法&lt;/strong&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;条件&#34;&gt;条件&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;继承超类或实现接口&lt;/li&gt;
-&lt;li&gt;方法的重写&lt;/li&gt;
-&lt;li&gt;父类引用指向子类对象或接口引用指向实现类对象&lt;/li&gt;
-&lt;/ul&gt;
 </description>
     </item>
     
@@ -1515,750 +2141,6 @@ arrayName. length//每个数组都有一个属性length来表示长度
       
       <guid>https://www.xizero.com/java/java-%E6%97%B6%E9%97%B4/</guid>
       <description></description>
-    </item>
-    
-    <item>
-      <title>Java 枚举</title>
-      <link>https://www.xizero.com/java/java-%E6%9E%9A%E4%B8%BE/</link>
-      <pubDate>Fri, 18 Nov 2016 18:20:00 +0800</pubDate>
-      
-      <guid>https://www.xizero.com/java/java-%E6%9E%9A%E4%B8%BE/</guid>
-      <description>
-
-&lt;h2 id=&#34;创建&#34;&gt;创建&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;public enum enumName{
-    parm1,
-    parm2,
-    ...
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;创建枚举类型要使用 enum 关键字，隐含了所创建的类型都是 java.lang.Enum 类（抽象类）的子类&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;枚举类型符合通用模式 Class Enum&lt;E extends Enum&lt;E&gt;&amp;gt;，而 E 表示枚举类型的名称。&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;枚举类型的每一个值都将映射到 protected Enum(String name, int ordinal) 构造函数中&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;switch&#34;&gt;switch&lt;/h2&gt;
-
-&lt;p&gt;例:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;public class App
-{
-     private enum INT{
-        one,two,three
-    }
-    public static void main(String[] args) {
-        INT c = INT.one;
-
-       // 注意case中必须写成one
-        switch (c){
-            case one:{
-                System.out.println(&amp;quot;1&amp;quot;);
-                break;
-            }
-            case two:{
-                System.out.println(&amp;quot;2&amp;quot;);
-                break;
-            }
-            case three:{
-                System.out.println(&amp;quot;3&amp;quot;);
-                break;
-            }
-            default:{
-                System.out.println(&amp;quot;0&amp;quot;);
-            }
-        }
-    }
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;成员变量与构造函数&#34;&gt;成员变量与构造函数&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;如果定义的枚举有自己的构造函数必须声明私有的&lt;/strong&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;public class App
-{
-     private enum INT{
-        one(1,&amp;quot;one&amp;quot;),two(2,&amp;quot;two&amp;quot;),three(2,&amp;quot;three&amp;quot;);//注意有分号  
-
-         int i;
-         String name;
-
-        INT(int i, String name) {
-             this.i = i;
-             this.name = name;
-         }
-         public int getI() {
-             return i;
-         }
-         public void setI(int i) {
-             this.i = i;
-         }
-         public String getName() {
-             return name;
-         }
-         public void setName(String name) {
-             this.name = name;
-         }
-     }
-    public static void main(String[] args) {
-
-        INT[] ints = INT.values();
-        for(INT n :ints){
-            System.out.println(&amp;quot;name : \t&amp;quot;+n.getName());
-            System.out.println(&amp;quot;index : \t&amp;quot;+n.getI());
-            System.out.println(&amp;quot;oridary : \t&amp;quot;+n.ordinal());
-            System.out.println(&amp;quot;this : \t&amp;quot;+n);
-            System.out.println(&amp;quot;name : \t&amp;quot;+n.name());
-            System.out.println(&amp;quot;name : \t&amp;quot;+n.valueOf(&amp;quot;two&amp;quot;));
-            System.out.println(&amp;quot;---------------------&amp;quot;);
-        }
-    }
-}
-
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;方法&#34;&gt;方法&lt;/h2&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;方法&lt;/th&gt;
-&lt;th&gt;作用&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;ordinal()&lt;/td&gt;
-&lt;td&gt;返回枚举值在枚举类种的顺序&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;values()&lt;/td&gt;
-&lt;td&gt;静态方法，返回一个包含全部枚举值的数组&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;toString()&lt;/td&gt;
-&lt;td&gt;返回枚举常量的名称&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;valueOf()&lt;/td&gt;
-&lt;td&gt;返回带指定名称的指定枚举类型的枚举常量&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h2 id=&#34;实现接口&#34;&gt;实现接口&lt;/h2&gt;
-
-&lt;p&gt;可以更方便地对枚举中的值进行排序、比较等操作，封装性更好.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;   interface INT_ {
-        void read();
-
-        String getState();
-    }
-
-     private enum INT implements INT_{
-        one(1,&amp;quot;one&amp;quot;),two(2,&amp;quot;two&amp;quot;),three(2,&amp;quot;three&amp;quot;);
-
-         int i;
-         String name;
-
-        INT(int i, String name) {
-             this.i = i;
-             this.name = name;
-         }
-
-         @Override
-         public void read() {
-
-         }
-
-         @Override
-         public String getState() {
-             return null;
-         }
-     }
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;enummap-和-enumset&#34;&gt;EnumMap 和 EnumSet&lt;/h2&gt;
-
-&lt;h3 id=&#34;enummap&#34;&gt;EnumMap&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;    public static void main(String[] args) {
-
-        EnumMap&amp;lt;INT,String&amp;gt; ints = new EnumMap&amp;lt;INT,String&amp;gt;(INT.class);
-        ints.put(INT.one,&amp;quot;11111111&amp;quot;);
-        ints.put(INT.two,&amp;quot;22222222&amp;quot;);
-        ints.put(INT.three,&amp;quot;333333333&amp;quot;);
-        Set&amp;lt;INT&amp;gt; keys = ints.keySet();
-        for(INT i:keys)
-        {
-            System.out.println(i.name()+&amp;quot; &amp;quot;+i.ordinal()+&amp;quot; &amp;quot;+ints.get(i));
-        }
-    }
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;enumset&#34;&gt;EnumSet&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;    public static void main(String[] args) {
-
-        EnumSet&amp;lt;INT&amp;gt; ints = EnumSet.allOf(INT.class);
-        for(INT i : ints)
-        {
-            System.out.println(i);
-        }
-    }
-&lt;/code&gt;&lt;/pre&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Java 核心类</title>
-      <link>https://www.xizero.com/java/java-%E6%A0%B8%E5%BF%83%E7%B1%BB/</link>
-      <pubDate>Fri, 18 Nov 2016 18:20:00 +0800</pubDate>
-      
-      <guid>https://www.xizero.com/java/java-%E6%A0%B8%E5%BF%83%E7%B1%BB/</guid>
-      <description>
-
-&lt;h1 id=&#34;java-lang-object&#34;&gt;java.lang.Object&lt;/h1&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;方法&lt;/th&gt;
-&lt;th&gt;说明&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;equals&lt;/td&gt;
-&lt;td&gt;将该对象与传入的对象比较&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;toString&lt;/td&gt;
-&lt;td&gt;返回该对象的说明&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;hashCode&lt;/td&gt;
-&lt;td&gt;返回该对象的一个哈希值&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;getClass&lt;/td&gt;
-&lt;td&gt;返回该对象的一个java.lang.Class对象&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h1 id=&#34;java-lang-string&#34;&gt;java.lang.String&lt;/h1&gt;
-
-&lt;p&gt;String 对象表示一个字符串。一个String对象是常量。&lt;/p&gt;
-
-&lt;h2 id=&#34;创建&#34;&gt;创建&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;//常见，直接将字符串赋值给对象
-String s = &amp;quot;java is cool&amp;quot;;
-
-//使用new来构建一个String对象
-String m = new String(&amp;quot;Hello&amp;quot;);
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;字符串比较&#34;&gt;字符串比较&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;字符串赋值和new关键字赋值的不同。&lt;/strong&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;String s1=&amp;quot;Java&amp;quot;;
-String s2=&amp;quot;Java&amp;quot;;
-if(s1==s2){ }//ture
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;String s1 = new String(&amp;quot;Java&amp;quot;);
-String s2 = new String(&amp;quot;Java&amp;quot;);
-if(s1 == s2){ }//false
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;strong&gt;equals方法&lt;/strong&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;if(s1 != null &amp;amp;&amp;amp; s1.equals(&amp;quot;java&amp;quot;))   //s1为空时，会有运行时异常
-if(&amp;quot;Java&amp;quot;.equals(s1)   //常用
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;字符串赋值&#34;&gt;字符串赋值&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;字符串以&lt;code&gt;&amp;quot;&lt;/code&gt;开始和结束，不可以在结束双引号之前换行。&lt;/li&gt;
-&lt;li&gt;可以使用加号连接符&lt;code&gt;+&lt;/code&gt;将多个字符串连接起来。&lt;/li&gt;
-&lt;li&gt;将 String 与基本类型或其他类型连接，或调用后者的&lt;code&gt;toString()&lt;/code&gt;方法。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;switch&#34;&gt;switch&lt;/h2&gt;
-
-&lt;p&gt;从 Java 7开始，可以对一个 String 使用switch 语句。&lt;/p&gt;
-
-&lt;h2 id=&#34;string-类的方法&#34;&gt;String 类的方法&lt;/h2&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;方法&lt;/th&gt;
-&lt;th&gt;作用&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;public char charAt(int index)&lt;/td&gt;
-&lt;td&gt;返回指定索引的字符&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;public String concat(String s)&lt;/td&gt;
-&lt;td&gt;在末尾连接字符串，并返回结果&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;public boolean equals(String s)&lt;/td&gt;
-&lt;td&gt;比较字符串的值&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;public boolean startWith(String prefix)&lt;/td&gt;
-&lt;td&gt;测试是否以指定的前缀开头&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;public boolean endsWith(String suffix)&lt;/td&gt;
-&lt;td&gt;测试是否以指定的后缀结尾&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;public int indexOf(String substring)&lt;/td&gt;
-&lt;td&gt;返回指定子字符串第一次出现的索引位置，不存在，返回 -1&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;public int indexOf(String substring ,int formIndex)&lt;/td&gt;
-&lt;td&gt;返回指定子字符串从指定索引开始的出现的第一次索引位置，不存在，返回 -1&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;public int lastIndexOf(String substring)&lt;/td&gt;
-&lt;td&gt;返回指定字符串最后一次出现的索引位置,不存在，返回 -1&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;public int lastindexOf(String substring,int formIndex)&lt;/td&gt;
-&lt;td&gt;返回指定子字符串从指定索引开始的出现的最后一次索引位置，不存在，返回 -1&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;public String substring(int beginIndex)&lt;/td&gt;
-&lt;td&gt;返回从指定索引开始的，到末尾的子字符串&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;public String substring(int beginIndex,int endIndex)&lt;/td&gt;
-&lt;td&gt;返回从beginIndex开始到endIndex结束的子字符串&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;public String replace(char oldChar,char newChar)&lt;/td&gt;
-&lt;td&gt;将oldChar 替换为newOld，并返回新的字符串&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;public int length()&lt;/td&gt;
-&lt;td&gt;返回字符串的长度&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;public boolean isEmpty()&lt;/td&gt;
-&lt;td&gt;判断字符串是否为空&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;public String[] split(String regEx)&lt;/td&gt;
-&lt;td&gt;使用指定的正则表达式分割字符串&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;public char[] toCharArray()&lt;/td&gt;
-&lt;td&gt;将字符串转换为字符的数组&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;public String toLowerCase()&lt;/td&gt;
-&lt;td&gt;将所有字符转换为小写&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;public String toUpperCase()&lt;/td&gt;
-&lt;td&gt;将所有字符转换为大写&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;public String trim()&lt;/td&gt;
-&lt;td&gt;去掉头部和尾部的空格&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;public static String valueOf( )&lt;/td&gt;
-&lt;td&gt;将基本类型、字符数组、对象转换为一个字符串&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h2 id=&#34;java-lang-stringbuffer和java-lang-stringbuilder&#34;&gt;java.lang.StringBuffer和java.lang.StringBuilder&lt;/h2&gt;
-
-&lt;p&gt;String 对象不可变，添加或插入字符都会创建一个新的对象。&lt;/p&gt;
-
-&lt;h3 id=&#34;stringbuffer和stringbuilder的选择&#34;&gt;StringBuffer和StringBuilder的选择&lt;/h3&gt;
-
-&lt;p&gt;一般用 StringBulider
-需要同步选择 StringBuffer&lt;/p&gt;
-
-&lt;h3 id=&#34;方法&#34;&gt;方法&lt;/h3&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;方法&lt;/th&gt;
-&lt;th&gt;作用&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;public int capacity()&lt;/td&gt;
-&lt;td&gt;返回对象的容量&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;public int length()&lt;/td&gt;
-&lt;td&gt;返回存储字符串的长度&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;public String__ append(String string)&lt;/td&gt;
-&lt;td&gt;将string添加到末尾&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;public String__ insert (int offset,String string)&lt;/td&gt;
-&lt;td&gt;在指定位置插入字符串&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;public String toString()&lt;/td&gt;
-&lt;td&gt;返回一个String对象&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h1 id=&#34;基本类型包装器&#34;&gt;基本类型包装器&lt;/h1&gt;
-
-&lt;h2 id=&#34;包装类&#34;&gt;包装类&lt;/h2&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;基本类型&lt;/th&gt;
-&lt;th&gt;对应包装类&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;byte&lt;/td&gt;
-&lt;td&gt;Byte&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;short&lt;/td&gt;
-&lt;td&gt;Short&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;int&lt;/td&gt;
-&lt;td&gt;Integer&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;long&lt;/td&gt;
-&lt;td&gt;Long&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;char&lt;/td&gt;
-&lt;td&gt;Character&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;float&lt;/td&gt;
-&lt;td&gt;Float&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;double&lt;/td&gt;
-&lt;td&gt;Double&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;boolean&lt;/td&gt;
-&lt;td&gt;Boolean&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;除了Integer和Character类以后，其它类的类名和基本数据类型相同，只是类名首字母大写。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&#34;包装器类的方法&#34;&gt;包装器类的方法&lt;/h2&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;构造方法&lt;/strong&gt;：&lt;strong&gt;基本类型&lt;/strong&gt; &amp;ndash;&amp;gt; 包装器类&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;构造方法&lt;/strong&gt;：&lt;strong&gt;字符串&lt;/strong&gt; &amp;ndash;&amp;gt; 包装器类&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;ul&gt;
-&lt;li&gt;带有基本值参数并创建包装类对象的构造函数  &lt;code&gt;Integer obj=new Integer(145);&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;带有字符串参数并创建包装类对象的构造函数  &lt;code&gt;Integer obj=new Integer(&amp;quot;-45.36&amp;quot;);&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;parse___&lt;/strong&gt;：&lt;strong&gt;字符串&lt;/strong&gt; &amp;ndash;&amp;gt; 基本类型&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;___Value&lt;/strong&gt;：&lt;strong&gt;包装器类&lt;/strong&gt; &amp;ndash;&amp;gt; 基本类型&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;ul&gt;
-&lt;li&gt;可生成对象基本值的typeValue方法  &lt;code&gt;obj.intValue();&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;将字符串转换为基本值的 parseType方法  &lt;code&gt;Integer.parseInt(args[0]);&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;toString&lt;/strong&gt;：&lt;strong&gt;包装器类&lt;/strong&gt; &amp;ndash;&amp;gt;字符串&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;___.valueOf&lt;/strong&gt;：&lt;strong&gt;字符串&lt;/strong&gt; &amp;ndash;&amp;gt;包装类&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&#34;自动装箱-拆箱&#34;&gt;自动装箱/拆箱&lt;/h2&gt;
-
-&lt;p&gt;JDK1.5的新特性：自动装箱/拆箱(Autoboxing/unboxing)&lt;/p&gt;
-
-&lt;p&gt;自动装箱
- - 基本类型就自动地封装到与它相似类型的包装中，如：Integer i = 100；
- - 本质上是，编译器编译时自动添加：Integer i = new Integer(100);&lt;/p&gt;
-
-&lt;p&gt;自动拆箱
- - 包装类对象自动转换成基本数据类型。如：int a = new Integer(100);
- - 本质是上，编译器编译时自动添加：int a = new Integer(100).intValue();&lt;/p&gt;
-
-&lt;h2 id=&#34;字符串与基本类型的相互转换&#34;&gt;字符串与基本类型的相互转换&lt;/h2&gt;
-
-&lt;h3 id=&#34;基本类型-字符串&#34;&gt;基本类型 &amp;ndash;&amp;gt; 字符串&lt;/h3&gt;
-
-&lt;ol&gt;
-&lt;li&gt;包装类 的 &lt;code&gt;toString()&lt;/code&gt; 方法&lt;/li&gt;
-&lt;li&gt;String类 的 &lt;code&gt;valueOf()&lt;/code&gt; 方法&lt;/li&gt;
-&lt;li&gt;空字符串&lt;code&gt;&amp;quot; &amp;quot;&lt;/code&gt; + 基本类型&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h3 id=&#34;字符串-基本类型&#34;&gt;字符串 &amp;ndash;&amp;gt; 基本类型&lt;/h3&gt;
-
-&lt;ol&gt;
-&lt;li&gt;包装类的 parseXxx 静态方法&lt;/li&gt;
-&lt;li&gt;包装类的 valueOf() 方法转换为基本类型的包装类，自动拆箱&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h1 id=&#34;java-lang-class&#34;&gt;java.lang.Class&lt;/h1&gt;
-
-&lt;h2 id=&#34;关于&#34;&gt;关于&lt;/h2&gt;
-
-&lt;ol&gt;
-&lt;li&gt;每次 JVM 创建对象时，都会创建一个 java.lang.Class 对象来描述该对象的类型。&lt;/li&gt;
-&lt;li&gt;同一个类的所有实例，都共享同一个 Class 对象。&lt;/li&gt;
-&lt;li&gt;Class 类没有 public 的构造方法，只能有 JVM 创建.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&#34;获取-class-实例&#34;&gt;获取 Class 实例&lt;/h2&gt;
-
-&lt;ol&gt;
-&lt;li&gt;实例变量 obj.getClass()；&lt;/li&gt;
-&lt;li&gt;对象类文件 Object.class；&lt;/li&gt;
-&lt;li&gt;Class的静态方法 forName();&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;数组只能用&lt;code&gt;.getClass&lt;/code&gt;，不可以用 &lt;code&gt;.class&lt;/code&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&#34;使用&#34;&gt;使用&lt;/h2&gt;
-
-&lt;h3 id=&#34;class-forname&#34;&gt;Class.forName()&lt;/h3&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;方法&lt;/th&gt;
-&lt;th&gt;描述&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;static Class&amp;lt;?&amp;gt; forName(String className)&lt;/td&gt;
-&lt;td&gt;Returns the Class object associated with the class or interface with the given string name.&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;static Class&amp;lt;?&amp;gt; forName(String name, boolean initialize, ClassLoader loader)&lt;/td&gt;
-&lt;td&gt;Returns the Class object associated with the class or interface with the given string name, using the given class loader.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;&lt;strong&gt;参数&lt;/strong&gt;
-- name - 类的全名
-- initialize - 表示是否初始化类
-- loader - 表示加载时使用的类加载器&lt;/p&gt;
-
-&lt;p&gt;Class.forName(className)实际上是调用Class.forName(className,true, this.getClass().getClassLoader())，默认初始化类，使用默认的类加载器。Class.forName（className）加载类时则已初始化。&lt;/p&gt;
-
-&lt;p&gt;CLass.forName()的作用是要求JVM 查找并加载指定的类。
-静态代码段在类加载时执行。&lt;/p&gt;
-
-&lt;h3 id=&#34;newlnstance&#34;&gt;newlnstance()&lt;/h3&gt;
-
-&lt;p&gt;用来创建实例&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;和new 的区别&lt;/strong&gt;
-- newlnstance ： 使用时类必须已经加载连接，只能调用无参构造函数
-- new ： 可以调用任意公共构造函数&lt;/p&gt;
-
-&lt;p&gt;构造函数调用 newlnstance 可以含参。&lt;/p&gt;
-
-&lt;h3 id=&#34;判断类型&#34;&gt;判断类型&lt;/h3&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;方法&lt;/th&gt;
-&lt;th&gt;作用&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;isAnnotationPresent(Class&amp;lt;? extends Annotation&amp;gt; annotationClass)&lt;/td&gt;
-&lt;td&gt;判断指定注解是否存在于该元素上&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;isArray()&lt;/td&gt;
-&lt;td&gt;判断该对象是否表示数组&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;isAnnotation()&lt;/td&gt;
-&lt;td&gt;判断该对象是否表示注解类型&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;isAnonymousClass()&lt;/td&gt;
-&lt;td&gt;當且僅當底層類是匿名類此方法返回true&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;isAssignableFrom(Class&amp;lt;?&amp;gt; cls)&lt;/td&gt;
-&lt;td&gt;判断该对象是否与另一个Class对象相同，或者是他的超类或接口&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;isInstance(Object obj)&lt;/td&gt;
-&lt;td&gt;判断 obj 是否兼容于该 class 对象，即 obj 是否是 class 的自身实例或子类实例&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;isInterface()&lt;/td&gt;
-&lt;td&gt;判断该对象是否表示接口类型&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;isEnum()&lt;/td&gt;
-&lt;td&gt;判断该对象是否表示枚举类型&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;isSynthetic()&lt;/td&gt;
-&lt;td&gt;判断该对象是否表示合成类&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;isMemberClass()&lt;/td&gt;
-&lt;td&gt;判断该对象是否表示内部类/成员类&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;isLocalClass()&lt;/td&gt;
-&lt;td&gt;判断该对象是否表示局部类&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;isPrimitive()&lt;/td&gt;
-&lt;td&gt;判断该对象是否表示基本类型&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h1 id=&#34;java-lang-system&#34;&gt;java.lang.System&lt;/h1&gt;
-
-&lt;h1 id=&#34;java-lang-scaner&#34;&gt;java.lang.Scaner&lt;/h1&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Java 概述</title>
-      <link>https://www.xizero.com/java/Java-%E6%A6%82%E8%BF%B0/</link>
-      <pubDate>Fri, 18 Nov 2016 18:20:00 +0800</pubDate>
-      
-      <guid>https://www.xizero.com/java/Java-%E6%A6%82%E8%BF%B0/</guid>
-      <description>
-
-&lt;h2 id=&#34;java的历史&#34;&gt;Java的历史&lt;/h2&gt;
-
-&lt;p&gt;1991 年Sun公司的James Gosling等人开始开发名称为 Oak 的语言&lt;/p&gt;
-
-&lt;p&gt;1994年将Oak语言更名为Java。&lt;/p&gt;
-
-&lt;p&gt;随着互联网的兴起，Java语言迅速崛起 。&lt;/p&gt;
-
-&lt;p&gt;2009年04月20日，美国甲骨文公司收购Sun，取得java的版权。&lt;/p&gt;
-
-&lt;h2 id=&#34;java技术体系&#34;&gt;&lt;strong&gt;Java技术体系&lt;/strong&gt;&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;JAVASE：&lt;/strong&gt;&lt;code&gt;Java Platform Standard Edition&lt;/code&gt;，完成桌面应用程序的开发，是其它两者的基础;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;JAVAEE：&lt;/strong&gt;&lt;code&gt;Java Platform Enterprise Edition&lt;/code&gt;，开发企业环境下的应用程序，主要针对web程序开发;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;JAVAME：&lt;/strong&gt;&lt;code&gt;Java Platform Micro Edition&lt;/code&gt;，开发电子消费产品和嵌入式设备，如手机中的程序。&lt;/p&gt;
-
-&lt;h2 id=&#34;java的特性&#34;&gt;Java的特性&lt;/h2&gt;
-
-&lt;p&gt;Java 是一种面向对象的编程语言。&lt;/p&gt;
-
-&lt;p&gt;其他，请自行Google了解。&lt;/p&gt;
-</description>
     </item>
     
   </channel>

@@ -7,7 +7,8 @@
 
 <link rel="alternate" href="https://www.xizero.com//index.xml" type="application/rss+xml" title="XIZERO">
 <link href="https://www.xizero.com/css/tomorrow.min.css" rel="stylesheet">
-<link href="https://www.xizero.com//css/main.css" rel="stylesheet">
+<link href="https://www.xizero.com/css/main.css" rel="stylesheet">
+<link href="https://www.xizero.com/css/context.css" rel="stylesheet">
 <link href="https://www.xizero.com/css/jqcloud.css" rel="stylesheet">
 <script src="https://www.xizero.com/js/high.min.js"></script>
 <script src="https://www.xizero.com/js/jqury.min.js"></script>
@@ -47,6 +48,12 @@ var word=[];
 
     var data = {}; 
     data.text = "annotation";  
+    data.weight = parseInt(Math.random()*10,10)+1;
+    data.link=data.text+'/';
+    word.push(data);  
+
+    var data = {}; 
+    data.text = "apache";  
     data.weight = parseInt(Math.random()*10,10)+1;
     data.link=data.text+'/';
     word.push(data);  
@@ -94,6 +101,12 @@ var word=[];
     word.push(data);  
 
     var data = {}; 
+    data.text = "http";  
+    data.weight = parseInt(Math.random()*10,10)+1;
+    data.link=data.text+'/';
+    word.push(data);  
+
+    var data = {}; 
     data.text = "https";  
     data.weight = parseInt(Math.random()*10,10)+1;
     data.link=data.text+'/';
@@ -107,6 +120,12 @@ var word=[];
 
     var data = {}; 
     data.text = "java";  
+    data.weight = parseInt(Math.random()*10,10)+1;
+    data.link=data.text+'/';
+    word.push(data);  
+
+    var data = {}; 
+    data.text = "javaee";  
     data.weight = parseInt(Math.random()*10,10)+1;
     data.link=data.text+'/';
     word.push(data);  
@@ -142,6 +161,12 @@ var word=[];
     word.push(data);  
 
     var data = {}; 
+    data.text = "servlet";  
+    data.weight = parseInt(Math.random()*10,10)+1;
+    data.link=data.text+'/';
+    word.push(data);  
+
+    var data = {}; 
     data.text = "spring";  
     data.weight = parseInt(Math.random()*10,10)+1;
     data.link=data.text+'/';
@@ -155,6 +180,12 @@ var word=[];
 
     var data = {}; 
     data.text = "string";  
+    data.weight = parseInt(Math.random()*10,10)+1;
+    data.link=data.text+'/';
+    word.push(data);  
+
+    var data = {}; 
+    data.text = "tomcat";  
     data.weight = parseInt(Math.random()*10,10)+1;
     data.link=data.text+'/';
     word.push(data);  
@@ -238,7 +269,7 @@ var word=[];
     word.push(data);  
 
     var data = {}; 
-    data.text = "心路";  
+    data.text = "手册";  
     data.weight = parseInt(Math.random()*10,10)+1;
     data.link=data.text+'/';
     word.push(data);  
@@ -341,12 +372,6 @@ var word=[];
 
     var data = {}; 
     data.text = "软件";  
-    data.weight = parseInt(Math.random()*10,10)+1;
-    data.link=data.text+'/';
-    word.push(data);  
-
-    var data = {}; 
-    data.text = "重装系统";  
     data.weight = parseInt(Math.random()*10,10)+1;
     data.link=data.text+'/';
     word.push(data);  

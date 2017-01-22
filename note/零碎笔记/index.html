@@ -7,7 +7,8 @@
 
 <link rel="alternate" href="https://www.xizero.com//index.xml" type="application/rss+xml" title="XIZERO">
 <link href="https://www.xizero.com/css/tomorrow.min.css" rel="stylesheet">
-<link href="https://www.xizero.com//css/main.css" rel="stylesheet">
+<link href="https://www.xizero.com/css/main.css" rel="stylesheet">
+<link href="https://www.xizero.com/css/context.css" rel="stylesheet">
 <link href="https://www.xizero.com/css/jqcloud.css" rel="stylesheet">
 <script src="https://www.xizero.com/js/high.min.js"></script>
 <script src="https://www.xizero.com/js/jqury.min.js"></script>
@@ -50,8 +51,7 @@
 <li>下载 <code>archetype-catalog.xml</code> ,放到 &ldquo;.m2\repository\org\apache\maven\archetype\archetype-catalog\2.4&rdquo; 目录下
 
 <ul>
-<li>下载文件夹链接 <code>http://repo.maven.apache.org/maven2/</code></li>
-<li>找到 <code>archetype-catalog.xml</code> ,右键保存</li>
+<li>下载链接 <code>http://repo.maven.apache.org/maven2/</code>，找到 <code>archetype-catalog.xml</code> ,右键保存</li>
 </ul></li>
 <li>在 <code>Settings</code>&gt; <code>Maven</code> &gt; <code>Runner</code> &gt; <code>VM Options</code> 中添加 <code>-DarchetypeCatalog=internal</code></li>
 <li>PS：注意右上角的灰字：for default project，而不是for current project</li>
@@ -72,7 +72,7 @@
 
 <p>在tomcat -&gt; conf -&gt; server.xml 的<Engine>中添加</p>
 
-<pre><code class="language-xml">&lt;Context path=&quot;&quot; docBase=&quot;项目名&quot; debug=&quot;0&quot; reloadable=&quot;true&quot;/&gt;
+<pre><code class="language-xml">&lt;Context path=&quot;&quot; docBase=&quot;项目 war 包名&quot; debug=&quot;0&quot; reloadable=&quot;true&quot;/&gt;
 </code></pre>
 
 <h2 id="5-sftp-提示无权限">5. sftp 提示无权限</h2>
@@ -109,50 +109,11 @@ $($('div')[7]).children();
 
 <p>It&rsquo;s worth pointing out that this would work because the DOM element is wrapped in $() - thus turning it into a jQuery object.</p>
 
-<h2 id="9-为什么listary-的注册码这么奇葩-已过期">9. 为什么Listary 的注册码这么奇葩？(已过期)</h2>
-
-<pre><code>姓    名（Name）：Vovan
-邮    箱（Email）：vovan666@6n8d7oa
-序 列 号（Code）：
-66666666666666666666666666666666
-66666666666666666666666666666666
-66666666666666666666666666666666
-66666666666666666666666666666666
-66666666666666666666666666666666
-66666666666666666666666666666666
-</code></pre>
-
-<h2 id="10-笔记本开wifi热点">10. 笔记本开wifi热点</h2>
-
-<p>cmd 运行</p>
-
-<pre><code class="language-bash">netsh wlan set hostednetwork mode=allow ssid=wifi名 key=密码 keyUsage =persistent
-</code></pre>
-
-<p>例</p>
-
-<pre><code class="language-bash">netsh wlan set hostednetwork mode=allow ssid=xxoo key=woshidabendan keyUsage =persistent
-</code></pre>
-
-<p>启动</p>
-
-<pre><code class="language-bash">netsh wlan start hostednetwork
-</code></pre>
-
-<p>关闭</p>
-
-<pre><code class="language-bash">netsh wlan stop hostednetwork
-</code></pre>
-
 <h2 id="11-staruml-license">11. StarUML license</h2>
 
 <p><strong>目录</strong> C:\Program Files (x86)\StarUML\www\license\node\LicenseManagerDomain.js</p>
 
 <p><img src="https://moetu.org/images/2016/10/14/cec8de.png" alt="cec8de.png" /></p>
-
-<h2 id="12-listary-pro-5-破解">12. Listary pro 5 破解</h2>
-
-<p><a href="http://pan.baidu.com/share/link?shareid=368037&amp;uk=605837026#list/path=%2F">百度云</a></p>
 
 <h2 id="13-flysee-关联文件无效">13. FlySee 关联文件无效</h2>
 
@@ -181,12 +142,7 @@ $($('div')[7]).children();
 
 <h2 id="16-maven-设置默认jdk版本">16. Maven 设置默认JDK版本</h2>
 
-<ul>
-<li>a. 修改 settings.xml</li>
-</ul>
-
-<pre><code class="language-bash">vim %maven%/conf/settings.xml
-</code></pre>
+<p>修改 <code>conf/settings.xml</code></p>
 
 <pre><code class="language-xml">&lt;profiles&gt;
   &lt;profile&gt;
@@ -202,12 +158,9 @@ $($('div')[7]).children();
     &lt;/properties&gt;
   &lt;/profile&gt;
 &lt;/profiles&gt;
-
 </code></pre>
 
-<ul>
-<li>b. 修改 pom.xml</li>
-</ul>
+<p>修改 pom.xml</p>
 
 <pre><code class="language-xml">&lt;build&gt;
   &lt;plugins&gt;

@@ -11,7 +11,7 @@
     <item>
       <title>零碎笔记</title>
       <link>https://www.xizero.com/note/%E9%9B%B6%E7%A2%8E%E7%AC%94%E8%AE%B0/</link>
-      <pubDate>Fri, 18 Nov 2016 18:20:00 +0800</pubDate>
+      <pubDate>Fri, 18 Nov 2016 18:21:00 +0800</pubDate>
       
       <guid>https://www.xizero.com/note/%E9%9B%B6%E7%A2%8E%E7%AC%94%E8%AE%B0/</guid>
       <description>
@@ -22,8 +22,7 @@
 &lt;li&gt;下载 &lt;code&gt;archetype-catalog.xml&lt;/code&gt; ,放到 &amp;ldquo;.m2\repository\org\apache\maven\archetype\archetype-catalog\2.4&amp;rdquo; 目录下
 
 &lt;ul&gt;
-&lt;li&gt;下载文件夹链接 &lt;code&gt;http://repo.maven.apache.org/maven2/&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;找到 &lt;code&gt;archetype-catalog.xml&lt;/code&gt; ,右键保存&lt;/li&gt;
+&lt;li&gt;下载链接 &lt;code&gt;http://repo.maven.apache.org/maven2/&lt;/code&gt;，找到 &lt;code&gt;archetype-catalog.xml&lt;/code&gt; ,右键保存&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;在 &lt;code&gt;Settings&lt;/code&gt;&amp;gt; &lt;code&gt;Maven&lt;/code&gt; &amp;gt; &lt;code&gt;Runner&lt;/code&gt; &amp;gt; &lt;code&gt;VM Options&lt;/code&gt; 中添加 &lt;code&gt;-DarchetypeCatalog=internal&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;PS：注意右上角的灰字：for default project，而不是for current project&lt;/li&gt;
@@ -44,7 +43,7 @@
 
 &lt;p&gt;在tomcat -&amp;gt; conf -&amp;gt; server.xml 的&lt;Engine&gt;中添加&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-xml&#34;&gt;&amp;lt;Context path=&amp;quot;&amp;quot; docBase=&amp;quot;项目名&amp;quot; debug=&amp;quot;0&amp;quot; reloadable=&amp;quot;true&amp;quot;/&amp;gt;
+&lt;pre&gt;&lt;code class=&#34;language-xml&#34;&gt;&amp;lt;Context path=&amp;quot;&amp;quot; docBase=&amp;quot;项目 war 包名&amp;quot; debug=&amp;quot;0&amp;quot; reloadable=&amp;quot;true&amp;quot;/&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;h2 id=&#34;5-sftp-提示无权限&#34;&gt;5. sftp 提示无权限&lt;/h2&gt;
@@ -81,50 +80,11 @@ $($(&#39;div&#39;)[7]).children();
 
 &lt;p&gt;It&amp;rsquo;s worth pointing out that this would work because the DOM element is wrapped in $() - thus turning it into a jQuery object.&lt;/p&gt;
 
-&lt;h2 id=&#34;9-为什么listary-的注册码这么奇葩-已过期&#34;&gt;9. 为什么Listary 的注册码这么奇葩？(已过期)&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code&gt;姓    名（Name）：Vovan
-邮    箱（Email）：vovan666@6n8d7oa
-序 列 号（Code）：
-66666666666666666666666666666666
-66666666666666666666666666666666
-66666666666666666666666666666666
-66666666666666666666666666666666
-66666666666666666666666666666666
-66666666666666666666666666666666
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;10-笔记本开wifi热点&#34;&gt;10. 笔记本开wifi热点&lt;/h2&gt;
-
-&lt;p&gt;cmd 运行&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;netsh wlan set hostednetwork mode=allow ssid=wifi名 key=密码 keyUsage =persistent
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;例&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;netsh wlan set hostednetwork mode=allow ssid=xxoo key=woshidabendan keyUsage =persistent
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;启动&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;netsh wlan start hostednetwork
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;关闭&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;netsh wlan stop hostednetwork
-&lt;/code&gt;&lt;/pre&gt;
-
 &lt;h2 id=&#34;11-staruml-license&#34;&gt;11. StarUML license&lt;/h2&gt;
 
 &lt;p&gt;&lt;strong&gt;目录&lt;/strong&gt; C:\Program Files (x86)\StarUML\www\license\node\LicenseManagerDomain.js&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&#34;https://moetu.org/images/2016/10/14/cec8de.png&#34; alt=&#34;cec8de.png&#34; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;12-listary-pro-5-破解&#34;&gt;12. Listary pro 5 破解&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://pan.baidu.com/share/link?shareid=368037&amp;amp;uk=605837026#list/path=%2F&#34;&gt;百度云&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;13-flysee-关联文件无效&#34;&gt;13. FlySee 关联文件无效&lt;/h2&gt;
 
@@ -153,12 +113,7 @@ $($(&#39;div&#39;)[7]).children();
 
 &lt;h2 id=&#34;16-maven-设置默认jdk版本&#34;&gt;16. Maven 设置默认JDK版本&lt;/h2&gt;
 
-&lt;ul&gt;
-&lt;li&gt;a. 修改 settings.xml&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;vim %maven%/conf/settings.xml
-&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;修改 &lt;code&gt;conf/settings.xml&lt;/code&gt;&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-xml&#34;&gt;&amp;lt;profiles&amp;gt;
   &amp;lt;profile&amp;gt;
@@ -174,12 +129,9 @@ $($(&#39;div&#39;)[7]).children();
     &amp;lt;/properties&amp;gt;
   &amp;lt;/profile&amp;gt;
 &amp;lt;/profiles&amp;gt;
-
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;ul&gt;
-&lt;li&gt;b. 修改 pom.xml&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;修改 pom.xml&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-xml&#34;&gt;&amp;lt;build&amp;gt;
   &amp;lt;plugins&amp;gt;

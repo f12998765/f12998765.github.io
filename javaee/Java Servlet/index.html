@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<meta name="generator" content="Hugo 0.18.1" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="alternate" href="https://www.xizero.com//index.xml" type="application/rss+xml" title="XIZERO">
+<link href="https://www.xizero.com/css/tomorrow.min.css" rel="stylesheet">
+<link href="https://www.xizero.com/css/main.css" rel="stylesheet">
+<link href="https://www.xizero.com/css/context.css" rel="stylesheet">
+<link href="https://www.xizero.com/css/jqcloud.css" rel="stylesheet">
+<script src="https://www.xizero.com/js/high.min.js"></script>
+<script src="https://www.xizero.com/js/jqury.min.js"></script>
+<script src="https://www.xizero.com/js/top.js"></script>
+<script src="https://www.xizero.com/js/jqcloud.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<title>Java Servlet - XIZERO</title>
+</head>
+<body>
+
+<div id="gotop" title="🚀 go top"></div>
+
+<div class="top">
+
+	<div class="gos">
+		<span class="go"><a href="https://www.xizero.com/">Home</a></span>
+		<span class="go"><a href="/tags/">Tags</a></span>
+		<span class="go"><a href="/about/">About</a></span>
+	</div>
+	
+	
+		<div class="tit">
+			Java Servlet
+		</div>
+
+	
+
+</div>
+
+
+
+
+<div class="con">
+	
+
+<h1 id="java-servlet">Java Servlet</h1>
+
+<h2 id="什么是-java-servlet">什么是 Java Servlet ?</h2>
+
+<p>维基百科：<a href="https://zh.wikipedia.org/wiki/Java_Servlet">https://zh.wikipedia.org/wiki/Java_Servlet</a></p>
+
+<p><a href="https://docs.oracle.com/javaee/7/tutorial/servlets.htm#BNAFD">Java Platform, Enterprise Edition: The Java EE Tutorial</a></p>
+
+<p>A servlet is a Java programming language class used to extend the capabilities of servers that host applications accessed by means of a request-response programming model.</p>
+
+<p>Java Servlet 是 Java 应用程序 ，运行在服务器端，由容器进行管理，生成动态内容。</p>
+
+<p>虽然 servlet 可以响应任何类型的请求，但通常用于web容器，Java Servlet 定义了对 Http 的特定 servlet 类。</p>
+
+<p>javax.servlet和javax.servlet.http包提供了用于编写servlet的接口和类。 所有servlet必须实现Servlet接口，它<strong>定义了生命周期方法</strong>。 当实现通用服务时，可以使用或扩展Java Servlet API提供的GenericServlet类。 HttpServlet类提供了用于处理特定于HTTP的服务的方法，例如doGet和doPost。</p>
+
+<h2 id="servlet-的生命周期">Servlet 的生命周期</h2>
+
+<p>Servlet 的生命周期由 servlet 容器控制。</p>
+
+<p>当一个请求映射到servlet，容器执行</p>
+
+<ol>
+<li>如果servlet的实例不存在，则web容器：
+
+<ul>
+<li>加载servlet类</li>
+<li>创建servlet类的实例</li>
+<li>通过调用初始化servlet实例<strong>init方法</strong></li>
+</ul></li>
+<li>容器调用<strong>service方法</strong>，判断请求方式，传递请求和响应对象</li>
+</ol>
+
+<p>如果需要删除该servlet，容器通过调用servlet的<strong>destroy方法</strong></p>
+
+<h2 id="servlet-核心类">Servlet 核心类</h2>
+
+<p>Java EE API : <a href="https://docs.oracle.com/javaee/7/api/">https://docs.oracle.com/javaee/7/api/</a></p>
+
+<h2 id="创建">创建</h2>
+
+<p>使用注解 @WebServlet( &ldquo;url &rdquo; ) , url 是 servlet 的路径映射 ，必须是唯一的 ，使用该注解必须继承 HttpServlet</p>
+
+<p>也可以在 web.xml 中配置</p>
+
+<pre><code>import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+
+@WebServlet（“/ test”）
+public class ModlServlet extends HttpServlet {
+    ... ...
+}
+</code></pre>
+
+</div>
+
+
+<div class="boo">
+	<span></span>
+</div>
+<div class="footer">
+	@XIZERO Powered by <a href="http://hugo.spf13.com/">Hugo</a> and <a href="#">bigbig</a>
+</div>
+</body>
+</html>
+

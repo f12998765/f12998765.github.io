@@ -9,6 +9,417 @@
     <atom:link href="https://www.xizero.com/tags/%E6%B3%9B%E5%9E%8B/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Apache Tomcat</title>
+      <link>https://www.xizero.com/java/java-%E6%B3%9B%E5%9E%8B/</link>
+      <pubDate>Tue, 13 Dec 2016 12:00:00 +0800</pubDate>
+      
+      <guid>https://www.xizero.com/java/java-%E6%B3%9B%E5%9E%8B/</guid>
+      <description>
+
+&lt;h1 id=&#34;泛型&#34;&gt;泛型&lt;/h1&gt;
+
+&lt;h2 id=&#34;泛型是什么&#34;&gt;泛型是什么?&lt;/h2&gt;
+
+&lt;p&gt;泛型是一种编译器机制，在编写代码时&lt;strong&gt;参数化类型&lt;/strong&gt;，在实例化化时&lt;strong&gt;指定&lt;/strong&gt;。&lt;/p&gt;
+
+&lt;h2 id=&#34;泛型编程&#34;&gt;泛型编程&lt;/h2&gt;
+
+&lt;h3 id=&#34;泛型类-容器类&#34;&gt;泛型类/容器类&lt;/h3&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;泛型类中依然可以使用基本类型和引用类型，不一定都要参数化类型&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;定义一个泛型类&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;在类名后使用 &amp;lt;&amp;gt; 定义一个参数化类型。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;public class App&amp;lt;T&amp;gt; {
+    private T x;
+
+    public T getX() {
+        return x;
+    }
+
+    public void setX(T x) {
+        this.x = x;
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;实例化泛型类&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;public class Main{
+    public static void main(String[] args) {
+        
+        //指定类型为 String
+        App&amp;lt;String&amp;gt; app = new App&amp;lt;&amp;gt;();
+        app.setX(&amp;quot;Hello World!&amp;quot;);
+        System.out.println(app.getX()); //Hello World!
+
+        //指定类型为 Integer
+        App&amp;lt;Integer&amp;gt; app1 = new App&amp;lt;&amp;gt;();
+        app1.setX(100);
+        System.out.println(app1.getX()); // 100
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;实例化时指定的参数类型必须是类，不能是&lt;strong&gt;基本类型&lt;/strong&gt;，原因看 泛型的实现原理 。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;定义一个有多个参数类型的泛型类&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;在 &amp;lt;&amp;gt; 中可以定义多个参数化类型，之间用 , 隔开&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;public class App1&amp;lt;T,U,B&amp;gt;{
+
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;实例化&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;App1&amp;lt;String,Integer,String&amp;gt; app1 = new App1&amp;lt;&amp;gt;();
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;定义一个泛型抽象类&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;public abstract class App2&amp;lt;T&amp;gt; {
+    private T y;
+
+    public T getY() {
+        return y;
+    }
+
+    public void setY(T y) {
+        this.y = y;
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;继承抽象泛型类&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;public class App3 extends App2&amp;lt;String&amp;gt; {
+    public static void main(String[] args) {
+        App3 app3 = new App3();
+        app3.setY(&amp;quot;泛型抽象类&amp;quot;);
+        System.out.println(app3.getY());
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;参数化类型的名称可以自定义，常用的有KTVE，具体含义看 。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&#34;泛型接口&#34;&gt;泛型接口&lt;/h3&gt;
+
+&lt;p&gt;定义一个泛型接口&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;接口中参数化类型的定义和类的一样&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;public interface IApp&amp;lt;T&amp;gt;{
+    public T get();
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;接口继承泛型接口&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;public interface IApp1 extends IApp&amp;lt;String&amp;gt; {
+    public String getAll();
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;泛型接口实现&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;public  class AppImpl implements IApp&amp;lt;String&amp;gt; {
+    @Override
+    public String get() {
+        return null;
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;泛型方法&#34;&gt;泛型方法&lt;/h3&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;泛型方法不只可以泛型类、泛型接口中定义，&lt;strong&gt;普通类&lt;/strong&gt;中也可以&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;定义一个泛型方法&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;在普通方法中定义参数化类型，在访问修饰符之后，返回类型之前，使用 &amp;lt;&amp;gt; 定义。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;//使用参数化类型定义参数的类型
+public &amp;lt;T&amp;gt; void hello(T t){
+    System.out.println(&amp;quot;Hello&amp;quot;+t);
+}
+
+//使用参数化类型定义返回类型
+public &amp;lt;T&amp;gt; T hello2(){
+    return null;
+}
+
+//一起使用
+public &amp;lt;T&amp;gt; T hello3(T t){
+    return t;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;定义一个静态的泛型方法&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;在静态泛型中定义参数化类型，在static 之后，返回类型之前&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;public static &amp;lt;T&amp;gt; T world(T t){
+    return t;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;一个可变参数的例子&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;public static &amp;lt;T&amp;gt; void out(T... args) {
+    for (T t : args) {
+        System.out.println(t);
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;使用泛型方法&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;//像普通的方法一样用
+app.hello();
+//指定参数化类型
+app.&amp;lt;String&amp;gt;hello();
+//静态方法也一样
+App.world();
+App.&amp;lt;String&amp;gt;world();
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;泛型的继承&#34;&gt;泛型的继承&lt;/h2&gt;
+
+&lt;h3 id=&#34;泛型类的继承&#34;&gt;泛型类的继承&lt;/h3&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;类型参数是当前类定义的。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;//type parameter of App1
+public class App1&amp;lt;T&amp;gt; extends App0&amp;lt;T&amp;gt;{
+
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;泛型类实现泛型接口&#34;&gt;泛型类实现泛型接口&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;public class App&amp;lt;T&amp;gt; extends IApp&amp;lt;T&amp;gt;{
+
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;泛型接口继承泛型接口&#34;&gt;泛型接口继承泛型接口&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;public class IApp1&amp;lt;T&amp;gt; extends IApp0&amp;lt;T&amp;gt;{
+
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;通配符和上下界&#34;&gt;通配符和上下界&lt;/h2&gt;
+
+&lt;h3 id=&#34;通配符&#34;&gt;通配符 ?&lt;/h3&gt;
+
+&lt;p&gt;通配符 ? 表示未知类型，不确定类型。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;只是用来在实例化时填充&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;例&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;//定义一个通用的容器类引用
+App&amp;lt;?&amp;gt; app;
+
+//指向不同对象
+app = new App&amp;lt;String&amp;gt;();
+
+app = new App&amp;lt;Integer&amp;gt;();
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;上下界&#34;&gt;上下界&lt;/h3&gt;
+
+&lt;p&gt;关键字: extends super&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&amp;lt; ? extends T&amp;gt; : 声明上界，表示参数化的类型是 T 或 T 的子类型&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&amp;lt; ? super T&amp;gt;：声明下界，表示参数的类型是 T 或 T 的父类型，直至 Object&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;理解通配符和上下界的三个方面
+- 引用指向的实现对象是否在上下界范围内
+- 添加元素时，注意类型是否确定，注意多态（父类引用指向子类实现对象）
+- 返回值的类型&lt;/p&gt;
+
+&lt;p&gt;**深入理解 &amp;lt; ? extends T&amp;gt; **&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;public class Main {
+    static class A{};
+    static class B extends A{};
+    static class C extends B{};
+    
+    public static void main(String[] args) {
+        List&amp;lt;? extends A&amp;gt; list = new ArrayList&amp;lt;B&amp;gt;();
+        //编译器报错
+        //list.add(new A());
+        //list.add(new B());
+        //list.add(new C());
+        list.add(null);
+
+        B b = list.get(0);
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;list 指向的是 A 或者 A 的子类型的ArrayList 对象&lt;/p&gt;
+
+&lt;p&gt;list 不能添加非空元素，原因是 &lt;strong&gt;编译器无法确定List所持有的类型&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;但可以取出时，值得类型是 A ，因为多态，父类引用指向子类实现。&lt;/p&gt;
+
+&lt;p&gt;**深入理解 &amp;lt; ? super T&amp;gt; **&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;public class Main {
+    static class A{};
+    static class B extends A{};
+    static class C extends B{};
+    public static void main(String[] args) {
+        List&amp;lt;? super B&amp;gt; list = new ArrayList&amp;lt;B&amp;gt;();
+        //注释掉的编译错误
+        //list.add(new A());
+        list.add(new B());
+        list.add(new Object());
+        //list.add(null);
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;List&amp;lt; ? super B&amp;gt; list 可以指向是 B 或 B 的父类型的 ArrayList 对象&lt;/p&gt;
+
+&lt;p&gt;但是可以添加的元素类型应该是 B 或 B 的子类型，可以添加原因也是多态&lt;/p&gt;
+
+&lt;p&gt;从list中取值，返回的是 Object&lt;/p&gt;
+
+&lt;h2 id=&#34;pecs原则&#34;&gt;PECS原则&lt;/h2&gt;
+
+&lt;p&gt;如果要从集合中读取类型T的数据，并且&lt;strong&gt;不能写入&lt;/strong&gt;，可以使用 ? extends 通配符；(Producer Extends)&lt;/p&gt;
+
+&lt;p&gt;如果要从集合中写入类型T的数据，并且&lt;strong&gt;不需要读取&lt;/strong&gt;，可以使用 ? super 通配符；(Consumer Super)&lt;/p&gt;
+
+&lt;p&gt;如果既要存又要取，那么就不要使用任何通配符。&lt;/p&gt;
+
+&lt;p&gt;出 处 ：&lt;a href=&#34;http://flyingcat2013.blog.51cto.com/7061638/1616068&#34;&gt;Java泛型中的PECS原则&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;和-t-的区别&#34;&gt;? 和 T 的区别&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;? 用在&lt;strong&gt;实例&lt;/strong&gt;泛型时，填充范围。&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;T 用在&lt;strong&gt;定义&lt;/strong&gt;泛型时，参数化类型。&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;与上下界一起使用时，区别还是一样。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&#34;泛型的实现原理&#34;&gt;泛型的实现原理&lt;/h2&gt;
+
+&lt;p&gt;泛型的实现在编译阶段，通过&lt;strong&gt;类型擦除&lt;/strong&gt;实现&lt;/p&gt;
+
+&lt;h3 id=&#34;type-erasure-http-docs-oracle-com-javase-tutorial-java-generics-erasure-html&#34;&gt;&lt;a href=&#34;http://docs.oracle.com/javase/tutorial/java/generics/erasure.html&#34;&gt;Type Erasure&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;Generics were introduced to the Java language to provide tighter type checks at compile time and to support generic programming.&lt;/p&gt;
+
+&lt;p&gt;Java 引入泛型，可以在编译时提供更严格的类型检查，并且支持泛型编程。&lt;/p&gt;
+
+&lt;p&gt;To implement generics, the Java compiler applies type erasure to:&lt;/p&gt;
+
+&lt;p&gt;为了实现泛型，java 编译器使用类型擦除 ：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Replace all type parameters in generic types with their bounds or Object if the type parameters are unbounded. The produced bytecode, therefore, contains only ordinary classes, interfaces, and methods.&lt;/li&gt;
+&lt;li&gt;Insert type casts if necessary to preserve type safety.&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Generate bridge methods to preserve polymorphism in extended generic types.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;将所有参数类型替换成其边界，如果没有边界替换成 Object 。因此，产生的字节码文件仅仅包含普通类、接口和方法。&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;必要时添加类型转换以保存类型安全&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;生成桥方法以在扩展泛型时保持多态性&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Type erasure ensures that no new classes are created for parameterized types; consequently, generics incur no runtime overhead.&lt;/p&gt;
+
+&lt;p&gt;类型擦除确保不因为参数化类型而创建新类； 因此，泛型不会产生运行时开销。&lt;/p&gt;
+
+&lt;h3 id=&#34;几种擦除&#34;&gt;几种擦除&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;T&gt;  &amp;ndash;&amp;gt; Object&lt;/li&gt;
+&lt;li&gt;&amp;lt;? extends T&amp;gt; &amp;ndash;&amp;gt; T&lt;/li&gt;
+&lt;li&gt;&amp;lt;? super T&amp;gt; &amp;ndash;&amp;gt; Object&lt;/li&gt;
+&lt;li&gt;添加桥接方法，保证多态性&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;与之前的深入理解有关&lt;/p&gt;
+
+&lt;h3 id=&#34;类型擦除的相关&#34;&gt;类型擦除的相关&lt;/h3&gt;
+
+&lt;p&gt;1.类型擦除，在编译之前进行类型检查&lt;/p&gt;
+
+&lt;p&gt;2.泛型与重载&lt;/p&gt;
+
+&lt;p&gt;因为类型擦除，所以下面的两个方法的参数类型相同，会报错，both methods hava same erasure.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;public void a(List&amp;lt;Object&amp;gt; list){};
+public void a(List&amp;lt;String&amp;gt; list){};
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;3.泛型与多态&lt;/p&gt;
+
+&lt;p&gt;会生成桥方法，以保证多态&lt;/p&gt;
+
+&lt;p&gt;4.泛型与static&lt;/p&gt;
+
+&lt;p&gt;类的参数化类型不能定义静态变量和方法。&lt;/p&gt;
+
+&lt;p&gt;但是泛型方法可以定义成静态方法，它使用的自己的参数类型。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;public static &amp;lt;T&amp;gt; T get( STring s){};
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;泛型类的所有静态变量是共享的。&lt;/p&gt;
+
+&lt;h2 id=&#34;参考&#34;&gt;参考&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.cnblogs.com/sharewind/archive/2012/11/26/2788698.html&#34;&gt;Java泛型通配符extends与super&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.hollischuang.com/archives/255&#34;&gt;Java泛型中extends和super的理解&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.hollischuang.com/archives/226&#34;&gt;Java的类型擦除&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://blog.csdn.net/lonelyroamer/article/details/7868820&#34;&gt;java泛型（二）、泛型的内部原理：类型擦除以及类型擦除带来的问题&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
       <title>java 泛型 TKVE 含义</title>
       <link>https://www.xizero.com/java/java-%E6%B3%9B%E5%9E%8B-TKVE/</link>
       <pubDate>Thu, 24 Nov 2016 15:55:43 +0800</pubDate>
@@ -36,159 +447,6 @@
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;www.hollischuang.com/archives/252&#34;&gt;Java泛型中K T V E ？ object等的含义&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Java 泛型</title>
-      <link>https://www.xizero.com/java/java-%E6%B3%9B%E5%9E%8B/</link>
-      <pubDate>Fri, 18 Nov 2016 18:20:00 +0800</pubDate>
-      
-      <guid>https://www.xizero.com/java/java-%E6%B3%9B%E5%9E%8B/</guid>
-      <description>
-
-&lt;h2 id=&#34;容器类&#34;&gt;容器类&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;又叫泛型类型&lt;/li&gt;
-&lt;li&gt;可以填充任意类型的容器类&lt;/li&gt;
-&lt;li&gt;注意与泛型接口的使用&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;public class Em&amp;lt;T&amp;gt; {
-    private T num;
-    private T name;
-
-    public T getNum() {
-        return num;
-    }
-
-    public void setNum(T num) {
-        this.num = num;
-    }
-
-    public T getName() {
-        return name;
-    }
-
-    public void setName(T name) {
-        this.name = name;
-    }
-
-    public Em() {
-
-    }
-
-    public Em(T num, T name) {
-        this.num = num;
-        this.name = name;
-    }
-
-    @Override
-    public String toString() {
-        return &amp;quot;Em{&amp;quot; +
-                &amp;quot;num=&amp;quot; + num +
-                &amp;quot;, name=&amp;quot; + name +
-                &#39;}&#39;;
-    }
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;泛型接口&#34;&gt;泛型接口&lt;/h2&gt;
-
-&lt;h3 id=&#34;定义&#34;&gt;定义&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;public interface Generator&amp;lt;T&amp;gt; {
-    public T next();
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;实现&#34;&gt;实现&lt;/h3&gt;
-
-&lt;p&gt;看　&lt;a href=&#34;http://xizero.com/java-notes/java-%E6%8E%92%E5%BA%8F/&#34;&gt;Java 排序&lt;/a&gt; 中的&lt;code&gt;Comparator&lt;/code&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;import java.util.Comparator;
-
-public class EmComparable implements Comparator&amp;lt;Em&amp;lt;Integer&amp;gt;&amp;gt; {
-
-    @Override
-    public int compare(Em&amp;lt;Integer&amp;gt; o1,Em&amp;lt;Integer&amp;gt;o2) {
-        if(o1.getNum()&amp;gt;o2.getNum())
-            return 1;
-        else if(o1.getNum()&amp;lt;o2.getNum())
-            return -1;
-        else
-            return 0;
-    }
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;泛型方法&#34;&gt;泛型方法&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;尽量使用&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;出现在关键字 &lt;code&gt;final&lt;/code&gt; 之后，返回类型之前。&lt;/p&gt;
-
-&lt;p&gt;不需要指定参数类型，可自动推断。&lt;/p&gt;
-
-&lt;p&gt;和可变参数的例子&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;    public static &amp;lt;T&amp;gt; void out(T... args) {
-        for (T t : args) {
-            System.out.println(t);
-        }
-    }
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;通配符&#34;&gt;通配符&lt;/h2&gt;
-
-&lt;h3 id=&#34;前言&#34;&gt;前言&lt;/h3&gt;
-
-&lt;p&gt;List&lt;ClassType&gt; 中可以存放
-- ClassType 的实例
-- ClassType（类）的子类实例
-- ClassType（接口）的实现类的实例&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;注意&lt;/strong&gt;
-List&lt;String&gt; 和 List&lt;Object&gt; 是不匹配的，即使 String 是 Object 的子类。&lt;/p&gt;
-
-&lt;h3 id=&#34;通配符-1&#34;&gt;? 通配符&lt;/h3&gt;
-
-&lt;p&gt;List&amp;lt;?&amp;gt; 可以表示任意类型的列表，即可以将 List&lt;String&gt; 传给下面的这个方法&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;public void test(List&amp;lt;?&amp;gt; list)
-{
-    //……
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;strong&gt;注意&lt;/strong&gt;
-在声明或创建一个容器类时，使用通配符是非法的。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;List&amp;lt;?&amp;gt; list = new ArrayList&amp;lt;?&amp;gt;(); // 这个是非法的
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;界限通配符&#34;&gt;界限通配符&lt;/h3&gt;
-
-&lt;p&gt;上界&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;&amp;lt;? extends 父类&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;下界&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;&amp;lt;? super 子类&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;泛型数组&#34;&gt;泛型数组&lt;/h2&gt;
-
-&lt;p&gt;Google&lt;/p&gt;
-
-&lt;h2 id=&#34;参考&#34;&gt;参考&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://segmentfault.com/a/1190000002646193&#34;&gt;Java泛型：泛型类、泛型接口和泛型方法&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
     </item>

@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>手册 on XIZERO</title>
+    <link>https://www.xizero.com/tags/%E6%89%8B%E5%86%8C/index.xml</link>
+    <description>Recent content in 手册 on XIZERO</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="https://www.xizero.com/tags/%E6%89%8B%E5%86%8C/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Java 开发环境恢复手册</title>
+      <link>https://www.xizero.com/tool/Java%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%81%A2%E5%A4%8D%E6%89%8B%E5%86%8C/</link>
+      <pubDate>Fri, 20 Jan 2017 12:00:00 +0800</pubDate>
+      
+      <guid>https://www.xizero.com/tool/Java%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%81%A2%E5%A4%8D%E6%89%8B%E5%86%8C/</guid>
+      <description>
+
+&lt;h2 id=&#34;notepad&#34;&gt;Notepad++&lt;/h2&gt;
+
+&lt;p&gt;官网：&lt;a href=&#34;https://notepad-plus-plus.org/&#34;&gt;https://notepad-plus-plus.org/&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;git-for-windows&#34;&gt;Git for Windows&lt;/h2&gt;
+
+&lt;p&gt;官网：&lt;a href=&#34;https://git-scm.com/&#34;&gt;https://git-scm.com/&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;安装&#34;&gt;安装&lt;/h3&gt;
+
+&lt;p&gt;添加快捷方式到桌面&lt;/p&gt;
+
+&lt;p&gt;添加 git bash 到右键菜单&lt;/p&gt;
+
+&lt;h3 id=&#34;更换主题&#34;&gt;更换主题&lt;/h3&gt;
+
+&lt;p&gt;网址：&lt;a href=&#34;http://ciembor.github.io/4bit/&#34;&gt;http://ciembor.github.io/4bit/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;编辑用户目录下的 .minttyrc 文件&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;BoldAsFont=-1
+Columns=99
+Rows=33
+Font=Lucida Console
+FontHeight=12
+BackgroundColour=13,25,38
+ForegroundColour=217,230,242
+CursorColour=217,230,242
+Black=0,0,0
+BoldBlack=38,38,38
+Red=184,122,122
+BoldRed=219,189,189
+Green=122,184,122
+BoldGreen=189,219,189
+Yellow=184,184,122
+BoldYellow=219,219,189
+Blue=122,122,184
+BoldBlue=189,189,219
+Magenta=184,122,184
+BoldMagenta=219,189,219
+Cyan=122,184,184
+BoldCyan=189,219,219
+White=217,217,217
+BoldWhite=255,255,255
+Locale=C
+Charset=GBK
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;配置文件&#34;&gt;配置文件&lt;/h3&gt;
+
+&lt;p&gt;配置用户名和邮箱&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git config --global user.name &amp;quot;[name]&amp;quot;
+git config --global user.email &amp;quot;[email]&amp;quot;
+git config --global color.ui true
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;打印全局配置&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git config --list
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;ssh-key&#34;&gt;SSH key&lt;/h3&gt;
+
+&lt;p&gt;检查用户目录下是否存在隐藏文件夹 .ssh&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;cd ~/.ssh
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;生成SSH Key，在 &lt;code&gt;.ssh/id_rsa.pub&lt;/code&gt; 中&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;ssh-keygen -t rsa -C &amp;quot;your_email&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;在 Github 中添加，并测试&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;ssh -T git@github.com
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;source-tree&#34;&gt;Source Tree&lt;/h2&gt;
+
+&lt;p&gt;官网：&lt;a href=&#34;https://www.sourcetreeapp.com/&#34;&gt;https://www.sourcetreeapp.com/&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;安装配置&#34;&gt;安装配置&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;跳过默认设置&lt;/li&gt;
+&lt;li&gt;使用系统Git&lt;/li&gt;
+&lt;li&gt;添加 SSH key&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;hugo&#34;&gt;Hugo&lt;/h2&gt;
+
+&lt;p&gt;官网：&lt;a href=&#34;https://gohugo.io/&#34;&gt;https://gohugo.io/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;下载地址：&lt;a href=&#34;https://github.com/spf13/hugo/releases&#34;&gt;https://github.com/spf13/hugo/releases&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;安装-1&#34;&gt;安装&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;解压，重命名为 hugo.exe ，放在 &lt;code&gt;D:/Software/hugo/bin/&lt;/code&gt; 下&lt;/li&gt;
+&lt;li&gt;配置环境变量 Path&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;visual-studio-code&#34;&gt;Visual Studio Code&lt;/h2&gt;
+
+&lt;p&gt;官网：&lt;a href=&#34;https://code.visualstudio.com/&#34;&gt;https://code.visualstudio.com/&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;jdk&#34;&gt;JDK&lt;/h2&gt;
+
+&lt;p&gt;官网：&lt;a href=&#34;http://www.oracle.com/technetwork/java/javase/downloads/index.html&#34;&gt;http://www.oracle.com/technetwork/java/javase/downloads/index.html&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;配置环境变量&#34;&gt;配置环境变量&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;JAVA_HOME&lt;/li&gt;
+&lt;li&gt;Path
+
+&lt;ul&gt;
+&lt;li&gt;%JAVA_HOME%\bin;&lt;/li&gt;
+&lt;li&gt;%JAVA_HOME%\jre\bin;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;tomcat&#34;&gt;Tomcat&lt;/h2&gt;
+
+&lt;p&gt;官网：&lt;a href=&#34;http://tomcat.apache.org/&#34;&gt;http://tomcat.apache.org/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;下载执行文件安装&lt;/p&gt;
+
+&lt;h2 id=&#34;maven&#34;&gt;Maven&lt;/h2&gt;
+
+&lt;p&gt;官网：&lt;a href=&#34;https://maven.apache.org/&#34;&gt;https://maven.apache.org/&lt;/a&gt;
+Maven Repository：&lt;a href=&#34;https://mvnrepository.com/&#34;&gt;Maven Repository&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;安装配置-1&#34;&gt;安装配置&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;解压到 &lt;code&gt;C:\Program Files\Apache Software Foundation&lt;/code&gt; 下，重命名为 Maven&lt;/li&gt;
+&lt;li&gt;配置环境变量
+
+&lt;ul&gt;
+&lt;li&gt;MAVEN_HOME&lt;/li&gt;
+&lt;li&gt;Path
+
+&lt;ul&gt;
+&lt;li&gt;%MAVEN_HOME%\bin&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;修改配置文件 &lt;code&gt;conf/setting.xml&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;设置本地仓库&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-xml&#34;&gt;&amp;lt;localRepository&amp;gt;d:/m2/repository&amp;lt;/localRepository&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;设置远程仓库镜像&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-xml&#34;&gt;&amp;lt;mirror&amp;gt;
+    &amp;lt;id&amp;gt;nexus-aliyun&amp;lt;/id&amp;gt;
+    &amp;lt;mirrorOf&amp;gt;*&amp;lt;/mirrorOf&amp;gt;ben
+    &amp;lt;name&amp;gt;Nexus aliyun&amp;lt;/name&amp;gt;
+    &amp;lt;url&amp;gt;http://maven.aliyun.com/nexus/content/groups/public&amp;lt;/url&amp;gt;
+&amp;lt;/mirror&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;intelij-idea&#34;&gt;InteLiJ IDEA&lt;/h2&gt;
+
+&lt;p&gt;官网：&lt;a href=&#34;https://www.jetbrains.com/idea/&#34;&gt;https://www.jetbrains.com/idea/&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;配置&#34;&gt;配置&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;登陆激活&lt;/li&gt;
+&lt;li&gt;去掉不需要的插件&lt;/li&gt;
+&lt;li&gt;设置默认设置
+
+&lt;ul&gt;
+&lt;li&gt;设置默认Maven&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&#34;idea新建maven项目卡住显示-generating-project-in-batch-mode&#34;&gt;IDEA新建MAVEN项目卡住显示 : &amp;ldquo;Generating Project in Batch mode&amp;rdquo;&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;下载 &lt;code&gt;archetype-catalog.xml&lt;/code&gt;  - -  &lt;a href=&#34;http://repo.maven.apache.org/maven2/&#34;&gt;http://repo.maven.apache.org/maven2/&lt;/a&gt;，找到 &lt;code&gt;archetype-catalog.xml&lt;/code&gt; ,右键保存&lt;/li&gt;
+&lt;li&gt;放到 &amp;ldquo;.m2\repository\org\apache\maven\archetype\archetype-catalog\2.4&amp;rdquo; 下&lt;/li&gt;
+&lt;li&gt;在 &lt;code&gt;Settings&lt;/code&gt;&amp;gt; &lt;code&gt;Maven&lt;/code&gt; &amp;gt; &lt;code&gt;Runner&lt;/code&gt; &amp;gt; &lt;code&gt;VM Options&lt;/code&gt; 中添加 &lt;code&gt;-DarchetypeCatalog=internal&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;PS：注意右上角的灰字：for default project，而不是for current project&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>win10 系统恢复手册</title>
+      <link>https://www.xizero.com/tool/win10%20%E7%B3%BB%E7%BB%9F%E6%81%A2%E5%A4%8D%E6%89%8B%E5%86%8C/</link>
+      <pubDate>Thu, 19 Jan 2017 12:00:00 +0800</pubDate>
+      
+      <guid>https://www.xizero.com/tool/win10%20%E7%B3%BB%E7%BB%9F%E6%81%A2%E5%A4%8D%E6%89%8B%E5%86%8C/</guid>
+      <description>
+
+&lt;h2 id=&#34;系统安装&#34;&gt;系统安装&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;断网安装，创建本地英文账户&lt;/li&gt;
+&lt;li&gt;禁止预装应用自动安装
+
+&lt;ul&gt;
+&lt;li&gt;打开注册表 regedit&lt;/li&gt;
+&lt;li&gt;进入路径 &lt;code&gt;HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;右键点击新建项“CloudContent&lt;/li&gt;
+&lt;li&gt;双击新建的CloudContent，在右栏右键新建DWORD (32位) 值或新建DWORD (64位)值，并命名为DisableWindowsConsumerFeatures&lt;/li&gt;
+&lt;li&gt;双击DisableWindowsConsumerFeatures，在数值数据输入1，确定&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;设置资源管理器默认打开我的电脑&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;连接网络-配置系统&#34;&gt;连接网络，配置系统&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Flower Password  - - &lt;a href=&#34;https://flowerpassword.com/&#34;&gt;https://flowerpassword.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;YoMail - - &lt;a href=&#34;http://www.yomail.com/&#34;&gt;http://www.yomail.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;登陆微软账号，激活系统&lt;/li&gt;
+&lt;li&gt;Dism++ - - &lt;a href=&#34;https://www.chuyu.me/&#34;&gt;https://www.chuyu.me/&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;必备软件&#34;&gt;必备软件&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;7-zip  - - &lt;a href=&#34;http://www.7-zip.org/&#34;&gt;http://www.7-zip.org/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;坚果云  - - &lt;a href=&#34;https://www.jianguoyun.com&#34;&gt;https://www.jianguoyun.com&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;网速监控 NetSpeedMonitor&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Enpass - - &lt;a href=&#34;https://www.enpass.io/&#34;&gt;https://www.enpass.io/&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;设置主密码，导入备份数据&lt;/li&gt;
+&lt;li&gt;设置同步文件夹
+
+&lt;ul&gt;
+&lt;li&gt;D:\JianGuoYun&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;shadowsocks-windows - - &lt;a href=&#34;https://github.com/shadowsocks/shadowsocks-windows/releases&#34;&gt;https://github.com/shadowsocks/shadowsocks-windows/releases&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Google Chrome  - - &lt;a href=&#34;https://www.google.cn/intl/zh-CN/chrome/browser/desktop/index.html&#34;&gt;https://www.google.cn/intl/zh-CN/chrome/browser/desktop/index.html&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;登陆账号，同步插件及相关配置&lt;/li&gt;
+&lt;li&gt;插件：Enpass、Flower Password、Humble New Tab Page、uBlock Origin、Octotree、Enhanced Steam、哔哩哔哩助手&lt;/li&gt;
+&lt;li&gt;应用：Google Keep、Web Server for Chrome&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;效率工具&#34;&gt;效率工具&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;滴答清单 - - &lt;a href=&#34;https://www.dida365.com&#34;&gt;https://www.dida365.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;MarkEditor - -  &lt;a href=&#34;http://zrey.com/app/markeditor&#34;&gt;http://zrey.com/app/markeditor&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;停止版本控制&lt;/li&gt;
+&lt;li&gt;添加工作目录
+
+&lt;ul&gt;
+&lt;li&gt;D:\JianGuoYun\XIZERO&lt;/li&gt;
+&lt;li&gt;D:\JianGuoYun\Tree hole&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Listary - -  &lt;a href=&#34;http://www.listary.com/&#34;&gt;http://www.listary.com/&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;娱乐软件&#34;&gt;娱乐软件&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;网易云音乐 - -  &lt;a href=&#34;http://music.163.com/&#34;&gt;http://music.163.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Steam  - -  &lt;a href=&#34;http://store.steampowered.com/&#34;&gt;http://store.steampowered.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;ASF - - &lt;a href=&#34;https://github.com/JustArchi/ArchiSteamFarm&#34;&gt;https://github.com/JustArchi/ArchiSteamFarm&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;wiki - - &lt;a href=&#34;http://steamcn.com/t187703-1-1&#34;&gt;http://steamcn.com/t187703-1-1&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;扩展软件&#34;&gt;扩展软件&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;迅雷极速版&lt;/li&gt;
+&lt;li&gt;SumatraPDF - - &lt;a href=&#34;https://www.sumatrapdfreader.org/free-pdf-reader-cn.html&#34;&gt;https://www.sumatrapdfreader.org/free-pdf-reader-cn.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Snipaste - - &lt;a href=&#34;https://zh.snipaste.com/&#34;&gt;https://zh.snipaste.com/&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;备注-文件结构&#34;&gt;备注 - - 文件结构&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;C - System&lt;/li&gt;
+&lt;li&gt;D - Data
+
+&lt;ul&gt;
+&lt;li&gt;Project - Git 项目&lt;/li&gt;
+&lt;li&gt;iProject - IDEA 项目&lt;/li&gt;
+&lt;li&gt;m2 - Maven 本地仓库&lt;/li&gt;
+&lt;li&gt;Software - 绿色软件&lt;/li&gt;
+&lt;li&gt;CloudMusic - 网易云音乐本地&lt;/li&gt;
+&lt;li&gt;Thunder - 迅雷下载&lt;/li&gt;
+&lt;li&gt;JianGuoYun - 我的坚果云&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;E - Game&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>win10 系统重装手册</title>
+      <link>https://www.xizero.com/tool/win10%20%E7%B3%BB%E7%BB%9F%E9%87%8D%E8%A3%85%E6%89%8B%E5%86%8C/</link>
+      <pubDate>Wed, 18 Jan 2017 12:00:00 +0800</pubDate>
+      
+      <guid>https://www.xizero.com/tool/win10%20%E7%B3%BB%E7%BB%9F%E9%87%8D%E8%A3%85%E6%89%8B%E5%86%8C/</guid>
+      <description>
+
+&lt;h2 id=&#34;删除-github-上的-ssh-密钥&#34;&gt;删除 Github 上的 SSH 密钥&lt;/h2&gt;
+
+&lt;p&gt;地址：&lt;a href=&#34;https://github.com/settings/keys&#34;&gt;https://github.com/settings/keys&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;删除-chrome-浏览器同步&#34;&gt;删除 Chrome 浏览器同步&lt;/h2&gt;
+
+&lt;p&gt;地址：&lt;a href=&#34;https://www.google.com/settings/chrome/sync&#34;&gt;https://www.google.com/settings/chrome/sync&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

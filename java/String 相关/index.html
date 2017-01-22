@@ -7,7 +7,8 @@
 
 <link rel="alternate" href="https://www.xizero.com//index.xml" type="application/rss+xml" title="XIZERO">
 <link href="https://www.xizero.com/css/tomorrow.min.css" rel="stylesheet">
-<link href="https://www.xizero.com//css/main.css" rel="stylesheet">
+<link href="https://www.xizero.com/css/main.css" rel="stylesheet">
+<link href="https://www.xizero.com/css/context.css" rel="stylesheet">
 <link href="https://www.xizero.com/css/jqcloud.css" rel="stylesheet">
 <script src="https://www.xizero.com/js/high.min.js"></script>
 <script src="https://www.xizero.com/js/jqury.min.js"></script>
@@ -55,26 +56,26 @@
 <pre><code class="language-java">
 //JDK 1.8
 public final class String implements java.io.Serializable, Comparable&lt;String&gt;, CharSequence {
-	//The value is used for character storage.
-	private final char value[];
+    //The value is used for character storage.
+    private final char value[];
 
-	//Cache the hash code for the string
-	private int hash; // Default to 0
+    //Cache the hash code for the string
+    private int hash; // Default to 0
 }
 
 //JDK1.6
 public final class String implements java.io.Serializable, Comparable&lt;String&gt;, CharSequence{
-	//The value is used for character storage.
-	private final char value[];
+    //The value is used for character storage.
+    private final char value[];
 
-	//The offset is the first index of the storage that is used.
-	private final int offset;
+    //The offset is the first index of the storage that is used.
+    private final int offset;
 
-	//The count is the number of characters in the String.
-	private final int count;
+    //The count is the number of characters in the String.
+    private final int count;
 
-	//Cache the hash code for the string
-	private int hash; // Default to 0
+    //Cache the hash code for the string
+    private int hash; // Default to 0
 }
 </code></pre>
 
@@ -150,26 +151,26 @@ System.out.println(c==d); //true
 
 <pre><code class="language-java">//JDK1.6
 public String substring(int beginIndex) {
-	return substring(beginIndex, count);
+    return substring(beginIndex, count);
 }
 public String substring(int beginIndex, int endIndex) {
-	if (beginIndex &lt; 0) {
-		throw new StringIndexOutOfBoundsException(beginIndex);
-	}
-	if (endIndex &gt; count) {
-		throw new StringIndexOutOfBoundsException(endIndex);
-	}
-	if (beginIndex &gt; endIndex) {
-		throw new StringIndexOutOfBoundsException(endIndex - beginIndex);
-	}
-	return ((beginIndex == 0) &amp;&amp; (endIndex == count)) ? this :
-		new String(offset + beginIndex, endIndex - beginIndex, value);
+    if (beginIndex &lt; 0) {
+        throw new StringIndexOutOfBoundsException(beginIndex);
+    }
+    if (endIndex &gt; count) {
+        throw new StringIndexOutOfBoundsException(endIndex);
+    }
+    if (beginIndex &gt; endIndex) {
+        throw new StringIndexOutOfBoundsException(endIndex - beginIndex);
+    }
+    return ((beginIndex == 0) &amp;&amp; (endIndex == count)) ? this :
+        new String(offset + beginIndex, endIndex - beginIndex, value);
 }
 
 String(int offset, int count, char value[]) {
-	this.value = value;
-	this.offset = offset;
-	this.count = count;
+    this.value = value;
+    this.offset = offset;
+    this.count = count;
 }
 </code></pre>
 
@@ -183,38 +184,38 @@ public String substring(int beginIndex) {
             throw new StringIndexOutOfBoundsException(beginIndex);
         }
         int subLen = value.length - beginIndex;
-		if (subLen &lt; 0) {
+        if (subLen &lt; 0) {
             throw new StringIndexOutOfBoundsException(subLen);
         }
         return (beginIndex == 0) ? this : new String(value, beginIndex, subLen);
 }
 
 public String substring(int beginIndex, int endIndex) {
-		if (beginIndex &lt; 0) {
-			throw new StringIndexOutOfBoundsException(beginIndex);
-		}
-		if (endIndex &gt; value.length) {
-			throw new StringIndexOutOfBoundsException(endIndex);
-		}
-		int subLen = endIndex - beginIndex;
-		if (subLen &lt; 0) {
-			throw new StringIndexOutOfBoundsException(subLen);
-		}
-		return ((beginIndex == 0) &amp;&amp; (endIndex == value.length)) ? this : new String(value, beginIndex, subLen);
+        if (beginIndex &lt; 0) {
+            throw new StringIndexOutOfBoundsException(beginIndex);
+        }
+        if (endIndex &gt; value.length) {
+            throw new StringIndexOutOfBoundsException(endIndex);
+        }
+        int subLen = endIndex - beginIndex;
+        if (subLen &lt; 0) {
+            throw new StringIndexOutOfBoundsException(subLen);
+        }
+        return ((beginIndex == 0) &amp;&amp; (endIndex == value.length)) ? this : new String(value, beginIndex, subLen);
 }
 
 public String(char value[], int offset, int count) {
-		if (offset &lt; 0) {
-			throw new StringIndexOutOfBoundsException(offset);
-		}
-		if (count &lt; 0) {
-			throw new StringIndexOutOfBoundsException(count);
-		}
-		// Note: offset or count might be near -1&gt;&gt;&gt;1.
-		if (offset &gt; value.length - count) {
-			throw new StringIndexOutOfBoundsException(offset + count);
-		}
-		this.value = Arrays.copyOfRange(value, offset, offset+count);
+        if (offset &lt; 0) {
+            throw new StringIndexOutOfBoundsException(offset);
+        }
+        if (count &lt; 0) {
+            throw new StringIndexOutOfBoundsException(count);
+        }
+        // Note: offset or count might be near -1&gt;&gt;&gt;1.
+        if (offset &gt; value.length - count) {
+            throw new StringIndexOutOfBoundsException(offset + count);
+        }
+        this.value = Arrays.copyOfRange(value, offset, offset+count);
 }
 </code></pre>
 
