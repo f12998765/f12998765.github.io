@@ -29,8 +29,16 @@
 &lt;li&gt;双击新建的CloudContent，在右栏右键新建DWORD (32位) 值或新建DWORD (64位)值，并命名为DisableWindowsConsumerFeatures&lt;/li&gt;
 &lt;li&gt;双击DisableWindowsConsumerFeatures，在数值数据输入1，确定&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;设置资源管理器默认打开我的电脑&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://support.office.com/zh-cn/article/%E5%85%B3%E9%97%AD%E6%88%96%E5%8D%B8%E8%BD%BD-OneDrive-f32a17ce-3336-40fe-9c38-6efb09f944b0?ui=zh-CN&amp;amp;rs=zh-CN&amp;amp;ad=CN&#34;&gt;关闭或卸载 OneDrive&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;设置资源管理器默认打开我的电脑，右键隐藏 OneDirve&lt;/li&gt;
+&lt;li&gt;运行组策略 &lt;code&gt;gpedit.msc&lt;/code&gt; ，打开 &lt;code&gt;计算机配置 --&amp;gt; 管理模块 --&amp;gt; windows 组件&lt;/code&gt;
+
+&lt;ul&gt;
+&lt;li&gt;OneDrive，启用 &lt;code&gt;禁止使用 OneDrive 进行文件存储&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;搜索，禁用小娜&lt;/li&gt;
+&lt;li&gt;可以跳过此步骤，使用 &lt;code&gt;Dism++&lt;/code&gt;
+&amp;gt; &lt;a href=&#34;https://support.office.com/zh-cn/article/%E5%85%B3%E9%97%AD%E6%88%96%E5%8D%B8%E8%BD%BD-OneDrive-f32a17ce-3336-40fe-9c38-6efb09f944b0?ui=zh-CN&amp;amp;rs=zh-CN&amp;amp;ad=CN&#34;&gt;关闭或卸载 OneDrive&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;创建文档结构&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;h2 id=&#34;连接网络-配置系统&#34;&gt;连接网络，配置系统&lt;/h2&gt;
@@ -40,6 +48,7 @@
 &lt;li&gt;YoMail - - &lt;a href=&#34;http://www.yomail.com/&#34;&gt;http://www.yomail.com/&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;登陆微软账号，激活系统&lt;/li&gt;
 &lt;li&gt;Dism++ - - &lt;a href=&#34;https://www.chuyu.me/&#34;&gt;https://www.chuyu.me/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;更新系统&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;h2 id=&#34;必备软件&#34;&gt;必备软件&lt;/h2&gt;
@@ -50,6 +59,7 @@
 
 &lt;ul&gt;
 &lt;li&gt;网速监控 NetSpeedMonitor&lt;/li&gt;
+&lt;li&gt;开始菜单优化 StartIsBack&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;Enpass - - &lt;a href=&#34;https://www.enpass.io/&#34;&gt;https://www.enpass.io/&lt;/a&gt;
 

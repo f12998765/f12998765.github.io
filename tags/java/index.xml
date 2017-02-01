@@ -144,12 +144,13 @@ git config --global color.ui true
 
 &lt;p&gt;官网：&lt;a href=&#34;http://tomcat.apache.org/&#34;&gt;http://tomcat.apache.org/&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;下载执行文件安装&lt;/p&gt;
+&lt;p&gt;解压到 &lt;code&gt;C:\Program Files\Apache Software Foundation&lt;/code&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;maven&#34;&gt;Maven&lt;/h2&gt;
 
-&lt;p&gt;官网：&lt;a href=&#34;https://maven.apache.org/&#34;&gt;https://maven.apache.org/&lt;/a&gt;
-Maven Repository：&lt;a href=&#34;https://mvnrepository.com/&#34;&gt;Maven Repository&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;官网：&lt;a href=&#34;https://maven.apache.org/&#34;&gt;https://maven.apache.org/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Maven Repository：&lt;a href=&#34;https://mvnrepository.com/&#34;&gt;Maven Repository&lt;/a&gt;&lt;/p&gt;
 
 &lt;h3 id=&#34;安装配置-1&#34;&gt;安装配置&lt;/h3&gt;
 
