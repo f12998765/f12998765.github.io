@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<meta name="generator" content="Hugo 0.18.1" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="alternate" href="https://www.xizero.com//index.xml" type="application/rss+xml" title="XIZERO">
+<link href="https://www.xizero.com/css/tomorrow.min.css" rel="stylesheet">
+<link href="https://www.xizero.com/css/main.css" rel="stylesheet">
+<link href="https://www.xizero.com/css/context.css" rel="stylesheet">
+<link href="https://www.xizero.com/css/jqcloud.css" rel="stylesheet">
+<script src="https://www.xizero.com/js/high.min.js"></script>
+<script src="https://www.xizero.com/js/jqury.min.js"></script>
+<script src="https://www.xizero.com/js/top.js"></script>
+<script src="https://www.xizero.com/js/jqcloud.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<title>SLF4J 和 Logback - XIZERO</title>
+</head>
+<body>
+
+<div id="gotop" title="🚀 go top"></div>
+
+<div class="top">
+
+	<div class="gos">
+		<span class="go"><a href="https://www.xizero.com/">Home</a></span>
+		<span class="go"><a href="/tags/">Tags</a></span>
+		<span class="go"><a href="/about/">About</a></span>
+	</div>
+	
+	
+		<div class="tit">
+			SLF4J 和 Logback
+		</div>
+
+	
+
+</div>
+
+
+
+
+<div class="con">
+	
+
+<h1 id="slf4j-simple-logging-facade-for-java">SLF4J - - Simple Logging Facade for Java</h1>
+
+<p>官网：<a href="https://www.slf4j.org/">https://www.slf4j.org/</a></p>
+
+<h2 id="hello-world">Hello World</h2>
+
+<pre><code class="language-java">public class Slf4jTest {  
+    static private Logger logger = LoggerFactory.getLogger(Slf4jTest.class);  
+    public static void main(String[] args) {  
+        logger.info(&quot;Hello World {}&quot;,&quot;!&quot;)  
+    }  
+}  
+</code></pre>
+
+<p>更多推荐阅读 ：</p>
+
+<ul>
+<li><a href="https://my.oschina.net/wangxindong/blog/825066">门面之下，日志之上-SLF4J</a></li>
+<li><a href="http://ifeve.com/?x=0&amp;y=0&amp;s=slf4j">并发编程网</a></li>
+</ul>
+
+<h1 id="logback">Logback</h1>
+
+<p>官网：<a href="https://logback.qos.ch/">https://logback.qos.ch/</a></p>
+
+<p>logback分为三个模块</p>
+
+<ul>
+<li>logback-core
+
+<ul>
+<li>为其他两个模块打下了基础</li>
+</ul></li>
+<li>logback-classic
+
+<ul>
+<li>可以被看做个有显著改进的log4J</li>
+<li>实现了 SLF4J API</li>
+</ul></li>
+<li>logback-access
+
+<ul>
+<li>​​与Servlet容器（例如Tomcat和Jetty）集成，以提供HTTP访问日志功能</li>
+</ul></li>
+</ul>
+
+<h2 id="日志级别">日志级别</h2>
+
+<p>原地址：<a href="https://zh.wikipedia.org/wiki/Log4j">https://zh.wikipedia.org/wiki/Log4j</a></p>
+
+<p>常用级别由低到高，依次为 Trace &lt; Debug &lt; Tnfo &lt; Warn &lt; Error</p>
+
+<table>
+<thead>
+<tr>
+<th>级别</th>
+<th>描述</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>OFF</td>
+<td>最高级别，用于关闭日志记录。</td>
+</tr>
+
+<tr>
+<td>FATAL</td>
+<td>导致应用程序提前终止的严重错误。一般这些信息将立即呈现在状态控制台上。</td>
+</tr>
+
+<tr>
+<td>ERROR</td>
+<td>其他运行时错误或意外情况。一般这些信息将立即呈现在状态控制台上。</td>
+</tr>
+
+<tr>
+<td>WARN</td>
+<td>使用已过时的API，API的滥用，潜在错误，其他不良的或意外的运行时的状况（但不一定是错误的）。一般这些信息将立即呈现在状态控制台上。</td>
+</tr>
+
+<tr>
+<td>INFO</td>
+<td>令人感兴趣的运行时事件（启动/关闭）。一般这些信息将立即呈现在状态控制台上，因而要保守使用，并保持到最低限度。</td>
+</tr>
+
+<tr>
+<td>DEBUG</td>
+<td>流经系统的详细信息。一般这些信息只记录到日志文件中。</td>
+</tr>
+
+<tr>
+<td>TRACE</td>
+<td>最详细的信息。一般这些信息只记录到日志文件中。</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="logback-xml-配置">logback.xml 配置</h2>
+
+<p><img src="https://ox.xizero.com/uploads/2017/02/Logback.xml.svg" alt="" /></p>
+
+<h2 id="使用">使用</h2>
+
+<h3 id="1-pox-xml-添加依赖">1.pox.xml 添加依赖</h3>
+
+<p>仓库地址：<a href="https://mvnrepository.com/artifact/ch.qos.logback/logback-classic">https://mvnrepository.com/artifact/ch.qos.logback/logback-classic</a></p>
+
+<pre><code class="language-xml">&lt;dependency&gt;
+    &lt;groupId&gt;ch.qos.logback&lt;/groupId&gt;
+    &lt;artifactId&gt;logback-classic&lt;/artifactId&gt;
+    &lt;version&gt;1.2.1&lt;/version&gt;
+&lt;/dependency&gt;
+&lt;!-- 使用求值表达式过滤，需要添加 janino 依赖--&gt;
+&lt;dependency&gt;
+    &lt;groupId&gt;org.codehaus.janino&lt;/groupId&gt;
+    &lt;artifactId&gt;janino&lt;/artifactId&gt;
+    &lt;version&gt;3.0.6&lt;/version&gt;
+&lt;/dependency&gt;
+
+</code></pre>
+
+<h3 id="2-src-main-resource添加logback-xml">2.src/main/resource添加logback.xml</h3>
+
+<p>参考：<a href="https://gist.githubusercontent.com/f12998765/28613af391c72c8c8ba47a0cef3f8250/raw/d1af5d48490308dd80645f9721e1af2b7cd6f69f/logback.xml">logback.xml</a></p>
+
+<pre><code class="language-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;configuration&gt;
+        &lt;!-- 项目名称 --&gt;
+        &lt;contextName&gt;Test contextName&lt;/contextName&gt;
+
+        &lt;!-- 变量 --&gt;
+        &lt;property name=&quot;log&quot; value=&quot;./log&quot;/&gt;
+
+        &lt;!-- 时间戳 --&gt;
+        &lt;timestamp key=&quot;bySecond&quot; datePattern=&quot;yyyyMMdd&quot; timeReference=&quot;contextBirth&quot;/&gt;
+
+        &lt;!-- 在控制台打印日志 --&gt;
+        &lt;appender name=&quot;STDOUT&quot; class=&quot;ch.qos.logback.core.ConsoleAppender&quot;&gt;
+
+                &lt;!-- 级别过滤器 --&gt;
+                &lt;filter class=&quot;ch.qos.logback.classic.filter.ThresholdFilter&quot;&gt;
+                        &lt;level&gt;DEBUG&lt;/level&gt;
+                        &lt;onMatch&gt;ACCEPT&lt;/onMatch&gt;
+                        &lt;onMismatch&gt;NEUTRAL&lt;/onMismatch&gt;
+                &lt;/filter&gt;
+
+                &lt;!-- 临界值过滤器 --&gt;
+                &lt;filter class=&quot;ch.qos.logback.classic.filter.ThresholdFilter&quot;&gt;
+                        &lt;level&gt;INFO&lt;/level&gt;
+                        &lt;onMatch&gt;ACCEPT&lt;/onMatch&gt;
+                        &lt;onMismatch&gt;DENY&lt;/onMismatch&gt;
+                &lt;/filter&gt;
+
+
+                &lt;!-- 求值过滤器 --&gt;
+                &lt;filter class=&quot;ch.qos.logback.core.filter.EvaluatorFilter&quot;&gt;
+                        &lt;evaluator&gt;
+                                &lt;matcher&gt;
+                                        &lt;name&gt;num&lt;/name&gt;
+                                        &lt;regex&gt;\ba\w*\b&lt;/regex&gt;
+                                &lt;/matcher&gt;
+                                &lt;expression&gt; num.matches(formattedMessage) &lt;/expression&gt;
+                        &lt;/evaluator&gt;
+                        &lt;onMatch&gt;ACCEPT&lt;/onMatch&gt;
+                        &lt;onMismatch&gt;DENY&lt;/onMismatch&gt;
+                &lt;/filter&gt;
+
+                &lt;encoder&gt;
+                        &lt;!-- pattern模式 %d时间 %thread 线程名 %level行为级别 %logger logger名称 %method 方法名称 %message 调用方法的入参消息 --&gt;
+                        &lt;pattern&gt;%-4d [%thread] %highlight%-5level %cyan%logger.%-10method - %message%n&lt;/pattern&gt;
+                &lt;/encoder&gt;
+        &lt;/appender&gt;
+
+        &lt;!-- FileAppender 输出到文件 --&gt;
+        &lt;appender name=&quot;FILE&quot; class=&quot;ch.qos.logback.core.FileAppender&quot;&gt;
+
+                &lt;file&gt;${log}/log-${bySecond}.log&lt;/file&gt;
+
+                &lt;encoder&gt;
+                        &lt;pattern&gt;%date %level [%thread] %logger{30} [%file:%line] %msg%n&lt;/pattern&gt;
+                &lt;/encoder&gt;
+        &lt;/appender&gt;
+
+
+        &lt;!-- 滚动记录日志文件 --&gt;
+        &lt;!-- 按时间滚动 --&gt;
+        &lt;appender name=&quot;FILE&quot; class=&quot;ch.qos.logback.core.rolling.RollingFileAppender&quot;&gt;
+                &lt;file&gt;${log}/test_log.log&lt;/file&gt;
+                &lt;rollingPolicy class=&quot;ch.qos.logback.core.rolling.TimeBasedRollingPolicy&quot;&gt;
+                        &lt;!-- daily rollover --&gt;
+                        &lt;fileNamePattern&gt;${log}/log.%d{yyyy-MM-dd}.log&lt;/fileNamePattern&gt;
+
+                        &lt;!-- keep 30 days' worth of history capped at 3GB total size --&gt;
+                        &lt;maxHistory&gt;30&lt;/maxHistory&gt;
+                        &lt;totalSizeCap&gt;3GB&lt;/totalSizeCap&gt;
+                &lt;/rollingPolicy&gt;
+
+                &lt;encoder&gt;
+                        &lt;pattern&gt;%-4relative [%thread] %-5level %logger{35} - %msg%n&lt;/pattern&gt;
+                &lt;/encoder&gt;
+        &lt;/appender&gt;
+
+        &lt;!-- Size and time based rolling policy --&gt;
+        &lt;appender name=&quot;ROLLING&quot; class=&quot;ch.qos.logback.core.rolling.RollingFileAppender&quot;&gt;
+                &lt;file&gt;${log}/test_log.log&lt;/file&gt;
+                &lt;rollingPolicy class=&quot;ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy&quot;&gt;
+                        &lt;!-- rollover daily --&gt;
+                        &lt;fileNamePattern&gt;${log}/log.%d{yyyy-MM-dd}.%i.log&lt;/fileNamePattern&gt;
+                        &lt;!-- each file should be at most 100MB, keep 60 days worth of history, but at most 20GB --&gt;
+                        &lt;maxFileSize&gt;100MB&lt;/maxFileSize&gt;    
+                        &lt;maxHistory&gt;60&lt;/maxHistory&gt;
+                        &lt;totalSizeCap&gt;20GB&lt;/totalSizeCap&gt;
+                &lt;/rollingPolicy&gt;
+                &lt;encoder&gt;
+                        &lt;pattern&gt;%-4relative [%thread] %-5level %logger{35} - %msg%n&lt;/pattern&gt;
+                &lt;/encoder&gt;
+        &lt;/appender&gt;
+
+        &lt;!-- 按窗口滚动 --&gt;
+        &lt;appender name=&quot;FILE&quot; class=&quot;ch.qos.logback.core.rolling.RollingFileAppender&quot;&gt;
+                &lt;file&gt;${log}/test_log.log&lt;/file&gt;
+
+                &lt;rollingPolicy class=&quot;ch.qos.logback.core.rolling.FixedWindowRollingPolicy&quot;&gt;
+                        &lt;fileNamePattern&gt;${log}/log.%i.log.zip&lt;/fileNamePattern&gt;
+                        &lt;minIndex&gt;1&lt;/minIndex&gt;
+                        &lt;maxIndex&gt;3&lt;/maxIndex&gt;
+                &lt;/rollingPolicy&gt;
+
+                &lt;triggeringPolicy class=&quot;ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy&quot;&gt;
+                        &lt;maxFileSize&gt;5MB&lt;/maxFileSize&gt;
+                &lt;/triggeringPolicy&gt;
+
+                &lt;encoder&gt;
+                        &lt;pattern&gt;%-4relative [%thread] %-5level %logger{35} - %msg%n&lt;/pattern&gt;
+                &lt;/encoder&gt;
+        &lt;/appender&gt;
+
+
+        &lt;!-- logger --&gt;
+        &lt;logger name=&quot;log.test&quot; level=&quot;INFO&quot; additivity=&quot;false&quot;&gt;
+                &lt;appender-ref ref=&quot;STDOUT&quot;/&gt;
+                &lt;appender-ref ref=&quot;ROLLINGFILE&quot;/&gt;
+                &lt;appender-ref ref=&quot;HTMLFILE&quot;/&gt;
+        &lt;/logger&gt;
+
+        &lt;logger name=&quot;log.test.Tesg&quot; level=&quot;debug&quot; additivity=&quot;false&quot;&gt;
+                &lt;appender-ref ref=&quot;STDOUT&quot;/&gt;
+                &lt;appender-ref ref=&quot;ROLLINGFILE&quot;/&gt;
+                &lt;appender-ref ref=&quot;HTMLFILE&quot;/&gt;
+        &lt;/logger&gt;
+
+        &lt;root level=&quot;debug&quot;&gt;
+                &lt;appender-ref ref=&quot;STDOUT&quot;/&gt;
+        &lt;/root&gt;
+
+&lt;/configuration&gt;
+</code></pre>
+
+<h2 id="备注">备注</h2>
+
+<h3 id="时间滚动">时间滚动</h3>
+
+<p>TimeBasedRollingPolicy 最常用的滚动策略，它根据时间来制定滚动策略，既负责滚动也负责触发滚动</p>
+
+<h3 id="日期相关">日期相关</h3>
+
+<table>
+<thead>
+<tr>
+<th>符号</th>
+<th>意义</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>G</td>
+<td>年代标志符</td>
+</tr>
+
+<tr>
+<td>y</td>
+<td>年</td>
+</tr>
+
+<tr>
+<td>M</td>
+<td>月</td>
+</tr>
+
+<tr>
+<td>d</td>
+<td>日</td>
+</tr>
+
+<tr>
+<td>h</td>
+<td>时 在上午或下午 (1~12)</td>
+</tr>
+
+<tr>
+<td>H</td>
+<td>时 在一天中 (0~23)</td>
+</tr>
+
+<tr>
+<td>m</td>
+<td>分</td>
+</tr>
+
+<tr>
+<td>s</td>
+<td>秒</td>
+</tr>
+
+<tr>
+<td>S</td>
+<td>毫秒</td>
+</tr>
+
+<tr>
+<td>E</td>
+<td>星期</td>
+</tr>
+
+<tr>
+<td>D</td>
+<td>一年中的第几天</td>
+</tr>
+
+<tr>
+<td>F</td>
+<td>一月中第几个星期几</td>
+</tr>
+
+<tr>
+<td>w</td>
+<td>一年中第几个星期</td>
+</tr>
+
+<tr>
+<td>W</td>
+<td>一月中第几个星期</td>
+</tr>
+
+<tr>
+<td>a</td>
+<td>上午 / 下午 标记符</td>
+</tr>
+
+<tr>
+<td>k</td>
+<td>时 在一天中 (1~24)</td>
+</tr>
+
+<tr>
+<td>K</td>
+<td>时 在上午或下午 (0~11)</td>
+</tr>
+
+<tr>
+<td>z</td>
+<td>时区</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="0-9-19版本之后-推荐使用encode">0.9.19版本之后，推荐使用encode</h3>
+
+<p>原因： <a href="https://logback.qos.ch/codes.html#layoutInsteadOfEncoder">https://logback.qos.ch/codes.html#layoutInsteadOfEncoder</a></p>
+
+<h3 id="size-and-time-based-rolling-policy">Size and time based rolling policy</h3>
+
+<p>原地址：<a href="https://logback.qos.ch/manual/appenders.html#SizeAndTimeBasedFNATP">https://logback.qos.ch/manual/appenders.html#SizeAndTimeBasedFNATP</a></p>
+
+<pre><code class="language-xml">&lt;configuration&gt;
+  &lt;appender name=&quot;ROLLING&quot; class=&quot;ch.qos.logback.core.rolling.RollingFileAppender&quot;&gt;
+    &lt;file&gt;mylog.txt&lt;/file&gt;
+    &lt;rollingPolicy class=&quot;ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy&quot;&gt;
+      &lt;!-- rollover daily --&gt;
+      &lt;fileNamePattern&gt;mylog-%d{yyyy-MM-dd}.%i.txt&lt;/fileNamePattern&gt;
+       &lt;!-- each file should be at most 100MB, keep 60 days worth of history, but at most 20GB --&gt;
+       &lt;maxFileSize&gt;100MB&lt;/maxFileSize&gt;    
+       &lt;maxHistory&gt;60&lt;/maxHistory&gt;
+       &lt;totalSizeCap&gt;20GB&lt;/totalSizeCap&gt;
+    &lt;/rollingPolicy&gt;
+    &lt;encoder&gt;
+      &lt;pattern&gt;%msg%n&lt;/pattern&gt;
+    &lt;/encoder&gt;
+  &lt;/appender&gt;
+  &lt;root level=&quot;DEBUG&quot;&gt;
+    &lt;appender-ref ref=&quot;ROLLING&quot; /&gt;
+  &lt;/root&gt;
+&lt;/configuration&gt;
+</code></pre>
+
+<h2 id="参考">参考</h2>
+
+<ul>
+<li><a href="http://www.cnblogs.com/jingmoxukong/p/5910309.html">细说Java主流日志工具库</a></li>
+<li><a href="https://my.oschina.net/wangxindong/blog/825066">门面之下，日志之上-SLF4J</a></li>
+<li><a href="http://ifeve.com/?x=0&amp;y=0&amp;s=slf4j">并发编程网</a></li>
+<li><a href="http://blog.csdn.net/huozhonbin/article/category/1656017">LogBack学习记录</a></li>
+<li><a href="http://czj4451.iteye.com/blog/1974831">logback系列</a></li>
+<li><a href="http://aub.iteye.com/category/161103">aubdiy - log</a></li>
+</ul>
+
+</div>
+
+
+<div class="boo">
+	<span></span>
+</div>
+<div class="footer">
+	@XIZERO Powered by <a href="http://hugo.spf13.com/">Hugo</a> and <a href="#">bigbig</a>
+</div>
+</body>
+</html>
+

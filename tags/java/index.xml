@@ -1427,45 +1427,45 @@ Path p_ = Paths.get(&amp;quot;/home&amp;quot;,&amp;quot;user&amp;quot;);
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
-&lt;th&gt;访问修饰符&lt;/th&gt;
-&lt;th&gt;所属类&lt;/th&gt;
-&lt;th&gt;所属包的其他类&lt;/th&gt;
-&lt;th&gt;子类&lt;/th&gt;
-&lt;th&gt;其他包的其他类&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;访问修饰符&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;所属类&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;所属包的其他类&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;子类&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;其他包的其他类&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 
 &lt;tbody&gt;
 &lt;tr&gt;
-&lt;td&gt;public&lt;/td&gt;
-&lt;td&gt;O&lt;/td&gt;
-&lt;td&gt;O&lt;/td&gt;
-&lt;td&gt;O&lt;/td&gt;
-&lt;td&gt;O&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;public&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;O&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;O&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;O&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;O&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td&gt;protected&lt;/td&gt;
-&lt;td&gt;O&lt;/td&gt;
-&lt;td&gt;O&lt;/td&gt;
-&lt;td&gt;O&lt;/td&gt;
-&lt;td&gt;X&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;protected&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;O&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;O&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;O&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;X&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td&gt;default&lt;/td&gt;
-&lt;td&gt;O&lt;/td&gt;
-&lt;td&gt;O&lt;/td&gt;
-&lt;td&gt;X&lt;/td&gt;
-&lt;td&gt;X&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;default&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;O&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;O&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;X&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;X&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td&gt;private&lt;/td&gt;
-&lt;td&gt;O&lt;/td&gt;
-&lt;td&gt;X&lt;/td&gt;
-&lt;td&gt;X&lt;/td&gt;
-&lt;td&gt;X&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;private&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;O&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;X&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;X&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;X&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
@@ -1788,9 +1788,12 @@ Array.set(数组实例,序列,值);
 &lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;Class class_ = class.getComponentType();
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;#参考
-- &lt;a href=&#34;http://www.cnblogs.com/penghongwei/p/3299688.html&#34;&gt;Java 反射 【译】&lt;/a&gt;
-- &lt;a href=&#34;http://tutorials.jenkov.com/java-reflection/index.html&#34;&gt;java-reflection [英] &lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&#34;参考&#34;&gt;参考&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.cnblogs.com/penghongwei/p/3299688.html&#34;&gt;Java 反射 【译】&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://tutorials.jenkov.com/java-reflection/index.html&#34;&gt;java-reflection [英] &lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 </description>
     </item>
     

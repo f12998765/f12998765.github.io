@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>JavaEEs on XIZERO</title>
-    <link>https://www.xizero.com/javaee/index.xml</link>
-    <description>Recent content in JavaEEs on XIZERO</description>
+    <title>Slf4j on XIZERO</title>
+    <link>https://www.xizero.com/tags/slf4j/index.xml</link>
+    <description>Recent content in Slf4j on XIZERO</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 19 Feb 2017 15:54:31 +0800</lastBuildDate>
-    <atom:link href="https://www.xizero.com/javaee/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://www.xizero.com/tags/slf4j/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>SLF4J 和 Logback</title>
@@ -424,102 +423,6 @@
 &lt;li&gt;&lt;a href=&#34;http://czj4451.iteye.com/blog/1974831&#34;&gt;logback系列&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://aub.iteye.com/category/161103&#34;&gt;aubdiy - log&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Java web 序言</title>
-      <link>https://www.xizero.com/javaee/Java%20web%20%E5%BA%8F%E8%A8%80/</link>
-      <pubDate>Fri, 06 Jan 2017 20:56:00 +0800</pubDate>
-      
-      <guid>https://www.xizero.com/javaee/Java%20web%20%E5%BA%8F%E8%A8%80/</guid>
-      <description>
-
-&lt;h1 id=&#34;java-web-序言&#34;&gt;Java web 序言&lt;/h1&gt;
-
-&lt;p&gt;不管怎样，学习越来越迷茫，每一步走地犹犹豫豫，忘记地越来越多，所以写一份总结。&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Apache Tomcat</title>
-      <link>https://www.xizero.com/javaee/Apache%20Tomcat/</link>
-      <pubDate>Tue, 03 Jan 2017 12:00:00 +0800</pubDate>
-      
-      <guid>https://www.xizero.com/javaee/Apache%20Tomcat/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Http 协议</title>
-      <link>https://www.xizero.com/javaee/Http%20%E5%8D%8F%E8%AE%AE/</link>
-      <pubDate>Mon, 02 Jan 2017 12:00:00 +0800</pubDate>
-      
-      <guid>https://www.xizero.com/javaee/Http%20%E5%8D%8F%E8%AE%AE/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Java Servlet</title>
-      <link>https://www.xizero.com/javaee/Java%20Servlet/</link>
-      <pubDate>Sun, 01 Jan 2017 12:00:00 +0800</pubDate>
-      
-      <guid>https://www.xizero.com/javaee/Java%20Servlet/</guid>
-      <description>
-
-&lt;h1 id=&#34;java-servlet&#34;&gt;Java Servlet&lt;/h1&gt;
-
-&lt;h2 id=&#34;什么是-java-servlet&#34;&gt;什么是 Java Servlet ?&lt;/h2&gt;
-
-&lt;p&gt;维基百科：&lt;a href=&#34;https://zh.wikipedia.org/wiki/Java_Servlet&#34;&gt;https://zh.wikipedia.org/wiki/Java_Servlet&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://docs.oracle.com/javaee/7/tutorial/servlets.htm#BNAFD&#34;&gt;Java Platform, Enterprise Edition: The Java EE Tutorial&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;A servlet is a Java programming language class used to extend the capabilities of servers that host applications accessed by means of a request-response programming model.&lt;/p&gt;
-
-&lt;p&gt;Java Servlet 是 Java 应用程序 ，运行在服务器端，由容器进行管理，生成动态内容。&lt;/p&gt;
-
-&lt;p&gt;虽然 servlet 可以响应任何类型的请求，但通常用于web容器，Java Servlet 定义了对 Http 的特定 servlet 类。&lt;/p&gt;
-
-&lt;p&gt;javax.servlet和javax.servlet.http包提供了用于编写servlet的接口和类。 所有servlet必须实现Servlet接口，它&lt;strong&gt;定义了生命周期方法&lt;/strong&gt;。 当实现通用服务时，可以使用或扩展Java Servlet API提供的GenericServlet类。 HttpServlet类提供了用于处理特定于HTTP的服务的方法，例如doGet和doPost。&lt;/p&gt;
-
-&lt;h2 id=&#34;servlet-的生命周期&#34;&gt;Servlet 的生命周期&lt;/h2&gt;
-
-&lt;p&gt;Servlet 的生命周期由 servlet 容器控制。&lt;/p&gt;
-
-&lt;p&gt;当一个请求映射到servlet，容器执行&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;如果servlet的实例不存在，则web容器：
-
-&lt;ul&gt;
-&lt;li&gt;加载servlet类&lt;/li&gt;
-&lt;li&gt;创建servlet类的实例&lt;/li&gt;
-&lt;li&gt;通过调用初始化servlet实例&lt;strong&gt;init方法&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;容器调用&lt;strong&gt;service方法&lt;/strong&gt;，判断请求方式，传递请求和响应对象&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;如果需要删除该servlet，容器通过调用servlet的&lt;strong&gt;destroy方法&lt;/strong&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;servlet-核心类&#34;&gt;Servlet 核心类&lt;/h2&gt;
-
-&lt;p&gt;Java EE API : &lt;a href=&#34;https://docs.oracle.com/javaee/7/api/&#34;&gt;https://docs.oracle.com/javaee/7/api/&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;创建&#34;&gt;创建&lt;/h2&gt;
-
-&lt;p&gt;使用注解 @WebServlet( &amp;ldquo;url &amp;rdquo; ) , url 是 servlet 的路径映射 ，必须是唯一的 ，使用该注解必须继承 HttpServlet&lt;/p&gt;
-
-&lt;p&gt;也可以在 web.xml 中配置&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-
-@WebServlet（“/ test”）
-public class ModlServlet extends HttpServlet {
-    ... ...
-}
-&lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
     
