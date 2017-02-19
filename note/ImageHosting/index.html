@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<meta name="generator" content="Hugo 0.18.1" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="alternate" href="https://www.xizero.com//index.xml" type="application/rss+xml" title="XIZERO">
+<link href="https://www.xizero.com/css/tomorrow.min.css" rel="stylesheet">
+<link href="https://www.xizero.com/css/main.css" rel="stylesheet">
+<link href="https://www.xizero.com/css/context.css" rel="stylesheet">
+<link href="https://www.xizero.com/css/jqcloud.css" rel="stylesheet">
+<script src="https://www.xizero.com/js/high.min.js"></script>
+<script src="https://www.xizero.com/js/jqury.min.js"></script>
+<script src="https://www.xizero.com/js/top.js"></script>
+<script src="https://www.xizero.com/js/jqcloud.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<title>自建图床-Qchan - XIZERO</title>
+</head>
+<body>
+
+<div id="gotop" title="🚀 go top"></div>
+
+<div class="top">
+
+	<div class="gos">
+		<span class="go"><a href="https://www.xizero.com/">Home</a></span>
+		<span class="go"><a href="/tags/">Tags</a></span>
+		<span class="go"><a href="/about/">About</a></span>
+	</div>
+	
+	
+		<div class="tit">
+			自建图床-Qchan
+		</div>
+
+	
+
+</div>
+
+
+
+
+<div class="con">
+	
+
+<h2 id="简述">简述</h2>
+
+<p>做完博客，搭建一个图床，应该很正常吧。(｡･∀･)ﾉﾞ</p>
+
+<p>翻来覆去，常见的都是在七牛等空间商托管，或者免费的图床网站，因为要自定域名还要文件安全，所以自建是最好的了。
+PHP图床程序开源常用的有 Qchan 、树洞外链、Chevereto这三种，还找到一个go编写的 Rikka 。以上程序，我都在 vps 上搭建过，每个都有难以描述的 bug ，很是心累，最后选择了 Qchan ，修改了一下主题。</p>
+
+<blockquote>
+<p>毫无一点 PHP和Go 基础的我，表示 （╯＾╰）</p>
+</blockquote>
+
+<hr />
+
+<h2 id="图床程序">图床程序</h2>
+
+<h3 id="rikkia">Rikkia</h3>
+
+<p>搭建难度：★☆☆☆☆</p>
+
+<p>Github : <a href="https://github.com/7sDream/rikka">https://github.com/7sDream/rikka</a></p>
+
+<p><strong>描述：</strong></p>
+
+<p>因为之前用过 docker ，搭建这个，很容易上手。</p>
+
+<p>很简洁，用于私人好一点，没有用户模块，没有后台管理。</p>
+
+<p><strong>问题：</strong></p>
+
+<p>我是用Nginx做二级域名代理，但是 Rikkia 返回的图片地址，却是 nginx 配置的 127.0.0.1。</p>
+
+<p>本想重新编译一下，但是天朝XX，golang 一直连接超时……</p>
+
+<hr />
+
+<h3 id="qchan">Qchan</h3>
+
+<p>搭建难度：★★☆☆☆</p>
+
+<p>Github : <a href="https://github.com/qakcn/qchan">https://github.com/qakcn/qchan</a></p>
+
+<p><strong>描述：</strong></p>
+
+<p>Qchan 没有用户模块，运行需要 PHP，对于像我这样没有接触过 php 的人来说，在 linux 上编译安装，简直了，没有安装成功，后来用 apt 安装的。</p>
+
+<p>界面很是瞎眼，重新写了一下主题，马马虎虎吧。</p>
+
+<p><strong>问题：</strong></p>
+
+<p>linux 下的安装，真心折磨；win 还好，开启插件也简单。</p>
+
+<hr />
+
+<h3 id="树洞外链">树洞外链</h3>
+
+<p>搭建难度：★★★☆☆
+官网：<a href="https://github.com/HFO4/shudong-share">https://github.com/HFO4/shudong-share</a>
+Github : <a href="https://github.com/qakcn/qchan">https://github.com/qakcn/qchan</a></p>
+
+<p><strong>描述：</strong></p>
+
+<p>运行需要PHP和MySQL，超级强大，不止能上传图片，做一些文件的分享也可以，就像是个云盘吧。</p>
+
+<p>后台管理很复杂，不同的上传方案，不同的用户组等等。</p>
+
+<p><strong>问题：</strong></p>
+
+<p>分享文件、注册用户出现bug，官网上的帮助也没有相关内容。</p>
+
+<p>上传 svg 卡住，所以放弃了。</p>
+
+<p>不过，真是一个好的分享云盘。</p>
+
+<hr />
+
+<h3 id="chevereto">Chevereto</h3>
+
+<p>搭建难度：★★★☆☆
+官网：<a href="https://chevereto.com/">https://chevereto.com/</a></p>
+
+<p><strong>描述：</strong></p>
+
+<p>老牌的图床程序，对版权很是看重，有免费开源版，网页华丽好看。</p>
+
+<p>商业版和开源版有些差别，对国内好像不友好。</p>
+
+<p><strong>问题：</strong></p>
+
+<p>不支持修改 上传图片类型，枪毙。</p>
+
+<hr />
+
+<h2 id="搭建-qchan">搭建 Qchan</h2>
+
+<p>简单描述一下，搭建 Qchan 的过程。</p>
+
+<h3 id="安装-php">安装 PHP</h3>
+
+<p>编译安装失败，apt 大法好。</p>
+
+<p>环境：Ubuntu 16.04</p>
+
+<pre><code class="language-bash">sudo apt-get install php php-gd
+</code></pre>
+
+<p>配置文件位置：<code>/etc/php/7.0/fpm/php.ini</code></p>
+
+<p>修改配置</p>
+
+<pre><code class="language-ini">post_max_size = 30M
+upload_max_filesize = 30M
+extension=php_gd2.dll
+</code></pre>
+
+<p>win 处了以上还需要修改</p>
+
+<pre><code class="language-ini">extension_dir = &quot;ext&quot;
+</code></pre>
+
+<h3 id="安装-nginx">安装 Nginx</h3>
+
+<pre><code class="language-bash">sudo apt-get install nginx
+</code></pre>
+
+<p>在 <code>/etc/nginx/conf.d/</code> 中新建 <code>www.conf</code>，添加</p>
+
+<pre><code class="language-conf">server {
+        listen 80 ;
+        server_name ox.xizero.com;
+        rewrite ^(.*)$  https://ox.xizero.com$1 permanent;
+}
+server {
+        listen 443 ssl;
+        server_name demo.com;
+        ssl on;
+        ssl_certificate conf.d/1_demo.com_bundle.crt;
+        ssl_certificate_key conf.d/2_demo.com.key;
+        root /home/ubuntu/qchan/;
+        index index.php;
+
+        location / {
+                try_files $uri $uri/ /index.html;
+        }
+        location ~ \.php$ {
+                include /etc/nginx/fastcgi_params;
+                fastcgi_pass unix:/run/php/php7.0-fpm.sock;
+                fastcgi_index index.php;
+                fastcgi_param SCRIPT_FILENAME /home/ubuntu/qchan/$fastcgi_script_name;
+                client_max_body_size    20m;
+        }
+
+        location ~ /purge(/.*){
+        expires 10m;
+        }
+}
+</code></pre>
+
+<h3 id="下载项目">下载项目</h3>
+
+<p>原 Github : <a href="https://github.com/qakcn/qchan">https://github.com/qakcn/qchan</a></p>
+
+<p>我的 Github : <a href="https://github.com/f12998765/qchan">https://github.com/f12998765/qchan</a></p>
+
+<ul>
+<li>克隆项目到 <code>~/</code></li>
+<li>修改  config.php 中的管理员用户和密码</li>
+<li>修改权限 <code>sudo chmod -R 777 qchan/</code></li>
+</ul>
+
+<h3 id="结束">结束</h3>
+
+<p>自建图床，花费了几天，还好，最终做了出来。学了点 php 安装，了解了一些套路，果然人还是要努力的！↖(^ω^)↗</p>
+
+<p>最后，  <strong>PHP是世界上最好的语言</strong>。</p>
+
+</div>
+
+
+<div class="boo">
+	<span></span>
+</div>
+<div class="footer">
+	@XIZERO Powered by <a href="http://hugo.spf13.com/">Hugo</a> and <a href="#">bigbig</a>
+</div>
+</body>
+</html>
+

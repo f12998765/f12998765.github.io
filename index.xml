@@ -6,8 +6,193 @@
     <description>Recent content on XIZERO</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 19 Feb 2017 15:54:31 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 19 Feb 2017 17:59:55 +0800</lastBuildDate>
     <atom:link href="https://www.xizero.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>自建图床-Qchan</title>
+      <link>https://www.xizero.com/note/ImageHosting/</link>
+      <pubDate>Sun, 19 Feb 2017 17:59:55 +0800</pubDate>
+      
+      <guid>https://www.xizero.com/note/ImageHosting/</guid>
+      <description>
+
+&lt;h2 id=&#34;简述&#34;&gt;简述&lt;/h2&gt;
+
+&lt;p&gt;做完博客，搭建一个图床，应该很正常吧。(｡･∀･)ﾉﾞ&lt;/p&gt;
+
+&lt;p&gt;翻来覆去，常见的都是在七牛等空间商托管，或者免费的图床网站，因为要自定域名还要文件安全，所以自建是最好的了。
+PHP图床程序开源常用的有 Qchan 、树洞外链、Chevereto这三种，还找到一个go编写的 Rikka 。以上程序，我都在 vps 上搭建过，每个都有难以描述的 bug ，很是心累，最后选择了 Qchan ，修改了一下主题。&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;毫无一点 PHP和Go 基础的我，表示 （╯＾╰）&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;图床程序&#34;&gt;图床程序&lt;/h2&gt;
+
+&lt;h3 id=&#34;rikkia&#34;&gt;Rikkia&lt;/h3&gt;
+
+&lt;p&gt;搭建难度：★☆☆☆☆&lt;/p&gt;
+
+&lt;p&gt;Github : &lt;a href=&#34;https://github.com/7sDream/rikka&#34;&gt;https://github.com/7sDream/rikka&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;描述：&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;因为之前用过 docker ，搭建这个，很容易上手。&lt;/p&gt;
+
+&lt;p&gt;很简洁，用于私人好一点，没有用户模块，没有后台管理。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;问题：&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;我是用Nginx做二级域名代理，但是 Rikkia 返回的图片地址，却是 nginx 配置的 127.0.0.1。&lt;/p&gt;
+
+&lt;p&gt;本想重新编译一下，但是天朝XX，golang 一直连接超时……&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&#34;qchan&#34;&gt;Qchan&lt;/h3&gt;
+
+&lt;p&gt;搭建难度：★★☆☆☆&lt;/p&gt;
+
+&lt;p&gt;Github : &lt;a href=&#34;https://github.com/qakcn/qchan&#34;&gt;https://github.com/qakcn/qchan&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;描述：&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Qchan 没有用户模块，运行需要 PHP，对于像我这样没有接触过 php 的人来说，在 linux 上编译安装，简直了，没有安装成功，后来用 apt 安装的。&lt;/p&gt;
+
+&lt;p&gt;界面很是瞎眼，重新写了一下主题，马马虎虎吧。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;问题：&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;linux 下的安装，真心折磨；win 还好，开启插件也简单。&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&#34;树洞外链&#34;&gt;树洞外链&lt;/h3&gt;
+
+&lt;p&gt;搭建难度：★★★☆☆
+官网：&lt;a href=&#34;https://github.com/HFO4/shudong-share&#34;&gt;https://github.com/HFO4/shudong-share&lt;/a&gt;
+Github : &lt;a href=&#34;https://github.com/qakcn/qchan&#34;&gt;https://github.com/qakcn/qchan&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;描述：&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;运行需要PHP和MySQL，超级强大，不止能上传图片，做一些文件的分享也可以，就像是个云盘吧。&lt;/p&gt;
+
+&lt;p&gt;后台管理很复杂，不同的上传方案，不同的用户组等等。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;问题：&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;分享文件、注册用户出现bug，官网上的帮助也没有相关内容。&lt;/p&gt;
+
+&lt;p&gt;上传 svg 卡住，所以放弃了。&lt;/p&gt;
+
+&lt;p&gt;不过，真是一个好的分享云盘。&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&#34;chevereto&#34;&gt;Chevereto&lt;/h3&gt;
+
+&lt;p&gt;搭建难度：★★★☆☆
+官网：&lt;a href=&#34;https://chevereto.com/&#34;&gt;https://chevereto.com/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;描述：&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;老牌的图床程序，对版权很是看重，有免费开源版，网页华丽好看。&lt;/p&gt;
+
+&lt;p&gt;商业版和开源版有些差别，对国内好像不友好。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;问题：&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;不支持修改 上传图片类型，枪毙。&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;搭建-qchan&#34;&gt;搭建 Qchan&lt;/h2&gt;
+
+&lt;p&gt;简单描述一下，搭建 Qchan 的过程。&lt;/p&gt;
+
+&lt;h3 id=&#34;安装-php&#34;&gt;安装 PHP&lt;/h3&gt;
+
+&lt;p&gt;编译安装失败，apt 大法好。&lt;/p&gt;
+
+&lt;p&gt;环境：Ubuntu 16.04&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo apt-get install php php-gd
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;配置文件位置：&lt;code&gt;/etc/php/7.0/fpm/php.ini&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;修改配置&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-ini&#34;&gt;post_max_size = 30M
+upload_max_filesize = 30M
+extension=php_gd2.dll
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;win 处了以上还需要修改&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-ini&#34;&gt;extension_dir = &amp;quot;ext&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;安装-nginx&#34;&gt;安装 Nginx&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo apt-get install nginx
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;在 &lt;code&gt;/etc/nginx/conf.d/&lt;/code&gt; 中新建 &lt;code&gt;www.conf&lt;/code&gt;，添加&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-conf&#34;&gt;server {
+        listen 80 ;
+        server_name ox.xizero.com;
+        rewrite ^(.*)$  https://ox.xizero.com$1 permanent;
+}
+server {
+        listen 443 ssl;
+        server_name demo.com;
+        ssl on;
+        ssl_certificate conf.d/1_demo.com_bundle.crt;
+        ssl_certificate_key conf.d/2_demo.com.key;
+        root /home/ubuntu/qchan/;
+        index index.php;
+
+        location / {
+                try_files $uri $uri/ /index.html;
+        }
+        location ~ \.php$ {
+                include /etc/nginx/fastcgi_params;
+                fastcgi_pass unix:/run/php/php7.0-fpm.sock;
+                fastcgi_index index.php;
+                fastcgi_param SCRIPT_FILENAME /home/ubuntu/qchan/$fastcgi_script_name;
+                client_max_body_size    20m;
+        }
+
+        location ~ /purge(/.*){
+        expires 10m;
+        }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;下载项目&#34;&gt;下载项目&lt;/h3&gt;
+
+&lt;p&gt;原 Github : &lt;a href=&#34;https://github.com/qakcn/qchan&#34;&gt;https://github.com/qakcn/qchan&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;我的 Github : &lt;a href=&#34;https://github.com/f12998765/qchan&#34;&gt;https://github.com/f12998765/qchan&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;克隆项目到 &lt;code&gt;~/&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;修改  config.php 中的管理员用户和密码&lt;/li&gt;
+&lt;li&gt;修改权限 &lt;code&gt;sudo chmod -R 777 qchan/&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;结束&#34;&gt;结束&lt;/h3&gt;
+
+&lt;p&gt;自建图床，花费了几天，还好，最终做了出来。学了点 php 安装，了解了一些套路，果然人还是要努力的！↖(^ω^)↗&lt;/p&gt;
+
+&lt;p&gt;最后，  &lt;strong&gt;PHP是世界上最好的语言&lt;/strong&gt;。&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>SLF4J 和 Logback</title>
@@ -1815,159 +2000,6 @@ public String(char value[], int offset, int count) {
 &lt;li&gt;&lt;a href=&#34;http://www.hollischuang.com/archives/99&#34;&gt;Java 7 源码学习系列（一）——String&lt;/a&gt; &amp;ndash; 看源码解释&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://brokendreams.iteye.com/blog/2260870&#34;&gt;关于Java String的一些总结&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>一个想法</title>
-      <link>https://www.xizero.com/zero/%E4%B8%80%E4%B8%AA%E6%83%B3%E6%B3%95/</link>
-      <pubDate>Sun, 20 Nov 2016 12:19:55 +0800</pubDate>
-      
-      <guid>https://www.xizero.com/zero/%E4%B8%80%E4%B8%AA%E6%83%B3%E6%B3%95/</guid>
-      <description>&lt;p&gt;自己做了一个小东西，一个简单的 &lt;a href=&#34;http://hao.xizero.com&#34;&gt;网址索引&lt;/a&gt;。&lt;/p&gt;
-
-&lt;p&gt;因为要显示每个网站的favicon，google一下，找到了一些还能用公共的api。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;google：&lt;a href=&#34;http://www.google.com/s2/favicons?domain=&#34;&gt;http://www.google.com/s2/favicons?domain=&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;BYI_API：&lt;a href=&#34;https://api.byi.pw/favicon/&#34;&gt;https://api.byi.pw/favicon/&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;其他的都不能用了，谷歌还要翻墙，最后就用了BYI_API。&lt;/p&gt;
-
-&lt;p&gt;一直都挺好的，被墙的网站也能返回，直到前几天（估计在11月12日左右），崩了（&amp;gt;_&amp;lt;）。&lt;/p&gt;
-
-&lt;p&gt;面对满页的XX，我换了另一个。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://f.ydr.me/?url=&#34;&gt;http://f.ydr.me/?url=&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;但是，满页的ie图标是要干啥（不支持的被墙的网站）&lt;/p&gt;
-
-&lt;p&gt;后来，看到了一个问答，大概是通过判断图片的MD5来判断是不是小地球（获取失败时返回），我灵感一动，两天的折磨……&lt;/p&gt;
-
-&lt;p&gt;前段框架用的是刚学的vue.js 2，用过滤器 filters 不就可以了吗？&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;
-{{data_url  | filter}}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;只要我把前面的链接获取到，然后判断那个图标是不是小地球，再来调用其他的api，不就可以了吗。&lt;/p&gt;
-
-&lt;p&gt;但是 vue 不支持在绑定属性中使用过滤器，（&amp;gt;_&amp;lt;），好，再google，(⊙o⊙)哦，要用计算属性 computed 啊！？&lt;/p&gt;
-
-&lt;p&gt;但是计算属性不能传参，（&amp;gt;_&amp;lt;），好，只能再找了，可以用 methods 。&lt;/p&gt;
-
-&lt;p&gt;之前学习了fetch，用fetch下图标，然后直接返回图片，这儿遇到点问题，主要是图片的处理和到最后也没有解决的跨域问题。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;
-fetch(img_url)
-.then(function(res){
-    return res.blob();
-})
-.then(function(imageBlob){
-    img_src = window.URL.createObjectURL(imageBlob);
-    //more
-})
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;这是一个简单的fetch获取图片的例子，复刻官网上的，本地图片可以加载。&lt;/p&gt;
-
-&lt;p&gt;但是favicon api是不支持跨域请求，所以一直在做挣扎。&lt;/p&gt;
-
-&lt;p&gt;在这段时间之中，把这个方法放到了mounted，想让图片直接在加载时判断。&lt;/p&gt;
-
-&lt;p&gt;主要是因为好好的看了一下js的闭包，之前有过卡在这儿的经历，还好征服了。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;
-for(var i=0;i&amp;lt;json.length;i++){
-    (function(i){
-        for(var j=0;j&amp;lt;json[i].list.length;j++){
-            (function(j){
-                fetch(
-                &#39;https://s2.googleusercontent.com/s2/favicons?domain=&#39;
-                +json[i].list[j].url,
-                    {
-                        mode:&amp;quot;cors&amp;quot;,
-                        headers:{
-                        &#39;Access-Control-Allow-Origin&#39;:&#39;*&#39;
-                        }
-                    }
-                )
-                .then(function(res){
-                    return res.blob();
-                })
-                .then(function(imageBlob){
-                    json[i].list[j].img
-                    =window.URL.createObjectURL(imageBlob);
-                })
-            })(j);
-        }
-    })(i);
-}
-
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;痛苦的是解决fetch 的跨域问题&lt;/p&gt;
-
-&lt;p&gt;fetch 的response 中有个mode的属性，可取值4个，包括 cors、no-cors等。&lt;/p&gt;
-
-&lt;p&gt;默认为cors，但在请求图片时，浏览器会提醒跨域问题。
-当设置为 no-cors 时， 虽然不会报错，但是你并不能获取resquest 中的data，所以然并软。&lt;/p&gt;
-
-&lt;p&gt;还曾引入过fetch-jsonp.js，但是就像no-cors，获取不到内容。&lt;/p&gt;
-
-&lt;p&gt;设置请求头中的Access-Control-Allow-Origin，会提示服务器不支持。&lt;/p&gt;
-
-&lt;p&gt;就当我要放弃时，我又突发奇想，等网页加载完，判断下载本地的图片。&lt;/p&gt;
-
-&lt;p&gt;不能直接获取图片的MD5，找到了别人写的代码，先变成Base64.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;
-function getBase64Image(img) {
-    var canvas = document.createElement(&amp;quot;canvas&amp;quot;);
-    canvas.width = img.width;
-    canvas.height = img.height;
-
-    var ctx = canvas.getContext(&amp;quot;2d&amp;quot;);
-    ctx.drawImage(img, 0, 0, img.width, img.height);
-
-    var dataURL = canvas.toDataURL(&amp;quot;image/png&amp;quot;);
-    return dataURL
-
-    // return dataURL.replace(&amp;quot;data:image/png;base64,&amp;quot;, &amp;quot;&amp;quot;);
-}
-
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;接下来，用SparkMD5，讲Base64编码，再比较。&lt;/p&gt;
-
-&lt;p&gt;小心翼翼地试了下，好像可以。&lt;/p&gt;
-
-&lt;p&gt;但是，当我写好了代码，请求时，浏览器报错传到函数里面的不是一个HTMLElement。
-我想是不是因为图片还没有加载完成，获取不到节点，那就判断一下。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;
-if (img.complete) {}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;但是，&lt;strong&gt;canvas&lt;/strong&gt; 不支持跨域 ！&lt;/p&gt;
-
-&lt;p&gt;所以，我放弃了。&lt;/p&gt;
-
-&lt;p&gt;我又重新看了一下开始的API，好像能用了，那就切换回来好了。&lt;/p&gt;
-
-&lt;p&gt;看到他的代码开源，想要自己整一个,以防万一。&lt;/p&gt;
-
-&lt;p&gt;（&amp;gt;_&amp;lt;）为什么是 拍X片 PHP ？？？&lt;/p&gt;
-
-&lt;p&gt;结束&lt;/p&gt;
-
-&lt;p&gt;后记&lt;/p&gt;
-
-&lt;p&gt;当我兴致勃勃的去用java写一个api时，我卡在了线程同步……&lt;/p&gt;
 </description>
     </item>
     

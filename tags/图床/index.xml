@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>图床 on XIZERO</title>
+    <link>https://www.xizero.com/tags/%E5%9B%BE%E5%BA%8A/index.xml</link>
+    <description>Recent content in 图床 on XIZERO</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="https://www.xizero.com/tags/%E5%9B%BE%E5%BA%8A/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>自建图床-Qchan</title>
+      <link>https://www.xizero.com/note/ImageHosting/</link>
+      <pubDate>Sun, 19 Feb 2017 17:59:55 +0800</pubDate>
+      
+      <guid>https://www.xizero.com/note/ImageHosting/</guid>
+      <description>
+
+&lt;h2 id=&#34;简述&#34;&gt;简述&lt;/h2&gt;
+
+&lt;p&gt;做完博客，搭建一个图床，应该很正常吧。(｡･∀･)ﾉﾞ&lt;/p&gt;
+
+&lt;p&gt;翻来覆去，常见的都是在七牛等空间商托管，或者免费的图床网站，因为要自定域名还要文件安全，所以自建是最好的了。
+PHP图床程序开源常用的有 Qchan 、树洞外链、Chevereto这三种，还找到一个go编写的 Rikka 。以上程序，我都在 vps 上搭建过，每个都有难以描述的 bug ，很是心累，最后选择了 Qchan ，修改了一下主题。&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;毫无一点 PHP和Go 基础的我，表示 （╯＾╰）&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;图床程序&#34;&gt;图床程序&lt;/h2&gt;
+
+&lt;h3 id=&#34;rikkia&#34;&gt;Rikkia&lt;/h3&gt;
+
+&lt;p&gt;搭建难度：★☆☆☆☆&lt;/p&gt;
+
+&lt;p&gt;Github : &lt;a href=&#34;https://github.com/7sDream/rikka&#34;&gt;https://github.com/7sDream/rikka&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;描述：&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;因为之前用过 docker ，搭建这个，很容易上手。&lt;/p&gt;
+
+&lt;p&gt;很简洁，用于私人好一点，没有用户模块，没有后台管理。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;问题：&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;我是用Nginx做二级域名代理，但是 Rikkia 返回的图片地址，却是 nginx 配置的 127.0.0.1。&lt;/p&gt;
+
+&lt;p&gt;本想重新编译一下，但是天朝XX，golang 一直连接超时……&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&#34;qchan&#34;&gt;Qchan&lt;/h3&gt;
+
+&lt;p&gt;搭建难度：★★☆☆☆&lt;/p&gt;
+
+&lt;p&gt;Github : &lt;a href=&#34;https://github.com/qakcn/qchan&#34;&gt;https://github.com/qakcn/qchan&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;描述：&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Qchan 没有用户模块，运行需要 PHP，对于像我这样没有接触过 php 的人来说，在 linux 上编译安装，简直了，没有安装成功，后来用 apt 安装的。&lt;/p&gt;
+
+&lt;p&gt;界面很是瞎眼，重新写了一下主题，马马虎虎吧。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;问题：&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;linux 下的安装，真心折磨；win 还好，开启插件也简单。&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&#34;树洞外链&#34;&gt;树洞外链&lt;/h3&gt;
+
+&lt;p&gt;搭建难度：★★★☆☆
+官网：&lt;a href=&#34;https://github.com/HFO4/shudong-share&#34;&gt;https://github.com/HFO4/shudong-share&lt;/a&gt;
+Github : &lt;a href=&#34;https://github.com/qakcn/qchan&#34;&gt;https://github.com/qakcn/qchan&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;描述：&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;运行需要PHP和MySQL，超级强大，不止能上传图片，做一些文件的分享也可以，就像是个云盘吧。&lt;/p&gt;
+
+&lt;p&gt;后台管理很复杂，不同的上传方案，不同的用户组等等。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;问题：&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;分享文件、注册用户出现bug，官网上的帮助也没有相关内容。&lt;/p&gt;
+
+&lt;p&gt;上传 svg 卡住，所以放弃了。&lt;/p&gt;
+
+&lt;p&gt;不过，真是一个好的分享云盘。&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&#34;chevereto&#34;&gt;Chevereto&lt;/h3&gt;
+
+&lt;p&gt;搭建难度：★★★☆☆
+官网：&lt;a href=&#34;https://chevereto.com/&#34;&gt;https://chevereto.com/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;描述：&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;老牌的图床程序，对版权很是看重，有免费开源版，网页华丽好看。&lt;/p&gt;
+
+&lt;p&gt;商业版和开源版有些差别，对国内好像不友好。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;问题：&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;不支持修改 上传图片类型，枪毙。&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;搭建-qchan&#34;&gt;搭建 Qchan&lt;/h2&gt;
+
+&lt;p&gt;简单描述一下，搭建 Qchan 的过程。&lt;/p&gt;
+
+&lt;h3 id=&#34;安装-php&#34;&gt;安装 PHP&lt;/h3&gt;
+
+&lt;p&gt;编译安装失败，apt 大法好。&lt;/p&gt;
+
+&lt;p&gt;环境：Ubuntu 16.04&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo apt-get install php php-gd
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;配置文件位置：&lt;code&gt;/etc/php/7.0/fpm/php.ini&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;修改配置&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-ini&#34;&gt;post_max_size = 30M
+upload_max_filesize = 30M
+extension=php_gd2.dll
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;win 处了以上还需要修改&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-ini&#34;&gt;extension_dir = &amp;quot;ext&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;安装-nginx&#34;&gt;安装 Nginx&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo apt-get install nginx
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;在 &lt;code&gt;/etc/nginx/conf.d/&lt;/code&gt; 中新建 &lt;code&gt;www.conf&lt;/code&gt;，添加&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-conf&#34;&gt;server {
+        listen 80 ;
+        server_name ox.xizero.com;
+        rewrite ^(.*)$  https://ox.xizero.com$1 permanent;
+}
+server {
+        listen 443 ssl;
+        server_name demo.com;
+        ssl on;
+        ssl_certificate conf.d/1_demo.com_bundle.crt;
+        ssl_certificate_key conf.d/2_demo.com.key;
+        root /home/ubuntu/qchan/;
+        index index.php;
+
+        location / {
+                try_files $uri $uri/ /index.html;
+        }
+        location ~ \.php$ {
+                include /etc/nginx/fastcgi_params;
+                fastcgi_pass unix:/run/php/php7.0-fpm.sock;
+                fastcgi_index index.php;
+                fastcgi_param SCRIPT_FILENAME /home/ubuntu/qchan/$fastcgi_script_name;
+                client_max_body_size    20m;
+        }
+
+        location ~ /purge(/.*){
+        expires 10m;
+        }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;下载项目&#34;&gt;下载项目&lt;/h3&gt;
+
+&lt;p&gt;原 Github : &lt;a href=&#34;https://github.com/qakcn/qchan&#34;&gt;https://github.com/qakcn/qchan&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;我的 Github : &lt;a href=&#34;https://github.com/f12998765/qchan&#34;&gt;https://github.com/f12998765/qchan&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;克隆项目到 &lt;code&gt;~/&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;修改  config.php 中的管理员用户和密码&lt;/li&gt;
+&lt;li&gt;修改权限 &lt;code&gt;sudo chmod -R 777 qchan/&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;结束&#34;&gt;结束&lt;/h3&gt;
+
+&lt;p&gt;自建图床，花费了几天，还好，最终做了出来。学了点 php 安装，了解了一些套路，果然人还是要努力的！↖(^ω^)↗&lt;/p&gt;
+
+&lt;p&gt;最后，  &lt;strong&gt;PHP是世界上最好的语言&lt;/strong&gt;。&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
