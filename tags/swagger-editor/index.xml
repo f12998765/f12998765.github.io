@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Swagger Editor on XIZERO</title>
+    <link>https://www.xizero.com/tags/swagger-editor/index.xml</link>
+    <description>Recent content in Swagger Editor on XIZERO</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="https://www.xizero.com/tags/swagger-editor/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Swagger</title>
+      <link>https://www.xizero.com/javaee/swagger/</link>
+      <pubDate>Mon, 27 Feb 2017 20:34:55 +0800</pubDate>
+      
+      <guid>https://www.xizero.com/javaee/swagger/</guid>
+      <description>
+
+&lt;h1 id=&#34;swagger&#34;&gt;Swagger&lt;/h1&gt;
+
+&lt;p&gt;官网：&lt;a href=&#34;http://swagger.io/&#34;&gt;http://swagger.io/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Github：&lt;a href=&#34;https://github.com/swagger-api&#34;&gt;https://github.com/swagger-api&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;THE WORLD&amp;rsquo;S MOST POPULAR API FRAMEWORK&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;世界上最流行的API框架&lt;/p&gt;
+
+&lt;p&gt;Swagger is a powerful open source framework backed by a large ecosystem of tools that helps you design, build, document, and consume your RESTful APIs.&lt;/p&gt;
+
+&lt;p&gt;Swagger是一个强大的开源框架，有工具生态系统支持，可帮助您设计，构建，记录和使用RESTful API。&lt;/p&gt;
+
+&lt;p&gt;Swagger 官方提供了三个工具，分别用于 Design、Build和Document：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Swagger Editor
+
+&lt;ul&gt;
+&lt;li&gt;一个设计或编辑 API 的编辑器，能根据 Swagger 规范进行直观的反馈。&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Swagger Codegen
+
+&lt;ul&gt;
+&lt;li&gt;将 Swagger 文档转换成代码。&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Swagger UI
+
+&lt;ul&gt;
+&lt;li&gt;在浏览器中浏览测试 REST API 。&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;swagger-editor&#34;&gt;Swagger Editor&lt;/h2&gt;
+
+&lt;p&gt;Swagger Editor 是一个可视化的 API 编辑器，能根据 Swagger 规范实时校验文档。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://ox.xizero.com/uploads/2017/02/swagger_editor.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;安装&#34;&gt;安装&lt;/h3&gt;
+
+&lt;p&gt;Swagger 提供了在线版的 Swagger Editor ：&lt;a href=&#34;http://editor.swagger.io/#/&#34;&gt;http://editor.swagger.io/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;也可以在 Github 上下载项目，在本地服务器（Nginx 或 npm http-server）上运行。&lt;/p&gt;
+
+&lt;p&gt;Github地址：&lt;a href=&#34;https://github.com/swagger-api/swagger-editor&#34;&gt;https://github.com/swagger-api/swagger-editor&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;也可以直接在拉取 docker 镜像，运行。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;docker pull swaggerapi/swagger-editor
+docker run -p 80:8080 swaggerapi/swagger-editor
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;使用&#34;&gt;使用&lt;/h3&gt;
+
+&lt;p&gt;Swagger 的文档需要符合 OpenAPI Specification ，使用 json 或者 yaml 描述 API。&lt;/p&gt;
+
+&lt;h3 id=&#34;openapi-specification&#34;&gt;OpenAPI Specification&lt;/h3&gt;
+
+&lt;p&gt;查看官方文档之前，推荐阅读：&lt;a href=&#34;https://www.gitbook.com/book/huangwenchao/swagger/details&#34;&gt;《如何编写基于OpenAPI规范的API文档》&lt;/a&gt;，可以对文档结构有个了解。&lt;/p&gt;
+
+&lt;p&gt;官方文档：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Swagger 官网上的：&lt;a href=&#34;http://swagger.io/specification/&#34;&gt;http://swagger.io/specification/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Github上的：&lt;a href=&#34;https://github.com/OAI/OpenAPI-Specification/blob/master/versions/2.0.md&#34;&gt;https://github.com/OAI/OpenAPI-Specification/blob/master/versions/2.0.md&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;国内关于 Swagger 的中文文档较少，简单地翻译了一下  OpenAPI Specification ，水平有限，见谅！&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;OpenAPI Specification 中文：&lt;a href=&#34;https://www.xizero.com/mixin/OpenAPISpecificationZh/&#34;&gt;https://www.xizero.com/mixin/OpenAPISpecificationZh/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Arnaud Lauret 大神的 OpenAPI Specification Visual Documentation ，可以对文档结构有个清晰了解。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;OpenAPI Specification Visual Documentation：&lt;a href=&#34;http://openapi-specification-visual-documentation.apihandyman.io/&#34;&gt;http://openapi-specification-visual-documentation.apihandyman.io/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;在 Github 上开源地址：&lt;a href=&#34;https://github.com/arno-di-loreto/openapi-specification-visual-documentation&#34;&gt;https://github.com/arno-di-loreto/openapi-specification-visual-documentation&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;并且大神在其博客上写了一个系列教程：Writing OpenAPI (fka Swagger) Specification tutorial&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;大神的博客：&lt;a href=&#34;http://apihandyman.io/&#34;&gt;API Handyman - http://apihandyman.io/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;教程的地址：&lt;a href=&#34;http://apihandyman.io/writing-openapi-swagger-specification-tutorial-part-1-introduction/&#34;&gt;http://apihandyman.io/writing-openapi-swagger-specification-tutorial-part-1-introduction/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;相关&#34;&gt;相关&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;JSON Schema&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;官网：&lt;a href=&#34;http://json-schema.org/&#34;&gt;http://json-schema.org/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Github：&lt;a href=&#34;https://github.com/json-schema-org/json-schema-spec&#34;&gt;https://github.com/json-schema-org/json-schema-spec&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;YAML&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;The Official YAML Web Site：&lt;a href=&#34;http://www.yaml.org/&#34;&gt;http://www.yaml.org/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;阮一峰-YAML 语言教程：&lt;a href=&#34;http://www.ruanyifeng.com/blog/2016/07/yaml.html&#34;&gt;http://www.ruanyifeng.com/blog/2016/07/yaml.html&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Google Java Style Guide&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://google.github.io/styleguide/javaguide.html&#34;&gt;https://google.github.io/styleguide/javaguide.html&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;参考&#34;&gt;参考&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://huangwenchao.gitbooks.io/swagger/content/&#34;&gt;如何编写基于OpenAPI规范的API文档&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://swagger.io/specification/&#34;&gt;SWAGGER SPECIFICATION&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/arno-di-loreto/openapi-specification-visual-documentation&#34;&gt;OpenAPI Specification Visual Documentation&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;swagger-codegen&#34;&gt;Swagger Codegen&lt;/h2&gt;
+
+&lt;p&gt;Swagger Codegen 是一个代码生成工具，根据符合 Swagger 规范的 API 文档生成 API clients 、Server stubs 或者其他类型的文档，还有其他(JMeter)。支持的语言/框架，如下：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;API clients: ActionScript, Bash, C# (.net 2.0, 4.0 or later), C++ (cpprest, Qt5, Tizen), Clojure, Dart, Elixir, Go, Groovy, Haskell, Java (Jersey1.x, Jersey2.x, OkHttp, Retrofit1.x, Retrofit2.x, Feign), Node.js (ES5, ES6, AngularJS with Google Closure Compiler annotations) Objective-C, Perl, PHP, Python, Ruby, Scala, Swift (2.x, 3.x), Typescript (Angular1.x, Angular2.x, Fetch, Node)&lt;/li&gt;
+&lt;li&gt;Server stubs: C# (ASP.NET Core, NancyFx), Erlang, Go, Haskell, Java (MSF4J, Spring, Undertow, JAX-RS: CDI, CXF, Inflector, RestEasy), PHP (Lumen, Slim, Silex, Zend Expressive), Python (Flask), NodeJS, Ruby (Sinatra, Rails5), Scala (Finch, Scalatra)&lt;/li&gt;
+&lt;li&gt;API documentation generators: HTML, Confluence Wiki&lt;/li&gt;
+&lt;li&gt;Others: JMeter&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;安装-1&#34;&gt;安装&lt;/h2&gt;
+
+&lt;h3 id=&#34;环境要求&#34;&gt;环境要求&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Java 7 or 8&lt;/li&gt;
+&lt;li&gt;Apache maven 3.3.3 or greater&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;安装及配置环境，可以看  &lt;a href=&#34;https://www.xizero.com/tool/Java%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%81%A2%E5%A4%8D%E6%89%8B%E5%86%8C/&#34;&gt;《Java 开发环境恢复手册》&lt;/a&gt;。&lt;/p&gt;
+
+&lt;h3 id=&#34;下载&#34;&gt;下载&lt;/h3&gt;
+
+&lt;p&gt;本地环境是 win10 ，关于&lt;a href=&#34;https://github.com/swagger-api/swagger-codegen#os-x-users&#34;&gt; OS X&lt;/a&gt;、&lt;a href=&#34;https://github.com/swagger-api/swagger-codegen#docker&#34;&gt;docker&lt;/a&gt;下的使用，暂不了解。&lt;/p&gt;
+
+&lt;p&gt;可以下载项目，自己编译运行，也可以直接下载 jar 文件执行。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;克隆编译，生成的 &lt;code&gt;swagger-codegen-cli.jar&lt;/code&gt; 文件在 &lt;code&gt;modules/swagger-codegen-cli/target/&lt;/code&gt; 下&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git clone https://github.com/swagger-api/swagger-codegen cd swagger
+ -codegen 
+mvn clean package 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;直接下载
+
+&lt;ul&gt;
+&lt;li&gt;Github ：&lt;a href=&#34;https://github.com/swagger-api/swagger-codegen/releases&#34;&gt;https://github.com/swagger-api/swagger-codegen/releases&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Maven ：&lt;a href=&#34;https://mvnrepository.com/artifact/io.swagger/swagger-codegen&#34;&gt;https://mvnrepository.com/artifact/io.swagger/swagger-codegen&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;使用-1&#34;&gt;使用&lt;/h3&gt;
+
+&lt;p&gt;编译生成的 &lt;code&gt;swagger-codegen-cli.jar&lt;/code&gt; 文件在 &lt;code&gt;modules/swagger-codegen-cli/target/&lt;/code&gt; 下 ，使用时要注意路径。&lt;/p&gt;
+
+&lt;p&gt;而且克隆项目下的 &lt;code&gt;bin&lt;/code&gt; 目录中有很多脚本，可以很方便地使用。初学的话，也可以借鉴很多。&lt;/p&gt;
+
+&lt;p&gt;下面，解释一下相关的命令：&lt;/p&gt;
+
+&lt;h4 id=&#34;java-jar-swagger-codegen-cli-2-2-1-jar-help&#34;&gt;&lt;code&gt;java -jar swagger-codegen-cli-2.2.1.jar help&lt;/code&gt;&lt;/h4&gt;
+
+&lt;p&gt;查看帮助信息&lt;/p&gt;
+
+&lt;p&gt;命令格式：&lt;code&gt;swagger-codegen-cli &amp;lt;command&amp;gt; [&amp;lt;args&amp;gt;]&lt;/code&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;注意在 win 下使用，应该是 &lt;code&gt;java -jar swagger-codegen-cli-2.2.1.jar  &amp;lt;command&amp;gt; [&amp;lt;args&amp;gt;]&lt;/code&gt;，其他地方相同不另做声明&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;可以使用 &lt;code&gt;swagger-codegen-cli help &amp;lt;command&amp;gt;&lt;/code&gt; 查看相关命令的更多信息。&lt;/p&gt;
+
+&lt;p&gt;常用的命令：
+- config-help&lt;br /&gt;
+    - 所选语言的配置帮助
+- generate&lt;br /&gt;
+    - 生成所选语言的代码
+- help&lt;br /&gt;
+    - 显示帮助信息
+- langs&lt;br /&gt;
+    - 显示支持的语言
+- meta&lt;br /&gt;
+    - MetaGenerator. Generator for creating a new template set and configuration for Co the language you specify, and includes default templates to include.
+    - 用于自定义模板，暂不了解&lt;/p&gt;
+
+&lt;h4 id=&#34;config-help&#34;&gt;&lt;code&gt;config-help&lt;/code&gt;&lt;/h4&gt;
+
+&lt;p&gt;查看 &lt;code&gt;config-help&lt;/code&gt; 命令的使用：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;`java -jar swagger-codegen-cli-2.2.1.jar help config-help`
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;code&gt;config-help&lt;/code&gt; 命令格式：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;swagger-codegen-cli config-help (-l &amp;lt;language&amp;gt; | --lang &amp;lt;language&amp;gt;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;code&gt;config-help&lt;/code&gt; 命令参数：
+- language - 所选语言&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;config-help&lt;/code&gt; 命令样例：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;java -jar swagger-codegen-cli-2.2.1.jar config-help -l spring
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;获取 &lt;code&gt;spring&lt;/code&gt; 的配置帮助，注意 &lt;code&gt;spring&lt;/code&gt; 的默认模板是 &lt;code&gt;spring-boot&lt;/code&gt;，若要生成 &lt;code&gt;spring-mvc&lt;/code&gt; ，需要在 &lt;code&gt;generate&lt;/code&gt; 中指定 &lt;code&gt;library&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# 部分执行结果
+library
+    library template (sub-template) to use (Default: spring-boot)
+        spring-boot - Spring-boot Server application using the SpringFox integration.
+        spring-mvc - Spring-MVC Server application using the SpringFox integration.
+        spring-cloud - Spring-Cloud-Feign client with Spring-Boot auto-configured settings.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;langs&#34;&gt;&lt;code&gt;langs&lt;/code&gt;&lt;/h4&gt;
+
+&lt;p&gt;查看支持的语言和框架&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;java -jar swagger-codegen-cli-2.2.1.jar langs
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;执行结果&lt;/p&gt;
+
+&lt;p&gt;Available languages: [android, aspnet5, async-scala, cwiki, csharp, cpprest, dart, flash, python-flask, go, groovy, java, jaxrs, jaxrs-cxf, jaxrs-resteasy, jaxrs-spec, inflector, javascript, javascript-closure-angular, jmeter, nancyfx, nodejs-server, objc, perl, php, python, qt5cpp, ruby, scala, scalatra, silex-PHP, sinatra, rails5, slim, spring, dynamic-html, html, html2, swagger, swagger-yaml, swift, tizen, typescript-angular2, typescript-angular, typescript-node, typescript-fetch, akka-scala, CsharpDotNet2, clojure, haskell, lumen, go-server]&lt;/p&gt;
+
+&lt;p&gt;了解相关语言的配置帮助，可使用 &lt;code&gt;config-help&lt;/code&gt; 命令。&lt;/p&gt;
+
+&lt;h4 id=&#34;generate&#34;&gt;&lt;code&gt;generate&lt;/code&gt;&lt;/h4&gt;
+
+&lt;p&gt;&lt;code&gt;generate&lt;/code&gt; 的作用是根据 API 文档生成代码，是&lt;strong&gt;最重要的命令&lt;/strong&gt;。&lt;/p&gt;
+
+&lt;p&gt;首先查看 &lt;code&gt;generate&lt;/code&gt; 命令的帮助信息：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ java -jar swagger-codegen-cli-2.2.1.jar help generate
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;概要，参数 &lt;code&gt;-i&lt;/code&gt; 和 &lt;code&gt;-l&lt;/code&gt; 是必要参数，其他参数可选。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;swagger-codegen-cli generate
+        [(-a &amp;lt;authorization&amp;gt; | --auth &amp;lt;authorization&amp;gt;)]
+        [--additional-properties &amp;lt;additional properties&amp;gt;]
+        [--api-package &amp;lt;api package&amp;gt;] [--artifact-id &amp;lt;artifact id&amp;gt;]
+        [--artifact-version &amp;lt;artifact version&amp;gt;]
+        [(-c &amp;lt;configuration file&amp;gt; | --config &amp;lt;configuration file&amp;gt;)]
+        [-D &amp;lt;system properties&amp;gt;] [--git-repo-id &amp;lt;git repo id&amp;gt;]
+        [--git-user-id &amp;lt;git user id&amp;gt;] [--group-id &amp;lt;group id&amp;gt;]
+        [--http-user-agent &amp;lt;http user agent&amp;gt;]
+        (-i &amp;lt;spec file&amp;gt; | --input-spec &amp;lt;spec file&amp;gt;)
+        [--import-mappings &amp;lt;import mappings&amp;gt;]
+        [--instantiation-types &amp;lt;instantiation types&amp;gt;]
+        [--invoker-package &amp;lt;invoker package&amp;gt;]
+        (-l &amp;lt;language&amp;gt; | --lang &amp;lt;language&amp;gt;)
+        [--language-specific-primitives &amp;lt;language specific primitives&amp;gt;]
+        [--library &amp;lt;library&amp;gt;] [--model-name-prefix &amp;lt;model name prefix&amp;gt;]
+        [--model-name-suffix &amp;lt;model name suffix&amp;gt;]
+        [--model-package &amp;lt;model package&amp;gt;]
+        [(-o &amp;lt;output directory&amp;gt; | --output &amp;lt;output directory&amp;gt;)]
+        [--release-note &amp;lt;release note&amp;gt;] [(-s | --skip-overwrite)]
+        [(-t &amp;lt;template directory&amp;gt; | --template-dir &amp;lt;template directory&amp;gt;)]
+        [--type-mappings &amp;lt;type mappings&amp;gt;] [(-v | --verbose)]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;部分参数解释&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;-i &amp;lt;spec file&amp;gt;, --input-spec &amp;lt;spec file&amp;gt;&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;必须&lt;/strong&gt; Swagger 规范文件的位置，可以是 url 也可以是文件的路径。&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;-l &amp;lt;language&amp;gt;, --lang &amp;lt;language&amp;gt;&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;必须&lt;/strong&gt; 所选的语言或框架&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;-o &amp;lt;output directory&amp;gt;, --output &amp;lt;output directory&amp;gt;&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;生成项目的位置，默认是当前目录&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;--library &amp;lt;library&amp;gt;&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;指定子模板，库模板&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;-c &amp;lt;configuration file&amp;gt;, --config &amp;lt;configuration file&amp;gt;&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;设置配置文件的路径，文件格式为 json ，如 &lt;code&gt;{&amp;quot;optionKey&amp;quot;:&amp;quot;optionValue&amp;quot;, &amp;quot;optionKey1&amp;quot;:&amp;quot;optionValue1&amp;quot;...}&lt;/code&gt;。&lt;/p&gt;
+
+&lt;p&gt;不同语言的配置信息不同，使用 &lt;code&gt;config-help -l {lang}&lt;/code&gt; 了解更多。&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;--api-package &amp;lt;api package&amp;gt;&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;设置 api 类的包名&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;--artifact-id &amp;lt;artifact id&amp;gt;&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;设置 pom.xml 中的 artifactId&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;--artifact-version &amp;lt;artifact version&amp;gt;&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;设置生成 pom.xml 中的 artifact version&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;--model-package &amp;lt;model package&amp;gt;&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;设置 models 的包名&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;--model-name-prefix &amp;lt;model name prefix&amp;gt;&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;model 的前缀，默认为空字符串&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;--model-name-suffix &amp;lt;model name suffix&amp;gt;&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;model 的后缀，默认为空字符串&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;--instantiation-types &amp;lt;instantiation types&amp;gt;&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;设置实例化类型的映射。格式为 &lt;code&gt;type=instantiatedType&lt;/code&gt;，多个映射之间用逗号 &lt;code&gt;,&lt;/code&gt; 隔开。&lt;/p&gt;
+
+&lt;p&gt;java 的一个例子: &lt;code&gt;array=ArrayList,map=HashMap&lt;/code&gt;，&lt;code&gt;array&lt;/code&gt; 类型在生成的代码中会实例化为 &lt;code&gt;ArrayList&lt;/code&gt;。&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;--type-mappings &amp;lt;type mappings&amp;gt;&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;设置swagger规范类型和生成的代码类型之间的映射。例如 &lt;code&gt;array=List,map=Map,string=String&lt;/code&gt;。&lt;/p&gt;
+
+&lt;p&gt;不了解 &lt;code&gt;instantiation-types&lt;/code&gt; 和 &lt;code&gt;type-mappings&lt;/code&gt; 的区别，待解。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;样例：&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Github wiki 上的 &lt;a href=&#34;https://github.com/swagger-api/swagger-codegen/wiki/Server-stub-generator-HOWTO&#34;&gt;《Server stub generator HOWTO》&lt;/a&gt;，列举了生成多种语言框架 server 的命令。但是一些并不那么好使，比如 spring-mvc。&lt;/p&gt;
+
+&lt;p&gt;wiki 例子：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;java -jar modules/swagger-codegen-cli/target/swagger-codegen-cli.jar generate \
+  -i http://petstore.swagger.io/v2/swagger.json \
+  -l spring-mvc \
+  -o samples/server/petstore/spring-mvc
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;但是实际上，在 Swagger codegen v2.2.0 中 spring-mvc 被删掉了，但是作为了 spring 的一个非默认库，spring-boot 作为其默认库。&lt;/p&gt;
+
+&lt;p&gt;具体细节&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;更新日志 &lt;a href=&#34;https://github.com/swagger-api/swagger-codegen/releases/tag/v2.2.0&#34;&gt;https://github.com/swagger-api/swagger-codegen/releases/tag/v2.2.0&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/swagger-api/swagger-codegen/pull/3133&#34;&gt;[Spring] put spring-mvc and spring-boot under the same language gen #3133&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;现在创建 spring-mvc ，应该这样：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;java -jar swagger-codegen-cli-2.2.1.jar generate -i swagger.yaml -l spring --library spring-mvc
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;swagger-codegen-总结&#34;&gt;Swagger codegen 总结&lt;/h3&gt;
+
+&lt;p&gt;Swagger codegen 作用就是根据 json 或 yaml 格式的 API 文档来生成代码。&lt;/p&gt;
+
+&lt;p&gt;基本掌握级别是会使用 &lt;code&gt;generate&lt;/code&gt; 。&lt;/p&gt;
+
+&lt;p&gt;其他进阶，如自定义模板、添加新的语言框架、工作流集成等等，可以看Github 上的 &lt;a href=&#34;https://github.com/swagger-api/swagger-codegen/blob/master/README.md&#34;&gt;README&lt;/a&gt; 或 &lt;a href=&#34;https://github.com/swagger-api/swagger-codegen/wiki&#34;&gt;wiki&lt;/a&gt;。&lt;/p&gt;
+
+&lt;p&gt;当然最简单的生成，可以在 Swagger Editore 中使用 Generate Server 和 Generate Client。只是不如命令操作仔细。还有，在 Swagger codegen 的 Github 项目中 &lt;code&gt;bin&lt;/code&gt; 目录下有很多可用的脚本，可根据需要修改使用。&lt;/p&gt;
+
+&lt;h3 id=&#34;参考-1&#34;&gt;参考&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/swagger-api/swagger-codegen&#34;&gt;Swagger Codegen Gtihub 项目&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/swagger-api/swagger-codegen/wiki&#34;&gt;Swagger Codegen Gtihub Wiki&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://javaarm.com/faces/display.xhtml;jsessionid=dkH9tZqNyijEI4XCAbpWtmV0?tid=3915&#34;&gt;Swagger Code Generator v2.1.5 README 中文翻译&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/swagger-api/swagger-codegen/pull/3133&#34;&gt;[Spring] put spring-mvc and spring-boot under the same language gen #3133&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://blog.csdn.net/wangjunjun2008/article/details/53200437&#34;&gt;swagger-codegen生成java客户端代码（其他语言类似）&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;swagger-ui&#34;&gt;Swagger UI&lt;/h2&gt;
+
+&lt;p&gt;Swagger UI  将 API 文档在浏览器中可视化。&lt;/p&gt;
+
+&lt;p&gt;官方的 Demo ，地址：&lt;a href=&#34;http://petstore.swagger.io/&#34;&gt;http://petstore.swagger.io/&lt;/a&gt;。截图：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://ox.xizero.com/uploads/2017/02/swagger_ui.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;安装-2&#34;&gt;安装&lt;/h3&gt;
+
+&lt;p&gt;可以从 &lt;a href=&#34;https://github.com/swagger-api/swagger-ui&#34;&gt;Github&lt;/a&gt; 下载项目，打开 &lt;code&gt;./dist/index.html&lt;/code&gt; 直接运行。&lt;/p&gt;
+
+&lt;p&gt;关于 &lt;code&gt;Build&lt;/code&gt; 项目和在 &lt;code&gt;docker&lt;/code&gt;  中运行，暂不了解。&lt;/p&gt;
+
+&lt;p&gt;可以编辑 &lt;code&gt;index.html&lt;/code&gt; ，对 &lt;code&gt;swaggerUi&lt;/code&gt; 对象自定义属性。&lt;/p&gt;
+
+&lt;p&gt;相关属性，参阅 ： &lt;a href=&#34;https://github.com/swagger-api/swagger-ui#swaggerui&#34;&gt;https://github.com/swagger-api/swagger-ui#swaggerui&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;重要属性解释：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;url  设置默认文档路径&lt;/li&gt;
+&lt;li&gt;docExpansion 控制列表显示：默认 none - 完全隐藏；list - 显示路径的操作列表；full - 完全展开&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;中文翻译设置，在 &lt;code&gt;index.html&lt;/code&gt; 中 30 行左右，去掉注释代码，修改为：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;script src=&#39;lang/translator.js&#39; type=&#39;text/javascript&#39;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#39;lang/zh-cn.js&#39; type=&#39;text/javascript&#39;&amp;gt;&amp;lt;/script&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;cors-支持&#34;&gt;CORS 支持&lt;/h3&gt;
+
+&lt;p&gt;关于 CORS 请看另一篇。&lt;/p&gt;
+
+&lt;h3 id=&#34;参考-2&#34;&gt;参考&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/swagger-api/swagger-ui&#34;&gt;https://github.com/swagger-api/swagger-ui&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;学习-swagger-的总结&#34;&gt;学习 Swagger 的总结&lt;/h2&gt;
+
+&lt;p&gt;Saggger 是世界上最流行的的 API 框架，提供了 API 设计、构建和展示的工具。但是相关的资料也有限，大概入了个门。&lt;/p&gt;
+
+&lt;p&gt;关于 Swagger 的更多相关开源项目，可以在 &lt;a href=&#34;http://swagger.io/open-source-integrations/&#34;&gt;http://swagger.io/open-source-integrations/&lt;/a&gt; 查看。&lt;/p&gt;
+
+&lt;p&gt;下一篇，学习如何从代码生成 API 文档 - SPringFox。&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

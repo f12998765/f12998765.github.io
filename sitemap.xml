@@ -2,6 +2,21 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.xizero.com/javaee/cors/</loc>
+    <lastmod>2017-02-27T20:35:59+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.xizero.com/javaee/swagger/</loc>
+    <lastmod>2017-02-27T20:34:55+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.xizero.com/mixin/OpenAPISpecificationZh/</loc>
+    <lastmod>2017-02-21T19:04:12+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.xizero.com/note/ImageHosting/</loc>
     <lastmod>2017-02-19T17:59:55+08:00</lastmod>
   </url>
@@ -257,6 +272,12 @@
   </url>
   
   <url>
+    <loc>https://www.xizero.com/tags/cors/</loc>
+    <lastmod>2017-02-27T20:35:59+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://www.xizero.com/tags/enum/</loc>
     <lastmod>2016-11-18T18:20:00+08:00</lastmod>
     <priority>0</priority>
@@ -306,7 +327,7 @@
   
   <url>
     <loc>https://www.xizero.com/javaee/</loc>
-    <lastmod>2017-02-19T15:54:31+08:00</lastmod>
+    <lastmod>2017-02-27T20:35:59+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -335,6 +356,12 @@
   </url>
   
   <url>
+    <loc>https://www.xizero.com/mixin/</loc>
+    <lastmod>2017-02-21T19:04:12+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://www.xizero.com/tags/mybatis/</loc>
     <lastmod>2016-11-18T18:20:00+08:00</lastmod>
     <priority>0</priority>
@@ -355,6 +382,12 @@
   <url>
     <loc>https://www.xizero.com/note/</loc>
     <lastmod>2017-02-19T17:59:55+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.xizero.com/tags/openapi/</loc>
+    <lastmod>2017-02-21T19:04:12+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -401,6 +434,30 @@
   </url>
   
   <url>
+    <loc>https://www.xizero.com/tags/swagger/</loc>
+    <lastmod>2017-02-27T20:34:55+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.xizero.com/tags/swagger-codegen/</loc>
+    <lastmod>2017-02-27T20:34:55+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.xizero.com/tags/swagger-editor/</loc>
+    <lastmod>2017-02-27T20:34:55+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.xizero.com/tags/swagger-ui/</loc>
+    <lastmod>2017-02-27T20:34:55+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://www.xizero.com/tags/</loc>
     <priority>0</priority>
   </url>
@@ -431,7 +488,7 @@
   
   <url>
     <loc>https://www.xizero.com/</loc>
-    <lastmod>2017-02-19T17:59:55+08:00</lastmod>
+    <lastmod>2017-02-27T20:35:59+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -624,6 +681,12 @@
   <url>
     <loc>https://www.xizero.com/tags/%E8%BD%AF%E4%BB%B6/</loc>
     <lastmod>2016-11-18T18:20:00+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.xizero.com/tags/%E8%BF%B7%E5%BF%83%E7%BF%BB%E8%AF%91/</loc>
+    <lastmod>2017-02-21T19:04:12+08:00</lastmod>
     <priority>0</priority>
   </url>
   

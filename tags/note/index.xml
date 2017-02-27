@@ -146,6 +146,22 @@ $($(&#39;div&#39;)[7]).children();
   &amp;lt;/plugins&amp;gt;
 &amp;lt;/build&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;17-js-点击复制&#34;&gt;17. JS 点击复制&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;$(&amp;quot;.result_info input&amp;quot;).on(&#39;click&#39;,function(e){
+        $(this).select();
+        document.execCommand(&amp;quot;Copy&amp;quot;);
+});
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;当渲染元素未出现&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;$(&amp;quot;#info_zone&amp;quot;).delegate(&amp;quot;input&amp;quot;,&amp;quot;click&amp;quot;,function(){
+    $(this).select();
+    document.execCommand(&amp;quot;Copy&amp;quot;);
+});
+&lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
     
@@ -338,6 +354,14 @@ git fetch origin master
 git merge origin/master
 # 拉取远程仓库分支，与当前分支合并
 git pull origin master
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;强制覆盖本地修改&#34;&gt;强制覆盖本地修改&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;#清除本地修改
+git reset --hard
+#拉代码
+git pull
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;待补充……&lt;/p&gt;

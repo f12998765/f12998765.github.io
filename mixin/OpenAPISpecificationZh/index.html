@@ -1,0 +1,3633 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<meta name="generator" content="Hugo 0.18.1" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="alternate" href="https://www.xizero.com//index.xml" type="application/rss+xml" title="XIZERO">
+<link href="https://www.xizero.com/css/tomorrow.min.css" rel="stylesheet">
+<link href="https://www.xizero.com/css/main.css" rel="stylesheet">
+<link href="https://www.xizero.com/css/context.css" rel="stylesheet">
+<link href="https://www.xizero.com/css/jqcloud.css" rel="stylesheet">
+<script src="https://www.xizero.com/js/high.min.js"></script>
+<script src="https://www.xizero.com/js/jqury.min.js"></script>
+<script src="https://www.xizero.com/js/top.js"></script>
+<script src="https://www.xizero.com/js/jqcloud.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<title>OpenAPI Specification - XIZERO</title>
+</head>
+<body>
+
+<div id="gotop" title="🚀 go top"></div>
+
+<div class="top">
+
+	<div class="gos">
+		<span class="go"><a href="https://www.xizero.com/">Home</a></span>
+		<span class="go"><a href="/tags/">Tags</a></span>
+		<span class="go"><a href="/about/">About</a></span>
+	</div>
+	
+	
+		<div class="tit">
+			OpenAPI Specification
+		</div>
+
+	
+
+</div>
+
+
+
+
+<div class="con">
+	
+
+<blockquote>
+<p>v2.1 水平有限，见谅！关于安全和xml对象部分，并未翻译。</p>
+</blockquote>
+
+<h1 id="openapi-规范">OpenAPI 规范</h1>
+
+<h2 id="fka-swagger-restful-api文档规范">(fka Swagger RESTful API文档规范)</h2>
+
+<h4 id="2-0-版本">2.0 版本</h4>
+
+<p>这些关键词： &ldquo;MUST&rdquo;, &ldquo;MUST NOT&rdquo;, &ldquo;REQUIRED&rdquo;, &ldquo;SHALL&rdquo;, &ldquo;SHALL NOT&rdquo;, &ldquo;SHOULD&rdquo;, &ldquo;SHOULD NOT&rdquo;, &ldquo;RECOMMENDED&rdquo;, &ldquo;MAY&rdquo;, and &ldquo;OPTIONAL&rdquo; 在本文中按<a href="http://www.ietf.org/rfc/rfc2119.txt">RFC 2119</a> 所描述的解释。</p>
+
+<p>Swagger 规范遵循<a href="http://www.apache.org/licenses/LICENSE-2.0.html">The Apache License, Version 2.0</a>.</p>
+
+<h2 id="引言">引言</h2>
+
+<p>Swagger™  是一个用于描述和记录 RESTful APIs 的项目。</p>
+
+<p>Swagger 规范定义了描述 API 所需的文件。这些文件可以被Swagger-UI项目用来显示API，也可以被Swagger-Codegen用来生成各种语言的客户端。其他程序也可以，如测试工具。</p>
+
+<h2 id="修订记录">修订记录</h2>
+
+<table>
+<thead>
+<tr>
+<th>版本</th>
+<th>时间</th>
+<th>记录</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>2.0</td>
+<td>2014-09-08</td>
+<td>发布Swagger 2.0</td>
+</tr>
+
+<tr>
+<td>1.2</td>
+<td>2014-03-14</td>
+<td>初步发布正式文件</td>
+</tr>
+
+<tr>
+<td>1.1</td>
+<td>2012-08-22</td>
+<td>发布 Swagger 1.1</td>
+</tr>
+
+<tr>
+<td>1.0</td>
+<td>2011-08-10</td>
+<td>首次发布 Swagger 规范</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="定义">定义</h2>
+
+<h5 id="a-name-pathtemplating-a-path-templating-路径模板"><a name="pathTemplating"></a>Path Templating / 路径模板</h5>
+
+<blockquote>
+<p>路径模板是指用大括号({})标记的一段URL路径代替参数的用法。</p>
+</blockquote>
+
+<h5 id="a-name-mimetypes-a-mime-类型"><a name="mimeTypes"></a>Mime 类型</h5>
+
+<p>Mime 类型的定义分布在多个资源，minm 类型的定义应该符合<a href="http://tools.ietf.org/html/rfc6838">RFC 6838</a>.</p>
+
+<p>一些 Minme 类型的例子：</p>
+
+<pre><code>  text/plain; charset=utf-8
+  application/json
+  application/vnd.github+json
+  application/vnd.github.v3+json
+  application/vnd.github.v3.raw+json
+  application/vnd.github.v3.text+json
+  application/vnd.github.v3.html+json
+  application/vnd.github.v3.full+json
+  application/vnd.github.v3.diff
+  application/vnd.github.v3.patch
+</code></pre>
+
+<p>参考：</p>
+
+<ul>
+<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Basics_of_HTTP/MIME_types">MDN-MIME 类型</a></li>
+<li><a href="https://zh.wikipedia.org/wiki/%E4%BA%92%E8%81%94%E7%BD%91%E5%AA%92%E4%BD%93%E7%B1%BB%E5%9E%8B">维基百科-互联网媒体类型</a></li>
+</ul>
+
+<h5 id="a-name-httpcodes-a-http-status-codes-http-状态码"><a name="httpCodes"></a>HTTP Status Codes / HTTP 状态码</h5>
+
+<p>HTTP 状态码是用来表示执行操作的状态。 可用的状态码由<a href="http://tools.ietf.org/html/rfc7231#section-6">RFC 7231</a> 在 <a href="http://www.iana.org/assignments/http-status-codes/http-status-codes.xhtml">IANA Status Code Registry</a> 中描述.</p>
+
+<p>参考：</p>
+
+<ul>
+<li><a href="https://zh.wikipedia.org/wiki/HTTP%E7%8A%B6%E6%80%81%E7%A0%81">维基百科-HTTP状态码</a></li>
+</ul>
+
+<h2 id="规范">规范</h2>
+
+<h3 id="格式">格式</h3>
+
+<p>根据 Swagger 规范描述 RESTful API 的文档表示为一个 JSON 对象，并且符合 JSON 标准。YAML，作为 JSON 的超集，也可以用于 Swager 规范文件。</p>
+
+<p>例如：如果一个字段是数组变量，用 JSON 数组可以表示为：</p>
+
+<pre><code class="language-js">{
+   &quot;field&quot; : [...]
+}
+</code></pre>
+
+<p>虽然 API 使用JSON 描述，但是并不强制API使用JSON输入或输出。</p>
+
+<p>规范中的所有字段名都 <strong>区分大小写</strong>。</p>
+
+<p>模式包括两种字段，有声明名称的固定字段，和用正则表达式声明字段名的 Patterned 字段。Patterned 字段可以多次使用，每个都有唯一名称。</p>
+
+<h3 id="文件结构">文件结构</h3>
+
+<p>描述 API 的文件是一个单独文件。但是，定义部分可以由用户分割成多个独立文件。
+用<a href="http://json-schema.org">JSON Schema</a> 定义的<code>$ref</code> 引入使用。</p>
+
+<p>按照惯例，Swagger规范文件被命名为<code>swagger.json</code>。</p>
+
+<h3 id="数据类型">数据类型</h3>
+
+<p>Swagger规范中的基本数据类型基于<a href="http://json-schema.org/latest/json-schema-core.html#anchor8">JSON-Schema Draft 4</a>. 使用JSON Schema Draft 4的子集<a href="#schemaObject">Schema Object</a>来描述模型。</p>
+
+<p>数据类型 <code>&quot;file&quot;</code> 用于在<a href="#parameterObject">Parameter Object</a> 设置参数类型，以及在 <a href="#responseObject">Response Object</a> 响应返回一个文件。</p>
+
+<p><a name="dataTypeFormat"></a>数据有一个可选的修饰属性  <code>format</code>. Swagger 使用规定好的 format 来更准确地确定使用的数据类型。 但是，<code>format</code> 的值可以是任意的<code>string</code>,可以用任意值来支持文档需要。像<code>&quot;email&quot;</code>, <code>&quot;uuid&quot;</code> 等等，尽管它们没有在规范中定义但是仍可以使用。<code>format</code>没有规定的类型遵循 JSON 标准中的定义(除了上面明确的 <code>file</code> 类型). Swagger规范定义的格式如下：</p>
+
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th><a href="#dataTypeType"><code>type</code></a></th>
+<th><a href="#dataTypeFormat"><code>format</code></a></th>
+<th>注释</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>integer</td>
+<td><code>integer</code></td>
+<td><code>int32</code></td>
+<td>有符号32位</td>
+</tr>
+
+<tr>
+<td>long</td>
+<td><code>integer</code></td>
+<td><code>int64</code></td>
+<td>有符号64位</td>
+</tr>
+
+<tr>
+<td>float</td>
+<td><code>number</code></td>
+<td><code>float</code></td>
+<td></td>
+</tr>
+
+<tr>
+<td>double</td>
+<td><code>number</code></td>
+<td><code>double</code></td>
+<td></td>
+</tr>
+
+<tr>
+<td>string</td>
+<td><code>string</code></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td>byte</td>
+<td><code>string</code></td>
+<td><code>byte</code></td>
+<td>base64 编码字符</td>
+</tr>
+
+<tr>
+<td>binary</td>
+<td><code>string</code></td>
+<td><code>binary</code></td>
+<td>任何字节序列</td>
+</tr>
+
+<tr>
+<td>boolean</td>
+<td><code>boolean</code></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td>date</td>
+<td><code>string</code></td>
+<td><code>date</code></td>
+<td><code>full-date</code> - <a href="http://xml2rfc.ietf.org/public/rfc/html/rfc3339.html#anchor14">RFC3339</a></td>
+</tr>
+
+<tr>
+<td>dateTime</td>
+<td><code>string</code></td>
+<td><code>date-time</code></td>
+<td><code>date-time</code> - <a href="http://xml2rfc.ietf.org/public/rfc/html/rfc3339.html#anchor14">RFC3339</a></td>
+</tr>
+
+<tr>
+<td>password</td>
+<td><code>string</code></td>
+<td><code>password</code></td>
+<td>用于提示隐藏输入</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="schema-模式">Schema / 模式</h3>
+
+<h4 id="a-name-swaggerobject-a-swagger-object"><a name="swaggerObject"></a>Swagger Object</h4>
+
+<p>这是 API 规范的根节点。它是以前Resource Listing和API声明(1.2版本及更早)的结合。</p>
+
+<h5 id="fixed-fields">Fixed Fields</h5>
+
+<table>
+<thead>
+<tr>
+<th>Field Name</th>
+<th align="center">Type</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><a name="swaggerSwagger"></a>swagger</td>
+<td align="center"><code>string</code></td>
+<td><strong>必须</strong> 指定使用的 Swagger 规范版本，Swagger UI 和其他客户端根据它来解释API文档。值必须是<code>&quot;2.0&quot;</code>。</td>
+</tr>
+
+<tr>
+<td><a name="swaggerInfo"></a>info</td>
+<td align="center"><a href="#infoObject">Info Object</a></td>
+<td><strong>必须</strong> 提供 API 的相关信息。如果需要，可以被客户端使用</td>
+</tr>
+
+<tr>
+<td><a name="swaggerHost"></a>host</td>
+<td align="center"><code>string</code></td>
+<td>提供 API 服务的 host 或 ip。必须是 host，不包括访问协议(http/https等)或子路径。可能包含端口。如果未定义，将使用文档所在的服务器，包括端口。不支持 <a href="#pathTemplating">path templating</a>.</td>
+</tr>
+
+<tr>
+<td><a name="swaggerBasePath"></a>basePath</td>
+<td align="center"><code>string</code></td>
+<td>提供相对于<a href="#swaggerHost"><code>host</code></a>的基本路径。如果没有定义，API则直接在<code>host</code>下服务。值必须以右斜杠(<code>/</code>)开头. <code>basePath</code> 不支持<a href="#pathTemplating">path templating</a>.</td>
+</tr>
+
+<tr>
+<td><a name="swaggerSchemes"></a>schemes</td>
+<td align="center">[<code>string</code>]</td>
+<td>API 的传输协议。值必须在这个列表中：<code>&quot;http&quot;</code>, <code>&quot;https&quot;</code>, <code>&quot;ws&quot;</code>, <code>&quot;wss&quot;</code>。 如果没有定义，默认使用访问 Swagger 的协议。</td>
+</tr>
+
+<tr>
+<td><a name="swaggerConsumes"></a>consumes</td>
+<td align="center">[<code>string</code>]</td>
+<td>API 可以使用的MIME 类型。 全局设置，但在特殊的API调用上可以覆盖。值必须是 <a href="#mimeTypes">Mime Types</a>.</td>
+</tr>
+
+<tr>
+<td><a name="swaggerProduces"></a>produces</td>
+<td align="center">[<code>string</code>]</td>
+<td>API 可以生成返回的MIME 类型。 全局设置，但在特殊的API调用上可以覆盖。值必须是 <a href="#mimeTypes">Mime Types</a>.</td>
+</tr>
+
+<tr>
+<td><a name="swaggerPaths"></a>paths</td>
+<td align="center"><a href="#pathsObject">Paths Object</a></td>
+<td><strong>必须</strong> API 访问路径。</td>
+</tr>
+
+<tr>
+<td><a name="swaggerDefinitions"></a>definitions</td>
+<td align="center"><a href="#definitionsObject">Definitions Object</a></td>
+<td>定义操作中的参数对象和响应对象，可在其他地方引用。</td>
+</tr>
+
+<tr>
+<td><a name="swaggerParameters"></a>parameters</td>
+<td align="center"><a href="#parametersDefinitionsObject">Parameters Definitions Object</a></td>
+<td>定义参数对象。该属性*不会*为全部操作定义全局参数。(相对于操作中的parameters)</td>
+</tr>
+
+<tr>
+<td><a name="swaggerResponses"></a>responses</td>
+<td align="center"><a href="#responsesDefinitionsObject">Responses Definitions Object</a></td>
+<td>定义响应对象。该属性*不会*为全部操作定义全局响应。(相对于操作中的responses)</td>
+</tr>
+
+<tr>
+<td><a name="swaggerSecurityDefinitions"></a>securityDefinitions</td>
+<td align="center"><a href="#securityDefinitionsObject">Security Definitions Object</a></td>
+<td>定义规范中使用的安全方案。</td>
+</tr>
+
+<tr>
+<td><a name="swaggerSecurity"></a>security</td>
+<td align="center">[<a href="#securityRequirementObject">Security Requirement Object</a>]</td>
+<td>A declaration of which security schemes are applied for the API as a whole. The list of values describes alternative security schemes that can be used (that is, there is a logical OR between the security requirements). Individual operations can override this definition.</td>
+</tr>
+
+<tr>
+<td><a name="swaggerTags"></a>tags</td>
+<td align="center">[<a href="#tagObject">Tag Object</a>]</td>
+<td>A list of tags used by the specification with additional metadata. The order of the tags can be used to reflect on their order by the parsing tools. Not all tags that are used by the <a href="#operationObject">Operation Object</a> must be declared. The tags that are not declared may be organized randomly or based on the tools&rsquo; logic. Each tag name in the list MUST be unique.</td>
+</tr>
+
+<tr>
+<td><a name="swaggerExternalDocs"></a>externalDocs</td>
+<td align="center"><a href="#externalDocumentationObject">External Documentation Object</a></td>
+<td>外部文档</td>
+</tr>
+</tbody>
+</table>
+
+<h5 id="patterned-objects">Patterned Objects</h5>
+
+<table>
+<thead>
+<tr>
+<th>Field Pattern</th>
+<th align="center">Type</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><a name="swaggerExtensions"></a>^x-</td>
+<td align="center">Any</td>
+<td>Allows extensions to the Swagger Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. See <a href="#vendorExtensions">Vendor Extensions</a> for further details.</td>
+</tr>
+</tbody>
+</table>
+
+<h4 id="a-name-infoobject-a-info-object"><a name="infoObject"></a>Info Object</h4>
+
+<p>提供 API 的相关信息。如果需要，可以被客户端使用，为了方便可以在Swagger-UI中呈现。</p>
+
+<h5 id="fixed-fields-1">Fixed Fields</h5>
+
+<table>
+<thead>
+<tr>
+<th>Field Name</th>
+<th align="center">Type</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><a name="infoTitle"></a>title</td>
+<td align="center"><code>string</code></td>
+<td><strong>必须</strong> 文档的标题</td>
+</tr>
+
+<tr>
+<td><a name="infoDescription"></a>description</td>
+<td align="center"><code>string</code></td>
+<td>关于文档简短描述，支持 Markdown <a href="https://guides.github.com/features/mastering-markdown/#GitHub-flavored-markdown">GFM syntax</a></td>
+</tr>
+
+<tr>
+<td><a name="infoTermsOfService"></a>termsOfService</td>
+<td align="center"><code>string</code></td>
+<td>API 的服务条款</td>
+</tr>
+
+<tr>
+<td><a name="infoContact"></a>contact</td>
+<td align="center"><a href="#contactObject">Contact Object</a></td>
+<td>API的联系信息</td>
+</tr>
+
+<tr>
+<td><a name="infoLicense"></a>license</td>
+<td align="center"><a href="#licenseObject">License Object</a></td>
+<td>API的许可信息</td>
+</tr>
+
+<tr>
+<td><a name="infoVersion"></a>version</td>
+<td align="center"><code>string</code></td>
+<td><strong>必须</strong> API 的版本，不要与规范的版本混淆</td>
+</tr>
+</tbody>
+</table>
+
+<h5 id="patterned-objects-1">Patterned Objects</h5>
+
+<table>
+<thead>
+<tr>
+<th>Field Pattern</th>
+<th align="center">Type</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><a name="infoExtensions"></a>^x-</td>
+<td align="center">Any</td>
+<td>Allows extensions to the Swagger Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. See <a href="#vendorExtensions">Vendor Extensions</a> for further details.</td>
+</tr>
+</tbody>
+</table>
+
+<h5 id="info-object-example">Info Object Example:</h5>
+
+<pre><code class="language-js">{
+  &quot;title&quot;: &quot;Swagger Sample App&quot;,
+  &quot;description&quot;: &quot;This is a sample server Petstore server.&quot;,
+  &quot;termsOfService&quot;: &quot;http://swagger.io/terms/&quot;,
+  &quot;contact&quot;: {
+    &quot;name&quot;: &quot;API Support&quot;,
+    &quot;url&quot;: &quot;http://www.swagger.io/support&quot;,
+    &quot;email&quot;: &quot;support@swagger.io&quot;
+  },
+  &quot;license&quot;: {
+    &quot;name&quot;: &quot;Apache 2.0&quot;,
+    &quot;url&quot;: &quot;http://www.apache.org/licenses/LICENSE-2.0.html&quot;
+  },
+  &quot;version&quot;: &quot;1.0.1&quot;
+}
+</code></pre>
+
+<pre><code class="language-yaml">title: Swagger Sample App
+description: This is a sample server Petstore server.
+termsOfService: http://swagger.io/terms/
+contact:
+  name: API Support
+  url: http://www.swagger.io/support
+  email: support@swagger.io
+license:
+  name: Apache 2.0
+  url: http://www.apache.org/licenses/LICENSE-2.0.html
+version: 1.0.1
+</code></pre>
+
+<h4 id="a-name-contactobject-a-contact-object"><a name="contactObject"></a>Contact Object</h4>
+
+<p>API 的联系信息</p>
+
+<h5 id="fixed-fields-2">Fixed Fields</h5>
+
+<table>
+<thead>
+<tr>
+<th>Field Name</th>
+<th align="center">Type</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><a name="contactName"></a>name</td>
+<td align="center"><code>string</code></td>
+<td>联系人或组织的标志名称</td>
+</tr>
+
+<tr>
+<td><a name="contactUrl"></a>url</td>
+<td align="center"><code>string</code></td>
+<td>指向联系人信息的URL。必须采用URL的格式。</td>
+</tr>
+
+<tr>
+<td><a name="contactEmail"></a>email</td>
+<td align="center"><code>string</code></td>
+<td>联系人/组织的电子邮件地址。必须采用电子邮件地址的格式。</td>
+</tr>
+</tbody>
+</table>
+
+<h5 id="patterned-objects-2">Patterned Objects</h5>
+
+<table>
+<thead>
+<tr>
+<th>Field Pattern</th>
+<th align="center">Type</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><a name="contactExtensions"></a>^x-</td>
+<td align="center">Any</td>
+<td>Allows extensions to the Swagger Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. See <a href="#vendorExtensions">Vendor Extensions</a> for further details.</td>
+</tr>
+</tbody>
+</table>
+
+<h5 id="contact-object-example">Contact Object Example:</h5>
+
+<pre><code class="language-js">{
+  &quot;name&quot;: &quot;API Support&quot;,
+  &quot;url&quot;: &quot;http://www.swagger.io/support&quot;,
+  &quot;email&quot;: &quot;support@swagger.io&quot;
+}
+</code></pre>
+
+<pre><code class="language-yaml">name: API Support
+url: http://www.swagger.io/support
+email: support@swagger.io
+</code></pre>
+
+<h4 id="a-name-licenseobject-a-license-object"><a name="licenseObject"></a>License Object</h4>
+
+<p>API的许可信息。</p>
+
+<h5 id="fixed-fields-3">Fixed Fields</h5>
+
+<table>
+<thead>
+<tr>
+<th>Field Name</th>
+<th align="center">Type</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><a name="licenseName"></a>name</td>
+<td align="center"><code>string</code></td>
+<td><strong>必须</strong> API的许可证名称</td>
+</tr>
+
+<tr>
+<td><a name="licenseUrl"></a>url</td>
+<td align="center"><code>string</code></td>
+<td>API使用许可证的URL，格式必须是URL，格式必须是URL</td>
+</tr>
+</tbody>
+</table>
+
+<h5 id="patterned-objects-3">Patterned Objects</h5>
+
+<table>
+<thead>
+<tr>
+<th>Field Pattern</th>
+<th align="center">Type</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><a name="licenseExtensions"></a>^x-</td>
+<td align="center">Any</td>
+<td>Allows extensions to the Swagger Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. See <a href="#vendorExtensions">Vendor Extensions</a> for further details.</td>
+</tr>
+</tbody>
+</table>
+
+<h5 id="license-object-example">License Object Example:</h5>
+
+<pre><code class="language-js">{
+  &quot;name&quot;: &quot;Apache 2.0&quot;,
+  &quot;url&quot;: &quot;http://www.apache.org/licenses/LICENSE-2.0.html&quot;
+}
+</code></pre>
+
+<pre><code class="language-yaml">name: Apache 2.0
+url: http://www.apache.org/licenses/LICENSE-2.0.html
+</code></pre>
+
+<h4 id="a-name-pathsobject-a-paths-object"><a name="pathsObject"></a>Paths Object</h4>
+
+<p>到各个节点的相对路径，与  <a href="#swaggerBasePath"><code>basePath</code></a> 构成完整URL。必须采用URL的格式。可能为空，因为<a href="#securityFiltering">ACL constraints</a>.</p>
+
+<h5 id="patterned-fields">Patterned Fields</h5>
+
+<table>
+<thead>
+<tr>
+<th>Field Pattern</th>
+<th align="center">Type</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><a name="pathsPath"></a>/{path}</td>
+<td align="center"><a href="#pathItemObject">Path Item Object</a></td>
+<td>到各个节点的相对路径，与  <a href="#swaggerBasePath"><code>basePath</code></a> 构成完整URL。必须以斜杠开头。允许<a href="#pathTemplating">Path templating</a>.</td>
+</tr>
+
+<tr>
+<td><a name="pathsExtensions"></a>^x-</td>
+<td align="center">Any</td>
+<td>Allows extensions to the Swagger Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. See <a href="#vendorExtensions">Vendor Extensions</a> for further details.</td>
+</tr>
+</tbody>
+</table>
+
+<h5 id="paths-object-example">Paths Object Example</h5>
+
+<pre><code class="language-js">{
+  &quot;/pets&quot;: {
+    &quot;get&quot;: {
+      &quot;description&quot;: &quot;Returns all pets from the system that the user has access to&quot;,
+      &quot;produces&quot;: [
+        &quot;application/json&quot;
+      ],
+      &quot;responses&quot;: {
+        &quot;200&quot;: {
+          &quot;description&quot;: &quot;A list of pets.&quot;,
+          &quot;schema&quot;: {
+            &quot;type&quot;: &quot;array&quot;,
+            &quot;items&quot;: {
+              &quot;$ref&quot;: &quot;#/definitions/pet&quot;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+</code></pre>
+
+<pre><code class="language-yaml">/pets:
+  get:
+    description: Returns all pets from the system that the user has access to
+    produces:
+    - application/json
+    responses:
+      '200':
+        description: A list of pets.
+        schema:
+          type: array
+          items:
+            $ref: '#/definitions/pet'
+</code></pre>
+
+<h4 id="a-name-pathitemobject-a-path-item-object"><a name="pathItemObject"></a>Path Item Object</h4>
+
+<p>路径可执行操作。由于 <a href="#securityFiltering">ACL constraints</a>，可能为空。浏览者可以看到路径，但不知道到可执行的操作和参数。</p>
+
+<h5 id="fixed-fields-4">Fixed Fields</h5>
+
+<table>
+<thead>
+<tr>
+<th>Field Name</th>
+<th align="center">Type</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><a name="pathItemRef"></a>$ref</td>
+<td align="center"><code>string</code></td>
+<td>引入外部定义。格式必须是 <a href="#pathItemObject">Path Item Object</a>. 如果引用定义和 Path Item的定义冲突，则为未定义 <em>undefined</em>.</td>
+</tr>
+
+<tr>
+<td><a name="pathItemGet"></a>get</td>
+<td align="center"><a href="#operationObject">Operation Object</a></td>
+<td>GET 操作</td>
+</tr>
+
+<tr>
+<td><a name="pathItemPut"></a>put</td>
+<td align="center"><a href="#operationObject">Operation Object</a></td>
+<td>PUT 操作</td>
+</tr>
+
+<tr>
+<td><a name="pathItemPost"></a>post</td>
+<td align="center"><a href="#operationObject">Operation Object</a></td>
+<td>POST 操作</td>
+</tr>
+
+<tr>
+<td><a name="pathItemDelete"></a>delete</td>
+<td align="center"><a href="#operationObject">Operation Object</a></td>
+<td>DELETE 操作</td>
+</tr>
+
+<tr>
+<td><a name="pathItemOptions"></a>options</td>
+<td align="center"><a href="#operationObject">Operation Object</a></td>
+<td>OPTIONS 操作</td>
+</tr>
+
+<tr>
+<td><a name="pathItemHead"></a>head</td>
+<td align="center"><a href="#operationObject">Operation Object</a></td>
+<td>HEAD 操作</td>
+</tr>
+
+<tr>
+<td><a name="pathItemPatch"></a>patch</td>
+<td align="center"><a href="#operationObject">Operation Object</a></td>
+<td>PATCH 操作</td>
+</tr>
+
+<tr>
+<td><a name="pathItemParameters"></a>parameters</td>
+<td align="center">[<a href="#parameterObject">Parameter Object</a> <span>&#124;</span> <a href="#referenceObject">Reference Object</a>]</td>
+<td>该路径下的所有操作的参数列表。参数可在操作下覆盖，但不可以删除。不能包含重复参数。参数的唯一由 <a href="#parameterName">name</a>和<a href="#parameterIn">location</a>组合定义。该列表可以引用<a href="#referenceObject">Reference Object</a>在Swagger对象 <a href="#swaggerParameters">Swagger Object&rsquo;s parameters</a> 中定义的参数。最多可以有一个“body”参数。</td>
+</tr>
+</tbody>
+</table>
+
+<h5 id="patterned-fields-1">Patterned Fields</h5>
+
+<table>
+<thead>
+<tr>
+<th>Field Pattern</th>
+<th align="center">Type</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><a name="pathItemExtensions"></a>^x-</td>
+<td align="center">Any</td>
+<td>Allows extensions to the Swagger Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. See <a href="#vendorExtensions">Vendor Extensions</a> for further details.</td>
+</tr>
+</tbody>
+</table>
+
+<h5 id="path-item-object-example">Path Item Object Example</h5>
+
+<pre><code class="language-js">{
+  &quot;get&quot;: {
+    &quot;description&quot;: &quot;Returns pets based on ID&quot;,
+    &quot;summary&quot;: &quot;Find pets by ID&quot;,
+    &quot;operationId&quot;: &quot;getPetsById&quot;,
+    &quot;produces&quot;: [
+      &quot;application/json&quot;,
+      &quot;text/html&quot;
+    ],
+    &quot;responses&quot;: {
+      &quot;200&quot;: {
+        &quot;description&quot;: &quot;pet response&quot;,
+        &quot;schema&quot;: {
+          &quot;type&quot;: &quot;array&quot;,
+          &quot;items&quot;: {
+            &quot;$ref&quot;: &quot;#/definitions/Pet&quot;
+          }
+        }
+      },
+      &quot;default&quot;: {
+        &quot;description&quot;: &quot;error payload&quot;,
+        &quot;schema&quot;: {
+          &quot;$ref&quot;: &quot;#/definitions/ErrorModel&quot;
+        }
+      }
+    }
+  },
+  &quot;parameters&quot;: [
+    {
+      &quot;name&quot;: &quot;id&quot;,
+      &quot;in&quot;: &quot;path&quot;,
+      &quot;description&quot;: &quot;ID of pet to use&quot;,
+      &quot;required&quot;: true,
+      &quot;type&quot;: &quot;array&quot;,
+      &quot;items&quot;: {
+        &quot;type&quot;: &quot;string&quot;
+      },
+      &quot;collectionFormat&quot;: &quot;csv&quot;
+    }
+  ]
+}
+</code></pre>
+
+<pre><code class="language-yaml">get:
+  description: Returns pets based on ID
+  summary: Find pets by ID
+  operationId: getPetsById
+  produces:
+  - application/json
+  - text/html
+  responses:
+    '200':
+      description: pet response
+      schema:
+        type: array
+        items:
+          $ref: '#/definitions/Pet'
+    default:
+      description: error payload
+      schema:
+        $ref: '#/definitions/ErrorModel'
+parameters:
+- name: id
+  in: path
+  description: ID of pet to use
+  required: true
+  type: array
+  items:
+    type: string
+  collectionFormat: csv
+</code></pre>
+
+<h4 id="a-name-operationobject-a-operation-object"><a name="operationObject"></a>Operation Object</h4>
+
+<p>路径上的某个 API 操作。</p>
+
+<h5 id="fixed-fields-5">Fixed Fields</h5>
+
+<table>
+<thead>
+<tr>
+<th>Field Name</th>
+<th align="center">Type</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><a name="operationTags"></a>tags</td>
+<td align="center">[<code>string</code>]</td>
+<td>API 文档管理中的标签列表。标签能按资源或者其他限定进行逻辑分组。</td>
+</tr>
+
+<tr>
+<td><a name="operationSummary"></a>summary</td>
+<td align="center"><code>string</code></td>
+<td>执行操作的简短描述，为了在 swagger-ui 中获取最大可读性，该字段应该小于 120 字符</td>
+</tr>
+
+<tr>
+<td><a name="operationDescription"></a>description</td>
+<td align="center"><code>string</code></td>
+<td>执行操作的详细描述，支持 Markdown <a href="https://guides.github.com/features/mastering-markdown/#GitHub-flavored-markdown">GFM syntax</a></td>
+</tr>
+
+<tr>
+<td><a name="operationExternalDocs"></a>externalDocs</td>
+<td align="center"><a href="#externalDocumentationObject">External Documentation Object</a></td>
+<td>外部文档</td>
+</tr>
+
+<tr>
+<td><a name="operationId"></a>operationId</td>
+<td align="center"><code>string</code></td>
+<td>&lt;后台程序提供服务的函数名&gt; 标志操作的唯一字符串,标志在API中所有的操作中具有唯一性。工具和 libraries 可使用 operationId 作为操作的唯一标志,建议遵循常见的编程命名约定。</td>
+</tr>
+
+<tr>
+<td><a name="operationConsumes"></a>consumes</td>
+<td align="center">[<code>string</code>]</td>
+<td>操作可以使用的MIME 类型。会覆盖在 Swagger 对象中定义的 <a href="#swaggerConsumes"><code>consumes</code></a> 。空值可以清除全局配置。值必须是<a href="#mimeTypes">Mime Types</a>.</td>
+</tr>
+
+<tr>
+<td><a name="operationProduces"></a>produces</td>
+<td align="center">[<code>string</code>]</td>
+<td>操作可以返回生成的MIME 类型。会覆盖在 Swagger 对象中定义的  <a href="#swaggerProduces"><code>produces</code></a>  。空值可以清除全局配置值必须是 <a href="#mimeTypes">Mime Types</a>.</td>
+</tr>
+
+<tr>
+<td><a name="operationParameters"></a>parameters</td>
+<td align="center">[<a href="#parameterObject">Parameter Object</a> <span>&#124;</span> <a href="#referenceObject">Reference Object</a>]</td>
+<td>操作的参数列表。如果参数在 <a href="#pathItemParameters">Path Item</a> 中已经定义,那么新的定义将覆盖它，但是不会删除。该列表中不能还有重复元素。一个唯一的参数由 <a href="#parameterName">name</a> 和 <a href="#parameterIn">location</a> 组合定义. 该列表可以使用 <a href="#referenceObject">Reference Object</a> 引用在 <a href="#swaggerParameters">Swagger Object&rsquo;s parameters</a> 中定义的参数. 最多含有一个 &ldquo;body&rdquo; 属性。</td>
+</tr>
+
+<tr>
+<td><a name="operationResponses"></a>responses</td>
+<td align="center"><a href="#responsesObject">Responses Object</a></td>
+<td><strong>必须</strong> 执行这个操作所可能返回的响应对象列表</td>
+</tr>
+
+<tr>
+<td><a name="operationSchemes"></a>schemes</td>
+<td align="center">[<code>string</code>]</td>
+<td>操作的传输协议，值必须属于这个列表： <code>&quot;http&quot;</code>, <code>&quot;https&quot;</code>, <code>&quot;ws&quot;</code>, <code>&quot;wss&quot;</code>。 会覆盖 Swagger Object <a href="#swaggerSchemes"><code>schemes</code></a> 中的定义.</td>
+</tr>
+
+<tr>
+<td><a name="operationDeprecated"></a>deprecated</td>
+<td align="center"><code>boolean</code></td>
+<td>声明该操作已经弃用。默认值为 <code>false</code>.</td>
+</tr>
+
+<tr>
+<td><a name="operationSecurity"></a>security</td>
+<td align="center">[<a href="#securityRequirementObject">Security Requirement Object</a>]</td>
+<td>用于声明操作的安全方案。该定义可以覆盖顶级 <a href="#swaggerSecurity"><code>security</code></a>. 如果想删除顶级 security 定义，可以使用空数组。</td>
+</tr>
+</tbody>
+</table>
+
+<h5 id="patterned-objects-4">Patterned Objects</h5>
+
+<table>
+<thead>
+<tr>
+<th>Field Pattern</th>
+<th align="center">Type</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><a name="operationExtensions"></a>^x-</td>
+<td align="center">Any</td>
+<td>Allows extensions to the Swagger Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. See <a href="#vendorExtensions">Vendor Extensions</a> for further details.</td>
+</tr>
+</tbody>
+</table>
+
+<h5 id="operation-object-example">Operation Object Example</h5>
+
+<pre><code class="language-js">{
+  &quot;tags&quot;: [
+    &quot;pet&quot;
+  ],
+  &quot;summary&quot;: &quot;Updates a pet in the store with form data&quot;,
+  &quot;description&quot;: &quot;&quot;,
+  &quot;operationId&quot;: &quot;updatePetWithForm&quot;,
+  &quot;consumes&quot;: [
+    &quot;application/x-www-form-urlencoded&quot;
+  ],
+  &quot;produces&quot;: [
+    &quot;application/json&quot;,
+    &quot;application/xml&quot;
+  ],
+  &quot;parameters&quot;: [
+    {
+      &quot;name&quot;: &quot;petId&quot;,
+      &quot;in&quot;: &quot;path&quot;,
+      &quot;description&quot;: &quot;ID of pet that needs to be updated&quot;,
+      &quot;required&quot;: true,
+      &quot;type&quot;: &quot;string&quot;
+    },
+    {
+      &quot;name&quot;: &quot;name&quot;,
+      &quot;in&quot;: &quot;formData&quot;,
+      &quot;description&quot;: &quot;Updated name of the pet&quot;,
+      &quot;required&quot;: false,
+      &quot;type&quot;: &quot;string&quot;
+    },
+    {
+      &quot;name&quot;: &quot;status&quot;,
+      &quot;in&quot;: &quot;formData&quot;,
+      &quot;description&quot;: &quot;Updated status of the pet&quot;,
+      &quot;required&quot;: false,
+      &quot;type&quot;: &quot;string&quot;
+    }
+  ],
+  &quot;responses&quot;: {
+    &quot;200&quot;: {
+      &quot;description&quot;: &quot;Pet updated.&quot;
+    },
+    &quot;405&quot;: {
+      &quot;description&quot;: &quot;Invalid input&quot;
+    }
+  },
+  &quot;security&quot;: [
+    {
+      &quot;petstore_auth&quot;: [
+        &quot;write:pets&quot;,
+        &quot;read:pets&quot;
+      ]
+    }
+  ]
+}
+</code></pre>
+
+<pre><code class="language-yaml">tags:
+- pet
+summary: Updates a pet in the store with form data
+description: &quot;&quot;
+operationId: updatePetWithForm
+consumes:
+- application/x-www-form-urlencoded
+produces:
+- application/json
+- application/xml
+parameters:
+- name: petId
+  in: path
+  description: ID of pet that needs to be updated
+  required: true
+  type: string
+- name: name
+  in: formData
+  description: Updated name of the pet
+  required: false
+  type: string
+- name: status
+  in: formData
+  description: Updated status of the pet
+  required: false
+  type: string
+responses:
+  '200':
+    description: Pet updated.
+  '405':
+    description: Invalid input
+security:
+- petstore_auth:
+  - write:pets
+  - read:pets
+</code></pre>
+
+<h4 id="a-name-externaldocumentationobject-a-external-documentation-object"><a name="externalDocumentationObject"></a>External Documentation Object</h4>
+
+<p>允许引用外部文档中的资源。</p>
+
+<h5 id="fixed-fields-6">Fixed Fields</h5>
+
+<table>
+<thead>
+<tr>
+<th>Field Name</th>
+<th align="center">Type</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><a name="externalDocDescription"></a>description</td>
+<td align="center"><code>string</code></td>
+<td>目标文档的简短描述， 支持 Markdown <a href="https://guides.github.com/features/mastering-markdown/#GitHub-flavored-markdown">GFM syntax</a> 。</td>
+</tr>
+
+<tr>
+<td><a name="externalDocUrl"></a>url</td>
+<td align="center"><code>string</code></td>
+<td><strong>必须</strong> 目标文档的 URL，值必须是 URL 格式。</td>
+</tr>
+</tbody>
+</table>
+
+<h5 id="patterned-objects-5">Patterned Objects</h5>
+
+<table>
+<thead>
+<tr>
+<th>Field Pattern</th>
+<th align="center">Type</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><a name="externalDocExtensions"></a>^x-</td>
+<td align="center">Any</td>
+<td>Allows extensions to the Swagger Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. See <a href="#vendorExtensions">Vendor Extensions</a> for further details.</td>
+</tr>
+</tbody>
+</table>
+
+<h5 id="external-documentation-object-example">External Documentation Object Example</h5>
+
+<pre><code class="language-js">{
+  &quot;description&quot;: &quot;Find more info here&quot;,
+  &quot;url&quot;: &quot;https://swagger.io&quot;
+}
+</code></pre>
+
+<pre><code class="language-yaml">description: Find more info here
+url: https://swagger.io
+</code></pre>
+
+<h4 id="a-name-parameterobject-a-parameter-object"><a name="parameterObject"></a>Parameter Object</h4>
+
+<p>描述单个操作的参数。</p>
+
+<p>一个唯一的参数由 <a href="#parameterName">name</a> 和 <a href="#parameterIn">location</a> 组合定义。</p>
+
+<p>参数类型有五种。</p>
+
+<ul>
+<li>Path - 和 <a href="#pathTemplating">Path Templating</a> 一起使用, 参数值是路径URL的一部分,不包括API的 host或者 base path 。例如，in <code>/items/{itemId}</code>, 路径参数值是 <code>itemId</code>.</li>
+<li>Query - 附加在URL后的参数。例如，在 <code>/items?id=###</code>中,query 参数值是<code>id</code>.</li>
+<li>Header - 作为请求头的一部分</li>
+<li>Body - 附加在HTTP请求的载荷 payload,由于只有一个载荷，所以只能有<em>一个</em> body 参数。body 参数的名称对其没有影响，仅仅是文档目的。 由于 Form 参数也在载荷中，所以不能同时出现在同一个操作中。</li>
+<li>Form - 用于描述<code>application/x-www-form-urlencoded</code>, <code>multipart/form-data</code> ，或者两者都有的内容请求(在 Swagger的定义中, 操作中的<a href="#operationConsumes"><code>consumes</code></a> 属性)的有效载荷。这是唯一可以发送文件的属性类型，因此支持 <code>file</code> 类型. 由于 form 参数在载荷中发送，所以不在同一个操作中同时和 body 定义。参数类型使用不同的内容类型 (了解更多，请看<a href="http://www.w3.org/TR/html401/interact/forms.html#h-17.13.4):">http://www.w3.org/TR/html401/interact/forms.html#h-17.13.4):</a>
+
+<ul>
+<li><code>application/x-www-form-urlencoded</code> - 类似 Query 的参数格式,但是作用在载荷。例如， <code>foo=1&amp;bar=swagger</code> ， <code>foo</code> 和 <code>bar</code> 都是表单参数。通常用于阐述简单的参数。</li>
+<li><code>multipart/form-data</code> - 每个参数在载荷中包含一个内部头 （each parameter takes a section in the payload with an internal header.) 例如，在头 <code>Content-Disposition: form-data; name=&quot;submit-name&quot;</code> 中，参数的名称是 <code>submit-name</code>。这种类型的表单参数更多地用于传输文件。</li>
+</ul></li>
+</ul>
+
+<h5 id="fixed-fields-7">Fixed Fields</h5>
+
+<table>
+<thead>
+<tr>
+<th>Field Name</th>
+<th align="center">Type</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><a name="parameterName"></a>name</td>
+<td align="center"><code>string</code></td>
+<td><strong>必须</strong> 参数的名称，参数名称<em>区分大小写</em><ul><li>如果 <a href="#parameterIn"><code>in</code></a> 的值是<code>&quot;path&quot;</code>,那么 <code>name</code> 必须对应 <a href="#pathsObject">Paths Object</a>中的 <a href="#pathsPath">path</a> 字段。更多信息看<a href="#pathTemplating">Path Templating</a> <li>对于其他情况，<code>name</code> 对应基于<a href="#parameterIn"><code>in</code></a> 属性使用的参数名</ul></td>
+</tr>
+
+<tr>
+<td><a name="parameterIn"></a>in</td>
+<td align="center"><code>string</code></td>
+<td><strong>必须</strong> 参数的位置，值是 &ldquo;query&rdquo;, &ldquo;header&rdquo;, &ldquo;path&rdquo;, &ldquo;formData&rdquo; 和 &ldquo;body&rdquo;中之一。</td>
+</tr>
+
+<tr>
+<td><a name="parameterDescription"></a>description</td>
+<td align="center"><code>string</code></td>
+<td>参数的简短描述。可以包含使用样例。, 支持 Markdown <a href="https://guides.github.com/features/mastering-markdown/#GitHub-flavored-markdown">GFM syntax</a> 。</td>
+</tr>
+
+<tr>
+<td><a name="parameterRequired"></a>required</td>
+<td align="center"><code>boolean</code></td>
+<td>确定此参数是否必须。如果 <a href="#parameterIn"><code>in</code></a> 的值是&rdquo;path&rdquo;,那么该属性是 <strong>必须</strong> 而且必须是 <code>true</code>。其他情况，该属性也可能包含，默认值是 <code>false</code>。</td>
+</tr>
+</tbody>
+</table>
+
+<p>如果<a href="#parameterIn"><code>in</code></a> 的值是 <code>&quot;body&quot;</code>:</p>
+
+<table>
+<thead>
+<tr>
+<th>Field Name</th>
+<th align="center">Type</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><a name="parameterSchema"></a>schema</td>
+<td align="center"><a href="#schemaObject">Schema Object</a></td>
+<td><strong>必须</strong> 模式(schema)定义的是 body 参数的类型(The schema defining the type used for the body parameter.)。</td>
+</tr>
+</tbody>
+</table>
+
+<p>如果 <a href="#parameterIn"><code>in</code></a> 的值是除了<code>&quot;body&quot;</code>的任意一个 :</p>
+
+<table>
+<thead>
+<tr>
+<th>Field Name</th>
+<th align="center">Type</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><a name="parameterType"></a>type</td>
+<td align="center"><code>string</code></td>
+<td><strong>必须</strong> 参数的类型。由于参数不在请求体(request body)中 ，所以仅限简单类型(不能是对象)，值必须是 <code>&quot;string&quot;</code>, <code>&quot;number&quot;</code>, <code>&quot;integer&quot;</code>, <code>&quot;boolean&quot;</code>, <code>&quot;array&quot;</code> 和 <code>&quot;file&quot;</code>中之一。如果 <code>type</code> 是 <code>&quot;file&quot;</code>，那么 <a href="#operationConsumes"><code>consumes</code></a> 必须被定义为 <code>&quot;multipart/form-data&quot;</code>, <code>&quot; application/x-www-form-urlencoded&quot;</code> ，或者两者,而且 <a href="#parameterIn"><code>in</code></a> 的值必须是<code>&quot;formData&quot;</code>。</td>
+</tr>
+
+<tr>
+<td><a name="parameterFormat"></a>format</td>
+<td align="center"><code>string</code></td>
+<td>对<a href="#parameterType"><code>type</code></a> 进行扩展，更详细的描述。 查看<a href="#dataTypeFormat">Data Type Formats</a>了解更多。</td>
+</tr>
+
+<tr>
+<td><a name="parameterAllowEmptyValue"/>allowEmptyValue</td>
+<td align="center"><code>boolean</code></td>
+<td>设置能否传递空值参数。仅仅对 <code>query</code> 或 <code>formData</code>参数有效，允许发送仅具有名称或空值的参数，默认值为 <code>false</code>。</td>
+</tr>
+
+<tr>
+<td><a name="parameterItems"></a>items</td>
+<td align="center"><a href="#itemsObject">Items Object</a></td>
+<td><strong>必须 ，如果 <a href="#parameterType"><code>type</code></a> 的值是 &ldquo;array&rdquo;。</strong> 描述数组中的元素类型</td>
+</tr>
+
+<tr>
+<td><a name="parameterCollectionFormat"></a>collectionFormat</td>
+<td align="center"><code>string</code></td>
+<td>Determines the format of the array if type array is used。可用的值: <ul><li><code>csv</code> - 逗号分隔值 <code>foo,bar</code>. <li><code>ssv</code> - 空格分隔值 <code>foo bar</code>. <li><code>tsv</code> -  制表符分隔值 <code>foo\tbar</code>. <li><code>pipes</code> - 管道分隔值 <code>foo&#124;bar</code>. <li><code>multi</code> - 对应于多个参数实例，而不是单个实例,如<code>foo=bar&amp;foo=baz</code>. 仅仅用于 <a href="#parameterIn"><code>in</code></a> 的值是&rdquo;query&rdquo; 或 &ldquo;formData&rdquo;。 </ul> 默认值是 <code>csv</code>.</td>
+</tr>
+
+<tr>
+<td><a name="parameterDefault"></a>default</td>
+<td align="center">*</td>
+<td>定义参数的默认值。例如， 如果请求中没有提供，那么控制每页结果数的&rdquo;count&rdquo; 默认值就为100(注意：&rdquo;default&rdquo; has no meaning for required parameters.)  参阅 <a href="http://json-schema.org/latest/json-schema-validation.html#anchor101">http://json-schema.org/latest/json-schema-validation.html#anchor101</a>. 不同于 JSON Schema，这个值必须符合 <a href="#parameterType"><code>type</code></a> 定义的参数。</td>
+</tr>
+
+<tr>
+<td><a name="parameterMaximum"></a>maximum</td>
+<td align="center"><code>number</code></td>
+<td>参阅 <a href="http://json-schema.org/latest/json-schema-validation.html#anchor17">http://json-schema.org/latest/json-schema-validation.html#anchor17</a>.</td>
+</tr>
+
+<tr>
+<td><a name="parameterExclusiveMaximum"></a>exclusiveMaximum</td>
+<td align="center"><code>boolean</code></td>
+<td>参阅 <a href="http://json-schema.org/latest/json-schema-validation.html#anchor17">http://json-schema.org/latest/json-schema-validation.html#anchor17</a>.</td>
+</tr>
+
+<tr>
+<td><a name="parameterMinimum"></a>minimum</td>
+<td align="center"><code>number</code></td>
+<td>参阅 <a href="http://json-schema.org/latest/json-schema-validation.html#anchor21">http://json-schema.org/latest/json-schema-validation.html#anchor21</a>.</td>
+</tr>
+
+<tr>
+<td><a name="parameterExclusiveMinimum"></a>exclusiveMinimum</td>
+<td align="center"><code>boolean</code></td>
+<td>参阅 <a href="http://json-schema.org/latest/json-schema-validation.html#anchor21">http://json-schema.org/latest/json-schema-validation.html#anchor21</a>.</td>
+</tr>
+
+<tr>
+<td><a name="parameterMaxLength"></a>maxLength</td>
+<td align="center"><code>integer</code></td>
+<td>参阅 <a href="http://json-schema.org/latest/json-schema-validation.html#anchor26">http://json-schema.org/latest/json-schema-validation.html#anchor26</a>.</td>
+</tr>
+
+<tr>
+<td><a name="parameterMinLength"></a>minLength</td>
+<td align="center"><code>integer</code></td>
+<td>参阅 <a href="http://json-schema.org/latest/json-schema-validation.html#anchor29">http://json-schema.org/latest/json-schema-validation.html#anchor29</a>.</td>
+</tr>
+
+<tr>
+<td><a name="parameterPattern"></a>pattern</td>
+<td align="center"><code>string</code></td>
+<td>参阅 <a href="http://json-schema.org/latest/json-schema-validation.html#anchor33">http://json-schema.org/latest/json-schema-validation.html#anchor33</a>.</td>
+</tr>
+
+<tr>
+<td><a name="parameterMaxItems"></a>maxItems</td>
+<td align="center"><code>integer</code></td>
+<td>参阅 <a href="http://json-schema.org/latest/json-schema-validation.html#anchor42">http://json-schema.org/latest/json-schema-validation.html#anchor42</a>.</td>
+</tr>
+
+<tr>
+<td><a name="parameterMinItems"></a>minItems</td>
+<td align="center"><code>integer</code></td>
+<td>参阅 <a href="http://json-schema.org/latest/json-schema-validation.html#anchor45">http://json-schema.org/latest/json-schema-validation.html#anchor45</a>.</td>
+</tr>
+
+<tr>
+<td><a name="parameterUniqueItems"></a>uniqueItems</td>
+<td align="center"><code>boolean</code></td>
+<td>参阅 <a href="http://json-schema.org/latest/json-schema-validation.html#anchor49">http://json-schema.org/latest/json-schema-validation.html#anchor49</a>.</td>
+</tr>
+
+<tr>
+<td><a name="parameterEnum"></a>enum</td>
+<td align="center">[*]</td>
+<td>参阅 <a href="http://json-schema.org/latest/json-schema-validation.html#anchor76">http://json-schema.org/latest/json-schema-validation.html#anchor76</a>.</td>
+</tr>
+
+<tr>
+<td><a name="parameterMultipleOf"></a>multipleOf</td>
+<td align="center"><code>number</code></td>
+<td>参阅 <a href="http://json-schema.org/latest/json-schema-validation.html#anchor14">http://json-schema.org/latest/json-schema-validation.html#anchor14</a>.</td>
+</tr>
+</tbody>
+</table>
+
+<h5 id="patterned-fields-2">Patterned Fields</h5>
+
+<table>
+<thead>
+<tr>
+<th>Field Pattern</th>
+<th align="center">Type</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><a name="parameterExtensions"></a>^x-</td>
+<td align="center">Any</td>
+<td>Allows extensions to the Swagger Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. See <a href="#vendorExtensions">Vendor Extensions</a> for further details.</td>
+</tr>
+</tbody>
+</table>
+
+<h5 id="parameter-object-examples">Parameter Object Examples</h5>
+
+<h6 id="body-parameters">Body Parameters</h6>
+
+<p>在 body 参数中引用一个 shema 定义（通常用于模型定义）。</p>
+
+<pre><code class="language-js">{
+  &quot;name&quot;: &quot;user&quot;,
+  &quot;in&quot;: &quot;body&quot;,
+  &quot;description&quot;: &quot;user to add to the system&quot;,
+  &quot;required&quot;: true,
+  &quot;schema&quot;: {
+    &quot;$ref&quot;: &quot;#/definitions/User&quot;
+  }
+}
+</code></pre>
+
+<pre><code class="language-yaml">name: user
+in: body
+description: user to add to the system
+required: true
+schema:
+  $ref: '#/definitions/User'
+</code></pre>
+
+<p>一个包含字符串数组的 body 参数 :</p>
+
+<pre><code class="language-js">{
+  &quot;name&quot;: &quot;user&quot;,
+  &quot;in&quot;: &quot;body&quot;,
+  &quot;description&quot;: &quot;user to add to the system&quot;,
+  &quot;required&quot;: true,
+  &quot;schema&quot;: {
+    &quot;type&quot;: &quot;array&quot;,
+    &quot;items&quot;: {
+      &quot;type&quot;: &quot;string&quot;
+    }
+  }
+}
+</code></pre>
+
+<pre><code class="language-yaml">name: user
+in: body
+description: user to add to the system
+required: true
+schema:
+  type: array
+  items:
+    type: string
+</code></pre>
+
+<h6 id="other-parameters">Other Parameters</h6>
+
+<p>包含64位整数的 header parameter：</p>
+
+<pre><code class="language-js">{
+  &quot;name&quot;: &quot;token&quot;,
+  &quot;in&quot;: &quot;header&quot;,
+  &quot;description&quot;: &quot;token to be passed as a header&quot;,
+  &quot;required&quot;: true,
+  &quot;type&quot;: &quot;array&quot;,
+  &quot;items&quot;: {
+    &quot;type&quot;: &quot;integer&quot;,
+    &quot;format&quot;: &quot;int64&quot;
+  },
+  &quot;collectionFormat&quot;: &quot;csv&quot;
+}
+</code></pre>
+
+<pre><code class="language-yaml">name: token
+in: header
+description: token to be passed as a header
+required: true
+type: array
+items:
+  type: integer
+  format: int64
+collectionFormat: csv
+</code></pre>
+
+<p>一个字符串的 path parameter。</p>
+
+<pre><code class="language-js">{
+  &quot;name&quot;: &quot;username&quot;,
+  &quot;in&quot;: &quot;path&quot;,
+  &quot;description&quot;: &quot;username to fetch&quot;,
+  &quot;required&quot;: true,
+  &quot;type&quot;: &quot;string&quot;
+}
+</code></pre>
+
+<pre><code class="language-yaml">name: username
+in: path
+description: username to fetch
+required: true
+type: string
+</code></pre>
+
+<p>一个字符串的query parameter,允许多个重复的值：(An optional query parameter of a string value, allowing multiple values by repeating the query parameter:)</p>
+
+<pre><code class="language-js">{
+  &quot;name&quot;: &quot;id&quot;,
+  &quot;in&quot;: &quot;query&quot;,
+  &quot;description&quot;: &quot;ID of the object to fetch&quot;,
+  &quot;required&quot;: false,
+  &quot;type&quot;: &quot;array&quot;,
+  &quot;items&quot;: {
+    &quot;type&quot;: &quot;string&quot;
+  },
+  &quot;collectionFormat&quot;: &quot;multi&quot;
+}
+</code></pre>
+
+<pre><code class="language-yaml">name: id
+in: query
+description: ID of the object to fetch
+required: false
+type: array
+items:
+  type: string
+collectionFormat: multi
+</code></pre>
+
+<p>用于文件上传的表单数据：</p>
+
+<pre><code class="language-js">{
+  &quot;name&quot;: &quot;avatar&quot;,
+  &quot;in&quot;: &quot;formData&quot;,
+  &quot;description&quot;: &quot;The avatar of the user&quot;,
+  &quot;required&quot;: true,
+  &quot;type&quot;: &quot;file&quot;
+}
+</code></pre>
+
+<pre><code class="language-yaml">name: avatar
+in: formData
+description: The avatar of the user
+required: true
+type: file
+</code></pre>
+
+<h4 id="a-name-itemsobject-a-items-object"><a name="itemsObject"></a>Items Object</h4>
+
+<p>JSON-SChema 的 items 对象的子集(A limited subset of JSON-Schema&rsquo;s items object). 当<a href="#parameterIn"><code>in</code></a> 的值不是<code>&quot;body&quot;</code>时，该参数才能定义。</p>
+
+<h5 id="fixed-fields-8">Fixed Fields</h5>
+
+<table>
+<thead>
+<tr>
+<th>Field Name</th>
+<th align="center">Type</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><a name="itemsType"></a>type</td>
+<td align="center"><code>string</code></td>
+<td><strong>必须</strong> 参数类型。必须是 <code>&quot;string&quot;</code>, <code>&quot;number&quot;</code>, <code>&quot;integer&quot;</code>, <code>&quot;boolean&quot;</code>, or <code>&quot;array&quot;</code> 之一。不允许使用 Files 和 models 。</td>
+</tr>
+
+<tr>
+<td><a name="itemsFormat"></a>format</td>
+<td align="center"><code>string</code></td>
+<td>对<a href="#parameterType"><code>type</code></a> 进行扩展，更详细的描述。 查看<a href="#dataTypeFormat">Data Type Formats</a>了解更多。</td>
+</tr>
+
+<tr>
+<td><a name="itemsItems"></a>items</td>
+<td align="center"><a href="#itemsObject">Items Object</a></td>
+<td><strong>当<a href="#itemsType"><code>type</code></a> 的值是 &ldquo;array&rdquo;时，是必须的</strong> 描述数组元素的类型。</td>
+</tr>
+
+<tr>
+<td><a name="itemsCollectionFormat"></a>collectionFormat</td>
+<td align="center"><code>string</code></td>
+<td>Determines the format of the array if type array is used。可用的值: <ul><li><code>csv</code> - 逗号分隔值 <code>foo,bar</code>. <li><code>ssv</code> - 空格分隔值 <code>foo bar</code>. <li><code>tsv</code> -  制表符分隔值 <code>foo\tbar</code>. <li><code>pipes</code> - 管道分隔值 <code>foo&#124;bar</code>. </ul> 默认值是 <code>csv</code>.</td>
+</tr>
+
+<tr>
+<td><a name="itemsDefault"></a>default</td>
+<td align="center">*</td>
+<td>当没有提供时，server 使用的默认值。 (Note: &ldquo;default&rdquo; has no meaning for required items.) 参阅 <a href="http://json-schema.org/latest/json-schema-validation.html#anchor101.与">http://json-schema.org/latest/json-schema-validation.html#anchor101.与</a> JSON Schema 不同，值必须符合 <a href="#itemsType"><code>type</code></a> 所定义的类型。</td>
+</tr>
+
+<tr>
+<td><a name="itemsMaximum"></a>maximum</td>
+<td align="center"><code>number</code></td>
+<td>参阅 <a href="http://json-schema.org/latest/json-schema-validation.html#anchor17">http://json-schema.org/latest/json-schema-validation.html#anchor17</a>.</td>
+</tr>
+
+<tr>
+<td><a name="itemsMaximum"></a>exclusiveMaximum</td>
+<td align="center"><code>boolean</code></td>
+<td>参阅 <a href="http://json-schema.org/latest/json-schema-validation.html#anchor17">http://json-schema.org/latest/json-schema-validation.html#anchor17</a>.</td>
+</tr>
+
+<tr>
+<td><a name="itemsMinimum"></a>minimum</td>
+<td align="center"><code>number</code></td>
+<td>参阅 <a href="http://json-schema.org/latest/json-schema-validation.html#anchor21">http://json-schema.org/latest/json-schema-validation.html#anchor21</a>.</td>
+</tr>
+
+<tr>
+<td><a name="itemsExclusiveMinimum"></a>exclusiveMinimum</td>
+<td align="center"><code>boolean</code></td>
+<td>参阅 <a href="http://json-schema.org/latest/json-schema-validation.html#anchor21">http://json-schema.org/latest/json-schema-validation.html#anchor21</a>.</td>
+</tr>
+
+<tr>
+<td><a name="itemsMaxLength"></a>maxLength</td>
+<td align="center"><code>integer</code></td>
+<td>参阅 <a href="http://json-schema.org/latest/json-schema-validation.html#anchor26">http://json-schema.org/latest/json-schema-validation.html#anchor26</a>.</td>
+</tr>
+
+<tr>
+<td><a name="itemsMinLength"></a>minLength</td>
+<td align="center"><code>integer</code></td>
+<td>参阅 <a href="http://json-schema.org/latest/json-schema-validation.html#anchor29">http://json-schema.org/latest/json-schema-validation.html#anchor29</a>.</td>
+</tr>
+
+<tr>
+<td><a name="itemsPattern"></a>pattern</td>
+<td align="center"><code>string</code></td>
+<td>参阅 <a href="http://json-schema.org/latest/json-schema-validation.html#anchor33">http://json-schema.org/latest/json-schema-validation.html#anchor33</a>.</td>
+</tr>
+
+<tr>
+<td><a name="itemsMaxItems"></a>maxItems</td>
+<td align="center"><code>integer</code></td>
+<td>参阅 <a href="http://json-schema.org/latest/json-schema-validation.html#anchor42">http://json-schema.org/latest/json-schema-validation.html#anchor42</a>.</td>
+</tr>
+
+<tr>
+<td><a name="itemsMinItems"></a>minItems</td>
+<td align="center"><code>integer</code></td>
+<td>参阅 <a href="http://json-schema.org/latest/json-schema-validation.html#anchor45">http://json-schema.org/latest/json-schema-validation.html#anchor45</a>.</td>
+</tr>
+
+<tr>
+<td><a name="itemsUniqueItems"></a>uniqueItems</td>
+<td align="center"><code>boolean</code></td>
+<td>参阅 <a href="http://json-schema.org/latest/json-schema-validation.html#anchor49">http://json-schema.org/latest/json-schema-validation.html#anchor49</a>.</td>
+</tr>
+
+<tr>
+<td><a name="itemsEnum"></a>enum</td>
+<td align="center">[*]</td>
+<td>参阅 <a href="http://json-schema.org/latest/json-schema-validation.html#anchor76">http://json-schema.org/latest/json-schema-validation.html#anchor76</a>.</td>
+</tr>
+
+<tr>
+<td><a name="itemsMultipleOf"></a>multipleOf</td>
+<td align="center"><code>number</code></td>
+<td>参阅 <a href="http://json-schema.org/latest/json-schema-validation.html#anchor14">http://json-schema.org/latest/json-schema-validation.html#anchor14</a>.</td>
+</tr>
+</tbody>
+</table>
+
+<h5 id="patterned-objects-6">Patterned Objects</h5>
+
+<table>
+<thead>
+<tr>
+<th>Field Pattern</th>
+<th align="center">Type</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><a name="itemsExtensions"></a>^x-</td>
+<td align="center">Any</td>
+<td>Allows extensions to the Swagger Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. See <a href="#vendorExtensions">Vendor Extensions</a> for further details.</td>
+</tr>
+</tbody>
+</table>
+
+<h5 id="items-object-examples">Items Object Examples</h5>
+
+<p>参数的类型是 string，并且长度小于 2 字符：</p>
+
+<pre><code class="language-js">{
+    &quot;type&quot;: &quot;string&quot;,
+    &quot;minLength&quot;: 2
+}
+</code></pre>
+
+<pre><code class="language-yaml">type: string
+minLength: 2
+</code></pre>
+
+<p>一个数组，元素的类型是 integer ，大小在 0 与 63 之间（含）：</p>
+
+<pre><code class="language-js">{
+    &quot;type&quot;: &quot;array&quot;,
+    &quot;items&quot;: {
+        &quot;type&quot;: &quot;integer&quot;,
+        &quot;minimum&quot;: 0,
+        &quot;maximum&quot;: 63
+    }
+}
+</code></pre>
+
+<pre><code class="language-yaml">type: array
+items:
+  type: integer
+  minimum: 0
+  maximum: 63
+</code></pre>
+
+<h4 id="a-name-responsesobject-a-responses-object"><a name="responsesObject"></a>Responses Object</h4>
+
+<p>描述操作的预期响应。将 HTTP 状态码映射到预期响应。不要期望文档可以涵盖全部的响应码，因为它们往往是不可预知的。但是，在文档中可以看到成功时的响应以及已知的错误。</p>
+
+<p><code>default</code> 能作用到全部 HTTP 响应码，除了单独覆盖的。</p>
+
+<p><code>Responses Object</code> 必须包含一个响应码，而且它应该是一个成功操作的响应码。</p>
+
+<h5 id="fixed-fields-9">Fixed Fields</h5>
+
+<table>
+<thead>
+<tr>
+<th>Field Name</th>
+<th align="center">Type</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><a name="responsesDefault"></a>default</td>
+<td align="center"><a href="#responseObject">Response Object</a> <span>&#124;</span> <a href="#referenceObject">Reference Object</a></td>
+<td>描述除了 HTTP 特定响应码外的响应。可以覆盖未声明的响应。可以通过 <a href="#referenceObject">Reference Object</a> 引用在 <a href="#swaggerResponses">Swagger Object&rsquo;s responses</a> 对象中定义的响应。</td>
+</tr>
+</tbody>
+</table>
+
+<h5 id="patterned-fields-3">Patterned Fields</h5>
+
+<table>
+<thead>
+<tr>
+<th>Field Pattern</th>
+<th align="center">Type</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><a name="responsesCode"></a>{<a href="#httpCodes">HTTP Status Code</a>}</td>
+<td align="center"><a href="#responseObject">Response Object</a> <span>&#124;</span> <a href="#referenceObject">Reference Object</a></td>
+<td>任何 <a href="#httpCodes">HTTP status code</a> 都可作为属性的名称，每个响应码都是一个独立的属性。描述HTTP响应码所代表的的响应。可通过 <a href="#referenceObject">Reference Object</a> 引用 <a href="#swaggerResponses">Swagger Object&rsquo;s responses</a> 中定义的响应.</td>
+</tr>
+
+<tr>
+<td><a name="responsesExtensions"></a>^x-</td>
+<td align="center">Any</td>
+<td>Allows extensions to the Swagger Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. See <a href="#vendorExtensions">Vendor Extensions</a> for further details.</td>
+</tr>
+</tbody>
+</table>
+
+<h5 id="responses-object-example">Responses Object Example</h5>
+
+<p>成功响应的状态码 200，和其他默认的响应（意味着错误）：</p>
+
+<pre><code class="language-js">{
+  &quot;200&quot;: {
+    &quot;description&quot;: &quot;a pet to be returned&quot;,
+    &quot;schema&quot;: {
+      &quot;$ref&quot;: &quot;#/definitions/Pet&quot;
+    }
+  },
+  &quot;default&quot;: {
+    &quot;description&quot;: &quot;Unexpected error&quot;,
+    &quot;schema&quot;: {
+      &quot;$ref&quot;: &quot;#/definitions/ErrorModel&quot;
+    }
+  }
+}
+</code></pre>
+
+<pre><code class="language-yaml">'200':
+  description: a pet to be returned
+  schema:
+    $ref: '#/definitions/Pet'
+default:
+  description: Unexpected error
+  schema:
+    $ref: '#/definitions/ErrorModel'
+</code></pre>
+
+<h4 id="a-name-responseobject-a-response-object"><a name="responseObject"></a>Response Object</h4>
+
+<p>描述API操作的某个响应。</p>
+
+<h5 id="fixed-fields-10">Fixed Fields</h5>
+
+<table>
+<thead>
+<tr>
+<th>Field Name</th>
+<th align="center">Type</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><a name="responseDescription"></a>description</td>
+<td align="center"><code>string</code></td>
+<td><strong>必须</strong> 响应的简短描述 , 支持 Markdown <a href="https://guides.github.com/features/mastering-markdown/#GitHub-flavored-markdown">GFM syntax</a> 。</td>
+</tr>
+
+<tr>
+<td><a name="responseSchema"></a>schema</td>
+<td align="center"><a href="#schemaObject">Schema Object</a></td>
+<td>定义响应结构。可以是一个 primitive, array 或 object。 如果该字段不存，那么表示响应没有内容返回。作为 <a href="#schemaObject">Schema Object</a> 的扩展,  它的 root <code>type</code> 值可以是 <code>&quot;file&quot;</code>。应该伴有一个相关的 <code>produces</code> 定义 mime-type。</td>
+</tr>
+
+<tr>
+<td><a name="responseHeaders"></a>headers</td>
+<td align="center"><a href="#headersObject">Headers Object</a></td>
+<td>和响应一起发送的响应头</td>
+</tr>
+
+<tr>
+<td><a name="responseExamples"></a>examples</td>
+<td align="center"><a href="#exampleObject">Example Object</a></td>
+<td>响应消息的实例。</td>
+</tr>
+</tbody>
+</table>
+
+<h5 id="patterned-objects-7">Patterned Objects</h5>
+
+<table>
+<thead>
+<tr>
+<th>Field Pattern</th>
+<th align="center">Type</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><a name="responseExtensions"></a>^x-</td>
+<td align="center">Any</td>
+<td>Allows extensions to the Swagger Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. See <a href="#vendorExtensions">Vendor Extensions</a> for further details.</td>
+</tr>
+</tbody>
+</table>
+
+<h5 id="response-object-examples">Response Object Examples</h5>
+
+<p>数组的响应示例：</p>
+
+<pre><code class="language-js">{
+  &quot;description&quot;: &quot;A complex object array response&quot;,
+  &quot;schema&quot;: {
+    &quot;type&quot;: &quot;array&quot;,
+    &quot;items&quot;: {
+      &quot;$ref&quot;: &quot;#/definitions/VeryComplexType&quot;
+    }
+  }
+}
+</code></pre>
+
+<pre><code class="language-yaml">description: A complex object array response
+schema:
+  type: array
+  items:
+    $ref: '#/definitions/VeryComplexType'
+</code></pre>
+
+<p>string 类型的响应示例：</p>
+
+<pre><code class="language-js">{
+  &quot;description&quot;: &quot;A simple string response&quot;,
+  &quot;schema&quot;: {
+    &quot;type&quot;: &quot;string&quot;
+  }
+}
+</code></pre>
+
+<pre><code class="language-yaml">description: A simple string response
+schema:
+  type: string
+</code></pre>
+
+<p>带响应头的示例:</p>
+
+<pre><code class="language-js">{
+  &quot;description&quot;: &quot;A simple string response&quot;,
+  &quot;schema&quot;: {
+    &quot;type&quot;: &quot;string&quot;
+  },
+  &quot;headers&quot;: {
+    &quot;X-Rate-Limit-Limit&quot;: {
+      &quot;description&quot;: &quot;The number of allowed requests in the current period&quot;,
+      &quot;type&quot;: &quot;integer&quot;
+    },
+    &quot;X-Rate-Limit-Remaining&quot;: {
+      &quot;description&quot;: &quot;The number of remaining requests in the current period&quot;,
+      &quot;type&quot;: &quot;integer&quot;
+    },
+    &quot;X-Rate-Limit-Reset&quot;: {
+      &quot;description&quot;: &quot;The number of seconds left in the current period&quot;,
+      &quot;type&quot;: &quot;integer&quot;
+    }
+  }
+}
+</code></pre>
+
+<pre><code class="language-yaml">description: A simple string response
+schema:
+  type: string
+headers:
+  X-Rate-Limit-Limit:
+    description: The number of allowed requests in the current period
+    type: integer
+  X-Rate-Limit-Remaining:
+    description: The number of remaining requests in the current period
+    type: integer
+  X-Rate-Limit-Reset:
+    description: The number of seconds left in the current period
+    type: integer
+</code></pre>
+
+<p>没有内容的响应：</p>
+
+<pre><code class="language-js">{
+  &quot;description&quot;: &quot;object created&quot;
+}
+</code></pre>
+
+<pre><code class="language-yaml">description: object created
+</code></pre>
+
+<h4 id="a-name-headersobject-a-headers-object"><a name="headersObject"></a>Headers Object</h4>
+
+<p>Lists the headers that can be sent as part of a response.</p>
+
+<h5 id="patterned-fields-4">Patterned Fields</h5>
+
+<table>
+<thead>
+<tr>
+<th>Field Pattern</th>
+<th align="center">Type</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><a name="headersName"></a>{name}</td>
+<td align="center"><a href="#headerObject">Header Object</a></td>
+<td>The name of the property corresponds to the name of the header. The value describes the type of the header.</td>
+</tr>
+</tbody>
+</table>
+
+<h5 id="headers-object-example">Headers Object Example</h5>
+
+<p>Rate-limit headers:</p>
+
+<pre><code class="language-js">{
+    &quot;X-Rate-Limit-Limit&quot;: {
+        &quot;description&quot;: &quot;The number of allowed requests in the current period&quot;,
+        &quot;type&quot;: &quot;integer&quot;
+    },
+    &quot;X-Rate-Limit-Remaining&quot;: {
+        &quot;description&quot;: &quot;The number of remaining requests in the current period&quot;,
+        &quot;type&quot;: &quot;integer&quot;
+    },
+    &quot;X-Rate-Limit-Reset&quot;: {
+        &quot;description&quot;: &quot;The number of seconds left in the current period&quot;,
+        &quot;type&quot;: &quot;integer&quot;
+    }
+}
+</code></pre>
+
+<pre><code class="language-yaml">X-Rate-Limit-Limit:
+  description: The number of allowed requests in the current period
+  type: integer
+X-Rate-Limit-Remaining:
+  description: The number of remaining requests in the current period
+  type: integer
+X-Rate-Limit-Reset:
+  description: The number of seconds left in the current period
+  type: integer
+</code></pre>
+
+<h4 id="a-name-exampleobject-a-example-object"><a name="exampleObject"></a>Example Object</h4>
+
+<p>Allows sharing examples for operation responses.</p>
+
+<h5 id="patterned-fields-5">Patterned Fields</h5>
+
+<table>
+<thead>
+<tr>
+<th>Field Pattern</th>
+<th align="center">Type</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><a name="exampleMimeType"></a>{<a href="#mimeTypes">mime type</a>}</td>
+<td align="center">Any</td>
+<td>属性的名称必须是操作 <code>produces</code> 属性的值之一 (包含或者继承). 响应的示例。</td>
+</tr>
+</tbody>
+</table>
+
+<h5 id="example-object-example">Example Object Example</h5>
+
+<p>用 application/json mimetype 描述的宠物响应示例：</p>
+
+<pre><code class="language-js">{
+  &quot;application/json&quot;: {
+    &quot;name&quot;: &quot;Puma&quot;,
+    &quot;type&quot;: &quot;Dog&quot;,
+    &quot;color&quot;: &quot;Black&quot;,
+    &quot;gender&quot;: &quot;Female&quot;,
+    &quot;breed&quot;: &quot;Mixed&quot;
+  }
+}
+</code></pre>
+
+<pre><code class="language-yaml">application/json:
+  name: Puma
+  type: Dog
+  color: Black
+  gender: Female
+  breed: Mixed
+</code></pre>
+
+<h4 id="a-name-headerobject-a-header-object"><a name="headerObject"></a>Header Object</h4>
+
+<table>
+<thead>
+<tr>
+<th>Field Name</th>
+<th align="center">Type</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><a name="headerDescription"></a>description</td>
+<td align="center"><code>string</code></td>
+<td>Header 的简短描述</td>
+</tr>
+
+<tr>
+<td><a name="headerType"></a>type</td>
+<td align="center"><code>string</code></td>
+<td><strong>必须</strong>  对象的类型. 值必须是 <code>&quot;string&quot;</code>, <code>&quot;number&quot;</code>, <code>&quot;integer&quot;</code>, <code>&quot;boolean&quot;</code>, 或 <code>&quot;array&quot;</code> 之一。</td>
+</tr>
+
+<tr>
+<td><a name="headerFormat"></a>format</td>
+<td align="center"><code>string</code></td>
+<td>对<a href="#parameterType"><code>type</code></a> 进行扩展，更详细的描述。 查看<a href="#dataTypeFormat">Data Type Formats</a>了解更多。</td>
+</tr>
+
+<tr>
+<td><a name="headerItems"></a>items</td>
+<td align="center"><a href="#itemsObject">Items Object</a></td>
+<td><strong>如果 <a href="#stType"><code>type</code></a> 的值是 &ldquo;array&rdquo;时，是必须的</strong> 描述数组元素的类型。</td>
+</tr>
+
+<tr>
+<td><a name="headerCollectionFormat"></a>collectionFormat</td>
+<td align="center"><code>string</code></td>
+<td>Determines the format of the array if type array is used。可用的值: <ul><li><code>csv</code> - 逗号分隔值 <code>foo,bar</code>. <li><code>ssv</code> - 空格分隔值 <code>foo bar</code>. <li><code>tsv</code> -  制表符分隔值 <code>foo\tbar</code>. <li><code>pipes</code> - 管道分隔值 <code>foo&#124;bar</code>. </ul> 默认值是 <code>csv</code>.</td>
+</tr>
+
+<tr>
+<td><a name="headerDefault"></a>default</td>
+<td align="center">*</td>
+<td>当没有提供时，server 将使用的默认 header 。 (Note: &ldquo;default&rdquo; has no meaning for required items.) 参阅 <a href="http://json-schema.org/latest/json-schema-validation.html#anchor101.与">http://json-schema.org/latest/json-schema-validation.html#anchor101.与</a> JSON Schema 不同，值必须符合<a href="#headerDefault"><code>type</code></a> 所定义的类型。</td>
+</tr>
+
+<tr>
+<td><a name="headerMaximum"></a>maximum</td>
+<td align="center"><code>number</code></td>
+<td>参阅 <a href="http://json-schema.org/latest/json-schema-validation.html#anchor17">http://json-schema.org/latest/json-schema-validation.html#anchor17</a>.</td>
+</tr>
+
+<tr>
+<td><a name="headerMaximum"></a>exclusiveMaximum</td>
+<td align="center"><code>boolean</code></td>
+<td>参阅 <a href="http://json-schema.org/latest/json-schema-validation.html#anchor17">http://json-schema.org/latest/json-schema-validation.html#anchor17</a>.</td>
+</tr>
+
+<tr>
+<td><a name="headerMinimum"></a>minimum</td>
+<td align="center"><code>number</code></td>
+<td>参阅 <a href="http://json-schema.org/latest/json-schema-validation.html#anchor21">http://json-schema.org/latest/json-schema-validation.html#anchor21</a>.</td>
+</tr>
+
+<tr>
+<td><a name="headerExclusiveMinimum"></a>exclusiveMinimum</td>
+<td align="center"><code>boolean</code></td>
+<td>参阅 <a href="http://json-schema.org/latest/json-schema-validation.html#anchor21">http://json-schema.org/latest/json-schema-validation.html#anchor21</a>.</td>
+</tr>
+
+<tr>
+<td><a name="headerMaxLength"></a>maxLength</td>
+<td align="center"><code>integer</code></td>
+<td>参阅 <a href="http://json-schema.org/latest/json-schema-validation.html#anchor26">http://json-schema.org/latest/json-schema-validation.html#anchor26</a>.</td>
+</tr>
+
+<tr>
+<td><a name="headerMinLength"></a>minLength</td>
+<td align="center"><code>integer</code></td>
+<td>参阅 <a href="http://json-schema.org/latest/json-schema-validation.html#anchor29">http://json-schema.org/latest/json-schema-validation.html#anchor29</a>.</td>
+</tr>
+
+<tr>
+<td><a name="headerPattern"></a>pattern</td>
+<td align="center"><code>string</code></td>
+<td>参阅 <a href="http://json-schema.org/latest/json-schema-validation.html#anchor33">http://json-schema.org/latest/json-schema-validation.html#anchor33</a>.</td>
+</tr>
+
+<tr>
+<td><a name="headerMaxItems"></a>maxItems</td>
+<td align="center"><code>integer</code></td>
+<td>参阅 <a href="http://json-schema.org/latest/json-schema-validation.html#anchor42">http://json-schema.org/latest/json-schema-validation.html#anchor42</a>.</td>
+</tr>
+
+<tr>
+<td><a name="headerMinItems"></a>minItems</td>
+<td align="center"><code>integer</code></td>
+<td>参阅 <a href="http://json-schema.org/latest/json-schema-validation.html#anchor45">http://json-schema.org/latest/json-schema-validation.html#anchor45</a>.</td>
+</tr>
+
+<tr>
+<td><a name="headerUniqueItems"></a>uniqueItems</td>
+<td align="center"><code>boolean</code></td>
+<td>参阅 <a href="http://json-schema.org/latest/json-schema-validation.html#anchor49">http://json-schema.org/latest/json-schema-validation.html#anchor49</a>.</td>
+</tr>
+
+<tr>
+<td><a name="headerEnum"></a>enum</td>
+<td align="center">[*]</td>
+<td>参阅 <a href="http://json-schema.org/latest/json-schema-validation.html#anchor76">http://json-schema.org/latest/json-schema-validation.html#anchor76</a>.</td>
+</tr>
+
+<tr>
+<td><a name="headerMultipleOf"></a>multipleOf</td>
+<td align="center"><code>number</code></td>
+<td>参阅 <a href="http://json-schema.org/latest/json-schema-validation.html#anchor14">http://json-schema.org/latest/json-schema-validation.html#anchor14</a>.</td>
+</tr>
+</tbody>
+</table>
+
+<h5 id="patterned-objects-8">Patterned Objects</h5>
+
+<table>
+<thead>
+<tr>
+<th>Field Pattern</th>
+<th align="center">Type</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><a name="headerExtensions"></a>^x-</td>
+<td align="center">Any</td>
+<td>Allows extensions to the Swagger Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. See <a href="#vendorExtensions">Vendor Extensions</a> for further details.</td>
+</tr>
+</tbody>
+</table>
+
+<h5 id="header-object-example">Header Object Example</h5>
+
+<p>A simple header with of an integer type:</p>
+
+<pre><code class="language-js">{
+  &quot;description&quot;: &quot;The number of allowed requests in the current period&quot;,
+  &quot;type&quot;: &quot;integer&quot;
+}
+</code></pre>
+
+<pre><code class="language-yaml">description: The number of allowed requests in the current period
+type: integer
+</code></pre>
+
+<h4 id="a-name-tagobject-a-tag-object"><a name="tagObject"></a>Tag Object</h4>
+
+<p>Allows adding meta data to a single tag that is used by the <a href="#operationObject">Operation Object</a>（为<a href="#operationObject">Operation Object</a> 添加标签）. It is not mandatory to have a Tag Object per tag used there.</p>
+
+<h5 id="fixed-fields-11">Fixed Fields</h5>
+
+<table>
+<thead>
+<tr>
+<th>Field Name</th>
+<th align="center">Type</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><a name="tagName"></a>name</td>
+<td align="center"><code>string</code></td>
+<td><strong>必须</strong> 标签名</td>
+</tr>
+
+<tr>
+<td><a name="tagDescription"></a>description</td>
+<td align="center"><code>string</code></td>
+<td>标签的简短描述，支持 Markdown <a href="https://guides.github.com/features/mastering-markdown/#GitHub-flavored-markdown">GFM syntax</a> 。</td>
+</tr>
+
+<tr>
+<td><a name="tagExternalDocs"></a>externalDocs</td>
+<td align="center"><a href="#externalDocumentationObject">External Documentation Object</a></td>
+<td>添加其他文档。</td>
+</tr>
+</tbody>
+</table>
+
+<h5 id="patterned-fields-6">Patterned Fields</h5>
+
+<table>
+<thead>
+<tr>
+<th>Field Pattern</th>
+<th align="center">Type</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><a name="tagExtensions"></a>^x-</td>
+<td align="center">Any</td>
+<td>Allows extensions to the Swagger Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. See <a href="#vendorExtensions">Vendor Extensions</a> for further details.</td>
+</tr>
+</tbody>
+</table>
+
+<h5 id="tag-object-example">Tag Object Example</h5>
+
+<pre><code class="language-js">{
+    &quot;name&quot;: &quot;pet&quot;,
+    &quot;description&quot;: &quot;Pets operations&quot;
+}
+</code></pre>
+
+<pre><code class="language-yaml">name: pet
+description: Pets operations
+</code></pre>
+
+<h4 id="a-name-referenceobject-a-reference-object"><a name="referenceObject"></a>Reference Object</h4>
+
+<p>一个简单的对象，允许引用规范中的定义。可以引用在顶层定义的 parameters 和 responses 以便重用。</p>
+
+<p>Reference Object 是一个 <a href="http://tools.ietf.org/html/draft-pbryan-zyp-json-ref-02">JSON Reference</a>，它的值是一个 <a href="http://tools.ietf.org/html/rfc6901">JSON Pointer</a> 。For this specification, only <a href="http://json-schema.org/latest/json-schema-core.html#anchor27">canonical dereferencing</a> is supported.</p>
+
+<h5 id="fixed-fields-12">Fixed Fields</h5>
+
+<table>
+<thead>
+<tr>
+<th>Field Name</th>
+<th align="center">Type</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><a name="referenceRef"></a>$ref</td>
+<td align="center"><code>string</code></td>
+<td><strong>必须</strong> 引用的字符串</td>
+</tr>
+</tbody>
+</table>
+
+<h5 id="reference-object-example">Reference Object Example</h5>
+
+<pre><code class="language-js">{
+    &quot;$ref&quot;: &quot;#/definitions/Pet&quot;
+}
+</code></pre>
+
+<pre><code class="language-yaml">$ref: '#/definitions/Pet'
+</code></pre>
+
+<h5 id="relative-schema-file-example">Relative Schema File Example</h5>
+
+<pre><code class="language-js">{
+  &quot;$ref&quot;: &quot;Pet.json&quot;
+}
+</code></pre>
+
+<pre><code class="language-yaml">$ref: 'Pet.yaml'
+</code></pre>
+
+<h5 id="relative-files-with-embedded-schema-example">Relative Files With Embedded Schema Example</h5>
+
+<p>引入外部文档中定义的对象</p>
+
+<pre><code class="language-js">{
+  &quot;$ref&quot;: &quot;definitions.json#/Pet&quot;
+}
+</code></pre>
+
+<pre><code class="language-yaml">$ref: 'definitions.yaml#/Pet'
+</code></pre>
+
+<h4 id="a-name-schemaobject-a-schema-object"><a name="schemaObject"></a>Schema Object</h4>
+
+<p>Schema Object 定义输入输出的类型。类型可以是 objects, 也可以是 primitives 和 arrays。 This object is based on the <a href="http://json-schema.org/">JSON Schema Specification Draft 4</a> and uses a predefined subset of it. On top of this subset, there are extensions provided by this specification to allow for more complete documentation.</p>
+
+<p>更多信息，请看 <a href="http://json-schema.org/latest/json-schema-core.html">JSON Schema Core</a> 和 <a href="http://json-schema.org/latest/json-schema-validation.html">JSON Schema Validation</a>. 除非另有说明，属性定义遵循此处引用的JSON模式规范。</p>
+
+<p>以下属性直接取自JSON模式定义，并遵循相同的规范：</p>
+
+<ul>
+<li>$ref - As a <a href="https://tools.ietf.org/html/draft-pbryan-zyp-json-ref-03">JSON Reference</a></li>
+<li>format (See <a href="#dataTypeFormat">Data Type Formats</a> for further details)</li>
+<li>title</li>
+<li>description (支持 Markdown <a href="https://guides.github.com/features/mastering-markdown/#GitHub-flavored-markdown">GFM syntax</a>)</li>
+<li>default (和 JSON Schema不同, 值必须符合Schema对象的定义类型)</li>
+<li>multipleOf</li>
+<li>maximum</li>
+<li>exclusiveMaximum</li>
+<li>minimum</li>
+<li>exclusiveMinimum</li>
+<li>maxLength</li>
+<li>minLength</li>
+<li>pattern</li>
+<li>maxItems</li>
+<li>minItems</li>
+<li>uniqueItems</li>
+<li>maxProperties</li>
+<li>minProperties</li>
+<li>required</li>
+<li>enum</li>
+<li>type</li>
+</ul>
+
+<p>下面属性取自 JSON Schema ，但是它们的定义根据 Swagger 规范作了调整。Their definition is the same as the one from JSON Schema, only where the original definition references the JSON Schema definition, the <a href="#schemaObject">Schema Object</a> definition is used instead.</p>
+
+<ul>
+<li>items</li>
+<li>allOf</li>
+<li>properties</li>
+<li>additionalProperties</li>
+</ul>
+
+<p>除了 JSON Schema 字段外，以下字段也可以在文档中使用。</p>
+
+<h5 id="fixed-fields-13">Fixed Fields</h5>
+
+<table>
+<thead>
+<tr>
+<th>Field Name</th>
+<th align="center">Type</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><a name="schemaDiscriminator"></a>discriminator</td>
+<td align="center"><code>string</code></td>
+<td>添加对多态的支持(Adds support for polymorphism). discriminator 是模式属性的名称，用以区分继承该 schema 的其他 schema。 使用的属性名必须在该 shcema 中定义，而且必须在 <code>required</code> 属性列表中。使用的值必须是该schema 或者继承的名称。</td>
+</tr>
+
+<tr>
+<td><a name="schemaReadOnly"></a>readOnly</td>
+<td align="center"><code>boolean</code></td>
+<td>Relevant only for Schema <code>&quot;properties&quot;</code> definitions.定义成&rdquo;read only&rdquo;，意味着仅能作为响应发送而不能作为请求发送。Properties中设置<code>readOnly</code> 值为<code>true</code> 的参数，不应该出现在<code>required</code> 列表中。 默认值为<code>false</code>.</td>
+</tr>
+
+<tr>
+<td><a name="schemaXml"></a>xml</td>
+<td align="center"><a href="#xmlObject">XML Object</a></td>
+<td>This MAY be used only on properties schemas. It has no effect on root schemas. Adds Additional metadata to describe the XML representation format of this property.</td>
+</tr>
+
+<tr>
+<td><a name="schemaExternalDocs"></a>externalDocs</td>
+<td align="center"><a href="#externalDocumentationObject">External Documentation Object</a></td>
+<td>额外的文档</td>
+</tr>
+
+<tr>
+<td><a name="schemaExample"></a>example</td>
+<td align="center">Any</td>
+<td>A free-form property to include an example of an instance for this schema.</td>
+</tr>
+</tbody>
+</table>
+
+<h5 id="patterned-objects-9">Patterned Objects</h5>
+
+<table>
+<thead>
+<tr>
+<th>Field Pattern</th>
+<th align="center">Type</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><a name="schemaExtensions"></a>^x-</td>
+<td align="center">Any</td>
+<td>Allows extensions to the Swagger Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. See <a href="#vendorExtensions">Vendor Extensions</a> for further details.</td>
+</tr>
+</tbody>
+</table>
+
+<h6 id="composition-and-inheritance-polymorphism">Composition and Inheritance (Polymorphism)</h6>
+
+<p>Swagger allows combining and extending model definitions using the <code>allOf</code> property of JSON Schema, in effect offering model composition. <code>allOf</code> takes in an array of object definitions that are validated <em>independently</em> but together compose a single object.</p>
+
+<p>While composition offers model extensibility, it does not imply a hierarchy between the models. To support polymorphism, Swagger adds the support of the <code>discriminator</code> field. When used, the <code>discriminator</code> will be the name of the property used to decide which schema definition is used to validate the structure of the model. As such, the <code>discriminator</code> field MUST be a required field. The value of the chosen property has to be the friendly name given to the model under the <code>definitions</code> property. As such, inline schema definitions, which do not have a given id, <em>cannot</em> be used in polymorphism.</p>
+
+<h6 id="xml-modeling">XML Modeling</h6>
+
+<p>The <a href="#schemaXml">xml</a> property allows extra definitions when translating the JSON definition to XML. The <a href="#xmlObject">XML Object</a> contains additional information about the available options.</p>
+
+<h5 id="schema-object-examples">Schema Object Examples</h5>
+
+<h6 id="primitive-sample">Primitive Sample</h6>
+
+<p>Unlike previous versions of Swagger, Schema definitions can be used to describe primitive and arrays as well.</p>
+
+<pre><code class="language-js">{
+    &quot;type&quot;: &quot;string&quot;,
+    &quot;format&quot;: &quot;email&quot;
+}
+</code></pre>
+
+<pre><code class="language-yaml">type: string
+format: email
+</code></pre>
+
+<h6 id="simple-model">Simple Model</h6>
+
+<pre><code class="language-js">{
+  &quot;type&quot;: &quot;object&quot;,
+  &quot;required&quot;: [
+    &quot;name&quot;
+  ],
+  &quot;properties&quot;: {
+    &quot;name&quot;: {
+      &quot;type&quot;: &quot;string&quot;
+    },
+    &quot;address&quot;: {
+      &quot;$ref&quot;: &quot;#/definitions/Address&quot;
+    },
+    &quot;age&quot;: {
+      &quot;type&quot;: &quot;integer&quot;,
+      &quot;format&quot;: &quot;int32&quot;,
+      &quot;minimum&quot;: 0
+    }
+  }
+}
+</code></pre>
+
+<pre><code class="language-yaml">type: object
+required:
+- name
+properties:
+  name:
+    type: string
+  address:
+    $ref: '#/definitions/Address'
+  age:
+    type: integer
+    format: int32
+    minimum: 0
+</code></pre>
+
+<h6 id="model-with-map-dictionary-properties">Model with Map/Dictionary Properties</h6>
+
+<p>For a simple string to string mapping:</p>
+
+<pre><code class="language-js">{
+  &quot;type&quot;: &quot;object&quot;,
+  &quot;additionalProperties&quot;: {
+    &quot;type&quot;: &quot;string&quot;
+  }
+}
+</code></pre>
+
+<pre><code class="language-yaml">type: object
+additionalProperties:
+  type: string
+</code></pre>
+
+<p>For a string to model mapping:</p>
+
+<pre><code class="language-js">{
+  &quot;type&quot;: &quot;object&quot;,
+  &quot;additionalProperties&quot;: {
+    &quot;$ref&quot;: &quot;#/definitions/ComplexModel&quot;
+  }
+}
+</code></pre>
+
+<pre><code class="language-yaml">type: object
+additionalProperties:
+  $ref: '#/definitions/ComplexModel'
+</code></pre>
+
+<h6 id="model-with-example">Model with Example</h6>
+
+<pre><code class="language-js">{
+  &quot;type&quot;: &quot;object&quot;,
+  &quot;properties&quot;: {
+    &quot;id&quot;: {
+      &quot;type&quot;: &quot;integer&quot;,
+      &quot;format&quot;: &quot;int64&quot;
+    },
+    &quot;name&quot;: {
+      &quot;type&quot;: &quot;string&quot;
+    }
+  },
+  &quot;required&quot;: [
+    &quot;name&quot;
+  ],
+  &quot;example&quot;: {
+    &quot;name&quot;: &quot;Puma&quot;,
+    &quot;id&quot;: 1
+  }
+}
+</code></pre>
+
+<pre><code class="language-yaml">type: object
+properties:
+  id:
+    type: integer
+    format: int64
+  name:
+    type: string
+required:
+- name
+example:
+  name: Puma
+  id: 1
+</code></pre>
+
+<h6 id="models-with-composition">Models with Composition</h6>
+
+<pre><code class="language-js">{
+  &quot;definitions&quot;: {
+    &quot;ErrorModel&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;required&quot;: [
+        &quot;message&quot;,
+        &quot;code&quot;
+      ],
+      &quot;properties&quot;: {
+        &quot;message&quot;: {
+          &quot;type&quot;: &quot;string&quot;
+        },
+        &quot;code&quot;: {
+          &quot;type&quot;: &quot;integer&quot;,
+          &quot;minimum&quot;: 100,
+          &quot;maximum&quot;: 600
+        }
+      }
+    },
+    &quot;ExtendedErrorModel&quot;: {
+      &quot;allOf&quot;: [
+        {
+          &quot;$ref&quot;: &quot;#/definitions/ErrorModel&quot;
+        },
+        {
+          &quot;type&quot;: &quot;object&quot;,
+          &quot;required&quot;: [
+            &quot;rootCause&quot;
+          ],
+          &quot;properties&quot;: {
+            &quot;rootCause&quot;: {
+              &quot;type&quot;: &quot;string&quot;
+            }
+          }
+        }
+      ]
+    }
+  }
+}
+</code></pre>
+
+<pre><code class="language-yaml">definitions:
+  ErrorModel:
+    type: object
+    required:
+    - message
+    - code
+    properties:
+      message:
+        type: string
+      code:
+        type: integer
+        minimum: 100
+        maximum: 600
+  ExtendedErrorModel:
+    allOf:
+    - $ref: '#/definitions/ErrorModel'
+    - type: object
+      required:
+      - rootCause
+      properties:
+        rootCause:
+          type: string
+</code></pre>
+
+<h6 id="models-with-polymorphism-support">Models with Polymorphism Support</h6>
+
+<pre><code class="language-js">{
+  &quot;definitions&quot;: {
+    &quot;Pet&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;discriminator&quot;: &quot;petType&quot;,
+      &quot;properties&quot;: {
+        &quot;name&quot;: {
+          &quot;type&quot;: &quot;string&quot;
+        },
+        &quot;petType&quot;: {
+          &quot;type&quot;: &quot;string&quot;
+        }
+      },
+      &quot;required&quot;: [
+        &quot;name&quot;,
+        &quot;petType&quot;
+      ]
+    },
+    &quot;Cat&quot;: {
+      &quot;description&quot;: &quot;A representation of a cat&quot;,
+      &quot;allOf&quot;: [
+        {
+          &quot;$ref&quot;: &quot;#/definitions/Pet&quot;
+        },
+        {
+          &quot;type&quot;: &quot;object&quot;,
+          &quot;properties&quot;: {
+            &quot;huntingSkill&quot;: {
+              &quot;type&quot;: &quot;string&quot;,
+              &quot;description&quot;: &quot;The measured skill for hunting&quot;,
+              &quot;default&quot;: &quot;lazy&quot;,
+              &quot;enum&quot;: [
+                &quot;clueless&quot;,
+                &quot;lazy&quot;,
+                &quot;adventurous&quot;,
+                &quot;aggressive&quot;
+              ]
+            }
+          },
+          &quot;required&quot;: [
+            &quot;huntingSkill&quot;
+          ]
+        }
+      ]
+    },
+    &quot;Dog&quot;: {
+      &quot;description&quot;: &quot;A representation of a dog&quot;,
+      &quot;allOf&quot;: [
+        {
+          &quot;$ref&quot;: &quot;#/definitions/Pet&quot;
+        },
+        {
+          &quot;type&quot;: &quot;object&quot;,
+          &quot;properties&quot;: {
+            &quot;packSize&quot;: {
+              &quot;type&quot;: &quot;integer&quot;,
+              &quot;format&quot;: &quot;int32&quot;,
+              &quot;description&quot;: &quot;the size of the pack the dog is from&quot;,
+              &quot;default&quot;: 0,
+              &quot;minimum&quot;: 0
+            }
+          },
+          &quot;required&quot;: [
+            &quot;packSize&quot;
+          ]
+        }
+      ]
+    }
+  }
+}
+</code></pre>
+
+<pre><code class="language-yaml">definitions:
+  Pet:
+    type: object
+    discriminator: petType
+    properties:
+      name:
+        type: string
+      petType:
+        type: string
+    required:
+    - name
+    - petType
+  Cat:
+    description: A representation of a cat
+    allOf:
+    - $ref: '#/definitions/Pet'
+    - type: object
+      properties:
+        huntingSkill:
+          type: string
+          description: The measured skill for hunting
+          default: lazy
+          enum:
+          - clueless
+          - lazy
+          - adventurous
+          - aggressive
+      required:
+      - huntingSkill
+  Dog:
+    description: A representation of a dog
+    allOf:
+    - $ref: '#/definitions/Pet'
+    - type: object
+      properties:
+        packSize:
+          type: integer
+          format: int32
+          description: the size of the pack the dog is from
+          default: 0
+          minimum: 0
+      required:
+      - packSize
+</code></pre>
+
+<h4 id="a-name-xmlobject-a-xml-object"><a name="xmlObject"></a>XML Object</h4>
+
+<p>A metadata object that allows for more fine-tuned XML model definitions.</p>
+
+<p>When using arrays, XML element names are <em>not</em> inferred (for singular/plural forms) and the <code>name</code> property should be used to add that information. See examples for expected behavior.</p>
+
+<h5 id="fixed-fields-14">Fixed Fields</h5>
+
+<table>
+<thead>
+<tr>
+<th>Field Name</th>
+<th align="center">Type</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><a name="xmlName"></a>name</td>
+<td align="center"><code>string</code></td>
+<td>Replaces the name of the element/attribute used for the described schema property. When defined within the Items Object (<code>items</code>), it will affect the name of the individual XML elements within the list. When defined alongside <code>type</code> being <code>array</code> (outside the <code>items</code>), it will affect the wrapping element and only if <code>wrapped</code> is <code>true</code>. If <code>wrapped</code> is <code>false</code>, it will be ignored.</td>
+</tr>
+
+<tr>
+<td><a name="xmlNamespace"></a>namespace</td>
+<td align="center"><code>string</code></td>
+<td>The URL of the namespace definition. Value SHOULD be in the form of a URL.</td>
+</tr>
+
+<tr>
+<td><a name="xmlPrefix"></a>prefix</td>
+<td align="center"><code>string</code></td>
+<td>The prefix to be used for the <a href="#xmlName">name</a>.</td>
+</tr>
+
+<tr>
+<td><a name="xmlAttribute"></a>attribute</td>
+<td align="center"><code>boolean</code></td>
+<td>Declares whether the property definition translates to an attribute instead of an element. 默认值为<code>false</code>.</td>
+</tr>
+
+<tr>
+<td><a name="xmlWrapped"></a>wrapped</td>
+<td align="center"><code>boolean</code></td>
+<td>MAY be used only for an array definition. Signifies whether the array is wrapped (for example, <code>&lt;books&gt;&lt;book/&gt;&lt;book/&gt;&lt;/books&gt;</code>) or unwrapped (<code>&lt;book/&gt;&lt;book/&gt;</code>). 默认值为<code>false</code>. The definition takes effect only when defined alongside <code>type</code> being <code>array</code> (outside the <code>items</code>).</td>
+</tr>
+</tbody>
+</table>
+
+<h5 id="patterned-objects-10">Patterned Objects</h5>
+
+<table>
+<thead>
+<tr>
+<th>Field Pattern</th>
+<th align="center">Type</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><a name="xmlExtensions"></a>^x-</td>
+<td align="center">Any</td>
+<td>Allows extensions to the Swagger Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. See <a href="#vendorExtensions">Vendor Extensions</a> for further details.</td>
+</tr>
+</tbody>
+</table>
+
+<h5 id="xml-object-examples">XML Object Examples</h5>
+
+<p>The examples of the XML object definitions are included inside a property definition of a <a href="#schemaObject">Schema Object</a> with a sample of the XML representation of it.</p>
+
+<h6 id="no-xml-element">No XML Element</h6>
+
+<p>Basic string property:</p>
+
+<pre><code class="language-js">{
+    &quot;animals&quot;: {
+        &quot;type&quot;: &quot;string&quot;
+    }
+}
+</code></pre>
+
+<pre><code class="language-yaml">animals:
+  type: string
+</code></pre>
+
+<pre><code class="language-xml">&lt;animals&gt;...&lt;/animals&gt;
+</code></pre>
+
+<p>Basic string array property (<a href="#xmlWrapped"><code>wrapped</code></a> is <code>false</code> by default):</p>
+
+<pre><code class="language-js">{
+    &quot;animals&quot;: {
+        &quot;type&quot;: &quot;array&quot;,
+        &quot;items&quot;: {
+            &quot;type&quot;: &quot;string&quot;
+        }
+    }
+}
+</code></pre>
+
+<pre><code class="language-yaml">animals:
+  type: array
+  items:
+    type: string
+</code></pre>
+
+<pre><code class="language-xml">&lt;animals&gt;...&lt;/animals&gt;
+&lt;animals&gt;...&lt;/animals&gt;
+&lt;animals&gt;...&lt;/animals&gt;
+</code></pre>
+
+<h6 id="xml-name-replacement">XML Name Replacement</h6>
+
+<pre><code class="language-js">{
+  &quot;animals&quot;: {
+    &quot;type&quot;: &quot;string&quot;,
+    &quot;xml&quot;: {
+      &quot;name&quot;: &quot;animal&quot;
+    }
+  }
+}
+</code></pre>
+
+<pre><code class="language-yaml">animals:
+  type: string
+  xml:
+    name: animal
+</code></pre>
+
+<pre><code class="language-xml">&lt;animal&gt;...&lt;/animal&gt;
+</code></pre>
+
+<h6 id="xml-attribute-prefix-and-namespace">XML Attribute, Prefix and Namespace</h6>
+
+<p>In this example, a full model definition is shown.</p>
+
+<pre><code class="language-js">{
+  &quot;Person&quot;: {
+    &quot;type&quot;: &quot;object&quot;,
+    &quot;properties&quot;: {
+      &quot;id&quot;: {
+        &quot;type&quot;: &quot;integer&quot;,
+        &quot;format&quot;: &quot;int32&quot;,
+        &quot;xml&quot;: {
+          &quot;attribute&quot;: true
+        }
+      },
+      &quot;name&quot;: {
+        &quot;type&quot;: &quot;string&quot;,
+        &quot;xml&quot;: {
+          &quot;namespace&quot;: &quot;http://swagger.io/schema/sample&quot;,
+          &quot;prefix&quot;: &quot;sample&quot;
+        }
+      }
+    }
+  }
+}
+</code></pre>
+
+<pre><code class="language-yaml">Person:
+  type: object
+  properties:
+    id:
+      type: integer
+      format: int32
+      xml:
+        attribute: true
+    name:
+      type: string
+      xml:
+        namespace: http://swagger.io/schema/sample
+        prefix: sample
+</code></pre>
+
+<pre><code class="language-xml">&lt;Person id=&quot;123&quot;&gt;
+    &lt;sample:name xmlns:sample=&quot;http://swagger.io/schema/sample&quot;&gt;example&lt;/sample:name&gt;
+&lt;/Person&gt;
+</code></pre>
+
+<h6 id="xml-arrays">XML Arrays</h6>
+
+<p>Changing the element names:</p>
+
+<pre><code class="language-js">{
+  &quot;animals&quot;: {
+    &quot;type&quot;: &quot;array&quot;,
+    &quot;items&quot;: {
+      &quot;type&quot;: &quot;string&quot;,
+      &quot;xml&quot;: {
+        &quot;name&quot;: &quot;animal&quot;
+      }
+    }
+  }
+}
+</code></pre>
+
+<pre><code class="language-yaml">animals:
+  type: array
+  items:
+    type: string
+    xml:
+      name: animal
+</code></pre>
+
+<pre><code class="language-xml">&lt;animal&gt;value&lt;/animal&gt;
+&lt;animal&gt;value&lt;/animal&gt;
+</code></pre>
+
+<p>The external <code>name</code> property has no effect on the XML:</p>
+
+<pre><code class="language-js">{
+  &quot;animals&quot;: {
+    &quot;type&quot;: &quot;array&quot;,
+    &quot;items&quot;: {
+      &quot;type&quot;: &quot;string&quot;,
+      &quot;xml&quot;: {
+        &quot;name&quot;: &quot;animal&quot;
+      }
+    },
+    &quot;xml&quot;: {
+      &quot;name&quot;: &quot;aliens&quot;
+    }
+  }
+}
+</code></pre>
+
+<pre><code class="language-yaml">animals:
+  type: array
+  items:
+    type: string
+    xml:
+      name: animal
+  xml:
+    name: aliens
+</code></pre>
+
+<pre><code class="language-xml">&lt;animal&gt;value&lt;/animal&gt;
+&lt;animal&gt;value&lt;/animal&gt;
+</code></pre>
+
+<p>Even when the array is wrapped, if no name is explicitly defined, the same name will be used both internally and externally:</p>
+
+<pre><code class="language-js">{
+  &quot;animals&quot;: {
+    &quot;type&quot;: &quot;array&quot;,
+    &quot;items&quot;: {
+      &quot;type&quot;: &quot;string&quot;
+    },
+    &quot;xml&quot;: {
+      &quot;wrapped&quot;: true
+    }
+  }
+}
+</code></pre>
+
+<pre><code class="language-yaml">animals:
+  type: array
+  items:
+    type: string
+  xml:
+    wrapped: true
+</code></pre>
+
+<pre><code class="language-xml">&lt;animals&gt;
+  &lt;animals&gt;value&lt;/animals&gt;
+  &lt;animals&gt;value&lt;/animals&gt;
+&lt;/animals&gt;
+</code></pre>
+
+<p>To overcome the above example, the following definition can be used:</p>
+
+<pre><code class="language-js">{
+  &quot;animals&quot;: {
+    &quot;type&quot;: &quot;array&quot;,
+    &quot;items&quot;: {
+      &quot;type&quot;: &quot;string&quot;,
+      &quot;xml&quot;: {
+        &quot;name&quot;: &quot;animal&quot;
+      }
+    },
+    &quot;xml&quot;: {
+      &quot;wrapped&quot;: true
+    }
+  }
+}
+</code></pre>
+
+<pre><code class="language-yaml">animals:
+  type: array
+  items:
+    type: string
+    xml:
+      name: animal
+  xml:
+    wrapped: true
+</code></pre>
+
+<pre><code class="language-xml">&lt;animals&gt;
+  &lt;animal&gt;value&lt;/animal&gt;
+  &lt;animal&gt;value&lt;/animal&gt;
+&lt;/animals&gt;
+</code></pre>
+
+<p>Affecting both internal and external names:</p>
+
+<pre><code class="language-js">{
+  &quot;animals&quot;: {
+    &quot;type&quot;: &quot;array&quot;,
+    &quot;items&quot;: {
+      &quot;type&quot;: &quot;string&quot;,
+      &quot;xml&quot;: {
+        &quot;name&quot;: &quot;animal&quot;
+      }
+    },
+    &quot;xml&quot;: {
+      &quot;name&quot;: &quot;aliens&quot;,
+      &quot;wrapped&quot;: true
+    }
+  }
+}
+</code></pre>
+
+<pre><code class="language-yaml">animals:
+  type: array
+  items:
+    type: string
+    xml:
+      name: animal
+  xml:
+    name: aliens
+    wrapped: true
+</code></pre>
+
+<pre><code class="language-xml">&lt;aliens&gt;
+  &lt;animal&gt;value&lt;/animal&gt;
+  &lt;animal&gt;value&lt;/animal&gt;
+&lt;/aliens&gt;
+</code></pre>
+
+<p>If we change the external element but not the internal ones:</p>
+
+<pre><code class="language-js">{
+  &quot;animals&quot;: {
+    &quot;type&quot;: &quot;array&quot;,
+    &quot;items&quot;: {
+      &quot;type&quot;: &quot;string&quot;
+    },
+    &quot;xml&quot;: {
+      &quot;name&quot;: &quot;aliens&quot;,
+      &quot;wrapped&quot;: true
+    }
+  }
+}
+</code></pre>
+
+<pre><code class="language-yaml">animals:
+  type: array
+  items:
+    type: string
+  xml:
+    name: aliens
+    wrapped: true
+</code></pre>
+
+<pre><code class="language-xml">&lt;aliens&gt;
+  &lt;aliens&gt;value&lt;/aliens&gt;
+  &lt;aliens&gt;value&lt;/aliens&gt;
+&lt;/aliens&gt;
+</code></pre>
+
+<h4 id="a-name-definitionsobject-a-definitions-object"><a name="definitionsObject"></a>Definitions Object</h4>
+
+<p>定义参数和响应使用的数据对象。</p>
+
+<p>An object to hold data types that can be consumed and produced by operations. These data types can be primitives, arrays or models.</p>
+
+<h5 id="patterned-fields-7">Patterned Fields</h5>
+
+<table>
+<thead>
+<tr>
+<th>Field Pattern</th>
+<th align="center">Type</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><a name="definitionsName"></a>{name}</td>
+<td align="center"><a href="#schemaObject">Schema Object</a></td>
+<td>一个 description，&rdquo;name&rdquo;映射到定义的数据对象/模式。</td>
+</tr>
+</tbody>
+</table>
+
+<h5 id="definitions-object-example">Definitions Object Example</h5>
+
+<pre><code class="language-js">{
+  &quot;Category&quot;: {
+    &quot;type&quot;: &quot;object&quot;,
+    &quot;properties&quot;: {
+      &quot;id&quot;: {
+        &quot;type&quot;: &quot;integer&quot;,
+        &quot;format&quot;: &quot;int64&quot;
+      },
+      &quot;name&quot;: {
+        &quot;type&quot;: &quot;string&quot;
+      }
+    }
+  },
+  &quot;Tag&quot;: {
+    &quot;type&quot;: &quot;object&quot;,
+    &quot;properties&quot;: {
+      &quot;id&quot;: {
+        &quot;type&quot;: &quot;integer&quot;,
+        &quot;format&quot;: &quot;int64&quot;
+      },
+      &quot;name&quot;: {
+        &quot;type&quot;: &quot;string&quot;
+      }
+    }
+  }
+}
+</code></pre>
+
+<pre><code class="language-yaml">Category:
+  type: object
+  properties:
+    id:
+      type: integer
+      format: int64
+    name:
+      type: string
+Tag:
+  type: object
+  properties:
+    id:
+      type: integer
+      format: int64
+    name:
+      type: string
+</code></pre>
+
+<h4 id="a-name-parametersdefinitionsobject-a-parameters-definitions-object"><a name="parametersDefinitionsObject"></a>Parameters Definitions Object</h4>
+
+<p>定义可重复引用的参数对象。</p>
+
+<p>An object to hold parameters to be reused across operations. Parameter definitions can be referenced to the ones defined here.</p>
+
+<p>这里定义的参数不是全局的参数。</p>
+
+<p>This does <em>not</em> define global operation parameters.</p>
+
+<h5 id="patterned-fields-8">Patterned Fields</h5>
+
+<table>
+<thead>
+<tr>
+<th>Field Pattern</th>
+<th align="center">Type</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><a name="pdName"></a>{name}</td>
+<td align="center"><a href="#parameterObject">Parameter Object</a></td>
+<td>一个 parameter 定义，&rdquo;name&rdquo;映射定义的参数对象。</td>
+</tr>
+</tbody>
+</table>
+
+<h5 id="parameters-definition-object-example">Parameters Definition Object Example</h5>
+
+<pre><code class="language-js">{
+  &quot;skipParam&quot;: {
+    &quot;name&quot;: &quot;skip&quot;,
+    &quot;in&quot;: &quot;query&quot;,
+    &quot;description&quot;: &quot;number of items to skip&quot;,
+    &quot;required&quot;: true,
+    &quot;type&quot;: &quot;integer&quot;,
+    &quot;format&quot;: &quot;int32&quot;
+  },
+  &quot;limitParam&quot;: {
+    &quot;name&quot;: &quot;limit&quot;,
+    &quot;in&quot;: &quot;query&quot;,
+    &quot;description&quot;: &quot;max records to return&quot;,
+    &quot;required&quot;: true,
+    &quot;type&quot;: &quot;integer&quot;,
+    &quot;format&quot;: &quot;int32&quot;
+  }
+}
+</code></pre>
+
+<pre><code class="language-yaml">skipParam:
+  name: skip
+  in: query
+  description: number of items to skip
+  required: true
+  type: integer
+  format: int32
+limitParam:
+  name: limit
+  in: query
+  description: max records to return
+  required: true
+  type: integer
+  format: int32
+</code></pre>
+
+<h4 id="a-name-responsesdefinitionsobject-a-responses-definitions-object"><a name="responsesDefinitionsObject"></a>Responses Definitions Object</h4>
+
+<p>定义可重复引用的响应对象。</p>
+
+<p>An object to hold responses to be reused across operations. Response definitions can be referenced to the ones defined here.</p>
+
+<p>这里定义的响应不是全局的响应。</p>
+
+<p>This does <em>not</em> define global operation responses.</p>
+
+<h5 id="patterned-fields-9">Patterned Fields</h5>
+
+<table>
+<thead>
+<tr>
+<th>Field Pattern</th>
+<th align="center">Type</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><a name="rdName"></a>{name}</td>
+<td align="center"><a href="#responseObject">Response Object</a></td>
+<td>一个 response 定义，&rdquo;name&rdquo;映射定义的响应。</td>
+</tr>
+</tbody>
+</table>
+
+<h5 id="responses-definitions-object-example">Responses Definitions Object Example</h5>
+
+<pre><code class="language-js">{
+  &quot;NotFound&quot;: {
+    &quot;description&quot;: &quot;Entity not found.&quot;
+  },
+  &quot;IllegalInput&quot;: {
+    &quot;description&quot;: &quot;Illegal input for operation.&quot;
+  },
+  &quot;GeneralError&quot;: {
+    &quot;description&quot;: &quot;General Error&quot;,
+    &quot;schema&quot;: {
+        &quot;$ref&quot;: &quot;#/definitions/GeneralError&quot;
+    }
+  }
+}
+</code></pre>
+
+<pre><code class="language-yaml">NotFound:
+  description: Entity not found.
+IllegalInput:
+  description: Illegal input for operation.
+GeneralError:
+  description: General Error
+  schema:
+    $ref: '#/definitions/GeneralError'
+</code></pre>
+
+<h4 id="a-name-securitydefinitionsobject-a-security-definitions-object"><a name="securityDefinitionsObject"></a>Security Definitions Object</h4>
+
+<p>A declaration of the security schemes available to be used in the specification. This does not enforce the security schemes on the operations and only serves to provide the relevant details for each scheme.</p>
+
+<h5 id="patterned-fields-10">Patterned Fields</h5>
+
+<table>
+<thead>
+<tr>
+<th>Field Pattern</th>
+<th align="center">Type</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><a name="sdName"></a>{name}</td>
+<td align="center"><a href="#securitySchemeObject">Security Scheme Object</a></td>
+<td>A single security scheme definition, mapping a &ldquo;name&rdquo; to the scheme it defines.</td>
+</tr>
+</tbody>
+</table>
+
+<h5 id="security-definitions-object-example">Security Definitions Object Example</h5>
+
+<pre><code class="language-js">{
+  &quot;api_key&quot;: {
+    &quot;type&quot;: &quot;apiKey&quot;,
+    &quot;name&quot;: &quot;api_key&quot;,
+    &quot;in&quot;: &quot;header&quot;
+  },
+  &quot;petstore_auth&quot;: {
+    &quot;type&quot;: &quot;oauth2&quot;,
+    &quot;authorizationUrl&quot;: &quot;http://swagger.io/api/oauth/dialog&quot;,
+    &quot;flow&quot;: &quot;implicit&quot;,
+    &quot;scopes&quot;: {
+      &quot;write:pets&quot;: &quot;modify pets in your account&quot;,
+      &quot;read:pets&quot;: &quot;read your pets&quot;
+    }
+  }
+}
+</code></pre>
+
+<pre><code class="language-yaml">api_key:
+  type: apiKey
+  name: api_key
+  in: header
+petstore_auth:
+  type: oauth2
+  authorizationUrl: http://swagger.io/api/oauth/dialog
+  flow: implicit
+  scopes:
+    write:pets: modify pets in your account
+    read:pets: read your pets
+</code></pre>
+
+<h4 id="a-name-securityschemeobject-a-security-scheme-object"><a name="securitySchemeObject"></a>Security Scheme Object</h4>
+
+<p>Allows the definition of a security scheme that can be used by the operations. Supported schemes are basic authentication, an API key (either as a header or as a query parameter) and OAuth2&rsquo;s common flows (implicit, password, application and access code).</p>
+
+<h5 id="fixed-fields-15">Fixed Fields</h5>
+
+<table>
+<thead>
+<tr>
+<th>Field Name</th>
+<th align="center">Type</th>
+<th>Validity</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><a name="securitySchemeType"></a>type</td>
+<td align="center"><code>string</code></td>
+<td>Any</td>
+<td><strong>必须</strong> The type of the security scheme. Valid values are <code>&quot;basic&quot;</code>, <code>&quot;apiKey&quot;</code> or <code>&quot;oauth2&quot;</code>.</td>
+</tr>
+
+<tr>
+<td><a name="securitySchemeDescription"></a>description</td>
+<td align="center"><code>string</code></td>
+<td>Any</td>
+<td>A short description for security scheme.</td>
+</tr>
+
+<tr>
+<td><a name="securitySchemeName"></a>name</td>
+<td align="center"><code>string</code></td>
+<td><code>apiKey</code></td>
+<td><strong>必须</strong> The name of the header or query parameter to be used.</td>
+</tr>
+
+<tr>
+<td><a name="securitySchemeIn"></a>in</td>
+<td align="center"><code>string</code></td>
+<td><code>apiKey</code></td>
+<td><strong>Required</strong> The location of the API key. Valid values are <code>&quot;query&quot;</code> or <code>&quot;header&quot;</code>.</td>
+</tr>
+
+<tr>
+<td><a name="securitySchemeFlow"></a>flow</td>
+<td align="center"><code>string</code></td>
+<td><code>oauth2</code></td>
+<td><strong>必须</strong> The flow used by the OAuth2 security scheme. Valid values are <code>&quot;implicit&quot;</code>, <code>&quot;password&quot;</code>, <code>&quot;application&quot;</code> or <code>&quot;accessCode&quot;</code>.</td>
+</tr>
+
+<tr>
+<td><a name="securitySchemeAuthorizationUrl"></a>authorizationUrl</td>
+<td align="center"><code>string</code></td>
+<td><code>oauth2</code> (<code>&quot;implicit&quot;</code>, <code>&quot;accessCode&quot;</code>)</td>
+<td><strong>必须</strong> The authorization URL to be used for this flow. This SHOULD be in the form of a URL.</td>
+</tr>
+
+<tr>
+<td><a name="securitySchemeTokenUrl"></a>tokenUrl</td>
+<td align="center"><code>string</code></td>
+<td><code>oauth2</code> (<code>&quot;password&quot;</code>, <code>&quot;application&quot;</code>, <code>&quot;accessCode&quot;</code>)</td>
+<td><strong>必须</strong> The token URL to be used for this flow. This SHOULD be in the form of a URL.</td>
+</tr>
+
+<tr>
+<td><a name="securitySchemeScopes"></a>scopes</td>
+<td align="center"><a href="#scopesObject">Scopes Object</a></td>
+<td><code>oauth2</code></td>
+<td><strong>必须</strong> The available scopes for the OAuth2 security scheme.</td>
+</tr>
+</tbody>
+</table>
+
+<h5 id="patterned-fields-11">Patterned Fields</h5>
+
+<table>
+<thead>
+<tr>
+<th>Field Name</th>
+<th align="center">Type</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><a name="securitySchemeExtensions"></a>^x-</td>
+<td align="center">Any</td>
+<td>Allows extensions to the Swagger Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. See <a href="#vendorExtensions">Vendor Extensions</a> for further details.</td>
+</tr>
+</tbody>
+</table>
+
+<h5 id="security-scheme-object-example">Security Scheme Object Example</h5>
+
+<h6 id="basic-authentication-sample">Basic Authentication Sample</h6>
+
+<pre><code class="language-js">{
+  &quot;type&quot;: &quot;basic&quot;
+}
+</code></pre>
+
+<pre><code class="language-yaml">type: basic
+</code></pre>
+
+<h6 id="api-key-sample">API Key Sample</h6>
+
+<pre><code class="language-js">{
+  &quot;type&quot;: &quot;apiKey&quot;,
+  &quot;name&quot;: &quot;api_key&quot;,
+  &quot;in&quot;: &quot;header&quot;
+}
+</code></pre>
+
+<pre><code class="language-yaml">type: apiKey
+name: api_key
+in: header
+</code></pre>
+
+<h6 id="implicit-oauth2-sample">Implicit OAuth2 Sample</h6>
+
+<pre><code class="language-js">{
+  &quot;type&quot;: &quot;oauth2&quot;,
+  &quot;authorizationUrl&quot;: &quot;http://swagger.io/api/oauth/dialog&quot;,
+  &quot;flow&quot;: &quot;implicit&quot;,
+  &quot;scopes&quot;: {
+    &quot;write:pets&quot;: &quot;modify pets in your account&quot;,
+    &quot;read:pets&quot;: &quot;read your pets&quot;
+  }
+}
+</code></pre>
+
+<pre><code class="language-yaml">type: oauth2
+authorizationUrl: http://swagger.io/api/oauth/dialog
+flow: implicit
+scopes:
+  write:pets: modify pets in your account
+  read:pets: read your pets
+</code></pre>
+
+<h4 id="a-name-scopesobject-a-scopes-object"><a name="scopesObject"></a>Scopes Object</h4>
+
+<p>Lists the available scopes for an OAuth2 security scheme.</p>
+
+<h5 id="patterned-fields-12">Patterned Fields</h5>
+
+<table>
+<thead>
+<tr>
+<th>Field Pattern</th>
+<th align="center">Type</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><a name="scopesName"></a>{name}</td>
+<td align="center"><code>string</code></td>
+<td>Maps between a name of a scope to a short description of it (as the value of the property).</td>
+</tr>
+</tbody>
+</table>
+
+<h5 id="patterned-objects-11">Patterned Objects</h5>
+
+<table>
+<thead>
+<tr>
+<th>Field Pattern</th>
+<th align="center">Type</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><a name="scopesExtensions"></a>^x-</td>
+<td align="center">Any</td>
+<td>Allows extensions to the Swagger Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. See <a href="#vendorExtensions">Vendor Extensions</a> for further details.</td>
+</tr>
+</tbody>
+</table>
+
+<h5 id="scopes-object-example">Scopes Object Example</h5>
+
+<pre><code class="language-js">{
+  &quot;write:pets&quot;: &quot;modify pets in your account&quot;,
+  &quot;read:pets&quot;: &quot;read your pets&quot;
+}
+</code></pre>
+
+<pre><code class="language-yaml">write:pets: modify pets in your account
+read:pets: read your pets
+</code></pre>
+
+<h4 id="a-name-securityrequirementobject-a-security-requirement-object"><a name="securityRequirementObject"></a>Security Requirement Object</h4>
+
+<p>Lists the required security schemes to execute this operation. The object can have multiple security schemes declared in it which are all required (that is, there is a logical AND between the schemes).</p>
+
+<p>The name used for each property MUST correspond to a security scheme declared in the <a href="#securityDefinitionsObject">Security Definitions</a>.</p>
+
+<h5 id="patterned-fields-13">Patterned Fields</h5>
+
+<table>
+<thead>
+<tr>
+<th>Field Pattern</th>
+<th align="center">Type</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><a name="securityRequirementsName"></a>{name}</td>
+<td align="center">[<code>string</code>]</td>
+<td>Each name must correspond to a security scheme which is declared in the <a href="#securityDefinitions">Security Definitions</a>. If the security scheme is of type <code>&quot;oauth2&quot;</code>, then the value is a list of scope names required for the execution. For other security scheme types, the array MUST be empty.</td>
+</tr>
+</tbody>
+</table>
+
+<h5 id="security-requirement-object-examples">Security Requirement Object Examples</h5>
+
+<h6 id="non-oauth2-security-requirement">Non-OAuth2 Security Requirement</h6>
+
+<pre><code class="language-js">{
+  &quot;api_key&quot;: []
+}
+</code></pre>
+
+<pre><code class="language-yaml">api_key: []
+</code></pre>
+
+<h6 id="oauth2-security-requirement">OAuth2 Security Requirement</h6>
+
+<pre><code class="language-js">{
+  &quot;petstore_auth&quot;: [
+    &quot;write:pets&quot;,
+    &quot;read:pets&quot;
+  ]
+}
+</code></pre>
+
+<pre><code class="language-yaml">petstore_auth:
+- write:pets
+- read:pets
+</code></pre>
+
+<h3 id="a-name-vendorextensions-a-specification-extensions"><a name="vendorExtensions"></a>Specification Extensions</h3>
+
+<p>虽然  Swagger Specification 适用于大多数用例，但是可以在某些节点添加数据，扩展规范。</p>
+
+<p>扩展属性必须以<code>&quot;x-&quot;</code> 作为前缀，而且值必须符合JSON格式。</p>
+
+<p>这些扩展或许不能被某些工具支持，但是你可以为内部或开源的工具添加对这些扩展的支持。</p>
+
+<h3 id="a-name-securityfiltering-a-security-filtering"><a name="securityFiltering"></a>Security Filtering</h3>
+
+<p>Swagger 规范中的一些对象可以删除或者为空，即使它们是 API 文档的核心。</p>
+
+<p>The reasoning behind it is to allow an additional layer of access control over the documentation itself. 虽然不是规范的一部分，但是某些库可以通过某种形式的认证/授权来访问文档的某部分</p>
+
+<p>Two examples for this:</p>
+
+<ol>
+<li><a href="#pathsObject">Paths Object</a> 可能为空。 It may be counterintuitive, but this may tell the viewer that they got to the right place, but can&rsquo;t access any documentation. They&rsquo;d still have access to the <a href="#infoObject">Info Object</a> which may contain additional information regarding authentication.</li>
+<li><a href="#pathItemObject">Path Item Object</a> 为空时，这种情况，浏览者知道路径存在，但不能看到任何操作或参数。This is different than hiding the path itself from the <a href="#pathsObject">Paths Object</a> so the user will not be aware of its existence. 可以更好地让文档提供者控制浏览者可以看什么。</li>
+</ol>
+
+</div>
+
+
+<div class="boo">
+	<span></span>
+</div>
+<div class="footer">
+	@XIZERO Powered by <a href="http://hugo.spf13.com/">Hugo</a> and <a href="#">bigbig</a>
+</div>
+</body>
+</html>
+

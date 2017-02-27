@@ -176,6 +176,22 @@ $($('div')[7]).children();
 &lt;/build&gt;
 </code></pre>
 
+<h2 id="17-js-点击复制">17. JS 点击复制</h2>
+
+<pre><code class="language-js">$(&quot;.result_info input&quot;).on('click',function(e){
+        $(this).select();
+        document.execCommand(&quot;Copy&quot;);
+});
+</code></pre>
+
+<p><strong>当渲染元素未出现</strong></p>
+
+<pre><code class="language-js">$(&quot;#info_zone&quot;).delegate(&quot;input&quot;,&quot;click&quot;,function(){
+    $(this).select();
+    document.execCommand(&quot;Copy&quot;);
+});
+</code></pre>
+
 </div>
 
 

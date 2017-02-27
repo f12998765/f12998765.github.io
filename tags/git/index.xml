@@ -119,6 +119,14 @@ git merge origin/master
 git pull origin master
 &lt;/code&gt;&lt;/pre&gt;
 
+&lt;h2 id=&#34;强制覆盖本地修改&#34;&gt;强制覆盖本地修改&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;#清除本地修改
+git reset --hard
+#拉代码
+git pull
+&lt;/code&gt;&lt;/pre&gt;
+
 &lt;p&gt;待补充……&lt;/p&gt;
 </description>
     </item>
