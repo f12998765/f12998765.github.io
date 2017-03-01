@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<meta name="generator" content="Hugo 0.18.1" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate" href="http://hugo.xizero.com//index.xml" type="application/rss+xml" title="XIZERO">
+<link href="http://hugo.xizero.com/css/block.css" rel="stylesheet">
+<script src="http://hugo.xizero.com/js/jqury.min.js"></script>
+<script src="http://hugo.xizero.com/js/top.js"></script>
+
+
+<title>Java 开发环境恢复手册 - XIZERO</title>
+</head>
+<body>
+
+<div id="gotop" title="🚀 go top"></div>
+
+
+<div class="titlist">
+	<span><a href="http://hugo.xizero.com/">Home</a></span>
+	<span><a href="http://hugo.xizero.com//tags/">Tags</a></span>
+	<span><a href="http://hugo.xizero.com//about">About</a></span>
+</div>
+
+
+
+<link href="http://hugo.xizero.com/css/context.css" rel="stylesheet">
+<link href="http://hugo.xizero.com/css/tomorrow.min.css" rel="stylesheet">
+<script src="http://hugo.xizero.com/js/high.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<div class="tit">
+	Java 开发环境恢复手册
+</div>
+
+<div class="toc">
+	<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#notepad">Notepad++</a></li>
+<li><a href="#git-for-windows">Git for Windows</a>
+<ul>
+<li><a href="#安装">安装</a></li>
+<li><a href="#更换主题">更换主题</a></li>
+<li><a href="#配置文件">配置文件</a></li>
+<li><a href="#ssh-key">SSH key</a></li>
+</ul></li>
+<li><a href="#source-tree">Source Tree</a>
+<ul>
+<li><a href="#安装配置">安装配置</a></li>
+</ul></li>
+<li><a href="#hugo">Hugo</a>
+<ul>
+<li><a href="#安装-1">安装</a></li>
+</ul></li>
+<li><a href="#visual-studio-code">Visual Studio Code</a></li>
+<li><a href="#jdk">JDK</a>
+<ul>
+<li><a href="#配置环境变量">配置环境变量</a></li>
+</ul></li>
+<li><a href="#tomcat">Tomcat</a></li>
+<li><a href="#maven">Maven</a>
+<ul>
+<li><a href="#安装配置-1">安装配置</a></li>
+</ul></li>
+<li><a href="#intelij-idea">InteLiJ IDEA</a>
+<ul>
+<li><a href="#配置">配置</a></li>
+<li><a href="#idea新建maven项目卡住显示-generating-project-in-batch-mode">IDEA新建MAVEN项目卡住显示 : &ldquo;Generating Project in Batch mode&rdquo;</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+</div>
+
+<div class="con">
+	
+
+<h2 id="notepad">Notepad++</h2>
+
+<p>官网：<a href="https://notepad-plus-plus.org/">https://notepad-plus-plus.org/</a></p>
+
+<h2 id="git-for-windows">Git for Windows</h2>
+
+<p>官网：<a href="https://git-scm.com/">https://git-scm.com/</a></p>
+
+<h3 id="安装">安装</h3>
+
+<p>添加快捷方式到桌面</p>
+
+<p>添加 git bash 到右键菜单</p>
+
+<h3 id="更换主题">更换主题</h3>
+
+<p>网址：<a href="http://ciembor.github.io/4bit/">http://ciembor.github.io/4bit/</a></p>
+
+<p>编辑用户目录下的 .minttyrc 文件</p>
+
+<pre><code class="language-bash">BoldAsFont=-1
+Columns=99
+Rows=33
+Font=Lucida Console
+FontHeight=12
+BackgroundColour=13,25,38
+ForegroundColour=217,230,242
+CursorColour=217,230,242
+Black=0,0,0
+BoldBlack=38,38,38
+Red=184,122,122
+BoldRed=219,189,189
+Green=122,184,122
+BoldGreen=189,219,189
+Yellow=184,184,122
+BoldYellow=219,219,189
+Blue=122,122,184
+BoldBlue=189,189,219
+Magenta=184,122,184
+BoldMagenta=219,189,219
+Cyan=122,184,184
+BoldCyan=189,219,219
+White=217,217,217
+BoldWhite=255,255,255
+Locale=C
+Charset=GBK
+</code></pre>
+
+<h3 id="配置文件">配置文件</h3>
+
+<p>配置用户名和邮箱</p>
+
+<pre><code class="language-bash">git config --global user.name &quot;[name]&quot;
+git config --global user.email &quot;[email]&quot;
+git config --global color.ui true
+</code></pre>
+
+<p>打印全局配置</p>
+
+<pre><code class="language-bash">git config --list
+</code></pre>
+
+<h3 id="ssh-key">SSH key</h3>
+
+<p>检查用户目录下是否存在隐藏文件夹 .ssh</p>
+
+<pre><code class="language-bash">cd ~/.ssh
+</code></pre>
+
+<p>生成SSH Key，在 <code>.ssh/id_rsa.pub</code> 中</p>
+
+<pre><code class="language-bash">ssh-keygen -t rsa -C &quot;your_email&quot;
+</code></pre>
+
+<p>在 Github 中添加，并测试</p>
+
+<pre><code class="language-bash">ssh -T git@github.com
+</code></pre>
+
+<h2 id="source-tree">Source Tree</h2>
+
+<p>官网：<a href="https://www.sourcetreeapp.com/">https://www.sourcetreeapp.com/</a></p>
+
+<h3 id="安装配置">安装配置</h3>
+
+<ol>
+<li>跳过默认设置</li>
+<li>使用系统Git</li>
+<li>添加 SSH key</li>
+</ol>
+
+<h2 id="hugo">Hugo</h2>
+
+<p>官网：<a href="https://gohugo.io/">https://gohugo.io/</a></p>
+
+<p>下载地址：<a href="https://github.com/spf13/hugo/releases">https://github.com/spf13/hugo/releases</a></p>
+
+<h3 id="安装-1">安装</h3>
+
+<ol>
+<li>解压，重命名为 hugo.exe ，放在 <code>D:/Software/hugo/bin/</code> 下</li>
+<li>配置环境变量 Path</li>
+</ol>
+
+<h2 id="visual-studio-code">Visual Studio Code</h2>
+
+<p>官网：<a href="https://code.visualstudio.com/">https://code.visualstudio.com/</a></p>
+
+<h2 id="jdk">JDK</h2>
+
+<p>官网：<a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">http://www.oracle.com/technetwork/java/javase/downloads/index.html</a></p>
+
+<h3 id="配置环境变量">配置环境变量</h3>
+
+<ul>
+<li>JAVA_HOME</li>
+<li>Path
+
+<ul>
+<li>%JAVA_HOME%\bin;</li>
+<li>%JAVA_HOME%\jre\bin;</li>
+</ul></li>
+</ul>
+
+<h2 id="tomcat">Tomcat</h2>
+
+<p>官网：<a href="http://tomcat.apache.org/">http://tomcat.apache.org/</a></p>
+
+<p>解压到 <code>C:\Program Files\Apache Software Foundation</code></p>
+
+<h2 id="maven">Maven</h2>
+
+<p>官网：<a href="https://maven.apache.org/">https://maven.apache.org/</a></p>
+
+<p>Maven Repository：<a href="https://mvnrepository.com/">Maven Repository</a></p>
+
+<h3 id="安装配置-1">安装配置</h3>
+
+<ol>
+<li>解压到 <code>C:\Program Files\Apache Software Foundation</code> 下，重命名为 Maven</li>
+<li>配置环境变量
+
+<ul>
+<li>MAVEN_HOME</li>
+<li>Path
+
+<ul>
+<li>%MAVEN_HOME%\bin</li>
+</ul></li>
+</ul></li>
+<li>修改配置文件 <code>conf/setting.xml</code></li>
+</ol>
+
+<p>设置本地仓库</p>
+
+<pre><code class="language-xml">&lt;localRepository&gt;d:/m2/repository&lt;/localRepository&gt;
+</code></pre>
+
+<p>设置远程仓库镜像</p>
+
+<pre><code class="language-xml">&lt;mirror&gt;
+    &lt;id&gt;nexus-aliyun&lt;/id&gt;
+    &lt;mirrorOf&gt;*&lt;/mirrorOf&gt;ben
+    &lt;name&gt;Nexus aliyun&lt;/name&gt;
+    &lt;url&gt;http://maven.aliyun.com/nexus/content/groups/public&lt;/url&gt;
+&lt;/mirror&gt;
+</code></pre>
+
+<h2 id="intelij-idea">InteLiJ IDEA</h2>
+
+<p>官网：<a href="https://www.jetbrains.com/idea/">https://www.jetbrains.com/idea/</a></p>
+
+<h3 id="配置">配置</h3>
+
+<ol>
+<li>登陆激活</li>
+<li>去掉不需要的插件</li>
+<li>设置默认设置
+
+<ul>
+<li>设置默认Maven</li>
+</ul></li>
+</ol>
+
+<h3 id="idea新建maven项目卡住显示-generating-project-in-batch-mode">IDEA新建MAVEN项目卡住显示 : &ldquo;Generating Project in Batch mode&rdquo;</h3>
+
+<ol>
+<li>下载 <code>archetype-catalog.xml</code>  - -  <a href="http://repo.maven.apache.org/maven2/">http://repo.maven.apache.org/maven2/</a>，找到 <code>archetype-catalog.xml</code> ,右键保存</li>
+<li>放到 &ldquo;.m2\repository\org\apache\maven\archetype\archetype-catalog\2.4&rdquo; 下</li>
+<li>在 <code>Settings</code>&gt; <code>Maven</code> &gt; <code>Runner</code> &gt; <code>VM Options</code> 中添加 <code>-DarchetypeCatalog=internal</code></li>
+<li>PS：注意右上角的灰字：for default project，而不是for current project</li>
+</ol>
+
+</div>
+
+<link href="http://hugo.xizero.com/css/footer.css" rel="stylesheet">
+
+<div class="footer">
+	<div class="_hr"><span></span></div>
+	@XIZERO Powered by <a href="http://hugo.spf13.com/">Hugo</a> and <a href="#">bigbig</a>
+</div>
+
+</body>
+</html>
+

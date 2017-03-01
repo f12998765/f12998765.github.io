@@ -4,17 +4,11 @@
 <meta charset="utf-8">
 <meta name="generator" content="Hugo 0.18.1" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate" href="http://hugo.xizero.com//index.xml" type="application/rss+xml" title="XIZERO">
+<link href="http://hugo.xizero.com/css/block.css" rel="stylesheet">
+<script src="http://hugo.xizero.com/js/jqury.min.js"></script>
+<script src="http://hugo.xizero.com/js/top.js"></script>
 
-<link rel="alternate" href="https://www.xizero.com//index.xml" type="application/rss+xml" title="XIZERO">
-<link href="https://www.xizero.com/css/tomorrow.min.css" rel="stylesheet">
-<link href="https://www.xizero.com/css/main.css" rel="stylesheet">
-<link href="https://www.xizero.com/css/context.css" rel="stylesheet">
-<link href="https://www.xizero.com/css/jqcloud.css" rel="stylesheet">
-<script src="https://www.xizero.com/js/high.min.js"></script>
-<script src="https://www.xizero.com/js/jqury.min.js"></script>
-<script src="https://www.xizero.com/js/top.js"></script>
-<script src="https://www.xizero.com/js/jqcloud.js"></script>
-<script>hljs.initHighlightingOnLoad();</script>
 
 <title>Java 注解 - XIZERO</title>
 </head>
@@ -22,25 +16,58 @@
 
 <div id="gotop" title="🚀 go top"></div>
 
-<div class="top">
 
-	<div class="gos">
-		<span class="go"><a href="https://www.xizero.com/">Home</a></span>
-		<span class="go"><a href="/tags/">Tags</a></span>
-		<span class="go"><a href="/about/">About</a></span>
-	</div>
-	
-	
-		<div class="tit">
-			Java 注解
-		</div>
-
-	
-
+<div class="titlist">
+	<span><a href="http://hugo.xizero.com/">Home</a></span>
+	<span><a href="http://hugo.xizero.com//tags/">Tags</a></span>
+	<span><a href="http://hugo.xizero.com//about">About</a></span>
 </div>
 
 
 
+<link href="http://hugo.xizero.com/css/context.css" rel="stylesheet">
+<link href="http://hugo.xizero.com/css/tomorrow.min.css" rel="stylesheet">
+<script src="http://hugo.xizero.com/js/high.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<div class="tit">
+	Java 注解
+</div>
+
+<div class="toc">
+	<nav id="TableOfContents">
+<ul>
+<li><a href="#annotation-注解">Annotation（注解）</a></li>
+<li><a href="#注解和注解类型">注解和注解类型</a></li>
+<li><a href="#注解类型">注解类型</a></li>
+<li><a href="#元注解">元注解</a>
+<ul>
+<li><a href="#targe">@Targe</a></li>
+<li><a href="#retention">@Retention</a></li>
+<li><a href="#documented">@Documented</a></li>
+<li><a href="#inherited">@Inherited</a></li>
+</ul></li>
+<li><a href="#系统内置标准注解">系统内置标准注解：</a>
+<ul>
+<li><a href="#override">@Override</a></li>
+<li><a href="#deprecated">@Deprecated</a></li>
+<li><a href="#suppresswarnnings">@SuppressWarnnings</a>
+<ul>
+<li><a href="#suppresswarnings-value-注解的常见参数值的简单说明">@SuppressWarnings(value={})注解的常见参数值的简单说明：</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#自定义注解">自定义注解</a></li>
+<li><a href="#使用反射来查询注解">使用反射来查询注解</a>
+<ul>
+<li><a href="#如果存在-返回指定注解类型的注解-不存在则返回null">如果存在，返回指定注解类型的注解；不存在则返回null</a></li>
+<li><a href="#返回该类中所有注解">返回该类中所有注解</a></li>
+<li><a href="#判断该类是不是一个注解类型">判断该类是不是一个注解类型</a></li>
+<li><a href="#判断指定类型的一个注解是否出现在该类上">判断指定类型的一个注解是否出现在该类上</a></li>
+</ul></li>
+<li><a href="#参考">参考</a></li>
+</ul>
+</nav>
+</div>
 
 <div class="con">
 	
@@ -360,13 +387,13 @@ public @interface CustomAnnotation ( ) {
 
 </div>
 
+<link href="http://hugo.xizero.com/css/footer.css" rel="stylesheet">
 
-<div class="boo">
-	<span></span>
-</div>
 <div class="footer">
+	<div class="_hr"><span></span></div>
 	@XIZERO Powered by <a href="http://hugo.spf13.com/">Hugo</a> and <a href="#">bigbig</a>
 </div>
+
 </body>
 </html>
 

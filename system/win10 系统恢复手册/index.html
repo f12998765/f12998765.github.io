@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<meta name="generator" content="Hugo 0.18.1" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate" href="http://hugo.xizero.com//index.xml" type="application/rss+xml" title="XIZERO">
+<link href="http://hugo.xizero.com/css/block.css" rel="stylesheet">
+<script src="http://hugo.xizero.com/js/jqury.min.js"></script>
+<script src="http://hugo.xizero.com/js/top.js"></script>
+
+
+<title>win10 系统恢复手册 - XIZERO</title>
+</head>
+<body>
+
+<div id="gotop" title="🚀 go top"></div>
+
+
+<div class="titlist">
+	<span><a href="http://hugo.xizero.com/">Home</a></span>
+	<span><a href="http://hugo.xizero.com//tags/">Tags</a></span>
+	<span><a href="http://hugo.xizero.com//about">About</a></span>
+</div>
+
+
+
+<link href="http://hugo.xizero.com/css/context.css" rel="stylesheet">
+<link href="http://hugo.xizero.com/css/tomorrow.min.css" rel="stylesheet">
+<script src="http://hugo.xizero.com/js/high.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<div class="tit">
+	win10 系统恢复手册
+</div>
+
+<div class="toc">
+	<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#系统安装">系统安装</a></li>
+<li><a href="#连接网络-配置系统">连接网络，配置系统</a></li>
+<li><a href="#必备软件">必备软件</a></li>
+<li><a href="#效率工具">效率工具</a></li>
+<li><a href="#娱乐软件">娱乐软件</a></li>
+<li><a href="#扩展软件">扩展软件</a></li>
+<li><a href="#备注-文件结构">备注 - - 文件结构</a></li>
+</ul></li>
+</ul>
+</nav>
+</div>
+
+<div class="con">
+	
+
+<h2 id="系统安装">系统安装</h2>
+
+<ol>
+<li>断网安装，创建本地英文账户</li>
+<li>禁止预装应用自动安装
+
+<ul>
+<li>打开注册表 regedit</li>
+<li>进入路径 <code>HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\</code></li>
+<li>右键点击新建项“CloudContent</li>
+<li>双击新建的CloudContent，在右栏右键新建DWORD (32位) 值或新建DWORD (64位)值，并命名为DisableWindowsConsumerFeatures</li>
+<li>双击DisableWindowsConsumerFeatures，在数值数据输入1，确定</li>
+</ul></li>
+<li>设置资源管理器默认打开我的电脑，右键隐藏 OneDirve</li>
+<li>运行组策略 <code>gpedit.msc</code> ，打开 <code>计算机配置 --&gt; 管理模块 --&gt; windows 组件</code>
+
+<ul>
+<li>OneDrive，启用 <code>禁止使用 OneDrive 进行文件存储</code></li>
+<li>搜索，禁用小娜</li>
+<li>可以跳过此步骤，使用 <code>Dism++</code>
+&gt; <a href="https://support.office.com/zh-cn/article/%E5%85%B3%E9%97%AD%E6%88%96%E5%8D%B8%E8%BD%BD-OneDrive-f32a17ce-3336-40fe-9c38-6efb09f944b0?ui=zh-CN&amp;rs=zh-CN&amp;ad=CN">关闭或卸载 OneDrive</a></li>
+</ul></li>
+<li>创建文档结构</li>
+</ol>
+
+<h2 id="连接网络-配置系统">连接网络，配置系统</h2>
+
+<ol>
+<li>Flower Password  - - <a href="https://flowerpassword.com/">https://flowerpassword.com/</a></li>
+<li>YoMail - - <a href="http://www.yomail.com/">http://www.yomail.com/</a></li>
+<li>登陆微软账号，激活系统</li>
+<li>Dism++ - - <a href="https://www.chuyu.me/">https://www.chuyu.me/</a></li>
+<li>更新系统</li>
+</ol>
+
+<h2 id="必备软件">必备软件</h2>
+
+<ol>
+<li>7-zip  - - <a href="http://www.7-zip.org/">http://www.7-zip.org/</a></li>
+<li>坚果云  - - <a href="https://www.jianguoyun.com">https://www.jianguoyun.com</a>
+
+<ul>
+<li>网速监控 NetSpeedMonitor</li>
+<li>开始菜单优化 StartIsBack</li>
+</ul></li>
+<li>Enpass - - <a href="https://www.enpass.io/">https://www.enpass.io/</a>
+
+<ul>
+<li>设置主密码，导入备份数据</li>
+<li>设置同步文件夹
+
+<ul>
+<li>D:\JianGuoYun</li>
+</ul></li>
+</ul></li>
+<li>shadowsocks-windows - - <a href="https://github.com/shadowsocks/shadowsocks-windows/releases">https://github.com/shadowsocks/shadowsocks-windows/releases</a></li>
+<li>Google Chrome  - - <a href="https://www.google.cn/intl/zh-CN/chrome/browser/desktop/index.html">https://www.google.cn/intl/zh-CN/chrome/browser/desktop/index.html</a>
+
+<ul>
+<li>登陆账号，同步插件及相关配置</li>
+<li>插件：Enpass、Flower Password、Humble New Tab Page、uBlock Origin、Octotree、Enhanced Steam、哔哩哔哩助手</li>
+<li>应用：Google Keep、Web Server for Chrome</li>
+</ul></li>
+</ol>
+
+<h2 id="效率工具">效率工具</h2>
+
+<ol>
+<li>滴答清单 - - <a href="https://www.dida365.com">https://www.dida365.com</a></li>
+<li>MarkEditor - -  <a href="http://zrey.com/app/markeditor">http://zrey.com/app/markeditor</a>
+
+<ul>
+<li>停止版本控制</li>
+<li>添加工作目录
+
+<ul>
+<li>D:\JianGuoYun\XIZERO</li>
+<li>D:\JianGuoYun\Tree hole</li>
+</ul></li>
+</ul></li>
+<li>Listary - -  <a href="http://www.listary.com/">http://www.listary.com/</a></li>
+</ol>
+
+<h2 id="娱乐软件">娱乐软件</h2>
+
+<ol>
+<li>网易云音乐 - -  <a href="http://music.163.com/">http://music.163.com/</a></li>
+<li>Steam  - -  <a href="http://store.steampowered.com/">http://store.steampowered.com/</a></li>
+<li>ASF - - <a href="https://github.com/JustArchi/ArchiSteamFarm">https://github.com/JustArchi/ArchiSteamFarm</a>
+
+<ul>
+<li>wiki - - <a href="http://steamcn.com/t187703-1-1">http://steamcn.com/t187703-1-1</a></li>
+</ul></li>
+</ol>
+
+<h2 id="扩展软件">扩展软件</h2>
+
+<ol>
+<li>迅雷极速版</li>
+<li>SumatraPDF - - <a href="https://www.sumatrapdfreader.org/free-pdf-reader-cn.html">https://www.sumatrapdfreader.org/free-pdf-reader-cn.html</a></li>
+<li>Snipaste - - <a href="https://zh.snipaste.com/">https://zh.snipaste.com/</a></li>
+</ol>
+
+<h2 id="备注-文件结构">备注 - - 文件结构</h2>
+
+<ul>
+<li>C - System</li>
+<li>D - Data
+
+<ul>
+<li>Project - Git 项目</li>
+<li>iProject - IDEA 项目</li>
+<li>m2 - Maven 本地仓库</li>
+<li>Software - 绿色软件</li>
+<li>CloudMusic - 网易云音乐本地</li>
+<li>Thunder - 迅雷下载</li>
+<li>JianGuoYun - 我的坚果云</li>
+</ul></li>
+<li>E - Game</li>
+</ul>
+
+</div>
+
+<link href="http://hugo.xizero.com/css/footer.css" rel="stylesheet">
+
+<div class="footer">
+	<div class="_hr"><span></span></div>
+	@XIZERO Powered by <a href="http://hugo.spf13.com/">Hugo</a> and <a href="#">bigbig</a>
+</div>
+
+</body>
+</html>
+

@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Win on XIZERO</title>
-    <link>https://www.xizero.com/tags/win/index.xml</link>
+    <link>http://hugo.xizero.com/tags/win/index.xml</link>
     <description>Recent content in Win on XIZERO</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="https://www.xizero.com/tags/win/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://hugo.xizero.com/tags/win/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>win10 系统恢复手册</title>
-      <link>https://www.xizero.com/tool/win10%20%E7%B3%BB%E7%BB%9F%E6%81%A2%E5%A4%8D%E6%89%8B%E5%86%8C/</link>
+      <link>http://hugo.xizero.com/system/win10%20%E7%B3%BB%E7%BB%9F%E6%81%A2%E5%A4%8D%E6%89%8B%E5%86%8C/</link>
       <pubDate>Thu, 19 Jan 2017 12:00:00 +0800</pubDate>
       
-      <guid>https://www.xizero.com/tool/win10%20%E7%B3%BB%E7%BB%9F%E6%81%A2%E5%A4%8D%E6%89%8B%E5%86%8C/</guid>
+      <guid>http://hugo.xizero.com/system/win10%20%E7%B3%BB%E7%BB%9F%E6%81%A2%E5%A4%8D%E6%89%8B%E5%86%8C/</guid>
       <description>
 
 &lt;h2 id=&#34;系统安装&#34;&gt;系统安装&lt;/h2&gt;
@@ -141,10 +141,10 @@
     
     <item>
       <title>win10 系统重装手册</title>
-      <link>https://www.xizero.com/tool/win10%20%E7%B3%BB%E7%BB%9F%E9%87%8D%E8%A3%85%E6%89%8B%E5%86%8C/</link>
+      <link>http://hugo.xizero.com/system/win10%20%E7%B3%BB%E7%BB%9F%E9%87%8D%E8%A3%85%E6%89%8B%E5%86%8C/</link>
       <pubDate>Wed, 18 Jan 2017 12:00:00 +0800</pubDate>
       
-      <guid>https://www.xizero.com/tool/win10%20%E7%B3%BB%E7%BB%9F%E9%87%8D%E8%A3%85%E6%89%8B%E5%86%8C/</guid>
+      <guid>http://hugo.xizero.com/system/win10%20%E7%B3%BB%E7%BB%9F%E9%87%8D%E8%A3%85%E6%89%8B%E5%86%8C/</guid>
       <description>
 
 &lt;h2 id=&#34;删除-onedriver-上的电脑&#34;&gt;删除 OneDriver 上的电脑&lt;/h2&gt;
@@ -171,10 +171,10 @@
     
     <item>
       <title>Java web 序言</title>
-      <link>https://www.xizero.com/javaee/Java%20web%20%E5%BA%8F%E8%A8%80/</link>
+      <link>http://hugo.xizero.com/javaee/Java%20web%20%E5%BA%8F%E8%A8%80/</link>
       <pubDate>Fri, 06 Jan 2017 20:56:00 +0800</pubDate>
       
-      <guid>https://www.xizero.com/javaee/Java%20web%20%E5%BA%8F%E8%A8%80/</guid>
+      <guid>http://hugo.xizero.com/javaee/Java%20web%20%E5%BA%8F%E8%A8%80/</guid>
       <description>
 
 &lt;h1 id=&#34;java-web-序言&#34;&gt;Java web 序言&lt;/h1&gt;
@@ -185,10 +185,10 @@
     
     <item>
       <title>win 软件推荐</title>
-      <link>https://www.xizero.com/note/win%20%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90/</link>
+      <link>http://hugo.xizero.com/note/win%20%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90/</link>
       <pubDate>Fri, 18 Nov 2016 18:20:00 +0800</pubDate>
       
-      <guid>https://www.xizero.com/note/win%20%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90/</guid>
+      <guid>http://hugo.xizero.com/note/win%20%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90/</guid>
       <description>
 
 &lt;h1 id=&#34;win-software&#34;&gt;Win Software&lt;/h1&gt;
@@ -311,185 +311,6 @@
 &lt;li&gt;&lt;a href=&#34;https://www.enpass.io/&#34;&gt;Enpass&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://www.wepe.com.cn/&#34;&gt;微PE&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>搭建 Java 开发环境 win</title>
-      <link>https://www.xizero.com/java/%E6%90%AD%E5%BB%BA-Java-%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83-Win/</link>
-      <pubDate>Fri, 18 Nov 2016 18:20:00 +0800</pubDate>
-      
-      <guid>https://www.xizero.com/java/%E6%90%AD%E5%BB%BA-Java-%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83-Win/</guid>
-      <description>
-
-&lt;h2 id=&#34;安装jdk&#34;&gt;安装JDK&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;JDK
-
-&lt;ul&gt;
-&lt;li&gt;Java Development Kit&lt;/li&gt;
-&lt;li&gt;开发工具包和运行环境&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;JRE
-
-&lt;ul&gt;
-&lt;li&gt;Java Runtime Environment&lt;/li&gt;
-&lt;li&gt;程序的运行环境&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;1、下载页面 &amp;lt;&lt;a href=&#34;http://www.oracle.com/technetwork/java/javase/downloads/index.html&#34;&gt;下载链接&lt;/a&gt;&amp;gt;&lt;/p&gt;
-
-&lt;p&gt;2、选择对应系统的java 开发工具包下载 &lt;strong&gt;Java SE Development Kit&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;3、运行安装程序，默认安装&lt;/p&gt;
-
-&lt;h2 id=&#34;配置环境变量&#34;&gt;配置环境变量&lt;/h2&gt;
-
-&lt;h3 id=&#34;打开&#34;&gt;打开&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code&gt;控制面板 --&amp;gt; 系统和安全 --&amp;gt; 系统 --&amp;gt; 高级系统设置 --&amp;gt; 环境变量
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;如果使用1.5以上版本的JDK，不用设置CLASSPATH环境变量&lt;/strong&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h3 id=&#34;设置变量&#34;&gt;设置变量&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;JAVA_HOME&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;C:\Program Files\Java\jdk1.8.0 //根据实际路径配置
-&lt;br /&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Path&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;%JAVA_HOME%\bin;&lt;/li&gt;
-&lt;li&gt;%JAVA_HOME%\jre\bin;
-&lt;br /&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;验证&#34;&gt;验证&lt;/h3&gt;
-
-&lt;p&gt;&lt;strong&gt;win+R &amp;ndash;&amp;gt; 输入cmd &amp;ndash;&amp;gt; 运行命令&lt;/strong&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# 加载类库，运行.class文件
-java 
-# 编译.java文件，生成.Class文件
-javac 
-# 查看版本
-java -version
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;intellij-idea&#34;&gt;IntelliJ IDEA&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://www.jetbrains.com/idea/&#34;&gt;官网&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;学习 java se ，使用社区版（Community）就可以了。&lt;/p&gt;
-
-&lt;p&gt;如果是学生，可以申请学生授权，&amp;lt;&lt;a href=&#34;https://sales.jetbrains.com/hc/zh-cn/articles/207154369-%E5%AD%A6%E7%94%9F%E6%8E%88%E6%9D%83%E7%94%B3%E8%AF%B7%E6%96%B9%E5%BC%8F&#34;&gt;官方解答&lt;/a&gt;&amp;gt;。&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;如果没有校园邮箱或ISIC国际学生证，可以拍照发送学生证。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;一份很好的 IDEA 教程 ：&lt;a href=&#34;https://github.com/judasn/IntelliJ-IDEA-Tutorial/&#34;&gt;https://github.com/judasn/IntelliJ-IDEA-Tutorial/&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;maven&#34;&gt;Maven&lt;/h2&gt;
-
-&lt;p&gt;很棒的项目构建工具&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://maven.apache.org/&#34;&gt;Apache Maven&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://mvnrepository.com/&#34;&gt;Maven Repository&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;安装&#34;&gt;安装&lt;/h3&gt;
-
-&lt;p&gt;下载解压，配置环境变量
-- MAVEN_HOME
-- Path
-    - %MAVEN_HOME%\bin&lt;/p&gt;
-
-&lt;h3 id=&#34;修改配置文件&#34;&gt;修改配置文件&lt;/h3&gt;
-
-&lt;p&gt;路径&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;apache-maven-*\conf\settings.xml
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;大概 55 行左右添加，设置本地仓库路径&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-xml&#34;&gt;&amp;lt;localRepository&amp;gt;d:/m2/repository&amp;lt;/localRepository&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;大概 55 行左右添加，设置远程仓库镜像&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-xml&#34;&gt;&amp;lt;mirror&amp;gt;
-    &amp;lt;id&amp;gt;nexus-aliyun&amp;lt;/id&amp;gt;
-    &amp;lt;mirrorOf&amp;gt;*&amp;lt;/mirrorOf&amp;gt;ben
-    &amp;lt;name&amp;gt;Nexus aliyun&amp;lt;/name&amp;gt;
-    &amp;lt;url&amp;gt;http://maven.aliyun.com/nexus/content/groups/public&amp;lt;/url&amp;gt;
-&amp;lt;/mirror&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;tomcat&#34;&gt;Tomcat&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://tomcat.apache.org/&#34;&gt;Apache Tomcat&lt;/a&gt;
-下载安装或解压&lt;/p&gt;
-
-&lt;h2 id=&#34;mysql&#34;&gt;Mysql&lt;/h2&gt;
-
-&lt;p&gt;因为 MySQL 太耗资源，可以在云服务器上使用 docker 建个远程数据库&lt;/p&gt;
-
-&lt;h3 id=&#34;安装-docker&#34;&gt;安装 docker&lt;/h3&gt;
-
-&lt;p&gt;服务器是 ubuntu,使用脚本安装[
-&lt;a href=&#34;https://get.daocloud.io/&#34;&gt;daocloud.io&lt;/a&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt; curl -sSL https://get.daocloud.io/docker | sh
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;国内镜像地址，&lt;a href=&#34;https://hub.alauda.cn/&#34;&gt;灵雀云&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;安装-mysql&#34;&gt;安装 Mysql&lt;/h3&gt;
-
-&lt;p&gt;灵雀云 mysql 地址 : &lt;a href=&#34;https://hub.alauda.cn/repos/library/mysql&#34;&gt;library&amp;gt;mysql&lt;/a&gt;
-下载 mysql 镜像&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;docker pull registry.alauda.cn/library/mysql
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;创建，运行容器
-&amp;gt; MYSQL_ROOT_PASSWORD 设置root密码&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;docker run --name mysql -v /home/eastren/mysql:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=root -d -p 3306:3306 registry.alauda.cn/library/mysql
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;进入容器&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt; sudo docker exec -it  mysql  /bin/bash  
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;创建远程连接用户&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;grant all privileges on *.* to &#39;username&#39; @&#39;%&#39; identified by &#39;password&#39;;
-# 刷新
-flush privileges;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;本地连接&#34;&gt;本地连接&lt;/h3&gt;
-
-&lt;p&gt;可以随便选择，数据库图形管理软件&lt;/p&gt;
-
-&lt;p&gt;推荐：&lt;a href=&#34;http://www.heidisql.com/&#34;&gt;HeidiSQL - MySQL, MSSQL and PostgreSQL made easy&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;下载安装，数据库连接地址是云服务器公网 ip&lt;/p&gt;
 </description>
     </item>
     

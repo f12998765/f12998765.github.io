@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Servlet on XIZERO</title>
-    <link>https://www.xizero.com/tags/servlet/index.xml</link>
+    <link>http://hugo.xizero.com/tags/servlet/index.xml</link>
     <description>Recent content in Servlet on XIZERO</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="https://www.xizero.com/tags/servlet/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://hugo.xizero.com/tags/servlet/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Java Servlet</title>
-      <link>https://www.xizero.com/javaee/Java%20Servlet/</link>
+      <link>http://hugo.xizero.com/javaee/Java%20Servlet/</link>
       <pubDate>Sun, 01 Jan 2017 12:00:00 +0800</pubDate>
       
-      <guid>https://www.xizero.com/javaee/Java%20Servlet/</guid>
+      <guid>http://hugo.xizero.com/javaee/Java%20Servlet/</guid>
       <description>
 
 &lt;h1 id=&#34;java-servlet&#34;&gt;Java Servlet&lt;/h1&gt;

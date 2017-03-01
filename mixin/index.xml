@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Mixins on XIZERO</title>
-    <link>https://www.xizero.com/mixin/index.xml</link>
+    <link>http://hugo.xizero.com/mixin/index.xml</link>
     <description>Recent content in Mixins on XIZERO</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 21 Feb 2017 19:04:12 +0800</lastBuildDate>
-    <atom:link href="https://www.xizero.com/mixin/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://hugo.xizero.com/mixin/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>OpenAPI Specification</title>
-      <link>https://www.xizero.com/mixin/OpenAPISpecificationZh/</link>
+      <link>http://hugo.xizero.com/mixin/OpenAPISpecificationZh/</link>
       <pubDate>Tue, 21 Feb 2017 19:04:12 +0800</pubDate>
       
-      <guid>https://www.xizero.com/mixin/OpenAPISpecificationZh/</guid>
+      <guid>http://hugo.xizero.com/mixin/OpenAPISpecificationZh/</guid>
       <description>
 
 &lt;blockquote&gt;

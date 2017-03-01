@@ -4,17 +4,11 @@
 <meta charset="utf-8">
 <meta name="generator" content="Hugo 0.18.1" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate" href="http://hugo.xizero.com//index.xml" type="application/rss+xml" title="XIZERO">
+<link href="http://hugo.xizero.com/css/block.css" rel="stylesheet">
+<script src="http://hugo.xizero.com/js/jqury.min.js"></script>
+<script src="http://hugo.xizero.com/js/top.js"></script>
 
-<link rel="alternate" href="https://www.xizero.com//index.xml" type="application/rss+xml" title="XIZERO">
-<link href="https://www.xizero.com/css/tomorrow.min.css" rel="stylesheet">
-<link href="https://www.xizero.com/css/main.css" rel="stylesheet">
-<link href="https://www.xizero.com/css/context.css" rel="stylesheet">
-<link href="https://www.xizero.com/css/jqcloud.css" rel="stylesheet">
-<script src="https://www.xizero.com/js/high.min.js"></script>
-<script src="https://www.xizero.com/js/jqury.min.js"></script>
-<script src="https://www.xizero.com/js/top.js"></script>
-<script src="https://www.xizero.com/js/jqcloud.js"></script>
-<script>hljs.initHighlightingOnLoad();</script>
 
 <title>CORS - XIZERO</title>
 </head>
@@ -22,25 +16,62 @@
 
 <div id="gotop" title="🚀 go top"></div>
 
-<div class="top">
 
-	<div class="gos">
-		<span class="go"><a href="https://www.xizero.com/">Home</a></span>
-		<span class="go"><a href="/tags/">Tags</a></span>
-		<span class="go"><a href="/about/">About</a></span>
-	</div>
-	
-	
-		<div class="tit">
-			CORS
-		</div>
-
-	
-
+<div class="titlist">
+	<span><a href="http://hugo.xizero.com/">Home</a></span>
+	<span><a href="http://hugo.xizero.com//tags/">Tags</a></span>
+	<span><a href="http://hugo.xizero.com//about">About</a></span>
 </div>
 
 
 
+<link href="http://hugo.xizero.com/css/context.css" rel="stylesheet">
+<link href="http://hugo.xizero.com/css/tomorrow.min.css" rel="stylesheet">
+<script src="http://hugo.xizero.com/js/high.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<div class="tit">
+	CORS
+</div>
+
+<div class="toc">
+	<nav id="TableOfContents">
+<ul>
+<li><a href="#cors">CORS</a>
+<ul>
+<li><a href="#关于跨域请求">关于跨域请求</a></li>
+<li><a href="#cors-过程理解">CORS 过程理解</a></li>
+<li><a href="#cors-请求">CORS 请求</a>
+<ul>
+<li><a href="#简单请求">简单请求</a></li>
+<li><a href="#预请求">预请求</a></li>
+</ul></li>
+<li><a href="#http-请求头">HTTP 请求头</a>
+<ul>
+<li><a href="#origin">Origin</a></li>
+<li><a href="#access-control-request-method">Access-Control-Request-Method</a></li>
+<li><a href="#access-control-request-headers">Access-Control-Request-Headers</a></li>
+</ul></li>
+<li><a href="#http-响应头">HTTP 响应头</a>
+<ul>
+<li><a href="#access-control-allow-origin">Access-Control-Allow-Origin</a></li>
+<li><a href="#access-control-expose-headers">Access-Control-Expose-Headers</a></li>
+<li><a href="#access-control-max-age">Access-Control-Max-Age</a></li>
+<li><a href="#access-control-allow-credentials">Access-Control-Allow-Credentials</a></li>
+<li><a href="#access-control-allow-methods">Access-Control-Allow-Methods</a></li>
+<li><a href="#access-control-allow-headers">Access-Control-Allow-Headers</a></li>
+</ul></li>
+<li><a href="#在服务器端支持-cors">在服务器端支持 CORS</a>
+<ul>
+<li><a href="#在-tomcat-中设置-cors">在 tomcat 中设置 CORS</a></li>
+<li><a href="#在-nginx-中设置-cors">在 nginx 中设置 CORS</a></li>
+<li><a href="#在-java-web-项目中自定义-cors-过滤器">在 java web 项目中自定义 CORS 过滤器</a></li>
+</ul></li>
+<li><a href="#参考">参考</a></li>
+</ul></li>
+</ul>
+</nav>
+</div>
 
 <div class="con">
 	
@@ -277,13 +308,13 @@ public class SimpleCORSFilter implements Filter {
 
 </div>
 
+<link href="http://hugo.xizero.com/css/footer.css" rel="stylesheet">
 
-<div class="boo">
-	<span></span>
-</div>
 <div class="footer">
+	<div class="_hr"><span></span></div>
 	@XIZERO Powered by <a href="http://hugo.spf13.com/">Hugo</a> and <a href="#">bigbig</a>
 </div>
+
 </body>
 </html>
 

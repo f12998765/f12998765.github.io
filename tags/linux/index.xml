@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Linux on XIZERO</title>
-    <link>https://www.xizero.com/tags/linux/index.xml</link>
+    <link>http://hugo.xizero.com/tags/linux/index.xml</link>
     <description>Recent content in Linux on XIZERO</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="https://www.xizero.com/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://hugo.xizero.com/tags/linux/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Centos 配置</title>
-      <link>https://www.xizero.com/note/Centos%20%E9%85%8D%E7%BD%AE/</link>
+      <link>http://hugo.xizero.com/note/Centos%20%E9%85%8D%E7%BD%AE/</link>
       <pubDate>Fri, 18 Nov 2016 18:20:00 +0800</pubDate>
       
-      <guid>https://www.xizero.com/note/Centos%20%E9%85%8D%E7%BD%AE/</guid>
+      <guid>http://hugo.xizero.com/note/Centos%20%E9%85%8D%E7%BD%AE/</guid>
       <description>
 
 &lt;h2 id=&#34;ssh-配置修改&#34;&gt;SSH 配置修改&lt;/h2&gt;
@@ -85,86 +85,6 @@ mysql &amp;gt; select host,user from user;
 mysql &amp;gt; Grant all privileges on *.* to &#39;zero&#39;@&#39;%&#39; identified by &#39;zero&#39; with grant option;
 
 &lt;/code&gt;&lt;/pre&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>搭建 Java 开发环境 linux</title>
-      <link>https://www.xizero.com/java/%E6%90%AD%E5%BB%BA-java-%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83-linux/</link>
-      <pubDate>Fri, 18 Nov 2016 18:20:00 +0800</pubDate>
-      
-      <guid>https://www.xizero.com/java/%E6%90%AD%E5%BB%BA-java-%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83-linux/</guid>
-      <description>
-
-&lt;h2 id=&#34;安装-jdk&#34;&gt;安装 JDK&lt;/h2&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;下载压缩包&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;地址：&lt;a href=&#34;http://www.oracle.com/technetwork/java/javase/downloads/index.html&#34;&gt;http://www.oracle.com/technetwork/java/javase/downloads/index.html&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;解压到 &lt;code&gt;/usr/local/jdk&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;配置环境变量&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;vi /etc/profile
-
-# 在文件末尾添加
-
-export JAVA_HOME=/usr/locl/jdk/**
-
-export JRE_HOME=${JAVA_HOME}/jre
-
-export CLASSPATH=.:${JAVA_HOME}/lib/tools.jar:${JRE_HOME}/lib/dt.jar
-
-export PATH=${JAVA_HOME}/bin:${JAVA_HOME}/jre/bin:$PATH
-
-# 使配置生效
-source /etc/profile
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;安装-tomcat&#34;&gt;安装 Tomcat&lt;/h2&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;下载压缩包&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;地址：&lt;a href=&#34;http://tomcat.apache.org/&#34;&gt;http://tomcat.apache.org/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;解压到 &lt;code&gt;/usr/local/tomcat&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&#34;安装-idea&#34;&gt;安装 IDEA&lt;/h2&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;下载安装包&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;地址：&lt;a href=&#34;https://www.jetbrains.com/idea/&#34;&gt;https://www.jetbrains.com/idea/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;解压到 &lt;code&gt;/opt&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;运行 &lt;code&gt;/bin/idea.sh&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&#34;安装-datagrip&#34;&gt;安装 DataGrip&lt;/h2&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;下载安装包&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;地址：&lt;a href=&#34;https://www.jetbrains.com/datagrip&#34;&gt;https://www.jetbrains.com/datagrip&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;解压到 &lt;code&gt;/opt&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;运行 &lt;code&gt;/bin/DataGrip.sh&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
 </description>
     </item>
     

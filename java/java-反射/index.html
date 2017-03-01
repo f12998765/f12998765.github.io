@@ -4,17 +4,11 @@
 <meta charset="utf-8">
 <meta name="generator" content="Hugo 0.18.1" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate" href="http://hugo.xizero.com//index.xml" type="application/rss+xml" title="XIZERO">
+<link href="http://hugo.xizero.com/css/block.css" rel="stylesheet">
+<script src="http://hugo.xizero.com/js/jqury.min.js"></script>
+<script src="http://hugo.xizero.com/js/top.js"></script>
 
-<link rel="alternate" href="https://www.xizero.com//index.xml" type="application/rss+xml" title="XIZERO">
-<link href="https://www.xizero.com/css/tomorrow.min.css" rel="stylesheet">
-<link href="https://www.xizero.com/css/main.css" rel="stylesheet">
-<link href="https://www.xizero.com/css/context.css" rel="stylesheet">
-<link href="https://www.xizero.com/css/jqcloud.css" rel="stylesheet">
-<script src="https://www.xizero.com/js/high.min.js"></script>
-<script src="https://www.xizero.com/js/jqury.min.js"></script>
-<script src="https://www.xizero.com/js/top.js"></script>
-<script src="https://www.xizero.com/js/jqcloud.js"></script>
-<script>hljs.initHighlightingOnLoad();</script>
 
 <title>Java 反射 - XIZERO</title>
 </head>
@@ -22,25 +16,82 @@
 
 <div id="gotop" title="🚀 go top"></div>
 
-<div class="top">
 
-	<div class="gos">
-		<span class="go"><a href="https://www.xizero.com/">Home</a></span>
-		<span class="go"><a href="/tags/">Tags</a></span>
-		<span class="go"><a href="/about/">About</a></span>
-	</div>
-	
-	
-		<div class="tit">
-			Java 反射
-		</div>
-
-	
-
+<div class="titlist">
+	<span><a href="http://hugo.xizero.com/">Home</a></span>
+	<span><a href="http://hugo.xizero.com//tags/">Tags</a></span>
+	<span><a href="http://hugo.xizero.com//about">About</a></span>
 </div>
 
 
 
+<link href="http://hugo.xizero.com/css/context.css" rel="stylesheet">
+<link href="http://hugo.xizero.com/css/tomorrow.min.css" rel="stylesheet">
+<script src="http://hugo.xizero.com/js/high.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<div class="tit">
+	Java 反射
+</div>
+
+<div class="toc">
+	<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#class-name">Class Name</a>
+<ul>
+<li><a href="#获取完整类名">获取完整类名</a></li>
+<li><a href="#获取不包含包名的类名">获取不包含包名的类名</a></li>
+</ul></li>
+<li><a href="#class-modifies">Class Modifies</a>
+<ul>
+<li><a href="#获取修饰class-对象的访问修饰符">获取修饰Class 对象的访问修饰符</a></li>
+<li><a href="#检查修饰符">检查修饰符</a></li>
+</ul></li>
+<li><a href="#package-info">Package Info</a></li>
+<li><a href="#superclass">Superclass</a></li>
+<li><a href="#implemented-interfaces">Implemented Interfaces</a></li>
+<li><a href="#constructors">Constructors</a>
+<ul>
+<li><a href="#获得构造函数">获得构造函数</a></li>
+<li><a href="#获取指定参数的构造函数">获取指定参数的构造函数</a></li>
+<li><a href="#获取构造函数的参数">获取构造函数的参数</a></li>
+<li><a href="#调用构造函数-实例化对象">调用构造函数，实例化对象</a></li>
+</ul></li>
+<li><a href="#methods">Methods</a>
+<ul>
+<li><a href="#获取类中的公共方法">获取类中的公共方法</a></li>
+<li><a href="#获取指定的方法">获取指定的方法</a></li>
+<li><a href="#获取方法的参数">获取方法的参数</a></li>
+<li><a href="#获取方法的返回值类型">获取方法的返回值类型</a></li>
+<li><a href="#调用方法">调用方法</a></li>
+</ul></li>
+<li><a href="#fields">Fields</a>
+<ul>
+<li><a href="#获取类的公共字段">获取类的公共字段</a></li>
+<li><a href="#获取指定字段名的字段">获取指定字段名的字段</a></li>
+<li><a href="#根据字段获取字段名">根据字段获取字段名</a></li>
+<li><a href="#根据字段获取字段类型">根据字段获取字段类型</a></li>
+<li><a href="#通过字段获取设置字段的值">通过字段获取设置字段的值</a></li>
+</ul></li>
+<li><a href="#annotations">Annotations</a></li>
+<li><a href="#关于私有成员">关于私有成员</a>
+<ul>
+<li><a href="#私有字段">私有字段</a></li>
+<li><a href="#私有方法">私有方法</a></li>
+</ul></li>
+<li><a href="#数组">数组</a>
+<ul>
+<li><a href="#创建数组">创建数组</a></li>
+<li><a href="#get-和-set">get 和 set</a></li>
+<li><a href="#获取数组的类型">获取数组的类型</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#参考">参考</a></li>
+</ul>
+</nav>
+</div>
 
 <div class="con">
 	
@@ -259,13 +310,13 @@ Array.set(数组实例,序列,值);
 
 </div>
 
+<link href="http://hugo.xizero.com/css/footer.css" rel="stylesheet">
 
-<div class="boo">
-	<span></span>
-</div>
 <div class="footer">
+	<div class="_hr"><span></span></div>
 	@XIZERO Powered by <a href="http://hugo.spf13.com/">Hugo</a> and <a href="#">bigbig</a>
 </div>
+
 </body>
 </html>
 

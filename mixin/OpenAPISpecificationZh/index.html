@@ -4,17 +4,11 @@
 <meta charset="utf-8">
 <meta name="generator" content="Hugo 0.18.1" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate" href="http://hugo.xizero.com//index.xml" type="application/rss+xml" title="XIZERO">
+<link href="http://hugo.xizero.com/css/block.css" rel="stylesheet">
+<script src="http://hugo.xizero.com/js/jqury.min.js"></script>
+<script src="http://hugo.xizero.com/js/top.js"></script>
 
-<link rel="alternate" href="https://www.xizero.com//index.xml" type="application/rss+xml" title="XIZERO">
-<link href="https://www.xizero.com/css/tomorrow.min.css" rel="stylesheet">
-<link href="https://www.xizero.com/css/main.css" rel="stylesheet">
-<link href="https://www.xizero.com/css/context.css" rel="stylesheet">
-<link href="https://www.xizero.com/css/jqcloud.css" rel="stylesheet">
-<script src="https://www.xizero.com/js/high.min.js"></script>
-<script src="https://www.xizero.com/js/jqury.min.js"></script>
-<script src="https://www.xizero.com/js/top.js"></script>
-<script src="https://www.xizero.com/js/jqcloud.js"></script>
-<script>hljs.initHighlightingOnLoad();</script>
 
 <title>OpenAPI Specification - XIZERO</title>
 </head>
@@ -22,25 +16,243 @@
 
 <div id="gotop" title="🚀 go top"></div>
 
-<div class="top">
 
-	<div class="gos">
-		<span class="go"><a href="https://www.xizero.com/">Home</a></span>
-		<span class="go"><a href="/tags/">Tags</a></span>
-		<span class="go"><a href="/about/">About</a></span>
-	</div>
-	
-	
-		<div class="tit">
-			OpenAPI Specification
-		</div>
-
-	
-
+<div class="titlist">
+	<span><a href="http://hugo.xizero.com/">Home</a></span>
+	<span><a href="http://hugo.xizero.com//tags/">Tags</a></span>
+	<span><a href="http://hugo.xizero.com//about">About</a></span>
 </div>
 
 
 
+<link href="http://hugo.xizero.com/css/context.css" rel="stylesheet">
+<link href="http://hugo.xizero.com/css/tomorrow.min.css" rel="stylesheet">
+<script src="http://hugo.xizero.com/js/high.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<div class="tit">
+	OpenAPI Specification
+</div>
+
+<div class="toc">
+	<nav id="TableOfContents">
+<ul>
+<li><a href="#openapi-规范">OpenAPI 规范</a>
+<ul>
+<li><a href="#fka-swagger-restful-api文档规范">(fka Swagger RESTful API文档规范)</a>
+<ul>
+<li>
+<ul>
+<li><a href="#2-0-版本">2.0 版本</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#引言">引言</a></li>
+<li><a href="#修订记录">修订记录</a></li>
+<li><a href="#定义">定义</a>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#a-name-pathtemplating-a-path-templating-路径模板"><a name="pathTemplating"></a>Path Templating / 路径模板</a></li>
+<li><a href="#a-name-mimetypes-a-mime-类型"><a name="mimeTypes"></a>Mime 类型</a></li>
+<li><a href="#a-name-httpcodes-a-http-status-codes-http-状态码"><a name="httpCodes"></a>HTTP Status Codes / HTTP 状态码</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li><a href="#规范">规范</a>
+<ul>
+<li><a href="#格式">格式</a></li>
+<li><a href="#文件结构">文件结构</a></li>
+<li><a href="#数据类型">数据类型</a></li>
+<li><a href="#schema-模式">Schema / 模式</a>
+<ul>
+<li><a href="#a-name-swaggerobject-a-swagger-object"><a name="swaggerObject"></a>Swagger Object</a>
+<ul>
+<li><a href="#fixed-fields">Fixed Fields</a></li>
+<li><a href="#patterned-objects">Patterned Objects</a></li>
+</ul></li>
+<li><a href="#a-name-infoobject-a-info-object"><a name="infoObject"></a>Info Object</a>
+<ul>
+<li><a href="#fixed-fields-1">Fixed Fields</a></li>
+<li><a href="#patterned-objects-1">Patterned Objects</a></li>
+<li><a href="#info-object-example">Info Object Example:</a></li>
+</ul></li>
+<li><a href="#a-name-contactobject-a-contact-object"><a name="contactObject"></a>Contact Object</a>
+<ul>
+<li><a href="#fixed-fields-2">Fixed Fields</a></li>
+<li><a href="#patterned-objects-2">Patterned Objects</a></li>
+<li><a href="#contact-object-example">Contact Object Example:</a></li>
+</ul></li>
+<li><a href="#a-name-licenseobject-a-license-object"><a name="licenseObject"></a>License Object</a>
+<ul>
+<li><a href="#fixed-fields-3">Fixed Fields</a></li>
+<li><a href="#patterned-objects-3">Patterned Objects</a></li>
+<li><a href="#license-object-example">License Object Example:</a></li>
+</ul></li>
+<li><a href="#a-name-pathsobject-a-paths-object"><a name="pathsObject"></a>Paths Object</a>
+<ul>
+<li><a href="#patterned-fields">Patterned Fields</a></li>
+<li><a href="#paths-object-example">Paths Object Example</a></li>
+</ul></li>
+<li><a href="#a-name-pathitemobject-a-path-item-object"><a name="pathItemObject"></a>Path Item Object</a>
+<ul>
+<li><a href="#fixed-fields-4">Fixed Fields</a></li>
+<li><a href="#patterned-fields-1">Patterned Fields</a></li>
+<li><a href="#path-item-object-example">Path Item Object Example</a></li>
+</ul></li>
+<li><a href="#a-name-operationobject-a-operation-object"><a name="operationObject"></a>Operation Object</a>
+<ul>
+<li><a href="#fixed-fields-5">Fixed Fields</a></li>
+<li><a href="#patterned-objects-4">Patterned Objects</a></li>
+<li><a href="#operation-object-example">Operation Object Example</a></li>
+</ul></li>
+<li><a href="#a-name-externaldocumentationobject-a-external-documentation-object"><a name="externalDocumentationObject"></a>External Documentation Object</a>
+<ul>
+<li><a href="#fixed-fields-6">Fixed Fields</a></li>
+<li><a href="#patterned-objects-5">Patterned Objects</a></li>
+<li><a href="#external-documentation-object-example">External Documentation Object Example</a></li>
+</ul></li>
+<li><a href="#a-name-parameterobject-a-parameter-object"><a name="parameterObject"></a>Parameter Object</a>
+<ul>
+<li><a href="#fixed-fields-7">Fixed Fields</a></li>
+<li><a href="#patterned-fields-2">Patterned Fields</a></li>
+<li><a href="#parameter-object-examples">Parameter Object Examples</a>
+<ul>
+<li><a href="#body-parameters">Body Parameters</a></li>
+<li><a href="#other-parameters">Other Parameters</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#a-name-itemsobject-a-items-object"><a name="itemsObject"></a>Items Object</a>
+<ul>
+<li><a href="#fixed-fields-8">Fixed Fields</a></li>
+<li><a href="#patterned-objects-6">Patterned Objects</a></li>
+<li><a href="#items-object-examples">Items Object Examples</a></li>
+</ul></li>
+<li><a href="#a-name-responsesobject-a-responses-object"><a name="responsesObject"></a>Responses Object</a>
+<ul>
+<li><a href="#fixed-fields-9">Fixed Fields</a></li>
+<li><a href="#patterned-fields-3">Patterned Fields</a></li>
+<li><a href="#responses-object-example">Responses Object Example</a></li>
+</ul></li>
+<li><a href="#a-name-responseobject-a-response-object"><a name="responseObject"></a>Response Object</a>
+<ul>
+<li><a href="#fixed-fields-10">Fixed Fields</a></li>
+<li><a href="#patterned-objects-7">Patterned Objects</a></li>
+<li><a href="#response-object-examples">Response Object Examples</a></li>
+</ul></li>
+<li><a href="#a-name-headersobject-a-headers-object"><a name="headersObject"></a>Headers Object</a>
+<ul>
+<li><a href="#patterned-fields-4">Patterned Fields</a></li>
+<li><a href="#headers-object-example">Headers Object Example</a></li>
+</ul></li>
+<li><a href="#a-name-exampleobject-a-example-object"><a name="exampleObject"></a>Example Object</a>
+<ul>
+<li><a href="#patterned-fields-5">Patterned Fields</a></li>
+<li><a href="#example-object-example">Example Object Example</a></li>
+</ul></li>
+<li><a href="#a-name-headerobject-a-header-object"><a name="headerObject"></a>Header Object</a>
+<ul>
+<li><a href="#patterned-objects-8">Patterned Objects</a></li>
+<li><a href="#header-object-example">Header Object Example</a></li>
+</ul></li>
+<li><a href="#a-name-tagobject-a-tag-object"><a name="tagObject"></a>Tag Object</a>
+<ul>
+<li><a href="#fixed-fields-11">Fixed Fields</a></li>
+<li><a href="#patterned-fields-6">Patterned Fields</a></li>
+<li><a href="#tag-object-example">Tag Object Example</a></li>
+</ul></li>
+<li><a href="#a-name-referenceobject-a-reference-object"><a name="referenceObject"></a>Reference Object</a>
+<ul>
+<li><a href="#fixed-fields-12">Fixed Fields</a></li>
+<li><a href="#reference-object-example">Reference Object Example</a></li>
+<li><a href="#relative-schema-file-example">Relative Schema File Example</a></li>
+<li><a href="#relative-files-with-embedded-schema-example">Relative Files With Embedded Schema Example</a></li>
+</ul></li>
+<li><a href="#a-name-schemaobject-a-schema-object"><a name="schemaObject"></a>Schema Object</a>
+<ul>
+<li><a href="#fixed-fields-13">Fixed Fields</a></li>
+<li><a href="#patterned-objects-9">Patterned Objects</a>
+<ul>
+<li><a href="#composition-and-inheritance-polymorphism">Composition and Inheritance (Polymorphism)</a></li>
+<li><a href="#xml-modeling">XML Modeling</a></li>
+</ul></li>
+<li><a href="#schema-object-examples">Schema Object Examples</a>
+<ul>
+<li><a href="#primitive-sample">Primitive Sample</a></li>
+<li><a href="#simple-model">Simple Model</a></li>
+<li><a href="#model-with-map-dictionary-properties">Model with Map/Dictionary Properties</a></li>
+<li><a href="#model-with-example">Model with Example</a></li>
+<li><a href="#models-with-composition">Models with Composition</a></li>
+<li><a href="#models-with-polymorphism-support">Models with Polymorphism Support</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#a-name-xmlobject-a-xml-object"><a name="xmlObject"></a>XML Object</a>
+<ul>
+<li><a href="#fixed-fields-14">Fixed Fields</a></li>
+<li><a href="#patterned-objects-10">Patterned Objects</a></li>
+<li><a href="#xml-object-examples">XML Object Examples</a>
+<ul>
+<li><a href="#no-xml-element">No XML Element</a></li>
+<li><a href="#xml-name-replacement">XML Name Replacement</a></li>
+<li><a href="#xml-attribute-prefix-and-namespace">XML Attribute, Prefix and Namespace</a></li>
+<li><a href="#xml-arrays">XML Arrays</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#a-name-definitionsobject-a-definitions-object"><a name="definitionsObject"></a>Definitions Object</a>
+<ul>
+<li><a href="#patterned-fields-7">Patterned Fields</a></li>
+<li><a href="#definitions-object-example">Definitions Object Example</a></li>
+</ul></li>
+<li><a href="#a-name-parametersdefinitionsobject-a-parameters-definitions-object"><a name="parametersDefinitionsObject"></a>Parameters Definitions Object</a>
+<ul>
+<li><a href="#patterned-fields-8">Patterned Fields</a></li>
+<li><a href="#parameters-definition-object-example">Parameters Definition Object Example</a></li>
+</ul></li>
+<li><a href="#a-name-responsesdefinitionsobject-a-responses-definitions-object"><a name="responsesDefinitionsObject"></a>Responses Definitions Object</a>
+<ul>
+<li><a href="#patterned-fields-9">Patterned Fields</a></li>
+<li><a href="#responses-definitions-object-example">Responses Definitions Object Example</a></li>
+</ul></li>
+<li><a href="#a-name-securitydefinitionsobject-a-security-definitions-object"><a name="securityDefinitionsObject"></a>Security Definitions Object</a>
+<ul>
+<li><a href="#patterned-fields-10">Patterned Fields</a></li>
+<li><a href="#security-definitions-object-example">Security Definitions Object Example</a></li>
+</ul></li>
+<li><a href="#a-name-securityschemeobject-a-security-scheme-object"><a name="securitySchemeObject"></a>Security Scheme Object</a>
+<ul>
+<li><a href="#fixed-fields-15">Fixed Fields</a></li>
+<li><a href="#patterned-fields-11">Patterned Fields</a></li>
+<li><a href="#security-scheme-object-example">Security Scheme Object Example</a>
+<ul>
+<li><a href="#basic-authentication-sample">Basic Authentication Sample</a></li>
+<li><a href="#api-key-sample">API Key Sample</a></li>
+<li><a href="#implicit-oauth2-sample">Implicit OAuth2 Sample</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#a-name-scopesobject-a-scopes-object"><a name="scopesObject"></a>Scopes Object</a>
+<ul>
+<li><a href="#patterned-fields-12">Patterned Fields</a></li>
+<li><a href="#patterned-objects-11">Patterned Objects</a></li>
+<li><a href="#scopes-object-example">Scopes Object Example</a></li>
+</ul></li>
+<li><a href="#a-name-securityrequirementobject-a-security-requirement-object"><a name="securityRequirementObject"></a>Security Requirement Object</a>
+<ul>
+<li><a href="#patterned-fields-13">Patterned Fields</a></li>
+<li><a href="#security-requirement-object-examples">Security Requirement Object Examples</a>
+<ul>
+<li><a href="#non-oauth2-security-requirement">Non-OAuth2 Security Requirement</a></li>
+<li><a href="#oauth2-security-requirement">OAuth2 Security Requirement</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li><a href="#a-name-vendorextensions-a-specification-extensions"><a name="vendorExtensions"></a>Specification Extensions</a></li>
+<li><a href="#a-name-securityfiltering-a-security-filtering"><a name="securityFiltering"></a>Security Filtering</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+</div>
 
 <div class="con">
 	
@@ -3621,13 +3833,13 @@ read:pets: read your pets
 
 </div>
 
+<link href="http://hugo.xizero.com/css/footer.css" rel="stylesheet">
 
-<div class="boo">
-	<span></span>
-</div>
 <div class="footer">
+	<div class="_hr"><span></span></div>
 	@XIZERO Powered by <a href="http://hugo.spf13.com/">Hugo</a> and <a href="#">bigbig</a>
 </div>
+
 </body>
 </html>
 

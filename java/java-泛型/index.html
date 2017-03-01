@@ -4,43 +4,72 @@
 <meta charset="utf-8">
 <meta name="generator" content="Hugo 0.18.1" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate" href="http://hugo.xizero.com//index.xml" type="application/rss+xml" title="XIZERO">
+<link href="http://hugo.xizero.com/css/block.css" rel="stylesheet">
+<script src="http://hugo.xizero.com/js/jqury.min.js"></script>
+<script src="http://hugo.xizero.com/js/top.js"></script>
 
-<link rel="alternate" href="https://www.xizero.com//index.xml" type="application/rss+xml" title="XIZERO">
-<link href="https://www.xizero.com/css/tomorrow.min.css" rel="stylesheet">
-<link href="https://www.xizero.com/css/main.css" rel="stylesheet">
-<link href="https://www.xizero.com/css/context.css" rel="stylesheet">
-<link href="https://www.xizero.com/css/jqcloud.css" rel="stylesheet">
-<script src="https://www.xizero.com/js/high.min.js"></script>
-<script src="https://www.xizero.com/js/jqury.min.js"></script>
-<script src="https://www.xizero.com/js/top.js"></script>
-<script src="https://www.xizero.com/js/jqcloud.js"></script>
-<script>hljs.initHighlightingOnLoad();</script>
 
-<title>Apache Tomcat - XIZERO</title>
+<title>Java 泛型 - XIZERO</title>
 </head>
 <body>
 
 <div id="gotop" title="🚀 go top"></div>
 
-<div class="top">
 
-	<div class="gos">
-		<span class="go"><a href="https://www.xizero.com/">Home</a></span>
-		<span class="go"><a href="/tags/">Tags</a></span>
-		<span class="go"><a href="/about/">About</a></span>
-	</div>
-	
-	
-		<div class="tit">
-			Apache Tomcat
-		</div>
-
-	
-
+<div class="titlist">
+	<span><a href="http://hugo.xizero.com/">Home</a></span>
+	<span><a href="http://hugo.xizero.com//tags/">Tags</a></span>
+	<span><a href="http://hugo.xizero.com//about">About</a></span>
 </div>
 
 
 
+<link href="http://hugo.xizero.com/css/context.css" rel="stylesheet">
+<link href="http://hugo.xizero.com/css/tomorrow.min.css" rel="stylesheet">
+<script src="http://hugo.xizero.com/js/high.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<div class="tit">
+	Java 泛型
+</div>
+
+<div class="toc">
+	<nav id="TableOfContents">
+<ul>
+<li><a href="#泛型">泛型</a>
+<ul>
+<li><a href="#泛型是什么">泛型是什么?</a></li>
+<li><a href="#泛型编程">泛型编程</a>
+<ul>
+<li><a href="#泛型类-容器类">泛型类/容器类</a></li>
+<li><a href="#泛型接口">泛型接口</a></li>
+<li><a href="#泛型方法">泛型方法</a></li>
+</ul></li>
+<li><a href="#泛型的继承">泛型的继承</a>
+<ul>
+<li><a href="#泛型类的继承">泛型类的继承</a></li>
+<li><a href="#泛型类实现泛型接口">泛型类实现泛型接口</a></li>
+<li><a href="#泛型接口继承泛型接口">泛型接口继承泛型接口</a></li>
+</ul></li>
+<li><a href="#通配符和上下界">通配符和上下界</a>
+<ul>
+<li><a href="#通配符">通配符 ?</a></li>
+<li><a href="#上下界">上下界</a></li>
+</ul></li>
+<li><a href="#pecs原则">PECS原则</a></li>
+<li><a href="#和-t-的区别">? 和 T 的区别</a></li>
+<li><a href="#泛型的实现原理">泛型的实现原理</a>
+<ul>
+<li><a href="#type-erasure-http-docs-oracle-com-javase-tutorial-java-generics-erasure-html"><a href="http://docs.oracle.com/javase/tutorial/java/generics/erasure.html">Type Erasure</a></a></li>
+<li><a href="#几种擦除">几种擦除</a></li>
+<li><a href="#类型擦除的相关">类型擦除的相关</a></li>
+</ul></li>
+<li><a href="#参考">参考</a></li>
+</ul></li>
+</ul>
+</nav>
+</div>
 
 <div class="con">
 	
@@ -292,12 +321,15 @@ app = new App&lt;Integer&gt;();
 <li><p>&lt; ? super T&gt;：声明下界，表示参数的类型是 T 或 T 的父类型，直至 Object</p></li>
 </ul>
 
-<p>理解通配符和上下界的三个方面
-- 引用指向的实现对象是否在上下界范围内
-- 添加元素时，注意类型是否确定，注意多态（父类引用指向子类实现对象）
-- 返回值的类型</p>
+<p>理解通配符和上下界的三个方面</p>
 
-<p>**深入理解 &lt; ? extends T&gt; **</p>
+<ul>
+<li>引用指向的实现对象是否在上下界范围内</li>
+<li>添加元素时，注意类型是否确定，注意多态（父类引用指向子类实现对象）</li>
+<li>返回值的类型</li>
+</ul>
+
+<p><strong>深入理解 &lt; ? extends T&gt;</strong></p>
 
 <pre><code class="language-java">public class Main {
     static class A{};
@@ -323,7 +355,7 @@ app = new App&lt;Integer&gt;();
 
 <p>但可以取出时，值得类型是 A ，因为多态，父类引用指向子类实现。</p>
 
-<p>**深入理解 &lt; ? super T&gt; **</p>
+<p><strong>深入理解 &lt; ? super T&gt;</strong></p>
 
 <pre><code class="language-java">public class Main {
     static class A{};
@@ -448,13 +480,13 @@ public void a(List&lt;String&gt; list){};
 
 </div>
 
+<link href="http://hugo.xizero.com/css/footer.css" rel="stylesheet">
 
-<div class="boo">
-	<span></span>
-</div>
 <div class="footer">
+	<div class="_hr"><span></span></div>
 	@XIZERO Powered by <a href="http://hugo.spf13.com/">Hugo</a> and <a href="#">bigbig</a>
 </div>
+
 </body>
 </html>
 
