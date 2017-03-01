@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Https on XIZERO</title>
-    <link>http://hugo.xizero.com/tags/https/index.xml</link>
+    <link>https://www.xizero.com/tags/https/index.xml</link>
     <description>Recent content in Https on XIZERO</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="http://hugo.xizero.com/tags/https/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://www.xizero.com/tags/https/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Github Pages 配置 https</title>
-      <link>http://hugo.xizero.com/note/Github%20Pages%20%E9%85%8D%E7%BD%AE%20https/</link>
+      <link>https://www.xizero.com/note/Github%20Pages%20%E9%85%8D%E7%BD%AE%20https/</link>
       <pubDate>Fri, 06 Jan 2017 19:15:00 +0800</pubDate>
       
-      <guid>http://hugo.xizero.com/note/Github%20Pages%20%E9%85%8D%E7%BD%AE%20https/</guid>
+      <guid>https://www.xizero.com/note/Github%20Pages%20%E9%85%8D%E7%BD%AE%20https/</guid>
       <description>
 
 &lt;h1 id=&#34;github-pages-配置-https&#34;&gt;Github Pages 配置 https&lt;/h1&gt;

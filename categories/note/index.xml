@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Note on XIZERO</title>
-    <link>http://hugo.xizero.com/categories/note/index.xml</link>
+    <link>https://www.xizero.com/categories/note/index.xml</link>
     <description>Recent content in Note on XIZERO</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="http://hugo.xizero.com/categories/note/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://www.xizero.com/categories/note/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>自建图床-Qchan</title>
-      <link>http://hugo.xizero.com/note/ImageHosting/</link>
+      <link>https://www.xizero.com/note/ImageHosting/</link>
       <pubDate>Sun, 19 Feb 2017 17:59:55 +0800</pubDate>
       
-      <guid>http://hugo.xizero.com/note/ImageHosting/</guid>
+      <guid>https://www.xizero.com/note/ImageHosting/</guid>
       <description>
 
 &lt;h2 id=&#34;简述&#34;&gt;简述&lt;/h2&gt;
@@ -198,10 +198,10 @@ server {
     
     <item>
       <title>Github Pages 配置 https</title>
-      <link>http://hugo.xizero.com/note/Github%20Pages%20%E9%85%8D%E7%BD%AE%20https/</link>
+      <link>https://www.xizero.com/note/Github%20Pages%20%E9%85%8D%E7%BD%AE%20https/</link>
       <pubDate>Fri, 06 Jan 2017 19:15:00 +0800</pubDate>
       
-      <guid>http://hugo.xizero.com/note/Github%20Pages%20%E9%85%8D%E7%BD%AE%20https/</guid>
+      <guid>https://www.xizero.com/note/Github%20Pages%20%E9%85%8D%E7%BD%AE%20https/</guid>
       <description>
 
 &lt;h1 id=&#34;github-pages-配置-https&#34;&gt;Github Pages 配置 https&lt;/h1&gt;
@@ -287,10 +287,10 @@ server {
     
     <item>
       <title>零碎笔记</title>
-      <link>http://hugo.xizero.com/note/%E9%9B%B6%E7%A2%8E%E7%AC%94%E8%AE%B0/</link>
+      <link>https://www.xizero.com/note/%E9%9B%B6%E7%A2%8E%E7%AC%94%E8%AE%B0/</link>
       <pubDate>Fri, 18 Nov 2016 18:21:00 +0800</pubDate>
       
-      <guid>http://hugo.xizero.com/note/%E9%9B%B6%E7%A2%8E%E7%AC%94%E8%AE%B0/</guid>
+      <guid>https://www.xizero.com/note/%E9%9B%B6%E7%A2%8E%E7%AC%94%E8%AE%B0/</guid>
       <description>
 
 &lt;h2 id=&#34;1-idea新建maven项目卡住显示-generating-project-in-batch-mode&#34;&gt;1. IDEA新建MAVEN项目卡住显示 : &amp;ldquo;Generating Project in Batch mode&amp;rdquo;&lt;/h2&gt;
@@ -444,10 +444,10 @@ $($(&#39;div&#39;)[7]).children();
     
     <item>
       <title>Centos 配置</title>
-      <link>http://hugo.xizero.com/note/Centos%20%E9%85%8D%E7%BD%AE/</link>
+      <link>https://www.xizero.com/note/Centos%20%E9%85%8D%E7%BD%AE/</link>
       <pubDate>Fri, 18 Nov 2016 18:20:00 +0800</pubDate>
       
-      <guid>http://hugo.xizero.com/note/Centos%20%E9%85%8D%E7%BD%AE/</guid>
+      <guid>https://www.xizero.com/note/Centos%20%E9%85%8D%E7%BD%AE/</guid>
       <description>
 
 &lt;h2 id=&#34;ssh-配置修改&#34;&gt;SSH 配置修改&lt;/h2&gt;
@@ -524,10 +524,10 @@ mysql &amp;gt; Grant all privileges on *.* to &#39;zero&#39;@&#39;%&#39; identif
     
     <item>
       <title>Git 常用命令</title>
-      <link>http://hugo.xizero.com/note/Git%20%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</link>
+      <link>https://www.xizero.com/note/Git%20%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</link>
       <pubDate>Fri, 18 Nov 2016 18:20:00 +0800</pubDate>
       
-      <guid>http://hugo.xizero.com/note/Git%20%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</guid>
+      <guid>https://www.xizero.com/note/Git%20%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</guid>
       <description>
 
 &lt;h2 id=&#34;设置配置文件&#34;&gt;设置配置文件&lt;/h2&gt;
@@ -647,10 +647,10 @@ git pull
     
     <item>
       <title>Mybatis 笔记</title>
-      <link>http://hugo.xizero.com/note/Mybatis%20%E7%AC%94%E8%AE%B0/</link>
+      <link>https://www.xizero.com/note/Mybatis%20%E7%AC%94%E8%AE%B0/</link>
       <pubDate>Fri, 18 Nov 2016 18:20:00 +0800</pubDate>
       
-      <guid>http://hugo.xizero.com/note/Mybatis%20%E7%AC%94%E8%AE%B0/</guid>
+      <guid>https://www.xizero.com/note/Mybatis%20%E7%AC%94%E8%AE%B0/</guid>
       <description>
 
 &lt;h1 id=&#34;mybatis-note&#34;&gt;Mybatis Note&lt;/h1&gt;
@@ -659,10 +659,10 @@ git pull
     
     <item>
       <title>Spring MVC 中文乱码</title>
-      <link>http://hugo.xizero.com/note/springmvc-encoding/</link>
+      <link>https://www.xizero.com/note/springmvc-encoding/</link>
       <pubDate>Fri, 18 Nov 2016 18:20:00 +0800</pubDate>
       
-      <guid>http://hugo.xizero.com/note/springmvc-encoding/</guid>
+      <guid>https://www.xizero.com/note/springmvc-encoding/</guid>
       <description>
 
 &lt;h1 id=&#34;spring-mvc-中文乱码&#34;&gt;Spring MVC 中文乱码&lt;/h1&gt;
@@ -718,10 +718,10 @@ git pull
     
     <item>
       <title>java Framework</title>
-      <link>http://hugo.xizero.com/note/java-framework/</link>
+      <link>https://www.xizero.com/note/java-framework/</link>
       <pubDate>Fri, 18 Nov 2016 18:20:00 +0800</pubDate>
       
-      <guid>http://hugo.xizero.com/note/java-framework/</guid>
+      <guid>https://www.xizero.com/note/java-framework/</guid>
       <description>
 
 &lt;h1 id=&#34;java-framework&#34;&gt;java Framework&lt;/h1&gt;
@@ -813,10 +813,10 @@ git pull
     
     <item>
       <title>win 软件推荐</title>
-      <link>http://hugo.xizero.com/note/win%20%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90/</link>
+      <link>https://www.xizero.com/note/win%20%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90/</link>
       <pubDate>Fri, 18 Nov 2016 18:20:00 +0800</pubDate>
       
-      <guid>http://hugo.xizero.com/note/win%20%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90/</guid>
+      <guid>https://www.xizero.com/note/win%20%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90/</guid>
       <description>
 
 &lt;h1 id=&#34;win-software&#34;&gt;Win Software&lt;/h1&gt;
@@ -944,10 +944,10 @@ git pull
     
     <item>
       <title>网址收集</title>
-      <link>http://hugo.xizero.com/note/%E7%BD%91%E5%9D%80%E6%94%B6%E9%9B%86/</link>
+      <link>https://www.xizero.com/note/%E7%BD%91%E5%9D%80%E6%94%B6%E9%9B%86/</link>
       <pubDate>Fri, 18 Nov 2016 18:20:00 +0800</pubDate>
       
-      <guid>http://hugo.xizero.com/note/%E7%BD%91%E5%9D%80%E6%94%B6%E9%9B%86/</guid>
+      <guid>https://www.xizero.com/note/%E7%BD%91%E5%9D%80%E6%94%B6%E9%9B%86/</guid>
       <description>
 
 &lt;h1 id=&#34;url-index&#34;&gt;URL Index&lt;/h1&gt;
@@ -1509,10 +1509,10 @@ git pull
     
     <item>
       <title>软件扩展推荐</title>
-      <link>http://hugo.xizero.com/note/%E8%BD%AF%E4%BB%B6%E6%89%A9%E5%B1%95%E6%8E%A8%E8%8D%90/</link>
+      <link>https://www.xizero.com/note/%E8%BD%AF%E4%BB%B6%E6%89%A9%E5%B1%95%E6%8E%A8%E8%8D%90/</link>
       <pubDate>Fri, 18 Nov 2016 18:20:00 +0800</pubDate>
       
-      <guid>http://hugo.xizero.com/note/%E8%BD%AF%E4%BB%B6%E6%89%A9%E5%B1%95%E6%8E%A8%E8%8D%90/</guid>
+      <guid>https://www.xizero.com/note/%E8%BD%AF%E4%BB%B6%E6%89%A9%E5%B1%95%E6%8E%A8%E8%8D%90/</guid>
       <description>
 
 &lt;h2 id=&#34;google-chrome&#34;&gt;Google Chrome&lt;/h2&gt;

@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>XIZERO</title>
-    <link>http://hugo.xizero.com/index.xml</link>
+    <link>https://www.xizero.com/index.xml</link>
     <description>Recent content on XIZERO</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 27 Feb 2017 20:35:59 +0800</lastBuildDate>
-    <atom:link href="http://hugo.xizero.com/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://www.xizero.com/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>CORS</title>
-      <link>http://hugo.xizero.com/javaee/cors/</link>
+      <link>https://www.xizero.com/javaee/cors/</link>
       <pubDate>Mon, 27 Feb 2017 20:35:59 +0800</pubDate>
       
-      <guid>http://hugo.xizero.com/javaee/cors/</guid>
+      <guid>https://www.xizero.com/javaee/cors/</guid>
       <description>
 
 &lt;h1 id=&#34;cors&#34;&gt;CORS&lt;/h1&gt;
@@ -251,10 +251,10 @@ public class SimpleCORSFilter implements Filter {
     
     <item>
       <title>Swagger</title>
-      <link>http://hugo.xizero.com/javaee/swagger/</link>
+      <link>https://www.xizero.com/javaee/swagger/</link>
       <pubDate>Mon, 27 Feb 2017 20:34:55 +0800</pubDate>
       
-      <guid>http://hugo.xizero.com/javaee/swagger/</guid>
+      <guid>https://www.xizero.com/javaee/swagger/</guid>
       <description>
 
 &lt;h1 id=&#34;swagger&#34;&gt;Swagger&lt;/h1&gt;
@@ -694,10 +694,10 @@ library
     
     <item>
       <title>OpenAPI Specification</title>
-      <link>http://hugo.xizero.com/mixin/OpenAPISpecificationZh/</link>
+      <link>https://www.xizero.com/mixin/OpenAPISpecificationZh/</link>
       <pubDate>Tue, 21 Feb 2017 19:04:12 +0800</pubDate>
       
-      <guid>http://hugo.xizero.com/mixin/OpenAPISpecificationZh/</guid>
+      <guid>https://www.xizero.com/mixin/OpenAPISpecificationZh/</guid>
       <description>
 
 &lt;blockquote&gt;
@@ -4278,10 +4278,10 @@ read:pets: read your pets
     
     <item>
       <title>自建图床-Qchan</title>
-      <link>http://hugo.xizero.com/note/ImageHosting/</link>
+      <link>https://www.xizero.com/note/ImageHosting/</link>
       <pubDate>Sun, 19 Feb 2017 17:59:55 +0800</pubDate>
       
-      <guid>http://hugo.xizero.com/note/ImageHosting/</guid>
+      <guid>https://www.xizero.com/note/ImageHosting/</guid>
       <description>
 
 &lt;h2 id=&#34;简述&#34;&gt;简述&lt;/h2&gt;
@@ -4466,10 +4466,10 @@ server {
     
     <item>
       <title>SLF4J 和 Logback</title>
-      <link>http://hugo.xizero.com/javaee/SLF4JANDLogback/</link>
+      <link>https://www.xizero.com/javaee/SLF4JANDLogback/</link>
       <pubDate>Sun, 19 Feb 2017 15:54:31 +0800</pubDate>
       
-      <guid>http://hugo.xizero.com/javaee/SLF4JANDLogback/</guid>
+      <guid>https://www.xizero.com/javaee/SLF4JANDLogback/</guid>
       <description>
 
 &lt;h1 id=&#34;slf4j-simple-logging-facade-for-java&#34;&gt;SLF4J - - Simple Logging Facade for Java&lt;/h1&gt;
@@ -4884,10 +4884,10 @@ server {
     
     <item>
       <title>Java 开发环境恢复手册</title>
-      <link>http://hugo.xizero.com/system/Java%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%81%A2%E5%A4%8D%E6%89%8B%E5%86%8C/</link>
+      <link>https://www.xizero.com/system/Java%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%81%A2%E5%A4%8D%E6%89%8B%E5%86%8C/</link>
       <pubDate>Fri, 20 Jan 2017 12:00:00 +0800</pubDate>
       
-      <guid>http://hugo.xizero.com/system/Java%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%81%A2%E5%A4%8D%E6%89%8B%E5%86%8C/</guid>
+      <guid>https://www.xizero.com/system/Java%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%81%A2%E5%A4%8D%E6%89%8B%E5%86%8C/</guid>
       <description>
 
 &lt;h2 id=&#34;notepad&#34;&gt;Notepad++&lt;/h2&gt;
@@ -5087,10 +5087,10 @@ git config --global color.ui true
     
     <item>
       <title>win10 系统恢复手册</title>
-      <link>http://hugo.xizero.com/system/win10%20%E7%B3%BB%E7%BB%9F%E6%81%A2%E5%A4%8D%E6%89%8B%E5%86%8C/</link>
+      <link>https://www.xizero.com/system/win10%20%E7%B3%BB%E7%BB%9F%E6%81%A2%E5%A4%8D%E6%89%8B%E5%86%8C/</link>
       <pubDate>Thu, 19 Jan 2017 12:00:00 +0800</pubDate>
       
-      <guid>http://hugo.xizero.com/system/win10%20%E7%B3%BB%E7%BB%9F%E6%81%A2%E5%A4%8D%E6%89%8B%E5%86%8C/</guid>
+      <guid>https://www.xizero.com/system/win10%20%E7%B3%BB%E7%BB%9F%E6%81%A2%E5%A4%8D%E6%89%8B%E5%86%8C/</guid>
       <description>
 
 &lt;h2 id=&#34;系统安装&#34;&gt;系统安装&lt;/h2&gt;
@@ -5218,10 +5218,10 @@ git config --global color.ui true
     
     <item>
       <title>win10 系统重装手册</title>
-      <link>http://hugo.xizero.com/system/win10%20%E7%B3%BB%E7%BB%9F%E9%87%8D%E8%A3%85%E6%89%8B%E5%86%8C/</link>
+      <link>https://www.xizero.com/system/win10%20%E7%B3%BB%E7%BB%9F%E9%87%8D%E8%A3%85%E6%89%8B%E5%86%8C/</link>
       <pubDate>Wed, 18 Jan 2017 12:00:00 +0800</pubDate>
       
-      <guid>http://hugo.xizero.com/system/win10%20%E7%B3%BB%E7%BB%9F%E9%87%8D%E8%A3%85%E6%89%8B%E5%86%8C/</guid>
+      <guid>https://www.xizero.com/system/win10%20%E7%B3%BB%E7%BB%9F%E9%87%8D%E8%A3%85%E6%89%8B%E5%86%8C/</guid>
       <description>
 
 &lt;h2 id=&#34;删除-onedriver-上的电脑&#34;&gt;删除 OneDriver 上的电脑&lt;/h2&gt;
@@ -5248,10 +5248,10 @@ git config --global color.ui true
     
     <item>
       <title>Java 多态</title>
-      <link>http://hugo.xizero.com/java/Java-%E5%A4%9A%E6%80%81/</link>
+      <link>https://www.xizero.com/java/Java-%E5%A4%9A%E6%80%81/</link>
       <pubDate>Sun, 08 Jan 2017 04:11:00 +0800</pubDate>
       
-      <guid>http://hugo.xizero.com/java/Java-%E5%A4%9A%E6%80%81/</guid>
+      <guid>https://www.xizero.com/java/Java-%E5%A4%9A%E6%80%81/</guid>
       <description>
 
 &lt;h1 id=&#34;多态&#34;&gt;多态&lt;/h1&gt;
@@ -5276,10 +5276,10 @@ git config --global color.ui true
     
     <item>
       <title>Java web 序言</title>
-      <link>http://hugo.xizero.com/javaee/Java%20web%20%E5%BA%8F%E8%A8%80/</link>
+      <link>https://www.xizero.com/javaee/Java%20web%20%E5%BA%8F%E8%A8%80/</link>
       <pubDate>Fri, 06 Jan 2017 20:56:00 +0800</pubDate>
       
-      <guid>http://hugo.xizero.com/javaee/Java%20web%20%E5%BA%8F%E8%A8%80/</guid>
+      <guid>https://www.xizero.com/javaee/Java%20web%20%E5%BA%8F%E8%A8%80/</guid>
       <description>
 
 &lt;h1 id=&#34;java-web-序言&#34;&gt;Java web 序言&lt;/h1&gt;
@@ -5290,10 +5290,10 @@ git config --global color.ui true
     
     <item>
       <title>Github Pages 配置 https</title>
-      <link>http://hugo.xizero.com/note/Github%20Pages%20%E9%85%8D%E7%BD%AE%20https/</link>
+      <link>https://www.xizero.com/note/Github%20Pages%20%E9%85%8D%E7%BD%AE%20https/</link>
       <pubDate>Fri, 06 Jan 2017 19:15:00 +0800</pubDate>
       
-      <guid>http://hugo.xizero.com/note/Github%20Pages%20%E9%85%8D%E7%BD%AE%20https/</guid>
+      <guid>https://www.xizero.com/note/Github%20Pages%20%E9%85%8D%E7%BD%AE%20https/</guid>
       <description>
 
 &lt;h1 id=&#34;github-pages-配置-https&#34;&gt;Github Pages 配置 https&lt;/h1&gt;
@@ -5379,28 +5379,28 @@ git config --global color.ui true
     
     <item>
       <title>Apache Tomcat</title>
-      <link>http://hugo.xizero.com/javaee/Apache%20Tomcat/</link>
+      <link>https://www.xizero.com/javaee/Apache%20Tomcat/</link>
       <pubDate>Tue, 03 Jan 2017 12:00:00 +0800</pubDate>
       
-      <guid>http://hugo.xizero.com/javaee/Apache%20Tomcat/</guid>
+      <guid>https://www.xizero.com/javaee/Apache%20Tomcat/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Http 协议</title>
-      <link>http://hugo.xizero.com/javaee/Http%20%E5%8D%8F%E8%AE%AE/</link>
+      <link>https://www.xizero.com/javaee/Http%20%E5%8D%8F%E8%AE%AE/</link>
       <pubDate>Mon, 02 Jan 2017 12:00:00 +0800</pubDate>
       
-      <guid>http://hugo.xizero.com/javaee/Http%20%E5%8D%8F%E8%AE%AE/</guid>
+      <guid>https://www.xizero.com/javaee/Http%20%E5%8D%8F%E8%AE%AE/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Java Servlet</title>
-      <link>http://hugo.xizero.com/javaee/Java%20Servlet/</link>
+      <link>https://www.xizero.com/javaee/Java%20Servlet/</link>
       <pubDate>Sun, 01 Jan 2017 12:00:00 +0800</pubDate>
       
-      <guid>http://hugo.xizero.com/javaee/Java%20Servlet/</guid>
+      <guid>https://www.xizero.com/javaee/Java%20Servlet/</guid>
       <description>
 
 &lt;h1 id=&#34;java-servlet&#34;&gt;Java Servlet&lt;/h1&gt;
@@ -5461,10 +5461,10 @@ public class ModlServlet extends HttpServlet {
     
     <item>
       <title>Java 泛型</title>
-      <link>http://hugo.xizero.com/java/java-%E6%B3%9B%E5%9E%8B/</link>
+      <link>https://www.xizero.com/java/java-%E6%B3%9B%E5%9E%8B/</link>
       <pubDate>Tue, 13 Dec 2016 12:00:00 +0800</pubDate>
       
-      <guid>http://hugo.xizero.com/java/java-%E6%B3%9B%E5%9E%8B/</guid>
+      <guid>https://www.xizero.com/java/java-%E6%B3%9B%E5%9E%8B/</guid>
       <description>
 
 &lt;h1 id=&#34;泛型&#34;&gt;泛型&lt;/h1&gt;

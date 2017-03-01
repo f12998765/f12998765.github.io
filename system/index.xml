@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Systems on XIZERO</title>
-    <link>http://hugo.xizero.com/system/index.xml</link>
+    <link>https://www.xizero.com/system/index.xml</link>
     <description>Recent content in Systems on XIZERO</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 20 Jan 2017 12:00:00 +0800</lastBuildDate>
-    <atom:link href="http://hugo.xizero.com/system/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://www.xizero.com/system/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Java 开发环境恢复手册</title>
-      <link>http://hugo.xizero.com/system/Java%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%81%A2%E5%A4%8D%E6%89%8B%E5%86%8C/</link>
+      <link>https://www.xizero.com/system/Java%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%81%A2%E5%A4%8D%E6%89%8B%E5%86%8C/</link>
       <pubDate>Fri, 20 Jan 2017 12:00:00 +0800</pubDate>
       
-      <guid>http://hugo.xizero.com/system/Java%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%81%A2%E5%A4%8D%E6%89%8B%E5%86%8C/</guid>
+      <guid>https://www.xizero.com/system/Java%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%81%A2%E5%A4%8D%E6%89%8B%E5%86%8C/</guid>
       <description>
 
 &lt;h2 id=&#34;notepad&#34;&gt;Notepad++&lt;/h2&gt;
@@ -214,10 +214,10 @@ git config --global color.ui true
     
     <item>
       <title>win10 系统恢复手册</title>
-      <link>http://hugo.xizero.com/system/win10%20%E7%B3%BB%E7%BB%9F%E6%81%A2%E5%A4%8D%E6%89%8B%E5%86%8C/</link>
+      <link>https://www.xizero.com/system/win10%20%E7%B3%BB%E7%BB%9F%E6%81%A2%E5%A4%8D%E6%89%8B%E5%86%8C/</link>
       <pubDate>Thu, 19 Jan 2017 12:00:00 +0800</pubDate>
       
-      <guid>http://hugo.xizero.com/system/win10%20%E7%B3%BB%E7%BB%9F%E6%81%A2%E5%A4%8D%E6%89%8B%E5%86%8C/</guid>
+      <guid>https://www.xizero.com/system/win10%20%E7%B3%BB%E7%BB%9F%E6%81%A2%E5%A4%8D%E6%89%8B%E5%86%8C/</guid>
       <description>
 
 &lt;h2 id=&#34;系统安装&#34;&gt;系统安装&lt;/h2&gt;
@@ -345,10 +345,10 @@ git config --global color.ui true
     
     <item>
       <title>win10 系统重装手册</title>
-      <link>http://hugo.xizero.com/system/win10%20%E7%B3%BB%E7%BB%9F%E9%87%8D%E8%A3%85%E6%89%8B%E5%86%8C/</link>
+      <link>https://www.xizero.com/system/win10%20%E7%B3%BB%E7%BB%9F%E9%87%8D%E8%A3%85%E6%89%8B%E5%86%8C/</link>
       <pubDate>Wed, 18 Jan 2017 12:00:00 +0800</pubDate>
       
-      <guid>http://hugo.xizero.com/system/win10%20%E7%B3%BB%E7%BB%9F%E9%87%8D%E8%A3%85%E6%89%8B%E5%86%8C/</guid>
+      <guid>https://www.xizero.com/system/win10%20%E7%B3%BB%E7%BB%9F%E9%87%8D%E8%A3%85%E6%89%8B%E5%86%8C/</guid>
       <description>
 
 &lt;h2 id=&#34;删除-onedriver-上的电脑&#34;&gt;删除 OneDriver 上的电脑&lt;/h2&gt;

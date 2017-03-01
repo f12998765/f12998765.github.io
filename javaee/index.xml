@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>JavaEEs on XIZERO</title>
-    <link>http://hugo.xizero.com/javaee/index.xml</link>
+    <link>https://www.xizero.com/javaee/index.xml</link>
     <description>Recent content in JavaEEs on XIZERO</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 27 Feb 2017 20:35:59 +0800</lastBuildDate>
-    <atom:link href="http://hugo.xizero.com/javaee/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://www.xizero.com/javaee/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>CORS</title>
-      <link>http://hugo.xizero.com/javaee/cors/</link>
+      <link>https://www.xizero.com/javaee/cors/</link>
       <pubDate>Mon, 27 Feb 2017 20:35:59 +0800</pubDate>
       
-      <guid>http://hugo.xizero.com/javaee/cors/</guid>
+      <guid>https://www.xizero.com/javaee/cors/</guid>
       <description>
 
 &lt;h1 id=&#34;cors&#34;&gt;CORS&lt;/h1&gt;
@@ -251,10 +251,10 @@ public class SimpleCORSFilter implements Filter {
     
     <item>
       <title>Swagger</title>
-      <link>http://hugo.xizero.com/javaee/swagger/</link>
+      <link>https://www.xizero.com/javaee/swagger/</link>
       <pubDate>Mon, 27 Feb 2017 20:34:55 +0800</pubDate>
       
-      <guid>http://hugo.xizero.com/javaee/swagger/</guid>
+      <guid>https://www.xizero.com/javaee/swagger/</guid>
       <description>
 
 &lt;h1 id=&#34;swagger&#34;&gt;Swagger&lt;/h1&gt;
@@ -694,10 +694,10 @@ library
     
     <item>
       <title>SLF4J 和 Logback</title>
-      <link>http://hugo.xizero.com/javaee/SLF4JANDLogback/</link>
+      <link>https://www.xizero.com/javaee/SLF4JANDLogback/</link>
       <pubDate>Sun, 19 Feb 2017 15:54:31 +0800</pubDate>
       
-      <guid>http://hugo.xizero.com/javaee/SLF4JANDLogback/</guid>
+      <guid>https://www.xizero.com/javaee/SLF4JANDLogback/</guid>
       <description>
 
 &lt;h1 id=&#34;slf4j-simple-logging-facade-for-java&#34;&gt;SLF4J - - Simple Logging Facade for Java&lt;/h1&gt;
@@ -1112,10 +1112,10 @@ library
     
     <item>
       <title>Java web 序言</title>
-      <link>http://hugo.xizero.com/javaee/Java%20web%20%E5%BA%8F%E8%A8%80/</link>
+      <link>https://www.xizero.com/javaee/Java%20web%20%E5%BA%8F%E8%A8%80/</link>
       <pubDate>Fri, 06 Jan 2017 20:56:00 +0800</pubDate>
       
-      <guid>http://hugo.xizero.com/javaee/Java%20web%20%E5%BA%8F%E8%A8%80/</guid>
+      <guid>https://www.xizero.com/javaee/Java%20web%20%E5%BA%8F%E8%A8%80/</guid>
       <description>
 
 &lt;h1 id=&#34;java-web-序言&#34;&gt;Java web 序言&lt;/h1&gt;
@@ -1126,28 +1126,28 @@ library
     
     <item>
       <title>Apache Tomcat</title>
-      <link>http://hugo.xizero.com/javaee/Apache%20Tomcat/</link>
+      <link>https://www.xizero.com/javaee/Apache%20Tomcat/</link>
       <pubDate>Tue, 03 Jan 2017 12:00:00 +0800</pubDate>
       
-      <guid>http://hugo.xizero.com/javaee/Apache%20Tomcat/</guid>
+      <guid>https://www.xizero.com/javaee/Apache%20Tomcat/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Http 协议</title>
-      <link>http://hugo.xizero.com/javaee/Http%20%E5%8D%8F%E8%AE%AE/</link>
+      <link>https://www.xizero.com/javaee/Http%20%E5%8D%8F%E8%AE%AE/</link>
       <pubDate>Mon, 02 Jan 2017 12:00:00 +0800</pubDate>
       
-      <guid>http://hugo.xizero.com/javaee/Http%20%E5%8D%8F%E8%AE%AE/</guid>
+      <guid>https://www.xizero.com/javaee/Http%20%E5%8D%8F%E8%AE%AE/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Java Servlet</title>
-      <link>http://hugo.xizero.com/javaee/Java%20Servlet/</link>
+      <link>https://www.xizero.com/javaee/Java%20Servlet/</link>
       <pubDate>Sun, 01 Jan 2017 12:00:00 +0800</pubDate>
       
-      <guid>http://hugo.xizero.com/javaee/Java%20Servlet/</guid>
+      <guid>https://www.xizero.com/javaee/Java%20Servlet/</guid>
       <description>
 
 &lt;h1 id=&#34;java-servlet&#34;&gt;Java Servlet&lt;/h1&gt;

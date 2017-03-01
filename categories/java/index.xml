@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Java on XIZERO</title>
-    <link>http://hugo.xizero.com/categories/java/index.xml</link>
+    <link>https://www.xizero.com/categories/java/index.xml</link>
     <description>Recent content in Java on XIZERO</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="http://hugo.xizero.com/categories/java/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://www.xizero.com/categories/java/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>CORS</title>
-      <link>http://hugo.xizero.com/javaee/cors/</link>
+      <link>https://www.xizero.com/javaee/cors/</link>
       <pubDate>Mon, 27 Feb 2017 20:35:59 +0800</pubDate>
       
-      <guid>http://hugo.xizero.com/javaee/cors/</guid>
+      <guid>https://www.xizero.com/javaee/cors/</guid>
       <description>
 
 &lt;h1 id=&#34;cors&#34;&gt;CORS&lt;/h1&gt;
@@ -250,10 +250,10 @@ public class SimpleCORSFilter implements Filter {
     
     <item>
       <title>Swagger</title>
-      <link>http://hugo.xizero.com/javaee/swagger/</link>
+      <link>https://www.xizero.com/javaee/swagger/</link>
       <pubDate>Mon, 27 Feb 2017 20:34:55 +0800</pubDate>
       
-      <guid>http://hugo.xizero.com/javaee/swagger/</guid>
+      <guid>https://www.xizero.com/javaee/swagger/</guid>
       <description>
 
 &lt;h1 id=&#34;swagger&#34;&gt;Swagger&lt;/h1&gt;
@@ -693,10 +693,10 @@ library
     
     <item>
       <title>SLF4J 和 Logback</title>
-      <link>http://hugo.xizero.com/javaee/SLF4JANDLogback/</link>
+      <link>https://www.xizero.com/javaee/SLF4JANDLogback/</link>
       <pubDate>Sun, 19 Feb 2017 15:54:31 +0800</pubDate>
       
-      <guid>http://hugo.xizero.com/javaee/SLF4JANDLogback/</guid>
+      <guid>https://www.xizero.com/javaee/SLF4JANDLogback/</guid>
       <description>
 
 &lt;h1 id=&#34;slf4j-simple-logging-facade-for-java&#34;&gt;SLF4J - - Simple Logging Facade for Java&lt;/h1&gt;
@@ -1111,10 +1111,10 @@ library
     
     <item>
       <title>Java 多态</title>
-      <link>http://hugo.xizero.com/java/Java-%E5%A4%9A%E6%80%81/</link>
+      <link>https://www.xizero.com/java/Java-%E5%A4%9A%E6%80%81/</link>
       <pubDate>Sun, 08 Jan 2017 04:11:00 +0800</pubDate>
       
-      <guid>http://hugo.xizero.com/java/Java-%E5%A4%9A%E6%80%81/</guid>
+      <guid>https://www.xizero.com/java/Java-%E5%A4%9A%E6%80%81/</guid>
       <description>
 
 &lt;h1 id=&#34;多态&#34;&gt;多态&lt;/h1&gt;
@@ -1139,10 +1139,10 @@ library
     
     <item>
       <title>Java web 序言</title>
-      <link>http://hugo.xizero.com/javaee/Java%20web%20%E5%BA%8F%E8%A8%80/</link>
+      <link>https://www.xizero.com/javaee/Java%20web%20%E5%BA%8F%E8%A8%80/</link>
       <pubDate>Fri, 06 Jan 2017 20:56:00 +0800</pubDate>
       
-      <guid>http://hugo.xizero.com/javaee/Java%20web%20%E5%BA%8F%E8%A8%80/</guid>
+      <guid>https://www.xizero.com/javaee/Java%20web%20%E5%BA%8F%E8%A8%80/</guid>
       <description>
 
 &lt;h1 id=&#34;java-web-序言&#34;&gt;Java web 序言&lt;/h1&gt;
@@ -1153,28 +1153,28 @@ library
     
     <item>
       <title>Apache Tomcat</title>
-      <link>http://hugo.xizero.com/javaee/Apache%20Tomcat/</link>
+      <link>https://www.xizero.com/javaee/Apache%20Tomcat/</link>
       <pubDate>Tue, 03 Jan 2017 12:00:00 +0800</pubDate>
       
-      <guid>http://hugo.xizero.com/javaee/Apache%20Tomcat/</guid>
+      <guid>https://www.xizero.com/javaee/Apache%20Tomcat/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Http 协议</title>
-      <link>http://hugo.xizero.com/javaee/Http%20%E5%8D%8F%E8%AE%AE/</link>
+      <link>https://www.xizero.com/javaee/Http%20%E5%8D%8F%E8%AE%AE/</link>
       <pubDate>Mon, 02 Jan 2017 12:00:00 +0800</pubDate>
       
-      <guid>http://hugo.xizero.com/javaee/Http%20%E5%8D%8F%E8%AE%AE/</guid>
+      <guid>https://www.xizero.com/javaee/Http%20%E5%8D%8F%E8%AE%AE/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Java Servlet</title>
-      <link>http://hugo.xizero.com/javaee/Java%20Servlet/</link>
+      <link>https://www.xizero.com/javaee/Java%20Servlet/</link>
       <pubDate>Sun, 01 Jan 2017 12:00:00 +0800</pubDate>
       
-      <guid>http://hugo.xizero.com/javaee/Java%20Servlet/</guid>
+      <guid>https://www.xizero.com/javaee/Java%20Servlet/</guid>
       <description>
 
 &lt;h1 id=&#34;java-servlet&#34;&gt;Java Servlet&lt;/h1&gt;
@@ -1235,10 +1235,10 @@ public class ModlServlet extends HttpServlet {
     
     <item>
       <title>Java 泛型</title>
-      <link>http://hugo.xizero.com/java/java-%E6%B3%9B%E5%9E%8B/</link>
+      <link>https://www.xizero.com/java/java-%E6%B3%9B%E5%9E%8B/</link>
       <pubDate>Tue, 13 Dec 2016 12:00:00 +0800</pubDate>
       
-      <guid>http://hugo.xizero.com/java/java-%E6%B3%9B%E5%9E%8B/</guid>
+      <guid>https://www.xizero.com/java/java-%E6%B3%9B%E5%9E%8B/</guid>
       <description>
 
 &lt;h1 id=&#34;泛型&#34;&gt;泛型&lt;/h1&gt;
@@ -1649,10 +1649,10 @@ public void a(List&amp;lt;String&amp;gt; list){};
     
     <item>
       <title>java 泛型 TKVE 含义</title>
-      <link>http://hugo.xizero.com/java/java-%E6%B3%9B%E5%9E%8B-TKVE/</link>
+      <link>https://www.xizero.com/java/java-%E6%B3%9B%E5%9E%8B-TKVE/</link>
       <pubDate>Thu, 24 Nov 2016 15:55:43 +0800</pubDate>
       
-      <guid>http://hugo.xizero.com/java/java-%E6%B3%9B%E5%9E%8B-TKVE/</guid>
+      <guid>https://www.xizero.com/java/java-%E6%B3%9B%E5%9E%8B-TKVE/</guid>
       <description>
 
 &lt;h2 id=&#34;java-泛型经常使用的符号的含义&#34;&gt;Java 泛型经常使用的符号的含义&lt;/h2&gt;
@@ -1681,10 +1681,10 @@ public void a(List&amp;lt;String&amp;gt; list){};
     
     <item>
       <title>Java 序列化</title>
-      <link>http://hugo.xizero.com/java/java-%E5%BA%8F%E5%88%97%E5%8C%96/</link>
+      <link>https://www.xizero.com/java/java-%E5%BA%8F%E5%88%97%E5%8C%96/</link>
       <pubDate>Wed, 23 Nov 2016 16:28:21 +0800</pubDate>
       
-      <guid>http://hugo.xizero.com/java/java-%E5%BA%8F%E5%88%97%E5%8C%96/</guid>
+      <guid>https://www.xizero.com/java/java-%E5%BA%8F%E5%88%97%E5%8C%96/</guid>
       <description>
 
 &lt;h2 id=&#34;什么是序列化&#34;&gt;什么是序列化？&lt;/h2&gt;
@@ -1813,10 +1813,10 @@ public class Main {
     
     <item>
       <title>String 相关</title>
-      <link>http://hugo.xizero.com/java/String%20%E7%9B%B8%E5%85%B3/</link>
+      <link>https://www.xizero.com/java/String%20%E7%9B%B8%E5%85%B3/</link>
       <pubDate>Tue, 22 Nov 2016 08:36:39 +0800</pubDate>
       
-      <guid>http://hugo.xizero.com/java/String%20%E7%9B%B8%E5%85%B3/</guid>
+      <guid>https://www.xizero.com/java/String%20%E7%9B%B8%E5%85%B3/</guid>
       <description>
 
 &lt;h2 id=&#34;string-成员变量&#34;&gt;String 成员变量&lt;/h2&gt;
@@ -2052,10 +2052,10 @@ public String(char value[], int offset, int count) {
     
     <item>
       <title>Java IO</title>
-      <link>http://hugo.xizero.com/java/java-io/</link>
+      <link>https://www.xizero.com/java/java-io/</link>
       <pubDate>Fri, 18 Nov 2016 18:20:00 +0800</pubDate>
       
-      <guid>http://hugo.xizero.com/java/java-io/</guid>
+      <guid>https://www.xizero.com/java/java-io/</guid>
       <description>
 
 &lt;blockquote&gt;
@@ -2349,10 +2349,10 @@ Path p_ = Paths.get(&amp;quot;/home&amp;quot;,&amp;quot;user&amp;quot;);
     
     <item>
       <title>Java 修饰符</title>
-      <link>http://hugo.xizero.com/java/java-%E4%BF%AE%E9%A5%B0%E7%AC%A6/</link>
+      <link>https://www.xizero.com/java/java-%E4%BF%AE%E9%A5%B0%E7%AC%A6/</link>
       <pubDate>Fri, 18 Nov 2016 18:20:00 +0800</pubDate>
       
-      <guid>http://hugo.xizero.com/java/java-%E4%BF%AE%E9%A5%B0%E7%AC%A6/</guid>
+      <guid>https://www.xizero.com/java/java-%E4%BF%AE%E9%A5%B0%E7%AC%A6/</guid>
       <description>
 
 &lt;h2 id=&#34;分类&#34;&gt;分类&lt;/h2&gt;
@@ -2560,10 +2560,10 @@ import static packageName.className.*;
     
     <item>
       <title>Java 反射</title>
-      <link>http://hugo.xizero.com/java/java-%E5%8F%8D%E5%B0%84/</link>
+      <link>https://www.xizero.com/java/java-%E5%8F%8D%E5%B0%84/</link>
       <pubDate>Fri, 18 Nov 2016 18:20:00 +0800</pubDate>
       
-      <guid>http://hugo.xizero.com/java/java-%E5%8F%8D%E5%B0%84/</guid>
+      <guid>https://www.xizero.com/java/java-%E5%8F%8D%E5%B0%84/</guid>
       <description>
 
 &lt;p&gt;&lt;strong&gt;反射是将java 类中的各种成分映射成相应的类。&lt;/strong&gt;&lt;/p&gt;
